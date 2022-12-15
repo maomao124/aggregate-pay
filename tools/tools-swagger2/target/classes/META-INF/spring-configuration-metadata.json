@@ -1,0 +1,84 @@
+{
+  "groups": [
+    {
+      "name": "swagger",
+      "type": "mao.toolsswagger2.config.SwaggerConfigurationProperties",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.contact",
+      "type": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties",
+      "sourceMethod": "getContact()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "swagger.base-package",
+      "type": "java.lang.String",
+      "description": "swagger会解析的包路径",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.base-path",
+      "type": "java.util.List<java.lang.String>",
+      "description": "swagger会解析的url规则",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.contact.email",
+      "type": "java.lang.String",
+      "description": "电子邮件",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact"
+    },
+    {
+      "name": "swagger.contact.name",
+      "type": "java.lang.String",
+      "description": "联系人名称",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact"
+    },
+    {
+      "name": "swagger.contact.url",
+      "type": "java.lang.String",
+      "description": "url",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact"
+    },
+    {
+      "name": "swagger.description",
+      "type": "java.lang.String",
+      "description": "描述",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.docket",
+      "type": "java.util.Map<java.lang.String,mao.toolsswagger2.config.SwaggerConfigurationProperties$DocketInfo>",
+      "description": "分组文档",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.exclude-path",
+      "type": "java.util.List<java.lang.String>",
+      "description": "在basePath基础上需要排除的url规则",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.group",
+      "type": "java.lang.String",
+      "description": "自定义组名",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.title",
+      "type": "java.lang.String",
+      "description": "标题",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    },
+    {
+      "name": "swagger.version",
+      "type": "java.lang.String",
+      "description": "版本",
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+    }
+  ],
+  "hints": []
+}

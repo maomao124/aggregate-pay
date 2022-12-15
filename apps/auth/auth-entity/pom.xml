@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>auth</artifactId>
+        <groupId>mao</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>auth-entity</artifactId>
+    <name>auth-entity</name>
+    <description>auth-entity</description>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-log</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-jwt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+        </dependency>
+
+        <!-- Role 中字段的类型需要使用 DataScopeType -->
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-databases</artifactId>
+            <optional>true</optional>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>

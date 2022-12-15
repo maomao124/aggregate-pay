@@ -1,0 +1,31 @@
+def:
+  # docker部署时，需要指定， 表示运行该服务的宿主机IP
+  local-ip: ${LOCAL_IP:${spring.cloud.client.ip-address}}
+  nacos:
+    ip: ${NACOS_IP:@pom.nacos.ip@}
+    port: ${NACOS_PORT:@pom.nacos.port@}
+    namespace: ${NACOS_ID:@pom.nacos.namespace@}
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: @project.artifactId@ #pd-gateway
+  profiles:
+    active: @pom.profile.name@ #dev
+  cloud:
+    nacos:
+      config:
+        server-addr: ${def.nacos.ip}:${def.nacos.port}
+        file-extension: yml
+        namespace: ${def.nacos.namespace}
+        shared-dataids: common.yml,redis.yml,mysql.yml
+        refreshable-dataids: common.yml
+        enabled: true
+      discovery:
+        # 是否为临时实例
+        ephemeral: false
+        server-addr: ${def.nacos.ip}:${def.nacos.port}
+        namespace: ${def.nacos.namespace}
+        metadata:
+          management.context-path: ${server.servlet.context-path:}${spring.mvc.servlet.path:}${management.endpoints.web.base-path:}

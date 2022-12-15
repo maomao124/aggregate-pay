@@ -1,0 +1,31 @@
+# 在这里配置 权限服务 所有环境都能使用的配置
+def:
+  mysql:
+    database: authority
+    
+swagger:
+  enabled: true
+  contact:
+    name: mao
+    url: https://github.com/maomao124/
+    email: 1234@qq.com
+  docket:
+    auth:
+      title: 权限模块
+      base-package: mao.auth_server.controller.auth
+    common:
+      title: 公共模块
+      base-package: mao.auth_server.controller.common
+    core:
+      title: 组织岗位模块
+      base-package: mao.auth_server.controller.core
+
+authentication:
+  user:
+    header-name: token
+    expire: 43200               # 外部token有效期为12小时
+    pri-key: client/pri.key    # 加密
+    pub-key: client/pub.key    # 解密
+
+#server:
+#  port: 8764

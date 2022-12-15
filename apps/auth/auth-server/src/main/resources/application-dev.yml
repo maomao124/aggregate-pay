@@ -1,0 +1,6 @@
+# 设置日志级别，root表示根节点，即整体应用日志级别
+#logging:
+#  level:
+#    root: info
+#    # 为对应组设置日志级别
+#    mao: debug
