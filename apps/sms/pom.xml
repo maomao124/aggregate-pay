@@ -14,9 +14,40 @@
     <packaging>pom</packaging>
 
 
+    <modules>
+        <module>sms-api</module>
+        <module>sms-entity</module>
+        <module>sms-manage</module>
+        <module>sms-sdk</module>
+        <module>sms-server</module>
+    </modules>
+
+
+
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>sms-entity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>sms-sdk</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>sms-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>sms-manage</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

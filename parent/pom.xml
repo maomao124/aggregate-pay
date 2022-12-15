@@ -35,19 +35,19 @@
                 <pom.nacos.ip>127.0.0.1</pom.nacos.ip>
                 <pom.nacos.port>8848</pom.nacos.port>
                 <!--Nacos配置中心命名空间,用于支持多环境.这里必须使用ID，不能使用名称,默认为空-->
-                <pom.nacos.namespace>27ce69b0-bff1-4c03-8f3e-0ea5559a5732</pom.nacos.namespace>
+                <pom.nacos.namespace>2051a6a2-ba78-4dac-85a2-f991dd5162f2</pom.nacos.namespace>
             </properties>
         </profile>
-        <!-- docker 环境 -->
+        <!-- 测试 环境 -->
         <profile>
-            <id>docker</id>
+            <id>test</id>
             <properties>
-                <pom.profile.name>docker</pom.profile.name>
+                <pom.profile.name>test</pom.profile.name>
                 <!--Nacos配置中心地址-->
                 <pom.nacos.ip>192.168.1.34</pom.nacos.ip>
                 <pom.nacos.port>8848</pom.nacos.port>
                 <!--Nacos配置中心命名空间,用于支持多环境.这里必须使用ID，不能使用名称,默认为空-->
-                <pom.nacos.namespace>3bef359b-1ef7-4816-9c31-adb694b90bbe</pom.nacos.namespace>
+                <pom.nacos.namespace>2051a6a2-ba78-4dac-85a2-f991dd5162f2</pom.nacos.namespace>
             </properties>
         </profile>
         <!-- 生产 -->
@@ -59,7 +59,7 @@
                 <pom.nacos.ip>127.0.0.1</pom.nacos.ip>
                 <pom.nacos.port>8848</pom.nacos.port>
                 <!--Nacos配置中心命名空间,用于支持多环境.这里必须使用ID，不能使用名称,默认为空-->
-                <pom.nacos.namespace>385d3a28-3818-48b0-badd-954d37419c07</pom.nacos.namespace>
+                <pom.nacos.namespace>0937395c-8632-4714-9ed3-b48dac8cd5ae</pom.nacos.namespace>
             </properties>
         </profile>
     </profiles>

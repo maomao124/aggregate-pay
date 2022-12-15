@@ -8,10 +8,15 @@
     <file url="file://$PROJECT_DIR$/apps/gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-entity/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-manage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-manage/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-sdk/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/tools-core/src/main/java" charset="UTF-8" />
