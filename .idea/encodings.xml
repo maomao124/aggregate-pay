@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/apps/auth/auth-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/auth/auth-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/auth/auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/auth/auth-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-manage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-databases/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-databases/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-dozer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-dozer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-j2cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-j2cache/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-jwt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-swagger2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-swagger2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-user/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-validator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-validator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-xss/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tools/tools-xss/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

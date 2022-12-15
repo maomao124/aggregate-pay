@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="auth-entity" />
+        <module name="tools-common" />
+        <module name="auth-server" />
+        <module name="tools-xss" />
+        <module name="sms-entity" />
+        <module name="tools-core" />
+        <module name="tools-j2cache" />
+        <module name="tools-databases" />
+        <module name="sms-api" />
+        <module name="sms-sdk" />
+        <module name="sms-manage" />
+        <module name="sms-server" />
+        <module name="tools-validator" />
+        <module name="tools-user" />
+        <module name="tools-dozer" />
+        <module name="tools-jwt" />
+        <module name="tools-log" />
+        <module name="gateway" />
+        <module name="tools-swagger2" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-entity" options="-parameters" />
+      <module name="auth-server" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="sms-api" options="-parameters" />
+      <module name="sms-entity" options="-parameters" />
+      <module name="sms-manage" options="-parameters" />
+      <module name="sms-sdk" options="-parameters" />
+      <module name="sms-server" options="-parameters" />
+      <module name="tools-common" options="-parameters" />
+      <module name="tools-core" options="-parameters" />
+      <module name="tools-databases" options="-parameters" />
+      <module name="tools-dozer" options="-parameters" />
+      <module name="tools-j2cache" options="-parameters" />
+      <module name="tools-jwt" options="-parameters" />
+      <module name="tools-log" options="-parameters" />
+      <module name="tools-swagger2" options="-parameters" />
+      <module name="tools-user" options="-parameters" />
+      <module name="tools-validator" options="-parameters" />
+      <module name="tools-xss" options="-parameters" />
+    </option>
+  </component>
+</project>

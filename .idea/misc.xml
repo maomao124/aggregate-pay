@@ -13,4 +13,18 @@
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/sms/sms-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/sms/sms-manage/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/sms/sms-api/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/sms/sms-server/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/sms/sms-sdk/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK" />
 </project>
