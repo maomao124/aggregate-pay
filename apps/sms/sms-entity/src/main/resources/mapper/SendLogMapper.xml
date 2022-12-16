@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.itheima.sms.mapper.SendLogMapper">
+<mapper namespace="mao.auth_entity.mapper.SendLogMapper">
 
-    <resultMap type="com.itheima.sms.entity.SendLogEntity" id="sendLogMap">
+    <resultMap type="mao.auth_entity.entity.SendLogEntity" id="sendLogMap">
         <result property="id" column="id"/>
         <result property="configId" column="config_id"/>
         <result property="configPlatform" column="config_platform"/>
@@ -24,7 +24,7 @@
         <result property="updateUser" column="update_user"/>
         <result property="isDelete" column="is_delete"/>
     </resultMap>
-    <select id="selectLogPage" resultType="com.itheima.sms.vo.SendLogVO">
+    <select id="selectLogPage" resultType="mao.auth_entity.vo.SendLogVO">
         select sl.*,s.name as signature_name,t.name as template_name,rl.platform_name from send_log sl
         left join receive_log rl on sl.api_log_id = rl.api_log_id
         left join signature s on sl.signature = s.code
@@ -52,7 +52,7 @@
         </where>
         ORDER BY sl.create_time DESC
     </select>
-    <select id="trend" resultType="com.itheima.sms.vo.StatisticsCountVO">
+    <select id="trend" resultType="mao.auth_entity.vo.StatisticsCountVO">
         SELECT
         DATE_FORMAT( create_time, '%c.%e' ) AS date,
         COUNT( * ) AS count,
@@ -71,7 +71,7 @@
         GROUP BY date
         ORDER BY date ASC
     </select>
-    <select id="countPage" resultType="com.itheima.sms.vo.StatisticsCountVO">
+    <select id="countPage" resultType="mao.auth_entity.vo.StatisticsCountVO">
         SELECT
         DATE_FORMAT(sl.create_time, '%Y-%m-%d' ) AS date,
         COUNT( * ) AS count,
@@ -118,7 +118,7 @@
         ORDER BY
         config_name ASC
     </select>
-    <select id="getMarketingCount" resultType="com.itheima.sms.vo.MarketingStatisticsCountVO">
+    <select id="getMarketingCount" resultType="mao.auth_entity.vo.MarketingStatisticsCountVO">
         SELECT
             COUNT( * ) AS count,
             SUM( sl.STATUS ) AS success,
@@ -130,7 +130,7 @@
         WHERE
             rl.business = #{params.business}
     </select>
-    <select id="sendLogPage" resultType="com.itheima.sms.vo.SendLogPageVO">
+    <select id="sendLogPage" resultType="mao.auth_entity.vo.SendLogPageVO">
         SELECT
         sl.mobile,
         sl.create_time,
