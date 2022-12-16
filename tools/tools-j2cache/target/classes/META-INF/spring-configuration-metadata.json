@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "j2cache",
+      "type": "net.oschina.j2cache.autoconfigure.J2CacheConfig",
+      "sourceType": "net.oschina.j2cache.autoconfigure.J2CacheConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "j2cache.allow-null-values",
+      "type": "java.lang.Boolean",
+      "description": "是否允许缓存空值,默认:false",
+      "sourceType": "net.oschina.j2cache.autoconfigure.J2CacheConfig"
+    },
+    {
+      "name": "j2cache.cache-clean-mode",
+      "type": "java.lang.String",
+      "description": "缓存清除模式， <ul> <li>active:主动清除，二级缓存过期主动通知各节点清除，优点在于所有节点可以同时收到缓存清除<\/li> <li>passive:被动清除，一级缓存过期进行通知各节点清除一二级缓存，<\/li> <li> blend:两种模式一起运作，对于各个节点缓存准确以及及时性要求高的可以使用，正常用前两种模式中一个就可<\/li> <\/ul>",
+      "sourceType": "net.oschina.j2cache.autoconfigure.J2CacheConfig"
+    },
+    {
+      "name": "j2cache.config-location",
+      "type": "java.lang.String",
+      "sourceType": "net.oschina.j2cache.autoconfigure.J2CacheConfig"
+    },
+    {
+      "name": "j2cache.l2-cache-open",
+      "type": "java.lang.Boolean",
+      "description": "是否开启二级缓存",
+      "sourceType": "net.oschina.j2cache.autoconfigure.J2CacheConfig"
+    },
+    {
+      "name": "j2cache.open-spring-cache",
+      "type": "java.lang.Boolean",
+      "description": "是否开启spring cache缓存,注意:开启后需要添加spring.cache.type=GENERIC,将缓存类型设置为GENERIC",
+      "sourceType": "net.oschina.j2cache.autoconfigure.J2CacheConfig"
+    },
+    {
+      "name": "j2cache.redis-client",
+      "type": "java.lang.String",
+      "description": "使用哪种redis客户端,默认：jedis <ul> <li><a href ='https:\/\/github.com\/xetorthio\/jedis'>jedis: https:\/\/github.com\/xetorthio\/jedis<\/a><\/li> <li><a href ='https:\/\/github.com\/lettuce-io\/lettuce-core'>lettuce: https:\/\/github.com\/lettuce-io\/lettuce-core<\/a><\/li> <\/ul>",
+      "sourceType": "net.oschina.j2cache.autoconfigure.J2CacheConfig"
+    }
+  ],
+  "hints": []
+}
