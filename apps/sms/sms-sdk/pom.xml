@@ -69,11 +69,6 @@
             <artifactId>httpclient</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <scope>compile</scope>
-        </dependency>
 
     </dependencies>
 

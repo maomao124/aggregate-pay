@@ -1,0 +1,7 @@
+H:\程序\大四上期\sms-backend\apps\gateway\src\main\java\mao\gateway\api\ResourceApiFallback.java
+H:\程序\大四上期\sms-backend\apps\gateway\src\main\java\mao\gateway\api\ResourceApi.java
+H:\程序\大四上期\sms-backend\apps\gateway\src\main\java\mao\gateway\filter\TokenContextFilter.java
+H:\程序\大四上期\sms-backend\apps\gateway\src\main\java\mao\gateway\filter\AccessFilter.java
+H:\程序\大四上期\sms-backend\apps\gateway\src\main\java\mao\gateway\filter\BaseFilter.java
+H:\程序\大四上期\sms-backend\apps\gateway\src\main\java\mao\gateway\config\ZuulConfiguration.java
+H:\程序\大四上期\sms-backend\apps\gateway\src\main\java\mao\gateway\GatewayApplication.java

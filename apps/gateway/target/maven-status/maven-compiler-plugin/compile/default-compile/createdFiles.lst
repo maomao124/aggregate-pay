@@ -1,0 +1,7 @@
+mao\gateway\GatewayApplication.class
+mao\gateway\api\ResourceApi.class
+mao\gateway\config\ZuulConfiguration.class
+mao\gateway\filter\BaseFilter.class
+mao\gateway\api\ResourceApiFallback.class
+mao\gateway\filter\TokenContextFilter.class
+mao\gateway\filter\AccessFilter.class
