@@ -1667,3 +1667,29 @@ docket：{sms=DocketInfo{title='短信平台管理服务', group='', description
 2022-12-16 20:42:58.659  INFO 23296 --- [boundedElastic-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
 2022-12-16 20:42:58.661  INFO 23296 --- [boundedElastic-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
 2022-12-16 20:43:10.379  INFO 23296 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":8770,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@sms-manage\",\"name\":\"DEFAULT_GROUP@@sms-manage\",\"cacheMillis\":10000,\"lastRefTime\":1671194590378,\"checksum\":\"beb7538730afb0f349225726f0d7e28f\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":180647374277700} from /192.168.80.1
+2022-12-16 20:44:45.445 DEBUG 23296 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:45.445 DEBUG 23296 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/doc.html] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:45.491 DEBUG 23296 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-16 20:44:45.569 DEBUG 23296 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:45.570 DEBUG 23296 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/css/app.67f90c95.css] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:45.571 DEBUG 23296 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:45.571 DEBUG 23296 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/app.b1be8429.js] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:45.572 DEBUG 23296 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:45.572 DEBUG 23296 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-vendors.1e55988e.js] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:45.579 DEBUG 23296 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-16 20:44:45.582 DEBUG 23296 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-16 20:44:45.616 DEBUG 23296 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-16 20:44:46.017 DEBUG 23296 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:46.017 DEBUG 23296 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:46.032 DEBUG 23296 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:46.032 DEBUG 23296 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:46.039 DEBUG 23296 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:46.039 DEBUG 23296 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/favicon.ico] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:46.050 DEBUG 23296 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-16 20:44:46.050 DEBUG 23296 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-16 20:44:46.054 DEBUG 23296 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-16 20:44:46.081 DEBUG 23296 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-16 20:44:46.081 DEBUG 23296 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2022-12-16 20:44:46.087 DEBUG 23296 --- [http-nio-8770-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 短信平台管理服务
+2022-12-16 20:44:46.133 DEBUG 23296 --- [http-nio-8770-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 短信平台管理服务
+2022-12-16 20:44:46.171 DEBUG 23296 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
