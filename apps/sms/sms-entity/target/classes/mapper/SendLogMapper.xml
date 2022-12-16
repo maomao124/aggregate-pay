@@ -119,16 +119,13 @@
         config_name ASC
     </select>
     <select id="getMarketingCount" resultType="mao.auth_entity.vo.MarketingStatisticsCountVO">
-        SELECT
-            COUNT( * ) AS count,
-            SUM( sl.STATUS ) AS success,
-            MAX( s.NAME ) AS signature_name
-        FROM
-            send_log sl
-            LEFT JOIN receive_log rl ON sl.api_log_id = rl.api_log_id
-            LEFT JOIN signature s ON sl.signature = s.CODE
-        WHERE
-            rl.business = #{params.business}
+        SELECT COUNT(*)       AS count,
+               SUM(sl.STATUS) AS success,
+               MAX(s.NAME)    AS signature_name
+        FROM send_log sl
+                 LEFT JOIN receive_log rl ON sl.api_log_id = rl.api_log_id
+                 LEFT JOIN signature s ON sl.signature = s.CODE
+        WHERE rl.business = #{params.business}
     </select>
     <select id="sendLogPage" resultType="mao.auth_entity.vo.SendLogPageVO">
         SELECT

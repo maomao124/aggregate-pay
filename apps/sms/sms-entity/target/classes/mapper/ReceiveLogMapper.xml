@@ -54,11 +54,11 @@
     </select>
     <select id="top10" resultType="mao.auth_entity.vo.StatisticsCountVO">
         SELECT
-            platform_name as date,
-            COUNT( * ) AS count,
-            SUM( STATUS ) AS success
+        platform_name as date,
+        COUNT( * ) AS count,
+        SUM( STATUS ) AS success
         FROM
-            receive_log
+        receive_log
         <where>
             1 = 1
             <if test="params.startCreateTime != null">
@@ -69,17 +69,17 @@
             </if>
         </where>
         GROUP BY
-            platform_name
+        platform_name
         ORDER BY count DESC
         limit 10
     </select>
     <select id="trend" resultType="mao.auth_entity.vo.StatisticsCountVO">
         SELECT
-            DATE_FORMAT( create_time, '%c.%e' ) AS date,
-            COUNT( * ) AS count,
-            SUM(status) as success
+        DATE_FORMAT( create_time, '%c.%e' ) AS date,
+        COUNT( * ) AS count,
+        SUM(status) as success
         FROM
-            receive_log
+        receive_log
         <where>
             1 = 1
             <if test="params.platformId != null">

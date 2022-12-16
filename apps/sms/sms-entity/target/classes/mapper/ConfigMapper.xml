@@ -24,11 +24,15 @@
     </resultMap>
 
     <select id="findByTemplateSignature" parameterType="java.util.Map" resultMap="configMap">
-        select c.* from config c
-        left join config_template ct on c.id = ct.config_id
-        left join config_signature cs on c.id = cs.config_id
-        where c.is_active = 1 and c.is_enable = 1 and c.is_delete = 1
-        and ct.template_id = #{template} and cs.signature_id = #{signature}
+        select c.*
+        from config c
+                 left join config_template ct on c.id = ct.config_id
+                 left join config_signature cs on c.id = cs.config_id
+        where c.is_active = 1
+          and c.is_enable = 1
+          and c.is_delete = 1
+          and ct.template_id = #{template}
+          and cs.signature_id = #{signature}
         order by c.level asc
     </select>
 
