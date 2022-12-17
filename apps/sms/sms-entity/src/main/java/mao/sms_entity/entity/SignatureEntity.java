@@ -21,7 +21,7 @@ import mao.sms_entity.entity.base.BaseEntity;
  */
 
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 @TableName("signature")
 @ApiModel(description = "签名实体类")
 public class SignatureEntity extends BaseEntity

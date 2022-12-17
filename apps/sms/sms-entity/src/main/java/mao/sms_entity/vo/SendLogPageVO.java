@@ -133,7 +133,7 @@ public class SendLogPageVO
             case "未找到":
                 remark = "未找到合适配置";
                 break;
-                //梦网平台
+            //梦网平台
             case "MengWang":
                 //阿里云平台
             case "Aliyun":
@@ -157,7 +157,7 @@ public class SendLogPageVO
                     remark = error;
                 }
                 break;
-                //华为平台
+            //华为平台
             case "Huawei":
                 //判断响应是否为空
                 if (StringUtils.isNotEmpty(response))
@@ -177,7 +177,7 @@ public class SendLogPageVO
                     remark = error;
                 }
                 break;
-                //京东云
+            //京东云
             case "Jd":
                 //判断响应是否为空
                 if (StringUtils.isNotEmpty(response))
@@ -197,7 +197,7 @@ public class SendLogPageVO
                     remark = error;
                 }
                 break;
-                //乐信平台
+            //乐信平台
             case "Lexin":
                 //判断响应是否为空
                 if (StringUtils.isNotEmpty(response))
@@ -217,7 +217,7 @@ public class SendLogPageVO
                     remark = error;
                 }
                 break;
-                //默认
+            //默认
             default:
                 remark = error;
                 break;
