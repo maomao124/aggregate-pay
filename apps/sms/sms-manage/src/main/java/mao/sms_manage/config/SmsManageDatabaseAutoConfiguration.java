@@ -193,6 +193,6 @@ public class SmsManageDatabaseAutoConfiguration extends BaseDatabaseConfiguratio
     @PostConstruct
     public void init()
     {
-        log.info("初始化 SmsManageDatabaseAutoConfiguration");
+        log.info("初始化 SmsManageDatabaseAutoConfiguration 数据库配置");
     }
 }

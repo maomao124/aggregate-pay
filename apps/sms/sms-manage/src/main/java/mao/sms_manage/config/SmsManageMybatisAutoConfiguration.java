@@ -34,6 +34,6 @@ public class SmsManageMybatisAutoConfiguration extends BaseMybatisConfiguration
     @PostConstruct
     public void init()
     {
-        log.info("初始化 SmsManageMybatisAutoConfiguration");
+        log.info("初始化 SmsManageMybatisAutoConfiguration mybatis配置");
     }
 }
