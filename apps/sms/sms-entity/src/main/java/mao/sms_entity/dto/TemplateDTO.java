@@ -2,6 +2,8 @@ package mao.sms_entity.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import mao.sms_entity.entity.TemplateEntity;
 
 /**
@@ -17,6 +19,8 @@ import mao.sms_entity.entity.TemplateEntity;
  * Description(描述)： 无
  */
 
+@EqualsAndHashCode(callSuper = true)
+@Data
 @ApiModel(description = "模板表")
 public class TemplateDTO extends TemplateEntity
 {

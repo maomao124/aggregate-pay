@@ -2,6 +2,7 @@ package mao.sms_entity.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 import mao.sms_entity.entity.SignatureEntity;
 
 /**
@@ -17,6 +18,7 @@ import mao.sms_entity.entity.SignatureEntity;
  * Description(描述)： 无
  */
 
+@Data
 @ApiModel(description = "签名表")
 public class SignatureDTO extends SignatureEntity
 {
