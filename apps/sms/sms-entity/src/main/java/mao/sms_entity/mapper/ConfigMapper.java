@@ -2,6 +2,7 @@ package mao.sms_entity.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import mao.sms_entity.entity.ConfigEntity;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import java.util.Map;
  * Description(描述)： 配置表
  */
 
+@Mapper
 public interface ConfigMapper extends BaseMapper<ConfigEntity>
 {
     /**
@@ -27,5 +29,5 @@ public interface ConfigMapper extends BaseMapper<ConfigEntity>
      * @param params 签名id 、模板id
      * @return 配置集合
      */
-    List<ConfigEntity> findByTemplateSignature(Map<?,?> params);
+    List<ConfigEntity> findByTemplateSignature(Map<?, ?> params);
 }
