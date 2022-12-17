@@ -1,15 +1,30 @@
 package mao.sms_manage;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.tools_user.annotation.EnableLoginArgResolver;
+import mao.tools_validator.config.EnableFormValidator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @Slf4j
+@EnableHystrix
+@EnableLoginArgResolver
+@EnableFormValidator
+@EnableDiscoveryClient
+@EnableFeignClients(value =
+        {
+                "mao"
+        })
+@EnableTransactionManagement
 @SpringBootApplication
 public class SmsManageApplication
 {
