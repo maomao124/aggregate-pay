@@ -1,6 +1,0 @@
-mao\tools_xss\utils\XssUtils.class
-mao\tools_xss\config\XssAuthConfiguration.class
-mao\tools_xss\service\XssFilterService.class
-mao\tools_xss\wrapper\XssRequestWrapper.class
-mao\tools_xss\converter\XssStringJsonDeserializer.class
-mao\tools_xss\filter\XssFilter.class
