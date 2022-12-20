@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -20,7 +21,7 @@ import java.time.LocalDateTime;
  */
 
 @Data
-public class BaseEntity
+public abstract class BaseEntity implements Serializable
 {
     /**
      * id
