@@ -5,6 +5,8 @@ import mao.sms_entity.entity.BlackListEntity;
 import mao.tools_core.base.R;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Map;
+
 /**
  * Project name(项目名称)：sms-backend
  * Package(包名): mao.sms_manage.service
@@ -26,5 +28,5 @@ public interface BlackListService extends IService<BlackListEntity>
      * @param file 文件
      * @return {@link R}<{@link Boolean}>
      */
-    R<Boolean> upload(MultipartFile file);
+    R<Map<String, Object>> upload(MultipartFile file);
 }
