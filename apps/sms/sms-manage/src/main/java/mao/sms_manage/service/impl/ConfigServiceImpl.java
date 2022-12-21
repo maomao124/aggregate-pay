@@ -48,7 +48,7 @@ public class ConfigServiceImpl extends ServiceImpl<ConfigMapper, ConfigEntity> i
         ConfigEntity configEntity = this.getOne(Wraps.<ConfigEntity>lbQ().eq(ConfigEntity::getIsEnable, 1)
                 .eq(ConfigEntity::getIsActive, 1)
                 .orderByDesc(ConfigEntity::getLevel)
-                .last("limit 1"));
+                .last(" limit 1"));
         //判断是否为空
         if (configEntity == null)
         {
