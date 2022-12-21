@@ -1,8 +1,15 @@
 package mao.sms_entity.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import mao.sms_entity.dto.SignatureDTO;
 import mao.sms_entity.entity.SignatureEntity;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Project name(项目名称)：sms-backend
@@ -20,5 +27,20 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface SignatureMapper extends BaseMapper<SignatureEntity>
 {
+    /**
+     * 自定义
+     *
+     * @param page   页面
+     * @param params 参数个数
+     * @return {@link IPage}<{@link SignatureDTO}>
+     */
+    IPage<SignatureDTO> custom(Page<SignatureDTO> page, @Param("params") Map<?,?> params);
 
+    /**
+     * 自定义
+     *
+     * @param params 参数个数
+     * @return {@link List}<{@link SignatureDTO}>
+     */
+    List<SignatureDTO> custom(@Param("params") Map<?,?> params);
 }
