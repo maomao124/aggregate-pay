@@ -6,7 +6,7 @@ mysql:
   ip: 127.0.0.1
   port: 3306
   driverClassName: com.mysql.cj.jdbc.Driver
-  database: authority
+  database: sms
   username: root
   password: 20010713
 database:
@@ -59,7 +59,7 @@ spring:
 
 mybatis-plus:
   mapper-locations:
-    - classpath*:mapper_**/**/*Mapper.xml
+    - classpath*:mapper/*.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: mao
   global-config:

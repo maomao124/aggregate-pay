@@ -1,7 +1,8 @@
 # 在这里配置 权限服务 所有环境都能使用的配置
-def:
-  mysql:
-    database: sms
+
+mysql:
+  database: sms
+  
   # 服务端使用sdk配置信息
   sms:
     auth: false
