@@ -3,11 +3,13 @@ package mao.sms_manage.service.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import mao.sms_entity.entity.ReceiveLogEntity;
 import mao.sms_entity.mapper.ReceiveLogMapper;
 import mao.sms_entity.vo.ReceiveLogVO;
 import mao.sms_entity.vo.StatisticsCountVO;
 import mao.sms_manage.service.ReceiveLogService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
@@ -25,6 +27,8 @@ import java.util.Map;
  * Description(描述)： 接收日志
  */
 
+@Slf4j
+@Service
 public class ReceiveLogServiceImpl extends ServiceImpl<ReceiveLogMapper, ReceiveLogEntity> implements ReceiveLogService
 {
 
