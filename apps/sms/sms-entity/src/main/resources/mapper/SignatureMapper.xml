@@ -15,7 +15,7 @@
         <result property="updateUser" column="update_user"/>
         <result property="isDelete" column="is_delete"/>
     </resultMap>
-    <select id="custom" resultType="mao.sms_entity.sms.dto.SignatureDTO">
+    <select id="custom" resultType="mao.sms_entity.dto.SignatureDTO">
         select s.*,cs.config_signature_code,cs.config_id from config_signature cs
         left join signature s on cs.signature_id = s.id
         <where>
