@@ -15,6 +15,7 @@ import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.tools_databases.mybatis.conditions.query.LbqWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -98,6 +99,7 @@ public class BlackListController extends BaseController
      * @param entity BlackListEntity
      * @return {@link R}<{@link Boolean}>
      */
+    @Transactional
     @PostMapping
     @ApiOperation("保存")
     @DefaultParams
@@ -114,6 +116,7 @@ public class BlackListController extends BaseController
      * @param entity BlackListEntity
      * @return {@link R}<{@link Boolean}>
      */
+    @Transactional
     @PutMapping
     @ApiOperation("修改")
     @DefaultParams
@@ -130,6 +133,7 @@ public class BlackListController extends BaseController
      * @param ids id列表
      * @return {@link R}
      */
+    @Transactional
     @DeleteMapping
     @ApiOperation("删除")
     public R<Boolean> delete(@RequestBody List<String> ids)
@@ -146,6 +150,7 @@ public class BlackListController extends BaseController
      * @param file 文件
      * @return {@link R}<{@link ?}>
      */
+    @Transactional
     @PostMapping("/upload")
     @ApiOperation("导入")
     public R<?> upload(@RequestParam(value = "file") MultipartFile file)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mao.auth_entity.mapper.ConfigSignatureMapper">
+<mapper namespace="mao.sms_entity.mapper.ConfigSignatureMapper">
 
-    <resultMap type="mao.auth_entity.entity.ConfigSignatureEntity" id="configSignatureMap">
+    <resultMap type="mao.sms_entity.entity.ConfigSignatureEntity" id="configSignatureMap">
         <result property="id" column="id"/>
         <result property="configId" column="config_id"/>
         <result property="signatureId" column="signature_id"/>

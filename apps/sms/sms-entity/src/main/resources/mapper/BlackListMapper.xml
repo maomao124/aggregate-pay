@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mao.auth_entity.mapper.BlackListMapper">
+<mapper namespace="mao.sms_entity.mapper.BlackListMapper">
 
-    <resultMap type="mao.auth_entity.entity.BlackListEntity" id="blackListMap">
+    <resultMap type="mao.sms_entity.entity.BlackListEntity" id="blackListMap">
         <result property="id" column="id"/>
         <result property="type" column="type"/>
         <result property="content" column="content"/>

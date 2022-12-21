@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mao.auth_entity.mapper.ReceiveLogMapper">
+<mapper namespace="mao.sms_entity.mapper.ReceiveLogMapper">
 
-    <resultMap type="mao.auth_entity.entity.ReceiveLogEntity" id="manualProcessMap">
+    <resultMap type="mao.sms_entity.entity.ReceiveLogEntity" id="manualProcessMap">
         <result column="id" property="id"/>
         <result column="platform_id" property="platformId"/>
         <result column="platform_name" property="platformName"/>
@@ -24,7 +24,7 @@
         <result column="update_user" property="updateUser"/>
         <result column="is_delete" property="isDelete"/>
     </resultMap>
-    <select id="selectLogPage" resultType="mao.auth_entity.vo.ReceiveLogVO">
+    <select id="selectLogPage" resultType="mao.sms_entity.vo.ReceiveLogVO">
         select rl.*,sl.config_name,s.name as signature_name,t.name as template_name from receive_log rl
         left join send_log sl on rl.api_log_id = sl.api_log_id
         left join signature s on rl.signature = s.code
@@ -52,7 +52,7 @@
         </where>
         order by rl.create_time desc
     </select>
-    <select id="top10" resultType="mao.auth_entity.vo.StatisticsCountVO">
+    <select id="top10" resultType="mao.sms_entity.vo.StatisticsCountVO">
         SELECT
         platform_name as date,
         COUNT( * ) AS count,
@@ -71,9 +71,9 @@
         GROUP BY
         platform_name
         ORDER BY count DESC
-        limit 10
+        LIMIT 10
     </select>
-    <select id="trend" resultType="mao.auth_entity.vo.StatisticsCountVO">
+    <select id="trend" resultType="mao.sms_entity.vo.StatisticsCountVO">
         SELECT
         DATE_FORMAT( create_time, '%c.%e' ) AS date,
         COUNT( * ) AS count,
