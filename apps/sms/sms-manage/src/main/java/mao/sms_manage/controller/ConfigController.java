@@ -111,7 +111,7 @@ public class ConfigController extends BaseController
      * @param id id
      * @return {@link R}<{@link ConfigDTO}>
      */
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     @ApiOperation("根据id查询通道信息")
     public R<ConfigDTO> get(@PathVariable("id") String id)
     {
@@ -121,7 +121,7 @@ public class ConfigController extends BaseController
         if (null == configEntity || StringUtils.isEmpty(configEntity.getId()))
         {
             //响应失败
-            return R.fail("Id Not Found");
+            return R.fail("要查询的id不存在");
         }
         //不为空，转换
         ConfigDTO configDTO = dozerUtils.map(configEntity, ConfigDTO.class);
