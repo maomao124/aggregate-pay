@@ -1,11 +1,10 @@
-package mao.sms_dao.mapper;
+package mao.sms_manage.mapper;
 
+import mao.sms_dao.mapper.BlackListMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Project name(项目名称)：sms-backend
