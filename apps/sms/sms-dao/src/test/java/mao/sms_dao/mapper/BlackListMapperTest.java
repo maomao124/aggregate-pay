@@ -30,6 +30,6 @@ class BlackListMapperTest
     @Test
     void queryAll()
     {
-
+        System.out.println(blackListMapper.selectList(null));
     }
 }
