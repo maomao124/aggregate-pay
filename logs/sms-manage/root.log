@@ -2982,3 +2982,433 @@ docket：{sms=DocketInfo{title='短信平台管理服务', group='', description
 2022-12-22 21:07:26.539 DEBUG 9112 --- [http-nio-8770-exec-8] m.s.mapper.PlatformMapper.selectById     : ==> Parameters: 7(String)
 2022-12-22 21:07:26.540 DEBUG 9112 --- [http-nio-8770-exec-8] m.s.mapper.PlatformMapper.selectById     : <==      Total: 0
 2022-12-22 21:07:26.541 DEBUG 9112 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:24:23.408  WARN 9112 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-22 21:24:23.408  WARN 9112 --- [Thread-27] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-12-22 21:24:23.409  WARN 9112 --- [Thread-27] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-12-22 21:24:23.410  WARN 9112 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-12-22 21:24:23.423  INFO 9112 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-12-22 21:24:23.427  INFO 9112 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-12-22 21:24:23.428  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@sms-manage:192.168.3.143:8770 from beat map.
+2022-12-22 21:24:23.428  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 2051a6a2-ba78-4dac-85a2-f991dd5162f2 deregistering service DEFAULT_GROUP@@sms-manage with instance: Instance{instanceId='null', ip='192.168.3.143', port=8770, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-12-22 21:24:23.432  INFO 9112 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-12-22 21:24:23.434  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-12-22 21:24:23.434  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-12-22 21:24:23.434  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-12-22 21:24:24.441  INFO 9112 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":9070,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#9070#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":8770,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@sms-manage\",\"name\":\"DEFAULT_GROUP@@sms-manage\",\"cacheMillis\":10000,\"lastRefTime\":1671715464440,\"checksum\":\"88261b3777881aca40fc90f97ca75bb2\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":27927103492600} from /172.30.32.1
+2022-12-22 21:24:26.443  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-12-22 21:24:29.475  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-12-22 21:24:29.475  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-12-22 21:24:29.475  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-12-22 21:24:29.475  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-12-22 21:24:29.475  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-12-22 21:24:29.475  WARN 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-12-22 21:24:29.475  WARN 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-12-22 21:24:29.476  INFO 9112 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-12-22 21:24:29.476  INFO 9112 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-12-22 21:24:29.476  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-12-22 21:24:29.477  INFO 9112 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-12-22 21:24:29.488  WARN 9112 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-12-22 21:24:29.626  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-22 21:24:29.638  INFO 9112 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-22 21:24:29.791 DEBUG 9112 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy
+2022-12-22 21:24:37.626  WARN 2780 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[sms-manage] & group[DEFAULT_GROUP]
+2022-12-22 21:24:37.635  INFO 2780 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-sms-manage-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-manage.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-manage,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2022-12-22 21:24:37.675  INFO 2780 --- [main] mao.sms_manage.SmsManageApplication      : The following profiles are active: dev
+2022-12-22 21:24:38.919  INFO 2780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-12-22 21:24:38.922  INFO 2780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-12-22 21:24:38.958  INFO 2780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2022-12-22 21:24:39.026  WARN 2780 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-12-22 21:24:39.043  WARN 2780 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2022-12-22 21:24:39.231  INFO 2780 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a17824cf-ffbd-3255-afcf-679e93a8d9ab
+2022-12-22 21:24:39.239  INFO 2780 --- [main] m.t.config.ValidatorConfig               : 开启hibernate-validator快速返回
+2022-12-22 21:24:39.239  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mao.tools_validator.config.ValidatorConfig' of type [mao.tools_validator.config.ValidatorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.464  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.699  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.708  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.715  INFO 2780 --- [main] m.s.c.SmsManageMybatisAutoConfiguration  : 初始化 SmsManageMybatisAutoConfiguration mybatis配置
+2022-12-22 21:24:39.715  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsManageMybatisAutoConfiguration' of type [mao.sms_manage.config.SmsManageMybatisAutoConfiguration$$EnhancerBySpringCGLIB$$add53671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.723  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.729  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.732  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.735  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.744  INFO 2780 --- [main] m.s.c.SmsManageDatabaseAutoConfiguration : 初始化 SmsManageDatabaseAutoConfiguration 数据库配置
+2022-12-22 21:24:39.744  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsManageDatabaseAutoConfiguration' of type [mao.sms_manage.config.SmsManageDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$b4470c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.805  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.810  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.822  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.854  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.940  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.972  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.988  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:39.995  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:40.003  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:40.004  INFO 2780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-12-22 21:24:40.054  INFO 2780 --- [main] m.s.config.SmsManageWebConfiguration     : 初始化 SmsManageWebConfiguration 基础配置
+2022-12-22 21:24:40.286  INFO 2780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8770 (http)
+2022-12-22 21:24:40.295  INFO 2780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-22 21:24:40.296  INFO 2780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-12-22 21:24:40.437  INFO 2780 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-22 21:24:40.437  INFO 2780 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2736 ms
+2022-12-22 21:24:40.459  INFO 2780 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2022-12-22 21:24:40.595  WARN 2780 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-12-22 21:24:40.595  INFO 2780 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-12-22 21:24:40.605  INFO 2780 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5c59a0f7
+2022-12-22 21:24:40.748  INFO 2780 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2022-12-22 21:24:40.752 DEBUG 2780 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init start ...
+2022-12-22 21:24:40.818 DEBUG 2780 --- [main] mao.tools_xss.filter.XssFilter           : ignorePathList=null
+2022-12-22 21:24:40.821 DEBUG 2780 --- [main] mao.tools_xss.filter.XssFilter           : ignoreParamValueList=["samlp:LogoutRequest"]
+2022-12-22 21:24:40.822 DEBUG 2780 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init end
+2022-12-22 21:24:40.845  INFO 2780 --- [main] m.s.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration 全局异常配置
+2022-12-22 21:24:40.851  INFO 2780 --- [main] mao.sms_manage.config.SubscriberConfig   : 初始化 SubscriberConfig 订阅发布模式的容器配置
+2022-12-22 21:24:41.053  INFO 2780 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@fe8aaeb]
+2022-12-22 21:24:41.053  INFO 2780 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@6b9697ae]
+2022-12-22 21:24:41.098 DEBUG 2780 --- [main] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2022-12-22 21:24:41.105 DEBUG 2780 --- [main] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2022-12-22 21:24:42.096 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.102 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.103 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.105 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.106 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.106 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.106 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.106 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.106 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.106 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.106 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.107 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.108 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.BlackListController
+2022-12-22 21:24:42.227  INFO 2780 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2022-12-22 21:24:42.228  INFO 2780 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2022-12-22 21:24:42.233  INFO 2780 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2022-12-22 21:24:42.237  INFO 2780 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2022-12-22 21:24:42.243  INFO 2780 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2022-12-22 21:24:42.330  INFO 2780 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-manage/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2022-12-22 21:24:42.600  INFO 2780 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-12-22 21:24:42.603  INFO 2780 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-12-22 21:24:42.642  INFO 2780 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-12-22 21:24:42.643  INFO 2780 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-manage/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2022-12-22 21:24:42.645  INFO 2780 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-12-22 21:24:42.645  INFO 2780 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2022-12-22 21:24:42.651  INFO 2780 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2022-12-22 21:24:42.667  INFO 2780 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2022-12-22 21:24:42.670 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.672 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.672 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.672 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.672 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.672 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.672 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.672 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.673 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.674 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.ConfigController
+2022-12-22 21:24:42.717 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.718 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.718 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.718 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.718 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.718 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.718 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.719 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.LogController
+2022-12-22 21:24:42.741 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.742 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.743 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.PlatformController
+2022-12-22 21:24:42.748 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.749 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.749 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.749 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.749 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.750 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:42.751 DEBUG 2780 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_manage.controller.SignatureController
+2022-12-22 21:24:43.101  INFO 2780 --- [main] m.t.config.LoginArgResolverConfig        : 初始化 LoginArgResolverConfig
+2022-12-22 21:24:43.553  INFO 2780 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-12-22 21:24:43.553  INFO 2780 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-12-22 21:24:43.554  INFO 2780 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-12-22 21:24:43.760  INFO 2780 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2022-12-22 21:24:43.968  WARN 2780 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-12-22 21:24:43.969  INFO 2780 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-12-22 21:24:44.046  INFO 2780 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-12-22 21:24:44.196  INFO 2780 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-12-22 21:24:44.217  INFO 2780 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2022-12-22 21:24:44.234  INFO 2780 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-12-22 21:24:44.248  INFO 2780 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2022-12-22 21:24:44.248  INFO 2780 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{sms=DocketInfo{title='短信平台管理服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.sms_manage.controller', basePath=[], excludePath=[]}}
+
+2022-12-22 21:24:45.038  INFO 2780 --- [main] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@sms-manage@@DEFAULT -> [{"instanceId":"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage","ip":"192.168.3.143","port":8770,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#9070#DEFAULT#DEFAULT_GROUP@@sms-manage","ip":"192.168.3.143","port":9070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-12-22 21:24:45.048  INFO 2780 --- [main] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@sms-manage@@DEFAULT -> [{"instanceId":"192.168.3.143#9070#DEFAULT#DEFAULT_GROUP@@sms-manage","ip":"192.168.3.143","port":9070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage","ip":"192.168.3.143","port":8770,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-12-22 21:24:45.050  INFO 2780 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-12-22 21:24:45.076  INFO 2780 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-12-22 21:24:45.138  INFO 2780 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-12-22 21:24:45.304  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2022-12-22 21:24:45.325  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-12-22 21:24:45.360  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2022-12-22 21:24:45.374  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-12-22 21:24:45.376  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2022-12-22 21:24:45.387  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-12-22 21:24:45.431  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2022-12-22 21:24:45.436  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-12-22 21:24:45.443  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_2
+2022-12-22 21:24:45.446  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_2
+2022-12-22 21:24:45.447  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2022-12-22 21:24:45.456  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_3
+2022-12-22 21:24:45.460  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_4
+2022-12-22 21:24:45.469  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_3
+2022-12-22 21:24:45.472  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_3
+2022-12-22 21:24:45.473  INFO 2780 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2022-12-22 21:24:45.607  INFO 2780 --- [getRedisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2022-12-22 21:24:45.610  INFO 2780 --- [getRedisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2022-12-22 21:24:46.215  INFO 2780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8770 (http) with context path ''
+2022-12-22 21:24:46.219  INFO 2780 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 2051a6a2-ba78-4dac-85a2-f991dd5162f2 registering service DEFAULT_GROUP@@sms-manage with instance: Instance{instanceId='null', ip='192.168.3.143', port=8770, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/actuator}}
+2022-12-22 21:24:46.223  INFO 2780 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP sms-manage 192.168.3.143:8770 register finished
+2022-12-22 21:24:46.476  INFO 2780 --- [main] mao.sms_manage.SmsManageApplication      : Started SmsManageApplication in 10.328 seconds (JVM running for 11.365)
+2022-12-22 21:24:46.488  INFO 2780 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] sms-manage-dev.yml+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
+2022-12-22 21:24:46.490  INFO 2780 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=sms-manage-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-12-22 21:24:46.491  INFO 2780 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] sms-manage.yml+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
+2022-12-22 21:24:46.492  INFO 2780 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=sms-manage.yml, group=DEFAULT_GROUP, cnt=1
+2022-12-22 21:24:46.497  INFO 2780 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] common.yml+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
+2022-12-22 21:24:46.497  INFO 2780 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2022-12-22 21:24:46.497  INFO 2780 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] sms-manage+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
+2022-12-22 21:24:46.498  INFO 2780 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=sms-manage, group=DEFAULT_GROUP, cnt=1
+2022-12-22 21:24:46.499  INFO 2780 --- [main] mao.sms_manage.SmsManageApplication      : 应用sms-manage启动成功!swagger地址：http://172.30.32.1:8770/doc.html
+2022-12-22 21:24:46.499  INFO 2780 --- [main] mao.sms_manage.SmsManageApplication      : 启动耗时：10450ms
+2022-12-22 21:24:47.106  INFO 2780 --- [RMI TCP Connection(3)-172.30.32.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-22 21:24:47.106  INFO 2780 --- [RMI TCP Connection(3)-172.30.32.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-22 21:24:47.125  INFO 2780 --- [RMI TCP Connection(3)-172.30.32.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2022-12-22 21:24:47.233  INFO 2780 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":9070,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#9070#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":8770,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@sms-manage\",\"name\":\"DEFAULT_GROUP@@sms-manage\",\"cacheMillis\":10000,\"lastRefTime\":1671715487231,\"checksum\":\"71e50df906744bf7e39da76e68eebdba\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":27949894679700} from /172.30.32.1
+2022-12-22 21:24:47.867  INFO 2780 --- [RMI TCP Connection(2)-172.30.32.1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-22 21:25:01.053  INFO 2780 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":9070,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#9070#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":8770,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@sms-manage\",\"name\":\"DEFAULT_GROUP@@sms-manage\",\"cacheMillis\":10000,\"lastRefTime\":1671715501053,\"checksum\":\"71e50df906744bf7e39da76e68eebdba\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":27963716929900} from /172.30.32.1
+2022-12-22 21:25:01.054  INFO 2780 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : modified ips(1) service: DEFAULT_GROUP@@sms-manage@@DEFAULT -> [{"instanceId":"192.168.3.143#9070#DEFAULT#DEFAULT_GROUP@@sms-manage","ip":"192.168.3.143","port":9070,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-12-22 21:25:01.059  INFO 2780 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@sms-manage@@DEFAULT -> [{"instanceId":"192.168.3.143#9070#DEFAULT#DEFAULT_GROUP@@sms-manage","ip":"192.168.3.143","port":9070,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage","ip":"192.168.3.143","port":8770,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-manage","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-12-22 21:25:08.897 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:08.897 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/doc.html] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:08.917 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:09.291 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:09.291 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:09.293 DEBUG 2780 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:09.293 DEBUG 2780 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:09.322 DEBUG 2780 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:09.322 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:09.337 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:09.337 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:09.340 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 短信平台管理服务
+2022-12-22 21:25:09.375 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 短信平台管理服务
+2022-12-22 21:25:09.496 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:30.458 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:30.459 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:30.561 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:30.598 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:30.610 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:30.615 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:45.991 DEBUG 2780 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:45.991 DEBUG 2780 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:45.994 DEBUG 2780 --- [http-nio-8770-exec-4] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:45.995 DEBUG 2780 --- [http-nio-8770-exec-4] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:45.996 DEBUG 2780 --- [http-nio-8770-exec-4] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:45.997 DEBUG 2780 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:46.518 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:46.518 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:46.520 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:46.521 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:46.522 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:46.523 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:46.852 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:46.852 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:46.854 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:46.854 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:46.857 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:46.857 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:47.051 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:47.051 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:47.053 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:47.053 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:47.055 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:47.056 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:47.228 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:47.228 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:47.230 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:47.230 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:47.231 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:47.233 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:47.426 DEBUG 2780 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:47.426 DEBUG 2780 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:47.428 DEBUG 2780 --- [http-nio-8770-exec-10] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:47.428 DEBUG 2780 --- [http-nio-8770-exec-10] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:47.430 DEBUG 2780 --- [http-nio-8770-exec-10] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:47.431 DEBUG 2780 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:47.685 DEBUG 2780 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:47.685 DEBUG 2780 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:47.687 DEBUG 2780 --- [http-nio-8770-exec-1] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:47.687 DEBUG 2780 --- [http-nio-8770-exec-1] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:47.688 DEBUG 2780 --- [http-nio-8770-exec-1] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:47.689 DEBUG 2780 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:47.947 DEBUG 2780 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:47.947 DEBUG 2780 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:47.949 DEBUG 2780 --- [http-nio-8770-exec-2] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:47.949 DEBUG 2780 --- [http-nio-8770-exec-2] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:47.950 DEBUG 2780 --- [http-nio-8770-exec-2] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:47.951 DEBUG 2780 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:25:48.121 DEBUG 2780 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:25:48.121 DEBUG 2780 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/list] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:25:48.123 DEBUG 2780 --- [http-nio-8770-exec-3] m.s.mapper.SignatureMapper.selectList    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature ORDER BY create_time DESC 
+2022-12-22 21:25:48.123 DEBUG 2780 --- [http-nio-8770-exec-3] m.s.mapper.SignatureMapper.selectList    : ==> Parameters: 
+2022-12-22 21:25:48.124 DEBUG 2780 --- [http-nio-8770-exec-3] m.s.mapper.SignatureMapper.selectList    : <==      Total: 0
+2022-12-22 21:25:48.125 DEBUG 2780 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:01.545 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:01.545 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:01.549 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:01.595 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:01.597 DEBUG 2780 --- [http-nio-8770-exec-5] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:01.598 DEBUG 2780 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:02.220 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:02.221 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:02.222 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:02.223 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:02.224 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:02.225 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:02.446 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:02.446 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:02.448 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:02.448 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:02.450 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:02.451 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:02.607 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:02.607 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:02.608 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:02.608 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:02.609 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:02.610 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:09.894 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:09.894 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:09.896 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:09.896 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:09.897 DEBUG 2780 --- [http-nio-8770-exec-6] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:09.898 DEBUG 2780 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:10.046 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:10.046 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:10.048 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:10.049 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:10.051 DEBUG 2780 --- [http-nio-8770-exec-8] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:10.053 DEBUG 2780 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:10.209 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:10.210 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:10.211 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:10.211 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:10.212 DEBUG 2780 --- [http-nio-8770-exec-9] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:10.214 DEBUG 2780 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2022-12-22 21:26:10.383 DEBUG 2780 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2022-12-22 21:26:10.383 DEBUG 2780 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/signature/2] need XssFilter, go to XssRequestWrapper
+2022-12-22 21:26:10.385 DEBUG 2780 --- [http-nio-8770-exec-10] m.s.mapper.SignatureMapper.selectById    : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE id=? 
+2022-12-22 21:26:10.385 DEBUG 2780 --- [http-nio-8770-exec-10] m.s.mapper.SignatureMapper.selectById    : ==> Parameters: 2(String)
+2022-12-22 21:26:10.386 DEBUG 2780 --- [http-nio-8770-exec-10] m.s.mapper.SignatureMapper.selectById    : <==      Total: 0
+2022-12-22 21:26:10.387 DEBUG 2780 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
