@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid",
+      "type": "javax.sql.DataSource",
+      "sourceType": "mao.sms_manage.config.SmsManageDatabaseAutoConfiguration",
+      "sourceMethod": "druidDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

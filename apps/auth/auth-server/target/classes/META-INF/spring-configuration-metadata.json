@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid",
+      "type": "javax.sql.DataSource",
+      "sourceType": "mao.auth_server.config.DatabaseConfiguration",
+      "sourceMethod": "druidDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
