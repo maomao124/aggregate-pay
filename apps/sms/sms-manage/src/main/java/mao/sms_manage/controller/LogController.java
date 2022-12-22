@@ -152,7 +152,7 @@ public class LogController extends BaseController
      * @param sendLogPageVO {@link SendLogPageVO}
      * @return {@link R}<{@link Page}<{@link SendLogPageVO}>>
      */
-    @GetMapping("sendLogPage")
+    @GetMapping("/sendLogPage")
     @ApiOperation("发送记录")
     @ApiImplicitParams
             ({

@@ -7,17 +7,19 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import mao.sms_entity.dto.PlatformDTO;
 import mao.sms_entity.entity.PlatformEntity;
+import mao.sms_manage.annotation.DefaultParams;
 import mao.sms_manage.service.PlatformService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.tools_databases.mybatis.conditions.query.LbqWrapper;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * Project name(项目名称)：sms-backend
@@ -33,7 +35,7 @@ import javax.annotation.Resource;
  */
 
 @RestController
-@RequestMapping("platform")
+@RequestMapping("/platform")
 @Api(tags = {"接入平台"})
 public class PlatformController extends BaseController
 {
@@ -44,8 +46,16 @@ public class PlatformController extends BaseController
     @Resource
     private PlatformService platformService;
 
-    @GetMapping("page")
-    @ApiOperation("分页")
+
+    /**
+     * 分页查询
+     *
+     * @param platformDTO {@link PlatformDTO}
+     * @return {@link R}<{@link Page}<{@link PlatformEntity}>>
+     */
+    @SuppressWarnings("all")
+    @GetMapping("/page")
+    @ApiOperation("分页查询")
     @ApiImplicitParams
             ({
                     @ApiImplicitParam(name = "current", value = "当前页码，从1开始", paramType = "query", required = true, dataType = "int"),
@@ -70,5 +80,90 @@ public class PlatformController extends BaseController
 
         platformService.page(page, wrapper);
         return success(page);
+    }
+
+
+    /**
+     * 根据id查询平台信息
+     *
+     * @param id id
+     * @return {@link R}<{@link PlatformEntity}>
+     */
+    @GetMapping("/{id}")
+    @ApiOperation("根据id查询平台信息")
+    public R<PlatformEntity> get(@PathVariable("id") String id)
+    {
+        PlatformEntity data = platformService.getById(id);
+        return R.success(data);
+    }
+
+
+    /**
+     * 保存
+     *
+     * @param entity {@link PlatformEntity}
+     * @return {@link R}<{@link Boolean}>
+     */
+    @PostMapping
+    @ApiOperation("保存")
+    @DefaultParams
+    @Transactional
+    public R<Boolean> save(@RequestBody PlatformEntity entity)
+    {
+        if (StringUtils.isBlank(entity.getAccessKeyId()))
+        {
+            entity.setAccessKeyId(UUID.randomUUID().toString().replace("-", ""));
+        }
+        if (StringUtils.isBlank(entity.getAccessKeySecret()))
+        {
+            entity.setAccessKeySecret(UUID.randomUUID().toString().replace("-", ""));
+        }
+        if (platformService.getByName(entity.getName()) != null)
+        {
+            return R.fail("应用名称重复");
+        }
+        boolean save = platformService.save(entity);
+        if (!save)
+        {
+            return R.fail("保存失败");
+        }
+        return R.success();
+    }
+
+
+    /**
+     * 更新
+     *
+     * @param entity {@link PlatformEntity}
+     * @return {@link R}<{@link Boolean}>
+     */
+    @PutMapping
+    @ApiOperation("修改")
+    @DefaultParams
+    @Transactional
+    public R<Boolean> update(@RequestBody PlatformEntity entity)
+    {
+        PlatformEntity platform = platformService.getByName(entity.getName());
+        if (platform != null && !platform.getId().equals(entity.getId()))
+        {
+            return R.fail("应用名称重复");
+        }
+        platformService.updateById(entity);
+        return R.success();
+    }
+
+    /**
+     * 删除
+     *
+     * @param ids id列表
+     * @return {@link R}<{@link Boolean}>
+     */
+    @Transactional
+    @DeleteMapping
+    @ApiOperation("删除")
+    public R<Boolean> delete(@RequestBody List<String> ids)
+    {
+        platformService.removeByIds(ids);
+        return R.success();
     }
 }
