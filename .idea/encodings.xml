@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/apps/gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/sms/sms-dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-entity/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-entity/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-manage/src/main/java" charset="UTF-8" />

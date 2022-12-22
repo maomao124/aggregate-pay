@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mao.sms_entity.mapper.ConfigMapper">
+<mapper namespace="mao.sms_dao.mapper.ConfigMapper">
 
     <resultMap type="mao.sms_entity.entity.ConfigEntity" id="configMap">
         <result property="id" column="id"/>

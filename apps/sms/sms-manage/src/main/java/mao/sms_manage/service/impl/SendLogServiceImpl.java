@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import mao.sms_entity.entity.SendLogEntity;
-import mao.sms_entity.mapper.SendLogMapper;
+import mao.sms_dao.mapper.SendLogMapper;
 import mao.sms_entity.vo.MarketingStatisticsCountVO;
 import mao.sms_entity.vo.SendLogPageVO;
 import mao.sms_entity.vo.SendLogVO;

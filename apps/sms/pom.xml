@@ -16,6 +16,7 @@
 
     <modules>
         <module>sms-api</module>
+        <module>sms-dao</module>
         <module>sms-entity</module>
         <module>sms-manage</module>
         <module>sms-sdk</module>
@@ -46,6 +47,11 @@
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>sms-manage</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>sms-dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

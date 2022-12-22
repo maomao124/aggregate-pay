@@ -12,6 +12,7 @@
         <module name="auth-server" />
         <module name="tools-xss" />
         <module name="sms-entity" />
+        <module name="sms-dao" />
         <module name="tools-core" />
         <module name="tools-j2cache" />
         <module name="tools-databases" />
@@ -35,6 +36,7 @@
       <module name="auth-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="sms-api" options="-parameters" />
+      <module name="sms-dao" options="-parameters" />
       <module name="sms-entity" options="-parameters" />
       <module name="sms-manage" options="-parameters" />
       <module name="sms-sdk" options="-parameters" />

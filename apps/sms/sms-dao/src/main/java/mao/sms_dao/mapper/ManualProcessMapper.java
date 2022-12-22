@@ -1,4 +1,4 @@
-package mao.sms_entity.mapper;
+package mao.sms_dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import mao.sms_entity.entity.ManualProcessEntity;
@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * Project name(项目名称)：sms-backend
- * Package(包名): mao.sms_entity.mapper
+ * Package(包名): mao.sms_dao.mapper
  * Interface(接口名): ManualProcessMapper
  * Author(作者）: mao
  * Author QQ：1296193245

@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import mao.sms_entity.dto.SignatureDTO;
 import mao.sms_entity.entity.SignatureEntity;
 import mao.sms_entity.entity.base.BaseEntity;
-import mao.sms_entity.mapper.SignatureMapper;
+import mao.sms_dao.mapper.SignatureMapper;
 import mao.sms_manage.service.SignatureService;
 import mao.sms_manage.utils.StringUtils;
 import mao.tools_databases.mybatis.conditions.Wraps;

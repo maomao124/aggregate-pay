@@ -1,4 +1,4 @@
-package mao.sms_entity.mapper;
+package mao.sms_dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import mao.sms_entity.entity.ConfigEntity;
@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * Project name(项目名称)：sms-backend
- * Package(包名): mao.sms_entity.mapper
+ * Package(包名): mao.sms_dao.mapper
  * Interface(接口名): ConfigMapper
  * Author(作者）: mao
  * Author QQ：1296193245

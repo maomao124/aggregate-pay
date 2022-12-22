@@ -52,7 +52,7 @@ import java.util.List;
 @Slf4j
 @Configuration
 @MapperScan(
-        basePackages = {"mao"},
+        basePackages = {"mao.sms_dao.mapper"},
         sqlSessionFactoryRef = SmsManageDatabaseAutoConfiguration.DATABASE_PREFIX + "SqlSessionFactory")
 @EnableConfigurationProperties({MybatisPlusProperties.class, DatabaseProperties.class})
 public class SmsManageDatabaseAutoConfiguration extends BaseDatabaseConfiguration

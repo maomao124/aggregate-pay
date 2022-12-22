@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import mao.sms_entity.dto.ConfigDTO;
 import mao.sms_entity.entity.ConfigSignatureEntity;
-import mao.sms_entity.mapper.ConfigSignatureMapper;
+import mao.sms_dao.mapper.ConfigSignatureMapper;
 import mao.sms_manage.service.ConfigSignatureService;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;

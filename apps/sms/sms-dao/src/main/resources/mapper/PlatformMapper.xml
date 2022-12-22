@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mao.sms_entity.mapper.BlackListMapper">
+<mapper namespace="mao.sms_dao.mapper.PlatformMapper">
 
-    <resultMap type="mao.sms_entity.entity.BlackListEntity" id="blackListMap">
+    <resultMap type="mao.sms_entity.entity.PlatformEntity" id="platformMap">
         <result property="id" column="id"/>
-        <result property="type" column="type"/>
-        <result property="content" column="content"/>
+        <result property="name" column="name"/>
+        <result property="accessKeyId" column="access_key_id"/>
+        <result property="accessKeySecret" column="access_key_secret"/>
+        <result property="ipAddr" column="ip_addr"/>
+        <result property="needAuth" column="need_auth"/>
+        <result property="isActive" column="is_active"/>
+        <result property="level" column="level"/>
         <result property="remark" column="remark"/>
         <result property="createTime" column="create_time"/>
         <result property="createUser" column="create_user"/>

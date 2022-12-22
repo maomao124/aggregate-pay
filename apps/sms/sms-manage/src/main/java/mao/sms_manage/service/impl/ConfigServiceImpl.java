@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import mao.sms_entity.dto.ConfigDTO;
 import mao.sms_entity.entity.ConfigEntity;
-import mao.sms_entity.mapper.ConfigMapper;
+import mao.sms_dao.mapper.ConfigMapper;
 import mao.sms_entity.model.ServerTopic;
 import mao.sms_manage.service.ConfigService;
 import mao.tools_databases.mybatis.conditions.Wraps;

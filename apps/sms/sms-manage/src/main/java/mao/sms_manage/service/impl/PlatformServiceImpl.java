@@ -3,7 +3,7 @@ package mao.sms_manage.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import mao.sms_entity.entity.PlatformEntity;
-import mao.sms_entity.mapper.PlatformMapper;
+import mao.sms_dao.mapper.PlatformMapper;
 import mao.sms_manage.service.PlatformService;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import org.springframework.stereotype.Service;

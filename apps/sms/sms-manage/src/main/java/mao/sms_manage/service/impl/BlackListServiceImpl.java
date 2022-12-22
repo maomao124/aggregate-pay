@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.sms_entity.entity.BlackListEntity;
-import mao.sms_entity.mapper.BlackListMapper;
+import mao.sms_dao.mapper.BlackListMapper;
 import mao.sms_manage.excel.BlackListExcelDTO;
 import mao.sms_manage.service.BlackListService;
 import mao.tools_core.base.R;
@@ -108,7 +108,7 @@ public class BlackListServiceImpl extends ServiceImpl<BlackListMapper, BlackList
         int fail = nullErrorMsg.size() + matchErrorMsg.size() + duplicateErrorMsg.size();
         log.debug("黑名单导入 入库成功:{} 条", (total - fail));
 
-        Map<String,Object> result = new HashMap<>();
+        Map<String, Object> result = new HashMap<>();
         //总数
         result.put("total", total);
         //成功的数量
