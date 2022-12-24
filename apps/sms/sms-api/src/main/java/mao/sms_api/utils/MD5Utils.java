@@ -122,7 +122,11 @@ public class MD5Utils
      */
     public static String getMD5toUpperCase(String strText)
     {
-        return SHA(strText).toUpperCase();
+        if (strText == null)
+        {
+            return null;
+        }
+        return Objects.requireNonNull(SHA(strText)).toUpperCase();
     }
 
     /**
@@ -133,6 +137,10 @@ public class MD5Utils
      */
     public static String getMD5toUpperCase(byte[] md5Bytes)
     {
+        if (md5Bytes == null || md5Bytes.length == 0)
+        {
+            return null;
+        }
         return Objects.requireNonNull(SHA(md5Bytes)).toUpperCase();
     }
 }

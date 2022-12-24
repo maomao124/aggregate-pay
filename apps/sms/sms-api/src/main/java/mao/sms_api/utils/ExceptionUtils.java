@@ -27,6 +27,10 @@ public class ExceptionUtils
      */
     public static String getErrorStackTrace(Exception ex)
     {
+        if (ex == null)
+        {
+            return null;
+        }
         StringWriter stringWriter = null;
         PrintWriter printWriter = null;
         try
@@ -60,7 +64,6 @@ public class ExceptionUtils
 
             }
         }
-
         return stringWriter.toString();
     }
 }

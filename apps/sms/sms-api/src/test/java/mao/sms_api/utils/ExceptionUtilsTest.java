@@ -1,6 +1,7 @@
 package mao.sms_api.utils;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -25,6 +26,19 @@ class ExceptionUtilsTest
                         + "\r\n" + "\tat com.diffblue.cover.sandbox.execution.TimedExecutor$TaskQueueRunner.run(SourceFile:66)\r\n"
                         + "\tat com.diffblue.cover.sandbox.execution.WorkerThread.run(SourceFile:207)\r\n",
                 ExceptionUtils.getErrorStackTrace(new Exception("foo")));
+        assertEquals("java.lang.Exception: foo\r\n"
+                        + "\tat sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)\r\n"
+                        + "\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)"
+                        + "\r\n" + "\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n"
+                        + "\tat com.diffblue.tir.a.f.a(SourceFile:75)\r\n" + "\tat com.diffblue.tir.a.a.c.a(SourceFile:599)\r\n"
+                        + "\tat com.diffblue.tir.a.a.c.a(SourceFile:531)\r\n" + "\tat com.diffblue.tir.a.d.b(SourceFile:425)\r\n"
+                        + "\tat com.diffblue.tir.a.d.a(SourceFile:77)\r\n" + "\tat com.diffblue.tir.d.c.a(SourceFile:25)\r\n"
+                        + "\tat com.diffblue.tir.a.e.a(SourceFile:221)\r\n" + "\tat com.diffblue.tir.a.e.b(SourceFile:85)\r\n"
+                        + "\tat com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture.executeTask(SourceFile:27)"
+                        + "\r\n" + "\tat com.diffblue.cover.sandbox.execution.TimedExecutor$TaskQueueRunner.run(SourceFile:66)\r\n"
+                        + "\tat com.diffblue.cover.sandbox.execution.WorkerThread.run(SourceFile:207)\r\n",
+                ExceptionUtils.getErrorStackTrace(new Exception("foo")));
+        assertNull(ExceptionUtils.getErrorStackTrace(null));
     }
 
     /**

@@ -15,6 +15,14 @@ package mao.sms_api.utils;
 
 public class SmsEncryptionUtils
 {
+    /**
+     * 编码
+     *
+     * @param timestamp       时间戳
+     * @param accessKeyId     访问密钥id
+     * @param accessKeySecret 访问密钥秘密
+     * @return {@link String}
+     */
     public static String encode(String timestamp, String accessKeyId, String accessKeySecret)
     {
         byte[] timestamps = timestamp.getBytes();
