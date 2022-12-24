@@ -221,3 +221,5 @@ Caused by: java.lang.IllegalStateException: RedisConnectionFactory is required
 
 2022-12-24 15:16:18.682  WARN 20960 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
 2022-12-24 15:16:18.683  WARN 20960 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-12-24 20:36:05.096  WARN 18156 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-12-24 20:36:05.098  WARN 18156 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
