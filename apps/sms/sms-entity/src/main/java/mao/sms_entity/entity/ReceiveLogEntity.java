@@ -92,6 +92,9 @@ public class ReceiveLogEntity extends BaseEntity
     @ApiModelProperty(value = "日志id")
     private String apiLogId;
 
+    /**
+     * 状态
+     */
     @ApiModelProperty("状态：0失败，1成功")
     private int status;
 
