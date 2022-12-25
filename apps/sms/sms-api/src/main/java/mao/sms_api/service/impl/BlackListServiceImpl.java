@@ -18,6 +18,7 @@ import javax.annotation.Resource;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -38,23 +39,16 @@ import java.util.stream.Collectors;
 public class BlackListServiceImpl extends ServiceImpl<BlackListMapper, BlackListEntity> implements BlackListService
 {
     @Resource
-    private RedisTemplate redisTemplate;
-
-    @Resource
     private RedisUtils redisUtils;
 
     @Override
     public List<String> listByType(String type)
     {
-        ValueOperations<String, List<String>> valueOperations = redisTemplate.opsForValue();
-        List<String> phones = valueOperations.get("Black_" + type);
-        if (CollectionUtils.isEmpty(phones))
+        return redisUtils.query("sms:List:listByType:", "sms:List:listByType:lock:", type, List.class, s ->
         {
             List<BlackListEntity> blackListEntities = baseMapper.selectList(Wraps.<BlackListEntity>lbQ()
                     .eq(BlackListEntity::getType, type));
-            phones = blackListEntities.stream().map(BlackListEntity::getContent).collect(Collectors.toList());
-            valueOperations.set("Black_" + type, phones, 60, TimeUnit.SECONDS);
-        }
-        return phones;
+            return blackListEntities.stream().map(BlackListEntity::getContent).collect(Collectors.toList());
+        }, 60L, TimeUnit.SECONDS, 30);
     }
 }

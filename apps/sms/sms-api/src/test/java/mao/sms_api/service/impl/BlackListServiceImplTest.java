@@ -11,6 +11,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.List;
+
 @SpringBootTest
 class BlackListServiceImplTest
 {
@@ -29,7 +31,8 @@ class BlackListServiceImplTest
         //   Attempt to initialize test context failed with
         //   See https://diff.blue/R026 to resolve this issue.
 
-        this.blackListServiceImpl.listByType("Type");
+        List<String> list = this.blackListServiceImpl.listByType("Type");
+        System.out.println(list);
     }
 }
 
