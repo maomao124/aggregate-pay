@@ -52,7 +52,7 @@ public class SmsSendServiceImpl implements SmsSendService
 
 
     @Resource
-    private StringRedisTemplate redisTemplate;
+    private StringRedisTemplate stringRedisTemplate;
 
     /**
      * 平台服务
@@ -398,12 +398,12 @@ public class SmsSendServiceImpl implements SmsSendService
                 if (templateEntity.getType() == TemplateType.VERIFICATION.getCode())
                 {
                     //验证码类型的短信，保存到TOPIC_HIGH_SMS队列
-                    redisTemplate.opsForList().leftPush("TOPIC_HIGH_SMS", smsJson);
+                    stringRedisTemplate.opsForList().leftPush("TOPIC_HIGH_SMS", smsJson);
                 }
                 else
                 {
                     //其他类型的短信，保存到TOPIC_GENERAL_SMS队列
-                    redisTemplate.opsForList().leftPush("TOPIC_GENERAL_SMS", smsJson);
+                    stringRedisTemplate.opsForList().leftPush("TOPIC_GENERAL_SMS", smsJson);
                 }
             }
             //设置状态为成功
