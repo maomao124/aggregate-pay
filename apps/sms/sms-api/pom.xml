@@ -59,6 +59,10 @@
             <groupId>mao</groupId>
             <artifactId>tools-dozer</artifactId>
         </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-j2cache</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -125,10 +129,10 @@
         </dependency>
 
         <!--redis-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
+<!--        </dependency>-->
 
 
         <dependency>

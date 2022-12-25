@@ -7,6 +7,7 @@ import mao.sms_api.service.BlackListService;
 import mao.sms_dao.mapper.BlackListMapper;
 import mao.sms_entity.entity.BlackListEntity;
 import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_j2cache.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -38,6 +39,9 @@ public class BlackListServiceImpl extends ServiceImpl<BlackListMapper, BlackList
 {
     @Resource
     private RedisTemplate redisTemplate;
+
+    @Resource
+    private RedisUtils redisUtils;
 
     @Override
     public List<String> listByType(String type)

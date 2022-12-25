@@ -12,13 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @SpringBootTest
-@ContextConfiguration(classes = {BlackListServiceImpl.class, RedisTemplate.class})
-@ExtendWith(SpringExtension.class)
 class BlackListServiceImplTest
 {
-    @MockBean
-    private BlackListMapper blackListMapper;
-
     @Autowired
     private BlackListServiceImpl blackListServiceImpl;
 

@@ -2,6 +2,7 @@ package mao.sms_api.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import mao.sms_api.service.PlatformService;
 import mao.sms_dao.mapper.PlatformMapper;
 import mao.sms_entity.entity.PlatformEntity;
@@ -10,6 +11,7 @@ import mao.tools_j2cache.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
@@ -28,6 +30,8 @@ import java.util.function.Function;
  * Description(描述)： 平台
  */
 
+@Slf4j
+@Service
 public class PlatformServiceImpl extends ServiceImpl<PlatformMapper, PlatformEntity> implements PlatformService
 {
     @Resource
@@ -36,7 +40,7 @@ public class PlatformServiceImpl extends ServiceImpl<PlatformMapper, PlatformEnt
     @Override
     public PlatformEntity getByAccessKeyId(String accessKeyId)
     {
-        return redisUtils.query("sms:getByAccessKeyId:", "sms:getByAccessKeyId:lock:",
+        return redisUtils.query("sms:PlatformEntity:getByAccessKeyId:", "sms:PlatformEntity:getByAccessKeyId:lock:",
                 accessKeyId, PlatformEntity.class, new Function<String, PlatformEntity>()
         {
             @Override
