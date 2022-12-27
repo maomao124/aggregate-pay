@@ -40,33 +40,30 @@ public class R<T>
     /**
      * 调用是否成功标识，0：成功，-1:系统繁忙，此时请开发者稍候再试 详情见[ExceptionCode]
      */
-    @ApiModelProperty(value = "响应编码:0/200-请求处理成功")
     private int code;
 
     /**
      * 调用结果
      */
-    @ApiModelProperty(value = "响应数据")
     private T data;
 
     /**
      * 结果消息，如果调用成功，消息通常为空T
      */
-    @ApiModelProperty(value = "提示消息")
     private String msg = "ok";
 
-    @ApiModelProperty(value = "请求路径")
+    /**
+     * 路径
+     */
     private String path;
     /**
      * 附加数据
      */
-    @ApiModelProperty(value = "附加数据")
     private Map<String, Object> extra;
 
     /**
      * 响应时间
      */
-    @ApiModelProperty(value = "响应时间戳")
     private long timestamp = System.currentTimeMillis();
 
     private R()
@@ -75,7 +72,7 @@ public class R<T>
     }
 
     /**
-     * 构造方法
+     * r
      *
      * @param code 代码
      * @param data 数据
@@ -112,11 +109,6 @@ public class R<T>
         return new R<>(SUCCESS_CODE, data, "ok");
     }
 
-    /**
-     * 成功
-     *
-     * @return {@link R}<{@link Boolean}>
-     */
     public static R<Boolean> success()
     {
         return new R<>(SUCCESS_CODE, true, "ok");
@@ -135,9 +127,10 @@ public class R<T>
     }
 
     /**
+     * 失败
      * 请求失败消息
      *
-     * @param code 错误代码
+     * @param code 代码
      * @param msg  消息
      * @return {@link R}<{@link E}>
      */
@@ -170,75 +163,6 @@ public class R<T>
         return new R<>(OPERATION_EX_CODE, null, String.format(message, args));
     }
 
-    /**
-     * 失败
-     *
-     * @param exceptionCode 异常代码
-     * @return {@link R}<{@link E}>
-     */
-    public static <E> R<E> fail(BaseExceptionCode exceptionCode)
-    {
-        return validFail(exceptionCode);
-    }
-
-    /**
-     * 失败
-     *
-     * @param exception 业务异常
-     * @return {@link R}<{@link E}>
-     */
-    public static <E> R<E> fail(BizException exception)
-    {
-        if (exception == null)
-        {
-            return fail(DEF_ERROR_MESSAGE);
-        }
-        return new R<>(exception.getCode(), null, exception.getMessage());
-    }
-
-    /**
-     * 请求失败消息，根据异常类型，获取不同的提供消息
-     *
-     * @param throwable 异常
-     * @return RPC调用结果
-     */
-    public static <E> R<E> fail(Throwable throwable)
-    {
-        return fail(FAIL_CODE, throwable != null ? throwable.getMessage() : DEF_ERROR_MESSAGE);
-    }
-
-    public static <E> R<E> validFail(String msg)
-    {
-        return new R<>(VALID_EX_CODE, null, (msg == null || msg.isEmpty()) ? DEF_ERROR_MESSAGE : msg);
-    }
-
-    public static <E> R<E> validFail(String msg, Object... args)
-    {
-        String message = (msg == null || msg.isEmpty()) ? DEF_ERROR_MESSAGE : msg;
-        return new R<>(VALID_EX_CODE, null, String.format(message, args));
-    }
-
-    public static <E> R<E> validFail(BaseExceptionCode exceptionCode)
-    {
-        return new R<>(exceptionCode.getCode(), null,
-                (exceptionCode.getMsg() == null || exceptionCode.getMsg().isEmpty()) ? DEF_ERROR_MESSAGE : exceptionCode.getMsg());
-    }
-
-    public static <E> R<E> timeout()
-    {
-        return fail(TIMEOUT_CODE, HYSTRIX_ERROR_MESSAGE);
-    }
-
-
-    public R<T> put(String key, Object value)
-    {
-        if (this.extra == null)
-        {
-            this.extra = Maps.newHashMap();
-        }
-        this.extra.put(key, value);
-        return this;
-    }
 
     /**
      * 逻辑处理是否成功
@@ -251,6 +175,7 @@ public class R<T>
     }
 
     /**
+     * 得到是错误
      * 逻辑处理是否失败
      *
      * @return {@link Boolean}
