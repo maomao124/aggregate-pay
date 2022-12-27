@@ -3,6 +3,7 @@ package mao.sms_sdk.config;
 import lombok.extern.slf4j.Slf4j;
 import mao.sms_sdk.service.SmsSendService;
 import mao.sms_sdk.service.impl.SmsSendServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,14 +34,14 @@ public class SmsConfig
      * @return {@link SmsSendService}
      */
     @Bean
-    public SmsSendService smsSendService()
+    public SmsSendService smsSendService(@Autowired SmsConfigurationProperties smsConfigurationProperties)
     {
-        return new SmsSendServiceImpl();
+        return new SmsSendServiceImpl(smsConfigurationProperties);
     }
 
     @PostConstruct
     public void init()
     {
-        log.info("初始化 SmsConfig");
+        log.info("初始化 SmsConfig ，短信发送接口名为SmsSendService");
     }
 }

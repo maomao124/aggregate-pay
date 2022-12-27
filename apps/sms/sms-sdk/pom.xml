@@ -69,6 +69,17 @@
             <artifactId>httpclient</artifactId>
         </dependency>
 
+        <!--spring boot starter开发依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+
 
     </dependencies>
 
