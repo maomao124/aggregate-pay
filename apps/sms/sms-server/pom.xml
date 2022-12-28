@@ -43,6 +43,10 @@
             <groupId>mao</groupId>
             <artifactId>tools-databases</artifactId>
         </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-j2cache</artifactId>
+        </dependency>
 
 
         <dependency>

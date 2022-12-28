@@ -34,10 +34,10 @@ public interface RedisLockService
     /**
      * 加锁
      *
-     * @param key  锁的key
-     * @param maximumWaitTime 获取锁的最大等待时间
+     * @param key                  锁的key
+     * @param maximumWaitTime      获取锁的最大等待时间
      * @param automaticReleaseTime 锁自动释放时间
-     * @param timeUnit 时间单位
+     * @param timeUnit             时间单位
      * @return {@link LockInfo}
      */
     LockInfo tryLock(String key, long maximumWaitTime, long automaticReleaseTime, TimeUnit timeUnit);
