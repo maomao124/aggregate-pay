@@ -1,15 +1,15 @@
-package mao.tools_j2cache.utils;
+package mao.tools_redis_cache.utils;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import mao.tools_j2cache.entity.RedisData;
+import mao.tools_redis_cache.entity.LockInfo;
+import mao.tools_redis_cache.entity.RedisData;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
-
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -439,7 +439,7 @@ public class RedisUtils
         if (lockInfo.getLock().isHeldByCurrentThread())
         {
             //log.debug("尝试释放分布式锁");
-            lockInfo.lock.unlock();
+            lockInfo.getLock().unlock();
         }
     }
 
@@ -459,58 +459,5 @@ public class RedisUtils
             min = max;
         }
         return min + (int) (Math.random() * (max - min + 1));
-    }
-
-    private static class LockInfo
-    {
-        /**
-         * 获取锁是否成功
-         */
-        private boolean isSuccess;
-
-        /**
-         * 锁对象
-         */
-        private RLock lock;
-
-        /**
-         * Is success boolean.
-         *
-         * @return the boolean
-         */
-        public boolean isSuccess()
-        {
-            return isSuccess;
-        }
-
-        /**
-         * Sets success.
-         *
-         * @param success the success
-         */
-        public void setSuccess(boolean success)
-        {
-            isSuccess = success;
-        }
-
-        /**
-         * Gets lock.
-         *
-         * @return the lock
-         */
-        public RLock getLock()
-        {
-            return lock;
-        }
-
-        /**
-         * Sets lock.
-         *
-         * @param lock the lock
-         */
-        public void setLock(RLock lock)
-        {
-            this.lock = lock;
-        }
     }
 }

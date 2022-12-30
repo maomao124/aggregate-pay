@@ -1,4 +1,4 @@
-package mao.tools_j2cache.entity;
+package mao.tools_redis_cache.entity;
 
 import java.time.LocalDateTime;
 

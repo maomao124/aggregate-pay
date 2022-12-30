@@ -1,4 +1,4 @@
-package mao.tools_j2cache.config;
+package mao.tools_redis_cache.config;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;

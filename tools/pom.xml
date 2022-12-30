@@ -29,6 +29,7 @@
         <module>tools-jwt</module>
         <module>tools-user</module>
         <module>tools-databases</module>
+        <module>tools-redis-cache</module>
     </modules>
 
 
