@@ -85,6 +85,11 @@
                 <artifactId>tools-xss</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>tools-redis-cache</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -45,7 +45,7 @@
         </dependency>
         <dependency>
             <groupId>mao</groupId>
-            <artifactId>tools-j2cache</artifactId>
+            <artifactId>tools-redis-cache</artifactId>
         </dependency>
 
 
@@ -144,6 +144,21 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>

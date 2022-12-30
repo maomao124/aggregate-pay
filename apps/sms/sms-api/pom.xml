@@ -59,9 +59,13 @@
             <groupId>mao</groupId>
             <artifactId>tools-dozer</artifactId>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>mao</groupId>-->
+<!--            <artifactId>tools-j2cache</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>mao</groupId>
-            <artifactId>tools-j2cache</artifactId>
+            <artifactId>tools-redis-cache</artifactId>
         </dependency>
 
         <dependency>

@@ -27,6 +27,7 @@
         <module name="tools-log" />
         <module name="gateway" />
         <module name="tools-swagger2" />
+        <module name="tools-redis-cache" />
       </profile>
     </annotationProcessing>
   </component>
@@ -48,6 +49,7 @@
       <module name="tools-j2cache" options="-parameters" />
       <module name="tools-jwt" options="-parameters" />
       <module name="tools-log" options="-parameters" />
+      <module name="tools-redis-cache" options="-parameters" />
       <module name="tools-swagger2" options="-parameters" />
       <module name="tools-user" options="-parameters" />
       <module name="tools-validator" options="-parameters" />

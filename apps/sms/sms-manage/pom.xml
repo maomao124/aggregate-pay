@@ -141,16 +141,7 @@
             <groupId>mao</groupId>
             <artifactId>sms-entity</artifactId>
         </dependency>
-        <dependency>
-            <groupId>mao</groupId>
-            <artifactId>sms-sdk</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba.nacos</groupId>
-                    <artifactId>nacos-common</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
         <dependency>
             <groupId>mao</groupId>
             <artifactId>sms-dao</artifactId>
