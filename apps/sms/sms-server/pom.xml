@@ -136,6 +136,10 @@
             <groupId>mao</groupId>
             <artifactId>sms-entity</artifactId>
         </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>sms-dao</artifactId>
+        </dependency>
 
     </dependencies>
 
