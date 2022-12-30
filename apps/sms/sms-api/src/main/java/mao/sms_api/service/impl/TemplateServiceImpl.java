@@ -7,8 +7,7 @@ import mao.sms_api.service.TemplateService;
 import mao.sms_dao.mapper.TemplateMapper;
 import mao.sms_entity.entity.TemplateEntity;
 import mao.tools_databases.mybatis.conditions.Wraps;
-import mao.tools_j2cache.utils.RedisUtils;
-import org.springframework.data.redis.core.ValueOperations;
+import mao.tools_redis_cache.utils.RedisUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

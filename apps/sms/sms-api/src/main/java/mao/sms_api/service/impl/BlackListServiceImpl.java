@@ -7,10 +7,7 @@ import mao.sms_api.service.BlackListService;
 import mao.sms_dao.mapper.BlackListMapper;
 import mao.sms_entity.entity.BlackListEntity;
 import mao.tools_databases.mybatis.conditions.Wraps;
-import mao.tools_j2cache.utils.RedisUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
+import mao.tools_redis_cache.utils.RedisUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 

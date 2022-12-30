@@ -8,7 +8,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>tools-redis-cache</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>tools-redis-cache</name>
     <description>分布式缓存以及redis实现的分布式锁模块</description>
 

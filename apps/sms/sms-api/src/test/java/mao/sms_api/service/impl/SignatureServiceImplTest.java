@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 
 import mao.sms_dao.mapper.SignatureMapper;
 import mao.sms_entity.entity.SignatureEntity;
-import mao.tools_j2cache.utils.RedisUtils;
+
+import mao.tools_redis_cache.utils.RedisUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
