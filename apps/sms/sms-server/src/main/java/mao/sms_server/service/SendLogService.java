@@ -13,7 +13,7 @@ import mao.sms_entity.entity.SendLogEntity;
  * Date(创建日期)： 2022/12/30
  * Time(创建时间)： 19:57
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 日志
  */
 
 public interface SendLogService extends IService<SendLogEntity>
