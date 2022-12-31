@@ -47,6 +47,10 @@
             <groupId>mao</groupId>
             <artifactId>tools-redis-cache</artifactId>
         </dependency>
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-dozer</artifactId>
+        </dependency>
 
 
         <dependency>

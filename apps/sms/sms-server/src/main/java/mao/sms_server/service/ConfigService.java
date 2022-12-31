@@ -22,14 +22,17 @@ import java.util.List;
 public interface ConfigService extends IService<ConfigEntity>
 {
     /**
-     * 通道配置信息列表
+     * 获取Redis中的可用通道，如果redis中没有，从数据库中查找
      *
      * @return {@link List}<{@link ConfigEntity}>
      */
     List<ConfigEntity> listForConnect();
 
     /**
-     * 新通道配置信息列表
+     * 通道选举，选举策略：
+     * 1、剔除掉第一级通道
+     * 2、查询最近一小时内通道发送短信数量，按数量排序通道
+     * 3、如果最近一小时没有发送短信，按最后发送成功排序
      *
      * @return {@link List}<{@link ConfigEntity}>
      */
