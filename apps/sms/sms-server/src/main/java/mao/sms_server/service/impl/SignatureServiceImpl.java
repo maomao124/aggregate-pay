@@ -59,7 +59,7 @@ public class SignatureServiceImpl extends ServiceImpl<SignatureMapper, Signature
     public String getConfigCodeByCode(String id, String signature)
     {
         String redisId = signature + "_" + id + "_code";
-        return redisUtils.query("sms:String:getConfigCodeByCode:", "sms:String:getConfigCodeByCode:lock",
+        String result = redisUtils.query("sms:String:getConfigCodeByCode:", "sms:String:getConfigCodeByCode:lock",
                 redisId, String.class, new Function<String, String>()
                 {
                     @Override
@@ -67,7 +67,10 @@ public class SignatureServiceImpl extends ServiceImpl<SignatureMapper, Signature
                     {
                         SignatureEntity signatureEntity = baseMapper.selectOne(Wraps.<SignatureEntity>lbQ()
                                 .eq(SignatureEntity::getCode, signature));
-
+                        if (signatureEntity == null)
+                        {
+                            return "";
+                        }
                         ConfigSignatureEntity configSignatureEntity = configSignatureMapper.selectOne(Wraps.<ConfigSignatureEntity>lbQ()
                                 .eq(ConfigSignatureEntity::getConfigId, id)
                                 .eq(ConfigSignatureEntity::getSignatureId, signatureEntity.getId()));
@@ -75,5 +78,10 @@ public class SignatureServiceImpl extends ServiceImpl<SignatureMapper, Signature
                         return configSignatureEntity != null ? configSignatureEntity.getConfigSignatureCode() : "";
                     }
                 }, 60L, TimeUnit.SECONDS, 30);
+        if (result == null)
+        {
+            return "";
+        }
+        return result;
     }
 }
