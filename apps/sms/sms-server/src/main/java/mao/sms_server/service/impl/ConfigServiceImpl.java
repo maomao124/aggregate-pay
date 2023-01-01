@@ -11,6 +11,7 @@ import mao.sms_entity.entity.SendLogEntity;
 import mao.sms_server.service.ConfigService;
 import mao.tools_core.utils.DateUtils;
 import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_redis_cache.entity.RedisData;
 import mao.tools_redis_cache.utils.RedisUtils;
 import mao.toolsdozer.utils.DozerUtils;
 import org.springframework.beans.BeanUtils;
@@ -61,16 +62,20 @@ public class ConfigServiceImpl extends ServiceImpl<ConfigMapper, ConfigEntity> i
     public List<ConfigEntity> listForConnect()
     {
         //获取Redis的通道列表
-        return redisUtils.query("sms:List_ConfigEntity:listForConnect:", "sms:List_ConfigEntity:listForConnect:lock",
-                "-1", List.class, s ->
+        RedisData data = redisUtils.query("sms:List_ConfigEntity:listForConnect:", "sms:List_ConfigEntity:listForConnect:lock",
+                "-1", RedisData.class, s ->
                 {
                     LambdaQueryWrapper<ConfigEntity> wrapper = new LambdaQueryWrapper<>();
                     wrapper.eq(ConfigEntity::getChannelType, 1);
                     wrapper.eq(ConfigEntity::getIsActive, 1);
                     wrapper.eq(ConfigEntity::getIsEnable, 1);
                     wrapper.orderByAsc(ConfigEntity::getLevel);
-                    return list(wrapper);
+                    List<ConfigEntity> configEntityList = list(wrapper);
+                    RedisData redisData = new RedisData();
+                    redisData.setData(configEntityList);
+                    return redisData;
                 }, 60L, TimeUnit.SECONDS, 30);
+        return (List<ConfigEntity>) data.getData();
     }
 
     @Override
@@ -78,6 +83,12 @@ public class ConfigServiceImpl extends ServiceImpl<ConfigMapper, ConfigEntity> i
     {
         //获取Redis中的可用通道
         List<ConfigEntity> configEntityList = this.listForConnect();
+        //判断是否需要继续进行下去
+        if (configEntityList.size() == 0)
+        {
+            log.debug("集合为空");
+            return configEntityList;
+        }
         //降级第一级别通道
         Iterator<ConfigEntity> configEntityIterator = configEntityList.iterator();
         ConfigEntity firstConfigEntity = null;
