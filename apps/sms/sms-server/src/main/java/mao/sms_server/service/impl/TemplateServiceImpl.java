@@ -59,7 +59,7 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper, TemplateEnt
     public String getConfigCodeByCode(String id, String template)
     {
         String redisId = template + "_" + id + "_code";
-        return redisUtils.query("sms:String:getConfigCodeByCode2:", "sms:String:getConfigCodeByCode2:lock",
+        String result = redisUtils.query("sms:String:getConfigCodeByCode2:", "sms:String:getConfigCodeByCode2:lock",
                 redisId, String.class, new Function<String, String>()
                 {
                     @Override
@@ -68,6 +68,10 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper, TemplateEnt
                         TemplateEntity signatureEntity = baseMapper.selectOne(Wraps.<TemplateEntity>lbQ()
                                 .eq(TemplateEntity::getCode, template));
 
+                        if (signatureEntity == null)
+                        {
+                            return "";
+                        }
                         ConfigTemplateEntity configSignatureEntity = configTemplateMapper.selectOne(Wraps.<ConfigTemplateEntity>lbQ()
                                 .eq(ConfigTemplateEntity::getConfigId, id)
                                 .eq(ConfigTemplateEntity::getTemplateId, signatureEntity.getId()));
@@ -75,5 +79,10 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper, TemplateEnt
                         return configSignatureEntity != null ? configSignatureEntity.getConfigTemplateCode() : "";
                     }
                 }, 60L, TimeUnit.SECONDS, 30);
+        if (result == null)
+        {
+            return "";
+        }
+        return result;
     }
 }
