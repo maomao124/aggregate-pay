@@ -152,7 +152,10 @@ public class SmsConnectLoader implements CommandLineRunner
         log.info("将初始化的通道加载到集合中：{}", CONNECT_LIST);
 
         //解锁
-        redisLockService.unlock(lockInfo);
+        if (lockInfo != null)
+        {
+            redisLockService.unlock(lockInfo);
+        }
 
     }
 

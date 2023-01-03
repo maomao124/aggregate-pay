@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -56,7 +55,7 @@ public class ServerRegister implements CommandLineRunner
         SERVER_ID = UUID.randomUUID().toString();
         log.info("生成当前服务实例id:" + SERVER_ID);
 
-        stringRedisTemplate.opsForHash().put("SERVER_ID_HASH", SERVER_ID, System.currentTimeMillis());
+        stringRedisTemplate.opsForHash().put("SERVER_ID_HASH", SERVER_ID, String.valueOf(System.currentTimeMillis()));
     }
 
     /**
@@ -68,7 +67,7 @@ public class ServerRegister implements CommandLineRunner
     {
         //服务注册器，每三分钟报告一次，并传入当前时间戳
         log.info("定时上报，服务id：{}，时间戳：{}", SERVER_ID, System.currentTimeMillis());
-        stringRedisTemplate.opsForHash().put("SERVER_ID_HASH", SERVER_ID, System.currentTimeMillis());
+        stringRedisTemplate.opsForHash().put("SERVER_ID_HASH", SERVER_ID, String.valueOf(System.currentTimeMillis()));
     }
 
     /**
@@ -89,7 +88,8 @@ public class ServerRegister implements CommandLineRunner
         long current = System.currentTimeMillis();
         List<String> removeKeys = new ArrayList<>();
         map.forEach((key, value) ->
-        {//key为服务实例id，value为上报的系统时间戳
+        {
+            //key为服务实例id，value为上报的系统时间戳
             long parseLong = Long.parseLong(value.toString());
             if (current - parseLong > (1000 * 60 * 5))
             {
