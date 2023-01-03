@@ -1,13 +1,18 @@
 package mao.sms_server.config;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.sms_entity.exception.SmsException;
 import mao.tools_common.handler.DefaultGlobalExceptionHandler;
+import mao.tools_core.base.R;
+import mao.tools_core.utils.StrPool;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Project name(项目名称)：sms-backend
@@ -27,6 +32,20 @@ import javax.annotation.PostConstruct;
 @RestControllerAdvice(annotations = {RestController.class, Controller.class})
 public class ExceptionConfiguration extends DefaultGlobalExceptionHandler
 {
+    /**
+     * 短信平台异常
+     *
+     * @param ex      SmsException
+     * @param request HttpServletRequest
+     * @return {@link R}<{@link String}>
+     */
+    @ExceptionHandler(SmsException.class)
+    public R<String> smsException(SmsException ex, HttpServletRequest request)
+    {
+        log.warn("SmsException:", ex);
+        return R.result(ex.getCode(), StrPool.EMPTY, ex.getMessage()).setPath(request.getRequestURI());
+    }
+
     @PostConstruct
     public void init()
     {
