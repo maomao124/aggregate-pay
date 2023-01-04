@@ -1,0 +1,48 @@
+stages:
+  - sonar
+  - build
+
+sonar_analyze:
+  stage: sonar
+  script:
+    - |
+      sonar-scanner -X \
+      -Dsonar.projectKey=gitlab:$CI_COMMIT_REF_NAME:$CI_PROJECT_NAME \
+      -Dsonar.projectName=$CI_PROJECT_NAME \
+      -Dsonar.projectVersion=1.0.$CI_PIPELINE_ID \
+      -Dsonar.sources=src \
+      -Dsonar.sourceEncoding=UTF-8
+  tags:
+    - centos-aliyun-158
+  only:
+    - master
+
+build-master:
+  stage: build
+  script:
+    - pwd
+    # - yarn
+    # - yarn build
+    - cnpm i
+    - npm run build
+    - rm -rf /home/cicd/docker-data/nginx/html/sms.itheima.net
+    - cp -rf ./dist /home/cicd/docker-data/nginx/html/sms.itheima.net
+    # - python /home/tools/cdn.py Action=PushObjectCache ObjectPath=https://pip.itcast.cn/
+  tags:
+    - centos-aliyun-158
+  only:
+    - master
+# build-develop:
+#   stage: build
+#   script:
+#     - pwd
+#     # - yarn
+#     # - yarn build
+#     - cnpm i
+#     - npm run build
+#     - rm -rf /home/cicd/docker-data/nginx/html/project-dev.itheima.net
+#     - cp -rf ./dist /home/cicd/docker-data/nginx/html/project-dev.itheima.net
+#   tags:
+#     - centos-aliyun-158
+#   only:
+#     - develop

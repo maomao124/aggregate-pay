@@ -1,0 +1,119 @@
+// 有关el-input样式覆盖
+// 短信服务-签名管理（sign-message）
+.el-input--small .el-input__inner {
+  height: 36px;
+  line-height: 36px;
+}
+.el-form-item--small .el-form-item__content, .el-form-item--small .el-form-item__label {
+  line-height: 36px;
+}
+.button {
+  width: 102px;
+  height: 36px;
+  background: #0bb290;
+  border-radius: 6px;
+}
+.el-button--small, .el-button--small.is-round {
+  // padding: 10px 28px;
+}
+.el-button--primary {
+  color: #FFF;
+  background-color: #0bb290!important;
+  border-color: #0bb290!important;
+}
+.el-button--mini, .el-button--small {
+  font-size: 14px!important;
+  border-radius: 6px;
+}
+
+.el-button--primary:hover {
+  background-color: #0bb290;
+  // border-color: #0bb290;
+}
+
+.el-message-box__btns {
+  padding: 5px 15px 0;
+  text-align: center!important;
+}
+
+
+.el-input__inner:focus {
+  border-color: rgba(11,178,144,1);
+}
+.el-textarea__inner:focus {
+  border-color: rgba(11,178,144,1);
+}
+
+.el-checkbox__input:focus {
+  border-color: rgba(11,178,144,1);
+}
+
+
+
+// .search {
+//   // 朴素按钮样式迭代
+//   // hover
+//   /deep/ .el-button:last-child:hover {
+//     color: rgba(11,178,144,1);
+//     // border-color: rgba(11,178,144,1);
+//   }
+//   /deep/ .el-button:last-child:focus {
+//     color: rgba(11,178,144,1);
+//     // border-color: rgba(11,178,144,1);
+//   }
+// }
+.list {
+  .el-button--default {
+    background: #ffffff;
+    border: 1px solid #1f9f85;
+    border-radius: 4px;
+    color: rgba(31,159,133,1);
+  }
+  /deep/ .el-button:last-child:hover {
+    color: rgba(11,178,144,1);
+    border-color: rgba(11,178,144,1);
+  }
+  /deep/ .el-button:last-child:focus {
+    color: rgba(11,178,144,1);
+    border-color: rgba(11,178,144,1);
+  }
+}
+
+.upload-btn {
+  /deep/ .el-button:last-child:hover {
+    color: #fff!important;
+    border-color: rgba(11,178,144,1);
+  }
+  /deep/ .el-button:last-child:focus {
+    color: #fff!important;
+    // border-color: rgba(11,178,144,1);
+  }
+}
+
+// 更改时间选择框颜色
+// .el-date-table td.selected span {
+//   background-color:  #0bb290;
+// }
+.el-date-table td.end-date span, .el-date-table td.start-date span {
+  background-color:#0bb290;
+}
+.el-date-table td span:hover {
+  color: #0bb290;
+}
+.el-date-table td span:focus {
+  color: #0bb290;
+}
+.el-date-table td.today span {
+  color: #0bb290;
+}
+
+// 下拉框样式修改
+.el-select-dropdown__item.selected {
+  color: rgba(11,178,144,1)!important;
+}
+
+
+// 信息盒子
+.el-message-box {
+  border-radius: 10px!important;
+}
