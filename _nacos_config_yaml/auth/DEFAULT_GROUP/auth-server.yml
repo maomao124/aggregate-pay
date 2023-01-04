@@ -1,4 +1,5 @@
 # 在这里配置 权限服务 所有环境都能使用的配置
+
 mysql:
   database: authority
     

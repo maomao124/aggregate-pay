@@ -59,7 +59,7 @@ spring:
 
 mybatis-plus:
   mapper-locations:
-    - classpath*:mapper/*.xml
+    - classpath*:mapper_**/**/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: mao
   global-config:
