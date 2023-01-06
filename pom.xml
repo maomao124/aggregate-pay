@@ -5,10 +5,10 @@
 
 
     <groupId>mao</groupId>
-    <artifactId>sms-backend</artifactId>
+    <artifactId>aggregate-pay</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>sms-backend</name>
-    <description>管理jar版本和仓库</description>
+    <name>aggregate-pay</name>
+    <description>聚合支付-管理jar版本和仓库</description>
     <packaging>pom</packaging>
 
 
