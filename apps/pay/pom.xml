@@ -20,7 +20,7 @@
     </properties>
 
     <modules>
-
+        <module>aggregate-pay-common</module>
     </modules>
 
     <dependencyManagement>

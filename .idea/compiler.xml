@@ -13,6 +13,7 @@
         <module name="tools-xss" />
         <module name="sms-entity" />
         <module name="sms-dao" />
+        <module name="aggregate-pay-common" />
         <module name="tools-core" />
         <module name="tools-j2cache" />
         <module name="tools-databases" />
@@ -33,6 +34,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aggregate-pay-common" options="-parameters" />
       <module name="auth-entity" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
