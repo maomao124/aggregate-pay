@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>aggregate-pay-common</artifactId>
-    <name>aggregate-pay-common</name>
+    <name>${project.artifactId}</name>
     <description>聚合支付系统-公共模块</description>
 
     <properties>
