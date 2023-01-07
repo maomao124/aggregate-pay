@@ -20,6 +20,7 @@
         <module>auth</module>
         <module>gateway</module>
         <module>sms</module>
+        <module>pay</module>
     </modules>
 
     <dependencyManagement>

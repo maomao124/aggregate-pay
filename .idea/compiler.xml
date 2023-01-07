@@ -36,6 +36,7 @@
       <module name="auth-entity" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="pay" options="-parameters" />
       <module name="sms-api" options="-parameters" />
       <module name="sms-dao" options="-parameters" />
       <module name="sms-entity" options="-parameters" />
