@@ -21,10 +21,33 @@
 
     <modules>
         <module>aggregate-pay-common</module>
+        <module>aggregate-pay-merchant</module>
+        <module>aggregate-pay-merchant-application</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-common</artifactId>
+                <version>${project.artifactId}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-merchant-application</artifactId>
+                <version>${project.artifactId}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-merchant-api</artifactId>
+                <version>${project.artifactId}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-merchant-service</artifactId>
+                <version>${project.artifactId}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

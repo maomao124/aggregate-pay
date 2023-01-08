@@ -28,6 +28,7 @@
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-merchant-application/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-api/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/pom.xml" />
       </list>
     </option>
   </component>

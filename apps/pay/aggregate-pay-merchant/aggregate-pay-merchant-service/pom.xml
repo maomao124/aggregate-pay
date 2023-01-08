@@ -3,20 +3,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>aggregate-pay-merchant</artifactId>
+        <groupId>mao</groupId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>mao</groupId>
+
     <artifactId>aggregate-pay-merchant-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>aggregate-pay-merchant-service</name>
-    <description>aggregate-pay-merchant-service</description>
+    <name>${project.artifactId}</name>
+    <description>${project.artifactId}</description>
+
     <properties>
-        <java.version>17</java.version>
+
     </properties>
+
     <dependencies>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>aggregate-pay-merchant-api</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -27,6 +33,73 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- nacos 客户端依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!--Nacos配置管理客户端依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!--dubbo-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- 对象池 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-dozer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-swagger2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-databases</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-log</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

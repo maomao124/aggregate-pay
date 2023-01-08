@@ -3,39 +3,34 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>aggregate-pay-merchant</artifactId>
+        <groupId>mao</groupId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>mao</groupId>
+
     <artifactId>aggregate-pay-merchant-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>aggregate-pay-merchant-api</name>
-    <description>aggregate-pay-merchant-api</description>
+    <name>${project.artifactId}</name>
+    <description>商户服务API</description>
     <properties>
-        <java.version>17</java.version>
+
     </properties>
+
     <dependencies>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>mao</groupId>
+            <artifactId>aggregate-pay-common</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.9</version>
+            <scope>compile</scope>
         </dependency>
+
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+
 
 </project>
