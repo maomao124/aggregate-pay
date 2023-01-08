@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/apps/gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-merchant-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/sms/sms-dao/src/main/java" charset="UTF-8" />

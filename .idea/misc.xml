@@ -25,6 +25,9 @@
         <option value="$PROJECT_DIR$/apps/sms/sms-sdk/pom.xml" />
         <option value="$PROJECT_DIR$/apps/sms/sms-dao/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-common/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-merchant-application/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-api/pom.xml" />
       </list>
     </option>
   </component>
