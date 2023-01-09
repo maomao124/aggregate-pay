@@ -33,7 +33,7 @@ class MerchantServiceImplTest
     @Test
     void getMerchantById()
     {
-        MerchantDTO merchantDTO = merchantService.getMerchantById(34L);
+        MerchantDTO merchantDTO = merchantService.getMerchantById(1L);
         System.out.println(merchantDTO);
     }
 }
