@@ -1,0 +1,301 @@
+2023-01-09 14:41:19.215  WARN 17280 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-service] & group[DEFAULT_GROUP]
+2023-01-09 14:41:19.235  INFO 17280 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-09 14:41:19.306  INFO 17280 --- [main] m.a.mapper.AppMapperTest                 : The following profiles are active: dev
+2023-01-09 14:41:20.412  WARN 17280 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-09 14:41:20.553  INFO 17280 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b91d4442-2750-3911-bf04-1fb225dffc6e
+2023-01-09 14:41:20.807  INFO 17280 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:41:22.434  INFO 17280 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-09 14:41:22.435  INFO 17280 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-09 14:41:22.436  INFO 17280 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-09 14:41:22.491  INFO 17280 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-09 14:41:23.427  INFO 17280 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-09 14:41:23.712  INFO 17280 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:41:24.287  WARN 17280 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-09 14:41:24.287  INFO 17280 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-09 14:41:24.295  WARN 17280 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-09 14:41:24.295  INFO 17280 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-09 14:41:24.610  INFO 17280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-09 14:41:24.942  INFO 17280 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-09 14:41:25.390  INFO 17280 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@121cf6f4]
+2023-01-09 14:41:25.390  INFO 17280 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@7cdc4070]
+2023-01-09 14:41:25.433  INFO 17280 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-09 14:41:25.434  INFO 17280 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-09 14:41:25.440  INFO 17280 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-09 14:41:25.592  INFO 17280 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-09 14:41:25.599  INFO 17280 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-09 14:41:25.624  INFO 17280 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-09 14:41:25.872  INFO 17280 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:41:25.874  INFO 17280 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:41:25.898  INFO 17280 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-09 14:41:25.899  INFO 17280 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-09 14:41:25.902  INFO 17280 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:41:25.902  INFO 17280 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:41:25.909  INFO 17280 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-09 14:41:25.926  INFO 17280 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2023-01-09 14:41:25.935  INFO 17280 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-09 14:41:25.981  INFO 17280 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-09 14:41:25.996  INFO 17280 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-09 14:41:25.996  INFO 17280 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_service', basePath=[], excludePath=[]}}
+
+2023-01-09 14:41:27.184  INFO 17280 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-09 14:41:27.196  INFO 17280 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-09 14:41:27.199  INFO 17280 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-09 14:41:27.238  INFO 17280 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-09 14:41:27.285  INFO 17280 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-09 14:41:27.315  INFO 17280 --- [main] m.a.mapper.AppMapperTest                 : Started AppMapperTest in 9.72 seconds (JVM running for 11.103)
+2023-01-09 14:41:27.332  INFO 17280 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:41:27.333  INFO 17280 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:41:27.339  INFO 17280 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:41:27.339  INFO 17280 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:41:27.340  INFO 17280 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:41:27.340  INFO 17280 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:41:27.345  INFO 17280 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:41:27.345  INFO 17280 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:41:27.586 DEBUG 17280 --- [main] m.a.mapper.AppMapper.selectList          : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app 
+2023-01-09 14:41:27.846 DEBUG 17280 --- [main] m.a.mapper.AppMapper.selectList          : ==> Parameters: 
+2023-01-09 14:41:27.888 DEBUG 17280 --- [main] m.a.mapper.AppMapper.selectList          : <==      Total: 0
+2023-01-09 14:41:27.905  WARN 17280 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-09 14:41:27.905  WARN 17280 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-09 14:41:27.906  WARN 17280 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-09 14:41:27.906  WARN 17280 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-09 14:41:27.907  INFO 17280 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-09 14:41:27.910  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-09 14:41:27.910  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-09 14:41:27.910  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-09 14:41:28.210  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-09 14:41:31.238  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-09 14:41:31.238  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-09 14:41:32.465  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-09 14:41:32.466  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-09 14:41:32.466  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-09 14:41:32.466  WARN 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-09 14:41:32.466  WARN 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-09 14:41:32.466  INFO 17280 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-09 14:41:32.466  INFO 17280 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-09 14:41:32.467  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-09 14:41:32.467  INFO 17280 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-09 14:41:32.469  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-09 14:41:32.479  INFO 17280 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-09 14:48:05.770  WARN 12956 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-service] & group[DEFAULT_GROUP]
+2023-01-09 14:48:05.784  INFO 12956 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-09 14:48:05.864  INFO 12956 --- [main] m.a.mapper.AppMapperTest                 : The following profiles are active: dev
+2023-01-09 14:48:07.018  WARN 12956 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-09 14:48:07.199  INFO 12956 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f2e101e7-f191-39eb-a3c3-f839c8149fe1
+2023-01-09 14:48:07.490  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.820  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.835  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.857  INFO 12956 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-09 14:48:07.857  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [mao.aggregate_pay_merchant_service.config.MybatisConfig$$EnhancerBySpringCGLIB$$d9b9b9e7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.879  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.902  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.915  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.924  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:07.940  INFO 12956 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-09 14:48:07.941  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [mao.aggregate_pay_merchant_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$8ebb675b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.083  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.094  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.122  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.193  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.297  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.347  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.375  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.399  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.412  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.423  INFO 12956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:48:08.471  INFO 12956 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-01-09 14:48:09.949  INFO 12956 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-09 14:48:09.950  INFO 12956 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-09 14:48:09.950  INFO 12956 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-09 14:48:10.264  INFO 12956 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:48:10.862  INFO 12956 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@37b1149b]
+2023-01-09 14:48:10.862  INFO 12956 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@1187dc82]
+2023-01-09 14:48:11.333  WARN 12956 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-09 14:48:11.333  INFO 12956 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-09 14:48:11.342  WARN 12956 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-09 14:48:11.343  INFO 12956 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-09 14:48:11.550  INFO 12956 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-09 14:48:11.836  INFO 12956 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-09 14:48:11.983  INFO 12956 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-09 14:48:11.984  INFO 12956 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-09 14:48:11.989  INFO 12956 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-09 14:48:11.994  INFO 12956 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-09 14:48:12.000  INFO 12956 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-09 14:48:12.029  INFO 12956 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-09 14:48:12.278  INFO 12956 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:48:12.279  INFO 12956 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:48:12.301  INFO 12956 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-09 14:48:12.302  INFO 12956 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-09 14:48:12.305  INFO 12956 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:48:12.305  INFO 12956 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:48:12.311  INFO 12956 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-09 14:48:12.334  INFO 12956 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2023-01-09 14:48:12.343  INFO 12956 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-09 14:48:12.388  INFO 12956 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-09 14:48:12.402  INFO 12956 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-09 14:48:12.402  INFO 12956 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_service', basePath=[], excludePath=[]}}
+
+2023-01-09 14:48:13.518  INFO 12956 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-01-09 14:48:13.529  INFO 12956 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-01-09 14:48:13.532  INFO 12956 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-09 14:48:13.573  INFO 12956 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-09 14:48:13.610  INFO 12956 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-09 14:48:13.638  INFO 12956 --- [main] m.a.mapper.AppMapperTest                 : Started AppMapperTest in 9.512 seconds (JVM running for 10.738)
+2023-01-09 14:48:13.672  INFO 12956 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:48:13.673  INFO 12956 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:48:13.675  INFO 12956 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:48:13.675  INFO 12956 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:48:13.675  INFO 12956 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:48:13.676  INFO 12956 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:48:13.677  INFO 12956 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:48:13.677  INFO 12956 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:48:14.489  INFO 12956 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-09 14:48:14.510 DEBUG 12956 --- [main] m.a.mapper.AppMapper.selectList          : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app 
+2023-01-09 14:48:14.765 DEBUG 12956 --- [main] m.a.mapper.AppMapper.selectList          : ==> Parameters: 
+2023-01-09 14:48:14.796 DEBUG 12956 --- [main] m.a.mapper.AppMapper.selectList          : <==      Total: 0
+2023-01-09 14:48:14.810  WARN 12956 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-09 14:48:14.809  WARN 12956 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-09 14:48:14.810  WARN 12956 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-09 14:48:14.810  WARN 12956 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-09 14:48:14.811  INFO 12956 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-09 14:48:14.816  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-09 14:48:14.816  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-09 14:48:14.816  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-09 14:48:17.831  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-09 14:48:20.854  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-09 14:48:20.854  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-09 14:48:20.854  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-09 14:48:20.854  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-09 14:48:20.855  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-09 14:48:20.855  WARN 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-09 14:48:20.855  WARN 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-09 14:48:20.855  INFO 12956 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-09 14:48:20.855  INFO 12956 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-09 14:48:20.855  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-09 14:48:20.855  INFO 12956 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-09 14:48:20.861  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-09 14:48:20.870  INFO 12956 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-09 14:51:03.140  WARN 15060 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-service] & group[DEFAULT_GROUP]
+2023-01-09 14:51:03.153  INFO 15060 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-09 14:51:03.219  INFO 15060 --- [main] m.a.mapper.MerchantMapperTest            : The following profiles are active: dev
+2023-01-09 14:51:04.395  WARN 15060 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-09 14:51:04.576  INFO 15060 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f2e101e7-f191-39eb-a3c3-f839c8149fe1
+2023-01-09 14:51:04.885  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.194  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.205  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.218  INFO 15060 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-09 14:51:05.218  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [mao.aggregate_pay_merchant_service.config.MybatisConfig$$EnhancerBySpringCGLIB$$4c049d34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.233  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.248  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.256  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.263  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.280  INFO 15060 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-09 14:51:05.280  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [mao.aggregate_pay_merchant_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$1064aa8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.390  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.398  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.424  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.494  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.584  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.619  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.650  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.671  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.683  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.694  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-09 14:51:05.737  INFO 15060 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-01-09 14:51:07.210  INFO 15060 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-09 14:51:07.211  INFO 15060 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-09 14:51:07.211  INFO 15060 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-09 14:51:07.475  INFO 15060 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-09 14:51:07.954  INFO 15060 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@11e834ad]
+2023-01-09 14:51:07.954  INFO 15060 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@710ae6a7]
+2023-01-09 14:51:08.301  WARN 15060 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-09 14:51:08.301  INFO 15060 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-09 14:51:08.308  WARN 15060 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-09 14:51:08.308  INFO 15060 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-09 14:51:08.470  INFO 15060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-09 14:51:08.742  INFO 15060 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-09 14:51:08.878  INFO 15060 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-09 14:51:08.879  INFO 15060 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-09 14:51:08.884  INFO 15060 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-09 14:51:08.889  INFO 15060 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-09 14:51:08.894  INFO 15060 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-09 14:51:08.919  INFO 15060 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-09 14:51:09.211  INFO 15060 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:51:09.213  INFO 15060 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:51:09.235  INFO 15060 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-09 14:51:09.236  INFO 15060 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-09 14:51:09.238  INFO 15060 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:51:09.239  INFO 15060 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-09 14:51:09.246  INFO 15060 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-09 14:51:09.263  INFO 15060 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2023-01-09 14:51:09.273  INFO 15060 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-09 14:51:09.317  INFO 15060 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-09 14:51:09.330  INFO 15060 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-09 14:51:09.331  INFO 15060 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_service', basePath=[], excludePath=[]}}
+
+2023-01-09 14:51:10.389  INFO 15060 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-01-09 14:51:10.398  INFO 15060 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-01-09 14:51:10.401  INFO 15060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-09 14:51:10.434  INFO 15060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-09 14:51:10.470  INFO 15060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-09 14:51:10.497  INFO 15060 --- [main] m.a.mapper.MerchantMapperTest            : Started MerchantMapperTest in 9.021 seconds (JVM running for 10.318)
+2023-01-09 14:51:10.532  INFO 15060 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:51:10.533  INFO 15060 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:51:10.539  INFO 15060 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:51:10.539  INFO 15060 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:51:10.540  INFO 15060 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:51:10.540  INFO 15060 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:51:10.541  INFO 15060 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-09 14:51:10.541  INFO 15060 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-09 14:51:11.369  INFO 15060 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-09 14:51:11.391 DEBUG 15060 --- [main] m.a.mapper.MerchantMapper.selectList     : ==>  Preparing: SELECT ID,ID_CARD_FRONT_IMG,MOBILE,ID_CARD_AFTER_IMG,BUSINESS_LICENSES_IMG,MERCHANT_NAME,TENANT_ID,AUDIT_STATUS,CONTACTS_ADDRESS,MERCHANT_ADDRESS,MERCHANT_TYPE,USERNAME,MERCHANT_NO FROM merchant 
+2023-01-09 14:51:11.641 DEBUG 15060 --- [main] m.a.mapper.MerchantMapper.selectList     : ==> Parameters: 
+2023-01-09 14:51:11.679 DEBUG 15060 --- [main] m.a.mapper.MerchantMapper.selectList     : <==      Total: 0
+2023-01-09 14:51:11.697  WARN 15060 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-09 14:51:11.697  WARN 15060 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-09 14:51:11.698  WARN 15060 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-09 14:51:11.698  WARN 15060 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-09 14:51:11.699  INFO 15060 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-09 14:51:11.702  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-09 14:51:11.702  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-09 14:51:11.702  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-09 14:51:14.718  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-09 14:51:17.746  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-09 14:51:17.746  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-09 14:51:17.746  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-09 14:51:17.746  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-09 14:51:17.747  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-09 14:51:17.747  WARN 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-09 14:51:17.747  WARN 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-09 14:51:17.747  INFO 15060 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-09 14:51:17.747  INFO 15060 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-09 14:51:17.747  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-09 14:51:17.748  INFO 15060 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-09 14:51:17.753  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-09 14:51:17.763  INFO 15060 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
