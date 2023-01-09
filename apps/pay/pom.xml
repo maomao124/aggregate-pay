@@ -31,22 +31,22 @@
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>aggregate-pay-common</artifactId>
-                <version>${project.artifactId}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>aggregate-pay-merchant-application</artifactId>
-                <version>${project.artifactId}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>aggregate-pay-merchant-api</artifactId>
-                <version>${project.artifactId}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>aggregate-pay-merchant-service</artifactId>
-                <version>${project.artifactId}</version>
+                <version>${project.version}</version>
             </dependency>
 
         </dependencies>
