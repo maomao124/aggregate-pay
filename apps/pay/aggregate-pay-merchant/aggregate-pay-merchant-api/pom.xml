@@ -41,6 +41,11 @@
             <artifactId>feign-httpclient</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-swagger2</artifactId>
+        </dependency>
+
     </dependencies>
 
 
