@@ -91,6 +91,12 @@
                 <artifactId>tools-redis-cache</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>sms-sdk</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

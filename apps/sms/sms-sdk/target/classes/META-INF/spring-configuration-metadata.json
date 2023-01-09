@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {
+      "name": "sms",
+      "type": "mao.sms_sdk.config.SmsConfigurationProperties",
+      "sourceType": "mao.sms_sdk.config.SmsConfigurationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sms.access-key-id",
+      "type": "java.lang.String",
+      "description": "访问密钥id",
+      "sourceType": "mao.sms_sdk.config.SmsConfigurationProperties"
+    },
+    {
+      "name": "sms.access-key-secret",
+      "type": "java.lang.String",
+      "description": "访问密钥秘密",
+      "sourceType": "mao.sms_sdk.config.SmsConfigurationProperties"
+    },
+    {
+      "name": "sms.auth",
+      "type": "java.lang.Boolean",
+      "description": "是否需要身份验证",
+      "sourceType": "mao.sms_sdk.config.SmsConfigurationProperties"
+    },
+    {
+      "name": "sms.batch-send",
+      "type": "java.lang.String",
+      "description": "批量发送uri",
+      "sourceType": "mao.sms_sdk.config.SmsConfigurationProperties"
+    },
+    {
+      "name": "sms.domain",
+      "type": "java.lang.String",
+      "description": "域",
+      "sourceType": "mao.sms_sdk.config.SmsConfigurationProperties"
+    },
+    {
+      "name": "sms.send",
+      "type": "java.lang.String",
+      "description": "发送uri",
+      "sourceType": "mao.sms_sdk.config.SmsConfigurationProperties"
+    }
+  ],
+  "hints": []
+}
