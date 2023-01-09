@@ -489,3 +489,7 @@ docket：{aggregate_pay=DocketInfo{title='商户服务', group='', description='
 2023-01-09 20:36:25.090 DEBUG 21216 --- [http-nio-56040-exec-3] m.a.mapper.MerchantMapper.selectById     : ==>  Preparing: SELECT ID,ID_CARD_FRONT_IMG,MOBILE,ID_CARD_AFTER_IMG,BUSINESS_LICENSES_IMG,MERCHANT_NAME,TENANT_ID,AUDIT_STATUS,CONTACTS_ADDRESS,MERCHANT_ADDRESS,MERCHANT_TYPE,USERNAME,MERCHANT_NO FROM merchant WHERE ID=? 
 2023-01-09 20:36:25.091 DEBUG 21216 --- [http-nio-56040-exec-3] m.a.mapper.MerchantMapper.selectById     : ==> Parameters: 1(Long)
 2023-01-09 20:36:25.092 DEBUG 21216 --- [http-nio-56040-exec-3] m.a.mapper.MerchantMapper.selectById     : <==      Total: 1
+2023-01-09 20:40:21.949  WARN 21216 --- [http-nio-56040-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 236857
+2023-01-09 20:40:21.969 DEBUG 21216 --- [http-nio-56040-exec-10] m.a.mapper.MerchantMapper.selectById     : ==>  Preparing: SELECT ID,ID_CARD_FRONT_IMG,MOBILE,ID_CARD_AFTER_IMG,BUSINESS_LICENSES_IMG,MERCHANT_NAME,TENANT_ID,AUDIT_STATUS,CONTACTS_ADDRESS,MERCHANT_ADDRESS,MERCHANT_TYPE,USERNAME,MERCHANT_NO FROM merchant WHERE ID=? 
+2023-01-09 20:40:21.970 DEBUG 21216 --- [http-nio-56040-exec-10] m.a.mapper.MerchantMapper.selectById     : ==> Parameters: 1(Long)
+2023-01-09 20:40:21.971 DEBUG 21216 --- [http-nio-56040-exec-10] m.a.mapper.MerchantMapper.selectById     : <==      Total: 1
