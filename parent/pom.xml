@@ -35,7 +35,7 @@
                 <pom.nacos.ip>127.0.0.1</pom.nacos.ip>
                 <pom.nacos.port>8848</pom.nacos.port>
                 <!--Nacos配置中心命名空间,用于支持多环境.这里必须使用ID，不能使用名称,默认为空-->
-                <pom.nacos.namespace>2051a6a2-ba78-4dac-85a2-f991dd5162f2</pom.nacos.namespace>
+                <pom.nacos.namespace>51637975-182d-43e2-ab58-d012723411d5</pom.nacos.namespace>
             </properties>
         </profile>
         <!-- 测试 环境 -->
@@ -47,7 +47,7 @@
                 <pom.nacos.ip>192.168.1.34</pom.nacos.ip>
                 <pom.nacos.port>8848</pom.nacos.port>
                 <!--Nacos配置中心命名空间,用于支持多环境.这里必须使用ID，不能使用名称,默认为空-->
-                <pom.nacos.namespace>2051a6a2-ba78-4dac-85a2-f991dd5162f2</pom.nacos.namespace>
+                <pom.nacos.namespace>51637975-182d-43e2-ab58-d012723411d5</pom.nacos.namespace>
             </properties>
         </profile>
         <!-- 生产 -->
@@ -59,7 +59,7 @@
                 <pom.nacos.ip>127.0.0.1</pom.nacos.ip>
                 <pom.nacos.port>8848</pom.nacos.port>
                 <!--Nacos配置中心命名空间,用于支持多环境.这里必须使用ID，不能使用名称,默认为空-->
-                <pom.nacos.namespace>0937395c-8632-4714-9ed3-b48dac8cd5ae</pom.nacos.namespace>
+                <pom.nacos.namespace>2edd3dae-2155-4af4-a912-16c2b5052390</pom.nacos.namespace>
             </properties>
         </profile>
     </profiles>

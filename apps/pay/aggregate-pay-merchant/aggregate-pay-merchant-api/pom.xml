@@ -29,6 +29,18 @@
             <scope>compile</scope>
         </dependency>
 
+        <!--feign 依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!--httpClient的依赖 主要用于feign连接池-->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
+
     </dependencies>
 
 

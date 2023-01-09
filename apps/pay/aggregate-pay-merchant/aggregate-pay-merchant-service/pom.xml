@@ -10,7 +10,7 @@
 
     <artifactId>aggregate-pay-merchant-service</artifactId>
     <name>${project.artifactId}</name>
-    <description>${project.artifactId}</description>
+    <description>商户服务</description>
 
     <properties>
 
@@ -21,6 +21,18 @@
         <dependency>
             <groupId>mao</groupId>
             <artifactId>aggregate-pay-merchant-api</artifactId>
+            <exclusions>
+                <exclusion>
+                    <!--feign 依赖-->
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-openfeign</artifactId>
+                </exclusion>
+                <exclusion>
+                    <!--httpClient的依赖 主要用于feign连接池-->
+                    <groupId>io.github.openfeign</groupId>
+                    <artifactId>feign-httpclient</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -46,11 +58,6 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
-        <!--dubbo-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

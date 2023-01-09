@@ -52,21 +52,3 @@ info:
 
 
 
-
-dubbo:
-  scan:
-    # dubbo 服务扫描基准包
-    base-packages: mao
-  protocol:
-    # dubbo 协议
-    name: dubbo
-    port: 20891
-  registry:
-    address: ${def.nacos.ip}:${def.nacos.port}
-  application:
-    qos:
-      port: 22310 # dubbo qos端口配置  命令行注入
-  consumer:
-    check: false
-    timeout: 3000
-    retries: -1
