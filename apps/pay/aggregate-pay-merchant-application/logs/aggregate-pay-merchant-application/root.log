@@ -1,0 +1,703 @@
+2023-01-10 20:31:23.546  WARN 18632 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-10 20:31:23.561  INFO 18632 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-10 20:31:23.626  INFO 18632 --- [main] m.a.f.sms.VerificationFeignClientTest    : The following profiles are active: dev
+2023-01-10 20:31:24.863  WARN 18632 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-10 20:31:25.014  INFO 18632 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=209f4561-0087-3a25-ae3f-52637fc5cc44
+2023-01-10 20:31:26.260  INFO 18632 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:31:26.260  INFO 18632 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-10 20:31:26.260  INFO 18632 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:31:26.420  INFO 18632 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-10 20:31:26.841  WARN 18632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:31:26.841  INFO 18632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:31:26.847  WARN 18632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:31:26.847  INFO 18632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:31:27.057  INFO 18632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:31:27.375  INFO 18632 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:31:27.481  INFO 18632 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-10 20:31:27.482  INFO 18632 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-10 20:31:27.489  INFO 18632 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-10 20:31:27.495  INFO 18632 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-10 20:31:27.501  INFO 18632 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-10 20:31:27.529  INFO 18632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-10 20:31:27.835  INFO 18632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:31:27.837  INFO 18632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:31:27.862  INFO 18632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:31:27.863  INFO 18632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-10 20:31:27.866  INFO 18632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:31:27.867  INFO 18632 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:31:27.874  INFO 18632 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:31:27.890  INFO 18632 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-10 20:31:27.936  INFO 18632 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-10 20:31:27.952  INFO 18632 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-10 20:31:27.952  INFO 18632 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-10 20:31:28.848  INFO 18632 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:31:28.858  INFO 18632 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:31:28.861  INFO 18632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-10 20:31:28.893  INFO 18632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-10 20:31:28.927  INFO 18632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-10 20:31:28.956  INFO 18632 --- [main] m.a.f.sms.VerificationFeignClientTest    : Started VerificationFeignClientTest in 7.082 seconds (JVM running for 8.458)
+2023-01-10 20:31:28.995  INFO 18632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:31:28.996  INFO 18632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:31:28.997  INFO 18632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:31:28.997  INFO 18632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:31:29.004  INFO 18632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:31:29.004  INFO 18632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:31:29.010  INFO 18632 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:31:29.011  INFO 18632 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:31:29.178 ERROR 18632 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@14028087] to prepare test instance [mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClientTest@2b9d4b0]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClientTest': Unsatisfied dependency expressed through field 'verificationFeignClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Method has too many Body parameters: public abstract mao.aggregate_pay_common.domain.RestResponse mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient.verify(java.lang.String,java.lang.String,java.lang.String)
+Warnings:
+- 
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:393) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Method has too many Body parameters: public abstract mao.aggregate_pay_common.domain.RestResponse mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient.verify(java.lang.String,java.lang.String,java.lang.String)
+Warnings:
+- 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:530) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 67 common frames omitted
+Caused by: java.lang.IllegalStateException: Method has too many Body parameters: public abstract mao.aggregate_pay_common.domain.RestResponse mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient.verify(java.lang.String,java.lang.String,java.lang.String)
+Warnings:
+- 
+	at feign.Util.checkState(Util.java:129) ~[feign-core-10.10.1.jar:na]
+	at feign.Contract$BaseContract.parseAndValidateMetadata(Contract.java:127) ~[feign-core-10.10.1.jar:na]
+	at org.springframework.cloud.openfeign.support.SpringMvcContract.parseAndValidateMetadata(SpringMvcContract.java:207) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at feign.Contract$BaseContract.parseAndValidateMetadata(Contract.java:62) ~[feign-core-10.10.1.jar:na]
+	at feign.hystrix.HystrixDelegatingContract.parseAndValidateMetadata(HystrixDelegatingContract.java:47) ~[feign-hystrix-10.10.1.jar:na]
+	at feign.ReflectiveFeign$ParseHandlersByName.apply(ReflectiveFeign.java:151) ~[feign-core-10.10.1.jar:na]
+	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:49) ~[feign-core-10.10.1.jar:na]
+	at feign.Feign$Builder.target(Feign.java:269) ~[feign-core-10.10.1.jar:na]
+	at org.springframework.cloud.openfeign.HystrixTargeter.target(HystrixTargeter.java:57) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:338) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:369) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:347) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:240) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1231) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 75 common frames omitted
+
+2023-01-10 20:31:29.198  WARN 18632 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-10 20:31:29.198  WARN 18632 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-10 20:31:29.199  WARN 18632 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-10 20:31:29.200  WARN 18632 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-10 20:31:29.200  INFO 18632 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:31:29.205  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-10 20:31:29.205  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-10 20:31:29.205  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-10 20:31:29.873  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-10 20:31:32.908  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-10 20:31:32.908  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-10 20:31:35.932  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-10 20:31:35.932  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-10 20:31:35.932  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-10 20:31:35.933  WARN 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-10 20:31:35.933  WARN 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-10 20:31:35.933  INFO 18632 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-10 20:31:35.933  INFO 18632 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-10 20:31:35.933  INFO 18632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-10 20:31:35.934  INFO 18632 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:36:43.648  WARN 14628 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-10 20:36:43.662  INFO 14628 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-10 20:36:43.725  INFO 14628 --- [main] m.a.f.sms.VerificationFeignClientTest    : The following profiles are active: dev
+2023-01-10 20:36:44.805  WARN 14628 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-10 20:36:44.967  INFO 14628 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=209f4561-0087-3a25-ae3f-52637fc5cc44
+2023-01-10 20:36:46.225  INFO 14628 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:36:46.226  INFO 14628 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-10 20:36:46.226  INFO 14628 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:36:46.375  INFO 14628 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-10 20:36:46.786  WARN 14628 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:36:46.786  INFO 14628 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:36:46.793  WARN 14628 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:36:46.794  INFO 14628 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:36:46.997  INFO 14628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:36:47.303  INFO 14628 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:36:47.436  INFO 14628 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-10 20:36:47.438  INFO 14628 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-10 20:36:47.449  INFO 14628 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-10 20:36:47.457  INFO 14628 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-10 20:36:47.467  INFO 14628 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-10 20:36:47.514  INFO 14628 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-10 20:36:47.803  INFO 14628 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:36:47.805  INFO 14628 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:36:47.829  INFO 14628 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:36:47.830  INFO 14628 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-10 20:36:47.834  INFO 14628 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:36:47.835  INFO 14628 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:36:47.842  INFO 14628 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:36:47.860  INFO 14628 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-10 20:36:47.916  INFO 14628 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-10 20:36:47.932  INFO 14628 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-10 20:36:47.932  INFO 14628 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-10 20:36:48.834  INFO 14628 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:36:48.844  INFO 14628 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:36:48.847  INFO 14628 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-10 20:36:48.879  INFO 14628 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-10 20:36:48.912  INFO 14628 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-10 20:36:48.941  INFO 14628 --- [main] m.a.f.sms.VerificationFeignClientTest    : Started VerificationFeignClientTest in 6.949 seconds (JVM running for 8.172)
+2023-01-10 20:36:48.975  INFO 14628 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:36:48.976  INFO 14628 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:36:48.978  INFO 14628 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:36:48.978  INFO 14628 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:36:48.979  INFO 14628 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:36:48.979  INFO 14628 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:36:48.981  INFO 14628 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:36:48.981  INFO 14628 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:36:49.659 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> POST http://aggregate-pay-sms/generate?name=sms&effectiveTime=600 HTTP/1.1
+2023-01-10 20:36:49.660 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: gzip
+2023-01-10 20:36:49.660 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: deflate
+2023-01-10 20:36:49.660 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Length: 24
+2023-01-10 20:36:49.660 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Type: application/json
+2023-01-10 20:36:49.660 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> END HTTP (24-byte body)
+2023-01-10 20:36:49.801  INFO 14628 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:36:49.821  INFO 14628 --- [hystrix-aggregate-pay-sms-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-sms instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-10 20:36:49.829  INFO 14628 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-10 20:36:49.836  INFO 14628 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:36:49.837  INFO 14628 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:36:49.846  INFO 14628 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:36:49.848  INFO 14628 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-sms initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[192.168.3.143:35478],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:35478;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@14605d19
+2023-01-10 20:36:50.838  INFO 14628 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:36:54.374 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- HTTP/1.1 200  (4711ms)
+2023-01-10 20:36:54.374 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] connection: keep-alive
+2023-01-10 20:36:54.374 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] content-type: application/json;charset=UTF-8
+2023-01-10 20:36:54.374 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] date: Tue, 10 Jan 2023 12:36:54 GMT
+2023-01-10 20:36:54.375 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] keep-alive: timeout=60
+2023-01-10 20:36:54.375 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] transfer-encoding: chunked
+2023-01-10 20:36:54.375 DEBUG 14628 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- END HTTP (90-byte body)
+2023-01-10 20:36:54.405  INFO 14628 --- [Thread-20] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2023-01-10 20:36:54.405  WARN 14628 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-10 20:36:54.405  WARN 14628 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-10 20:36:54.406  WARN 14628 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-10 20:36:54.407  WARN 14628 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-10 20:36:54.407  INFO 14628 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:36:54.416  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-10 20:36:54.416  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-10 20:36:54.416  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-10 20:36:57.446  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-10 20:37:00.468  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-10 20:37:00.468  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-10 20:37:00.468  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-10 20:37:00.469  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-10 20:37:00.469  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-10 20:37:00.469  WARN 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-10 20:37:00.469  WARN 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-10 20:37:00.469  INFO 14628 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-10 20:37:00.470  INFO 14628 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-10 20:37:00.470  INFO 14628 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-10 20:37:00.470  INFO 14628 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:38:55.805  WARN 1052 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-10 20:38:55.819  INFO 1052 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-10 20:38:55.880  INFO 1052 --- [main] m.a.f.sms.VerificationFeignClientTest    : The following profiles are active: dev
+2023-01-10 20:38:56.926  WARN 1052 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-10 20:38:57.076  INFO 1052 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=209f4561-0087-3a25-ae3f-52637fc5cc44
+2023-01-10 20:38:58.321  INFO 1052 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:38:58.321  INFO 1052 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-10 20:38:58.322  INFO 1052 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:38:58.468  INFO 1052 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-10 20:38:58.873  WARN 1052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:38:58.873  INFO 1052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:38:58.879  WARN 1052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:38:58.880  INFO 1052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:38:59.097  INFO 1052 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:38:59.399  INFO 1052 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:38:59.498  INFO 1052 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-10 20:38:59.500  INFO 1052 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-10 20:38:59.507  INFO 1052 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-10 20:38:59.514  INFO 1052 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-10 20:38:59.522  INFO 1052 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-10 20:38:59.556  INFO 1052 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-10 20:38:59.828  INFO 1052 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:38:59.830  INFO 1052 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:38:59.855  INFO 1052 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:38:59.856  INFO 1052 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-10 20:38:59.859  INFO 1052 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:38:59.860  INFO 1052 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:38:59.867  INFO 1052 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:38:59.885  INFO 1052 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-10 20:38:59.944  INFO 1052 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-10 20:38:59.963  INFO 1052 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-10 20:38:59.963  INFO 1052 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-10 20:39:00.838  INFO 1052 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:39:00.848  INFO 1052 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:39:00.851  INFO 1052 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-10 20:39:00.881  INFO 1052 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-10 20:39:00.913  INFO 1052 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-10 20:39:00.948  INFO 1052 --- [main] m.a.f.sms.VerificationFeignClientTest    : Started VerificationFeignClientTest in 6.763 seconds (JVM running for 8.005)
+2023-01-10 20:39:00.983  INFO 1052 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:39:00.985  INFO 1052 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:39:00.990  INFO 1052 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:39:00.991  INFO 1052 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:39:00.992  INFO 1052 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:39:00.992  INFO 1052 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:39:00.993  INFO 1052 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:39:00.993  INFO 1052 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:39:01.602 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> POST http://aggregate-pay-sms/verify?name=sms&verificationKey=sms%3Acfe3e1fdf1b348cf986a2d612bcae497&verificationCode=941665 HTTP/1.1
+2023-01-10 20:39:01.602 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: gzip
+2023-01-10 20:39:01.602 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: deflate
+2023-01-10 20:39:01.602 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> END HTTP (0-byte body)
+2023-01-10 20:39:01.741  INFO 1052 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:39:01.757  INFO 1052 --- [hystrix-aggregate-pay-sms-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-sms instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-10 20:39:01.763  INFO 1052 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-10 20:39:01.771  INFO 1052 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:39:01.776  INFO 1052 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:39:01.785  INFO 1052 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:39:01.787  INFO 1052 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-sms initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[192.168.3.143:35478],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:35478;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@7dc52a0c
+2023-01-10 20:39:01.870 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- HTTP/1.1 200  (265ms)
+2023-01-10 20:39:01.870 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] connection: keep-alive
+2023-01-10 20:39:01.870 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] content-type: application/json;charset=UTF-8
+2023-01-10 20:39:01.870 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] date: Tue, 10 Jan 2023 12:39:01 GMT
+2023-01-10 20:39:01.870 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] keep-alive: timeout=60
+2023-01-10 20:39:01.870 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] transfer-encoding: chunked
+2023-01-10 20:39:01.871 DEBUG 1052 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- END HTTP (33-byte body)
+2023-01-10 20:39:01.904  INFO 1052 --- [Thread-19] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2023-01-10 20:39:01.905  WARN 1052 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-10 20:39:01.905  WARN 1052 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-10 20:39:01.905  WARN 1052 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-10 20:39:01.906  WARN 1052 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-10 20:39:01.906  INFO 1052 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:39:01.915  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-10 20:39:01.916  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-10 20:39:01.916  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-10 20:39:04.934  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-10 20:39:07.968  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-10 20:39:07.968  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-10 20:39:08.340  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-10 20:39:08.341  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-10 20:39:08.341  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-10 20:39:08.341  WARN 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-10 20:39:08.341  WARN 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-10 20:39:08.341  INFO 1052 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-10 20:39:08.341  INFO 1052 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-10 20:39:08.341  INFO 1052 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-10 20:39:08.342  INFO 1052 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:42:55.747  WARN 16516 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-10 20:42:55.760  INFO 16516 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-10 20:42:55.817  INFO 16516 --- [main] m.a.f.sms.VerificationFeignClientTest    : The following profiles are active: dev
+2023-01-10 20:42:56.874  WARN 16516 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-10 20:42:57.043  INFO 16516 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=209f4561-0087-3a25-ae3f-52637fc5cc44
+2023-01-10 20:42:58.259  INFO 16516 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:42:58.260  INFO 16516 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-10 20:42:58.260  INFO 16516 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:42:58.416  INFO 16516 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-10 20:42:58.828  WARN 16516 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:42:58.828  INFO 16516 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:42:58.834  WARN 16516 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:42:58.834  INFO 16516 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:42:59.058  INFO 16516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:42:59.378  INFO 16516 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:42:59.470  INFO 16516 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-10 20:42:59.471  INFO 16516 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-10 20:42:59.476  INFO 16516 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-10 20:42:59.481  INFO 16516 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-10 20:42:59.489  INFO 16516 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-10 20:42:59.515  INFO 16516 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-10 20:42:59.819  INFO 16516 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:42:59.821  INFO 16516 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:42:59.847  INFO 16516 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:42:59.848  INFO 16516 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-10 20:42:59.851  INFO 16516 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:42:59.852  INFO 16516 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:42:59.859  INFO 16516 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:42:59.877  INFO 16516 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-10 20:42:59.932  INFO 16516 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-10 20:42:59.952  INFO 16516 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-10 20:42:59.952  INFO 16516 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-10 20:43:00.915  INFO 16516 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:43:00.925  INFO 16516 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:43:00.928  INFO 16516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-10 20:43:00.963  INFO 16516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-10 20:43:01.002  INFO 16516 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-10 20:43:01.034  INFO 16516 --- [main] m.a.f.sms.VerificationFeignClientTest    : Started VerificationFeignClientTest in 6.91 seconds (JVM running for 8.112)
+2023-01-10 20:43:01.068  INFO 16516 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:01.069  INFO 16516 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:01.075  INFO 16516 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:01.076  INFO 16516 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:01.077  INFO 16516 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:01.077  INFO 16516 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:01.079  INFO 16516 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:01.079  INFO 16516 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:01.705 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> POST http://aggregate-pay-sms/verify?name=sms&verificationKey=sms%3Acfe3e1fdf1b348cf986a2d612bcae497&verificationCode=941665 HTTP/1.1
+2023-01-10 20:43:01.705 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: gzip
+2023-01-10 20:43:01.705 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: deflate
+2023-01-10 20:43:01.706 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> END HTTP (0-byte body)
+2023-01-10 20:43:01.851  INFO 16516 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:43:01.869  INFO 16516 --- [hystrix-aggregate-pay-sms-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-sms instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-10 20:43:01.876  INFO 16516 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-10 20:43:01.883  INFO 16516 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:43:01.889  INFO 16516 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:43:01.897  INFO 16516 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:43:01.899  INFO 16516 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-sms initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[192.168.3.143:35478],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:35478;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@43e7311f
+2023-01-10 20:43:01.979 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- HTTP/1.1 200  (270ms)
+2023-01-10 20:43:01.979 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] connection: keep-alive
+2023-01-10 20:43:01.979 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] content-type: application/json;charset=UTF-8
+2023-01-10 20:43:01.979 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] date: Tue, 10 Jan 2023 12:43:01 GMT
+2023-01-10 20:43:01.979 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] keep-alive: timeout=60
+2023-01-10 20:43:01.979 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] transfer-encoding: chunked
+2023-01-10 20:43:01.980 DEBUG 16516 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- END HTTP (33-byte body)
+2023-01-10 20:43:02.026 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> POST http://aggregate-pay-sms/generate?name=sms&effectiveTime=600 HTTP/1.1
+2023-01-10 20:43:02.026 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: gzip
+2023-01-10 20:43:02.026 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: deflate
+2023-01-10 20:43:02.026 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Length: 24
+2023-01-10 20:43:02.026 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Type: application/json
+2023-01-10 20:43:02.026 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> END HTTP (24-byte body)
+2023-01-10 20:43:02.882  INFO 16516 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:43:06.112 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- HTTP/1.1 200  (4086ms)
+2023-01-10 20:43:06.112 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] connection: keep-alive
+2023-01-10 20:43:06.112 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] content-type: application/json;charset=UTF-8
+2023-01-10 20:43:06.112 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] date: Tue, 10 Jan 2023 12:43:06 GMT
+2023-01-10 20:43:06.112 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] keep-alive: timeout=60
+2023-01-10 20:43:06.113 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] transfer-encoding: chunked
+2023-01-10 20:43:06.113 DEBUG 16516 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- END HTTP (90-byte body)
+2023-01-10 20:43:06.123  INFO 16516 --- [Thread-21] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2023-01-10 20:43:06.124  WARN 16516 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-10 20:43:06.124  WARN 16516 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-10 20:43:06.124  WARN 16516 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-10 20:43:06.125  WARN 16516 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-10 20:43:06.125  INFO 16516 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:43:06.131  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-10 20:43:06.132  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-10 20:43:06.132  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-10 20:43:09.152  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-10 20:43:12.169  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-10 20:43:12.169  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-10 20:43:12.169  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-10 20:43:12.170  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-10 20:43:12.170  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-10 20:43:12.170  WARN 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-10 20:43:12.170  WARN 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-10 20:43:12.171  INFO 16516 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-10 20:43:12.171  INFO 16516 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-10 20:43:12.171  INFO 16516 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-10 20:43:12.172  INFO 16516 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:43:29.227  WARN 25136 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-10 20:43:29.240  INFO 25136 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-10 20:43:29.302  INFO 25136 --- [main] m.a.f.sms.VerificationFeignClientTest    : The following profiles are active: dev
+2023-01-10 20:43:30.370  WARN 25136 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-10 20:43:30.528  INFO 25136 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=209f4561-0087-3a25-ae3f-52637fc5cc44
+2023-01-10 20:43:31.822  INFO 25136 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:43:31.823  INFO 25136 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-10 20:43:31.823  INFO 25136 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:43:31.974  INFO 25136 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-10 20:43:32.398  WARN 25136 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:43:32.398  INFO 25136 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:43:32.405  WARN 25136 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:43:32.405  INFO 25136 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:43:32.644  INFO 25136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:43:32.916  INFO 25136 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:43:33.009  INFO 25136 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-10 20:43:33.010  INFO 25136 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-10 20:43:33.016  INFO 25136 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-10 20:43:33.021  INFO 25136 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-10 20:43:33.028  INFO 25136 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-10 20:43:33.056  INFO 25136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-10 20:43:33.345  INFO 25136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:43:33.347  INFO 25136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:43:33.373  INFO 25136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:43:33.374  INFO 25136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-10 20:43:33.378  INFO 25136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:43:33.379  INFO 25136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:43:33.386  INFO 25136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:43:33.404  INFO 25136 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-10 20:43:33.460  INFO 25136 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-10 20:43:33.475  INFO 25136 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-10 20:43:33.476  INFO 25136 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-10 20:43:34.427  INFO 25136 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:43:34.437  INFO 25136 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:43:34.441  INFO 25136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-10 20:43:34.479  INFO 25136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-10 20:43:34.535  INFO 25136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-10 20:43:34.564  INFO 25136 --- [main] m.a.f.sms.VerificationFeignClientTest    : Started VerificationFeignClientTest in 6.955 seconds (JVM running for 8.239)
+2023-01-10 20:43:34.602  INFO 25136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:34.603  INFO 25136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:34.606  INFO 25136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:34.606  INFO 25136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:34.608  INFO 25136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:34.608  INFO 25136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:34.609  INFO 25136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:43:34.610  INFO 25136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:43:35.312 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> POST http://aggregate-pay-sms/generate?name=sms&effectiveTime=600 HTTP/1.1
+2023-01-10 20:43:35.313 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: gzip
+2023-01-10 20:43:35.313 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: deflate
+2023-01-10 20:43:35.313 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Length: 24
+2023-01-10 20:43:35.313 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Type: application/json
+2023-01-10 20:43:35.313 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> END HTTP (24-byte body)
+2023-01-10 20:43:35.457  INFO 25136 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:43:35.474  INFO 25136 --- [hystrix-aggregate-pay-sms-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-sms instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-10 20:43:35.480  INFO 25136 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-10 20:43:35.487  INFO 25136 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:43:35.492  INFO 25136 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-10 20:43:35.501  INFO 25136 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:43:35.503  INFO 25136 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-sms initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[192.168.3.143:35478],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:35478;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@306be7b3
+2023-01-10 20:43:36.499  INFO 25136 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:43:39.682 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- HTTP/1.1 200  (4364ms)
+2023-01-10 20:43:39.683 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] connection: keep-alive
+2023-01-10 20:43:39.683 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] content-type: application/json;charset=UTF-8
+2023-01-10 20:43:39.683 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] date: Tue, 10 Jan 2023 12:43:39 GMT
+2023-01-10 20:43:39.684 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] keep-alive: timeout=60
+2023-01-10 20:43:39.684 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] transfer-encoding: chunked
+2023-01-10 20:43:39.685 DEBUG 25136 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- END HTTP (90-byte body)
+2023-01-10 20:43:39.716  INFO 25136 --- [Thread-21] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2023-01-10 20:43:39.716  WARN 25136 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-10 20:43:39.716  WARN 25136 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-10 20:43:39.717  WARN 25136 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-10 20:43:39.718  WARN 25136 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-10 20:43:39.719  INFO 25136 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:43:39.728  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-10 20:43:39.729  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-10 20:43:39.729  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-10 20:43:42.749  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-10 20:43:45.778  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-10 20:43:45.778  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-10 20:43:45.778  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-10 20:43:45.778  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-10 20:43:45.779  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-10 20:43:45.779  WARN 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-10 20:43:45.779  WARN 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-10 20:43:45.779  INFO 25136 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-10 20:43:45.779  INFO 25136 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-10 20:43:45.779  INFO 25136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-10 20:43:45.780  INFO 25136 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:44:10.601  WARN 4216 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-10 20:44:10.614  INFO 4216 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-10 20:44:10.671  INFO 4216 --- [main] m.a.f.sms.VerificationFeignClientTest    : The following profiles are active: dev
+2023-01-10 20:44:11.706  WARN 4216 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-10 20:44:11.853  INFO 4216 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=209f4561-0087-3a25-ae3f-52637fc5cc44
+2023-01-10 20:44:13.062  INFO 4216 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:44:13.062  INFO 4216 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-10 20:44:13.062  INFO 4216 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-10 20:44:13.208  INFO 4216 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-10 20:44:13.616  WARN 4216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:44:13.616  INFO 4216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:44:13.623  WARN 4216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-10 20:44:13.623  INFO 4216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-10 20:44:13.839  INFO 4216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-10 20:44:14.151  INFO 4216 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:44:14.243  INFO 4216 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-10 20:44:14.244  INFO 4216 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-10 20:44:14.250  INFO 4216 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-10 20:44:14.255  INFO 4216 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-10 20:44:14.261  INFO 4216 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-10 20:44:14.289  INFO 4216 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-10 20:44:14.563  INFO 4216 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:44:14.565  INFO 4216 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:44:14.589  INFO 4216 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:44:14.590  INFO 4216 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-10 20:44:14.593  INFO 4216 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:44:14.594  INFO 4216 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-10 20:44:14.600  INFO 4216 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-10 20:44:14.617  INFO 4216 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-10 20:44:14.661  INFO 4216 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-10 20:44:14.676  INFO 4216 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-10 20:44:14.677  INFO 4216 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-10 20:44:15.634  INFO 4216 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:44:15.645  INFO 4216 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:44:15.648  INFO 4216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-10 20:44:15.681  INFO 4216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-10 20:44:15.714  INFO 4216 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-10 20:44:15.745  INFO 4216 --- [main] m.a.f.sms.VerificationFeignClientTest    : Started VerificationFeignClientTest in 6.752 seconds (JVM running for 8.018)
+2023-01-10 20:44:15.783  INFO 4216 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:44:15.784  INFO 4216 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:44:15.786  INFO 4216 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:44:15.786  INFO 4216 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:44:15.788  INFO 4216 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:44:15.788  INFO 4216 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:44:15.789  INFO 4216 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-10 20:44:15.789  INFO 4216 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-10 20:44:16.433 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> POST http://aggregate-pay-sms/verify?name=sms&verificationKey=sms%3Acfe3e1fdf1b348cf986a2d612bcae497&verificationCode=941665 HTTP/1.1
+2023-01-10 20:44:16.433 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: gzip
+2023-01-10 20:44:16.433 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: deflate
+2023-01-10 20:44:16.433 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> END HTTP (0-byte body)
+2023-01-10 20:44:16.573  INFO 4216 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:44:16.592  INFO 4216 --- [hystrix-aggregate-pay-sms-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-sms instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-10 20:44:16.599  INFO 4216 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-10 20:44:16.607  INFO 4216 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:44:16.612  INFO 4216 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-01-10 20:44:16.621  INFO 4216 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:44:16.623  INFO 4216 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-sms initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[192.168.3.143:35478],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:35478;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@581ea021
+2023-01-10 20:44:16.699 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- HTTP/1.1 200  (263ms)
+2023-01-10 20:44:16.700 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] connection: keep-alive
+2023-01-10 20:44:16.700 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] content-type: application/json;charset=UTF-8
+2023-01-10 20:44:16.700 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] date: Tue, 10 Jan 2023 12:44:16 GMT
+2023-01-10 20:44:16.700 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] keep-alive: timeout=60
+2023-01-10 20:44:16.700 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] transfer-encoding: chunked
+2023-01-10 20:44:16.700 DEBUG 4216 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- END HTTP (33-byte body)
+2023-01-10 20:44:16.748 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> POST http://aggregate-pay-sms/generate?name=sms&effectiveTime=600 HTTP/1.1
+2023-01-10 20:44:16.748 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: gzip
+2023-01-10 20:44:16.748 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: deflate
+2023-01-10 20:44:16.748 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Length: 24
+2023-01-10 20:44:16.748 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Type: application/json
+2023-01-10 20:44:16.748 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> END HTTP (24-byte body)
+2023-01-10 20:44:17.609  INFO 4216 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-10 20:44:20.840 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- HTTP/1.1 200  (4091ms)
+2023-01-10 20:44:20.841 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] connection: keep-alive
+2023-01-10 20:44:20.841 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] content-type: application/json;charset=UTF-8
+2023-01-10 20:44:20.841 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] date: Tue, 10 Jan 2023 12:44:20 GMT
+2023-01-10 20:44:20.841 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] keep-alive: timeout=60
+2023-01-10 20:44:20.841 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] transfer-encoding: chunked
+2023-01-10 20:44:20.841 DEBUG 4216 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- END HTTP (90-byte body)
+2023-01-10 20:44:20.852  INFO 4216 --- [Thread-19] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2023-01-10 20:44:20.852  WARN 4216 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-10 20:44:20.852  WARN 4216 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-10 20:44:20.852  WARN 4216 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-10 20:44:20.853  WARN 4216 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-10 20:44:20.854  INFO 4216 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-10 20:44:20.860  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-10 20:44:20.860  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-10 20:44:20.860  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-10 20:44:23.882  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-10 20:44:26.923  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-10 20:44:26.923  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-10 20:44:26.923  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-10 20:44:26.923  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-10 20:44:26.924  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-10 20:44:26.924  WARN 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-10 20:44:26.924  WARN 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-10 20:44:26.924  INFO 4216 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-10 20:44:26.924  INFO 4216 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-10 20:44:26.924  INFO 4216 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-10 20:44:26.925  INFO 4216 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
