@@ -6,10 +6,7 @@ import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -40,5 +37,12 @@ public class MerchantController extends BaseController
     public R<MerchantDTO> getById(@PathVariable Long merchantId)
     {
         return R.success(merchantService.getMerchantById(merchantId));
+    }
+
+    @ApiOperation("注册商户")
+    @PostMapping
+    public R<MerchantDTO> getById(@RequestBody MerchantDTO merchantDTO)
+    {
+        return R.success(merchantService.createMerchant(merchantDTO));
     }
 }
