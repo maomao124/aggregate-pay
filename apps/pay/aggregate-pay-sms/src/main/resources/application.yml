@@ -1,2 +1,10 @@
 server:
   port: 56085
+
+
+sms:
+  qcloud:
+    appId: -1
+    appKey: "null"
+    templateId: -1
+    sign: "null"
