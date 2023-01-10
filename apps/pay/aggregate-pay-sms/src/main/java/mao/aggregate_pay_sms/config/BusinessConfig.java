@@ -3,6 +3,7 @@ package mao.aggregate_pay_sms.config;
 
 import mao.aggregate_pay_sms.handler.AbstractVerificationHandler;
 import mao.aggregate_pay_sms.handler.SmsNumberVerificationHandler;
+import mao.aggregate_pay_sms.sms.SmsService;
 import mao.aggregate_pay_sms.sms.qcloud.QCloudSmsService;
 import mao.aggregate_pay_sms.store.VerificationStore;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +26,10 @@ public class BusinessConfig
     private VerificationStore verificationStore;
 
     /**
-     * 问云服务
+     * 短信服务
      */
     @Autowired
-    private QCloudSmsService qCloudSmsService;
+    private SmsService smsService;
 
     /**
      * 短信验证处理器数量
@@ -40,7 +41,7 @@ public class BusinessConfig
     {
         SmsNumberVerificationHandler smsNumberVerificationHandler = new SmsNumberVerificationHandler("sms", 6);
         smsNumberVerificationHandler.setVerificationStore(verificationStore);
-        smsNumberVerificationHandler.setSmsService(qCloudSmsService);
+        smsNumberVerificationHandler.setSmsService(smsService);
         return smsNumberVerificationHandler;
     }
 

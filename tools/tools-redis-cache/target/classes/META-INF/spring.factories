@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    mao.tools_redis_cache.config.RedisLockServiceConfig,\
+    mao.tools_redis_cache.config.RedissonConfig,\
+    mao.tools_redis_cache.config.RedisUtilsConfig
