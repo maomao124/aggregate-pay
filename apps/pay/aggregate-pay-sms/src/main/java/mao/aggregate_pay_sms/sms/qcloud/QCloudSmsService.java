@@ -9,14 +9,7 @@ import mao.aggregate_pay_sms.sms.SmsService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-/**
- * <P>
- * 腾讯云短信服务
- * </p>
- *
- * @author zhupeiyuan
- * @since 2019-07-12
- */
+
 @Slf4j
 public class QCloudSmsService implements SmsService
 {

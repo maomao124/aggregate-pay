@@ -1,13 +1,6 @@
 package mao.aggregate_pay_sms.sms;
 
-/**
- * <P>
- * 短信服务
- * </p>
- *
- * @author zhupeiyuan
- * @since 2019-07-12
- */
+
 public interface SmsService
 {
 
