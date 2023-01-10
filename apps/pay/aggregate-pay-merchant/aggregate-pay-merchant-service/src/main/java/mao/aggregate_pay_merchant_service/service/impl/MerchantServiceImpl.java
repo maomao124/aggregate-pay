@@ -38,4 +38,21 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         //转换，并返回
         return dozerUtils.map(merchant, MerchantDTO.class);
     }
+
+    @Override
+    public MerchantDTO createMerchant(MerchantDTO merchantDTO)
+    {
+        //构建商户
+        Merchant merchant = new Merchant();
+        //设置审核状态
+        merchant.setAuditStatus("0");
+        //设置手机号
+        merchant.setMobile(merchantDTO.getMobile());
+        //保存
+        this.save(merchant);
+        //保存id信息
+        merchantDTO.setId(merchant.getId());
+        //返回
+        return merchantDTO;
+    }
 }

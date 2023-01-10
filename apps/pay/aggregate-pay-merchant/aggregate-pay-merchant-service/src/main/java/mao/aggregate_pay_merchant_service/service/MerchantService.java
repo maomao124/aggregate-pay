@@ -26,4 +26,14 @@ public interface MerchantService extends IService<Merchant>
      * @return {@link MerchantDTO}
      */
     MerchantDTO getMerchantById(Long merchantId);
+
+
+    /**
+     * 商户注册
+     *
+     * @param merchantDTO {@link MerchantDTO} 商户dto
+     * @return {@link MerchantDTO}
+     */
+    MerchantDTO createMerchant(MerchantDTO merchantDTO);
+
 }
