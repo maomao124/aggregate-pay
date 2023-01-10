@@ -18,7 +18,6 @@ import org.springframework.stereotype.Service;
  * @since 2019-07-12
  */
 @Slf4j
-@Service
 public class QCloudSmsService implements SmsService
 {
 

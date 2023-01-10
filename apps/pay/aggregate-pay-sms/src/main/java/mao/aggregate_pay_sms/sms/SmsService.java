@@ -14,7 +14,7 @@ public interface SmsService
     /**
      * 发送短信
      *
-     * @param mobile  移动
+     * @param mobile  手机号
      * @param content 内容
      */
     default void send(String mobile, String content)
@@ -24,7 +24,7 @@ public interface SmsService
     /**
      * 发送短信验证码
      *
-     * @param mobile        移动
+     * @param mobile        手机号
      * @param code          代码
      * @param effectiveTime 有效时间
      */
@@ -33,7 +33,7 @@ public interface SmsService
     /**
      * 在控制台输出验证码，模拟发送短信
      *
-     * @param mobile        移动
+     * @param mobile        手机号
      * @param code          代码
      * @param effectiveTime 有效时间
      */
