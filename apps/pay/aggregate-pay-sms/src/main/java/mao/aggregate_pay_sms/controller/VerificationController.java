@@ -5,6 +5,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import mao.aggregate_pay_sms.common.domain.RestResponse;
+import mao.aggregate_pay_sms.dto.VerificationInfo;
 import mao.aggregate_pay_sms.service.VerificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-@Api(value = "验证码服务接口")
+@Api(tags = "验证码服务接口")
 @RestController
 public class VerificationController
 {

@@ -1,0 +1,7 @@
+server:
+  port: 57010
+  max-http-header-size: 100KB
+  servlet:
+    context‐path: /merchant
+
+
