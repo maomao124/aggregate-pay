@@ -29,5 +29,5 @@ public interface MerchantFeignClient
     R<MerchantDTO> getById(@PathVariable Long merchantId);
 
     @PostMapping
-    R<MerchantDTO> getById(@RequestBody MerchantDTO merchantDTO);
+    R<MerchantDTO> createMerchant(@RequestBody MerchantDTO merchantDTO);
 }

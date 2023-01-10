@@ -41,7 +41,7 @@ public class MerchantController extends BaseController
 
     @ApiOperation("注册商户")
     @PostMapping
-    public R<MerchantDTO> getById(@RequestBody MerchantDTO merchantDTO)
+    public R<MerchantDTO> createMerchant(@RequestBody MerchantDTO merchantDTO)
     {
         return R.success(merchantService.createMerchant(merchantDTO));
     }
