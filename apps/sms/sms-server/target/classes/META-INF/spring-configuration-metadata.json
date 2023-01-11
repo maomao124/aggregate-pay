@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "name": "sms",
+      "type": "mao.sms_server.properties.SmsConfigurationProperties",
+      "sourceType": "mao.sms_server.properties.SmsConfigurationProperties"
+    },
+    {
+      "name": "spring.datasource.druid",
+      "type": "javax.sql.DataSource",
+      "sourceType": "mao.sms_server.config.SmsServerDatabaseAutoConfiguration",
+      "sourceMethod": "druidDataSource()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sms.config-build-scale",
+      "type": "java.lang.Double",
+      "description": "通道选举算法启动比例",
+      "sourceType": "mao.sms_server.properties.SmsConfigurationProperties"
+    },
+    {
+      "name": "sms.config-level-fail-num",
+      "type": "java.lang.Integer",
+      "description": "通道最大失败次数",
+      "sourceType": "mao.sms_server.properties.SmsConfigurationProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "sms.message-error-num",
+      "type": "java.lang.Integer",
+      "description": "消息最大失败次数",
+      "sourceType": "mao.sms_server.properties.SmsConfigurationProperties",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}
