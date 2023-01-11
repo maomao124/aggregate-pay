@@ -1,9 +1,6 @@
 package mao.aggregate_pay_merchant_application.controller;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.BusinessException;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
@@ -15,9 +12,11 @@ import mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
 import mao.aggregate_pay_merchant_application.service.FileService;
 import mao.aggregate_pay_merchant_application.service.SmsService;
+import mao.aggregate_pay_merchant_application.vo.MerchantDetailVO;
 import mao.aggregate_pay_merchant_application.vo.MerchantRegisterVO;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -58,6 +57,9 @@ public class MerchantController
 
     @Resource
     private FileService fileService;
+
+    @Resource
+    private DozerUtils dozerUtils;
 
     /**
      * 发送验证码
@@ -165,4 +167,30 @@ public class MerchantController
         //byte[] bytes,String fileName
         return fileService.upload(multipartFile.getBytes(), fileName);
     }
+
+
+    /**
+     * 商户资质申请
+     *
+     * @param merchantDetailVO MerchantDetailVO
+     */
+    @ApiOperation("商户资质申请")
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "merchantDetailVO", value = "商户认证资料", required = true,
+                            dataType = "MerchantDetailVO", paramType = "body")
+            })
+    @PostMapping("/my/merchants/save")
+    public void saveMerchant(@RequestBody MerchantDetailVO merchantDetailVO)
+    {
+        //商户id
+        Long merchantId = 124619633188667425L;
+        //转换
+        MerchantDTO merchantDTO = dozerUtils.map(merchantDetailVO, MerchantDTO.class);
+        //发起远程调用
+        R<Boolean> result = merchantFeignClient.applyMerchant(merchantId, merchantDTO);
+        //断言结果
+        AssertResult.handler(result);
+    }
+
 }

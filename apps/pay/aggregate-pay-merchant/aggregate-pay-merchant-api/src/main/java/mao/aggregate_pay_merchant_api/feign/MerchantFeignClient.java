@@ -47,7 +47,6 @@ public interface MerchantFeignClient
      * @param merchantDTO 商人dto
      * @return {@link R}<{@link Boolean}>
      */
-    @ApiOperation("商户资质申请")
-    @PostMapping
-     R<Boolean> applyMerchant(@RequestParam Long merchantId, @RequestBody MerchantDTO merchantDTO);
+    @PostMapping("/{merchantId}")
+    R<Boolean> applyMerchant(@PathVariable Long merchantId, @RequestBody MerchantDTO merchantDTO);
 }

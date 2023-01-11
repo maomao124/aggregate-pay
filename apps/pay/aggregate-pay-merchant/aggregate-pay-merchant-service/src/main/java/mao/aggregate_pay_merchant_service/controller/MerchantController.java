@@ -66,8 +66,8 @@ public class MerchantController extends BaseController
      * @return {@link R}<{@link Boolean}>
      */
     @ApiOperation("商户资质申请")
-    @PostMapping
-    public R<Boolean> applyMerchant(@RequestParam Long merchantId,@RequestBody MerchantDTO merchantDTO)
+    @PostMapping("/{merchantId}")
+    public R<Boolean> applyMerchant(@PathVariable Long merchantId, @RequestBody MerchantDTO merchantDTO)
     {
         merchantService.applyMerchant(merchantId, merchantDTO);
         return R.success();

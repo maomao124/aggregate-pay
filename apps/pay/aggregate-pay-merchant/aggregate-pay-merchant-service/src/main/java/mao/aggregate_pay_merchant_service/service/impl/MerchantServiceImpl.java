@@ -87,8 +87,13 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         merchant_update.setAuditStatus("1");
         //租户id
         merchant_update.setTenantId(merchant.getTenantId());
+        //设置商户id
+        merchant_update.setId(merchantId);
         //更新
-        this.updateById(merchant_update);
-
+        boolean update = this.updateById(merchant_update);
+        if (!update)
+        {
+            throw BizException.wrap("商户资质申请失败");
+        }
     }
 }
