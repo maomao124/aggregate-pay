@@ -5,6 +5,8 @@ import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_service.entity.Merchant;
 import mao.aggregate_pay_merchant_service.mapper.MerchantMapper;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
+import mao.tools_core.exception.BizException;
+import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
 import org.springframework.stereotype.Service;
 
@@ -42,6 +44,12 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
     @Override
     public MerchantDTO createMerchant(MerchantDTO merchantDTO)
     {
+        //校验商户手机号的唯一性,根据商户的手机号查询商户表，如果存在记录则说明已有相同的手机号重复
+        int count = this.count(Wraps.<Merchant>lbQ().eq(Merchant::getMobile, merchantDTO.getMobile()));
+        if (count > 0)
+        {
+            throw BizException.wrap("手机号重复");
+        }
         //构建商户
         Merchant merchant = new Merchant();
         //设置审核状态

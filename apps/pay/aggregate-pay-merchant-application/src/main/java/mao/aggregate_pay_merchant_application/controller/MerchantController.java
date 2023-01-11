@@ -4,12 +4,18 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_common.domain.BusinessException;
+import mao.aggregate_pay_common.domain.CommonErrorCode;
+import mao.aggregate_pay_common.utils.PhoneUtil;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient;
+import mao.aggregate_pay_merchant_application.handler.AssertResult;
 import mao.aggregate_pay_merchant_application.service.SmsService;
 import mao.aggregate_pay_merchant_application.vo.MerchantRegisterVO;
+import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -55,6 +61,16 @@ public class MerchantController
     @ApiImplicitParam(value = "手机号", name = "phone", required = true, dataType = "string", paramType = "query")
     public String getSMSCode(@RequestParam("phone") String phone)
     {
+        //判断非空
+        if (StringUtils.isBlank(phone))
+        {
+            throw new BusinessException(CommonErrorCode.E_100112);
+        }
+        //校验手机号的合法性
+        if (!PhoneUtil.isMatches(phone))
+        {
+            throw new BusinessException(CommonErrorCode.E_100109);
+        }
         log.info("向手机号:{}发送验证码", phone);
         //向验证码服务请求发送验证码
         Map<String, Object> map = new HashMap<>();
@@ -73,17 +89,14 @@ public class MerchantController
     @ApiImplicitParam(value = "商户注册信息", name = "merchantRegisterVO", required = true, dataType = "MerchantRegisterVO", paramType = "body")
     public MerchantRegisterVO registerMerchant(@RequestBody MerchantRegisterVO merchantRegisterVO)
     {
-        if (merchantRegisterVO.getMobile() == null || merchantRegisterVO.getMobile().equals(""))
-        {
-            throw new RuntimeException("请输入手机号");
-        }
+
         if (merchantRegisterVO.getVerifiykey() == null || merchantRegisterVO.getVerifiykey().equals(""))
         {
-            throw new RuntimeException("验证码的key为空");
+            throw BizException.wrap("验证码的key为空");
         }
         if (merchantRegisterVO.getVerifiyCode() == null || merchantRegisterVO.getVerifiyCode().equals(""))
         {
-            throw new RuntimeException("请输入验证码");
+            throw BizException.wrap("请输入验证码");
         }
         smsService.checkVerifyCode(merchantRegisterVO.getVerifiykey(), merchantRegisterVO.getVerifiyCode());
 
@@ -92,8 +105,31 @@ public class MerchantController
         merchantDTO.setUsername(merchantRegisterVO.getUsername());
         merchantDTO.setMobile(merchantRegisterVO.getMobile());
         merchantDTO.setPassword(merchantRegisterVO.getPassword());
+
+        if (StringUtils.isBlank(merchantDTO.getMobile()))
+        {
+            throw new BusinessException(CommonErrorCode.E_100112);
+        }
+        //校验手机号的合法性
+        if (!PhoneUtil.isMatches(merchantDTO.getMobile()))
+        {
+            throw new BusinessException(CommonErrorCode.E_100109);
+        }
+        //联系人非空校验
+        if (StringUtils.isBlank(merchantDTO.getUsername()))
+        {
+            throw new BusinessException(CommonErrorCode.E_100110);
+        }
+        //密码非空校验
+        if (StringUtils.isBlank(merchantDTO.getPassword()))
+        {
+            throw new BusinessException(CommonErrorCode.E_100111);
+        }
+
         //远程调用
-        merchantFeignClient.createMerchant(merchantDTO);
+        R<MerchantDTO> result = merchantFeignClient.createMerchant(merchantDTO);
+        //断言结果
+        AssertResult.handler(result);
         //返回
         return merchantRegisterVO;
 

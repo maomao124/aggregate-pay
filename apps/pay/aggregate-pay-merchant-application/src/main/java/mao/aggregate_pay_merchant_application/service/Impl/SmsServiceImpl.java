@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.RestResponse;
 import mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient;
 import mao.aggregate_pay_merchant_application.service.SmsService;
+import mao.tools_core.exception.BizException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -39,13 +40,13 @@ public class SmsServiceImpl implements SmsService
             if (!response.getResult())
             {
                 //失败
-                throw new RuntimeException("验证码错误或者验证码已过期");
+                throw new BizException("验证码错误或者验证码已过期");
             }
         }
         catch (Exception e)
         {
             log.error("验证码服务异常：", e);
-            throw new RuntimeException("验证码错误或者验证码已过期");
+            throw new BizException("验证码错误或者验证码已过期");
         }
 
     }
