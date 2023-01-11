@@ -1,6 +1,7 @@
 package mao.aggregate_pay_merchant_service.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import mao.aggregate_pay_common.domain.CommonErrorCode;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_service.entity.Merchant;
 import mao.aggregate_pay_merchant_service.mapper.MerchantMapper;
@@ -9,6 +10,7 @@ import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -62,5 +64,31 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         merchantDTO.setId(merchant.getId());
         //返回
         return merchantDTO;
+    }
+
+    @Override
+    @Transactional
+    public void applyMerchant(Long merchantId, MerchantDTO merchantDTO)
+    {
+        //接收资质申请信息，更新到商户表
+        if (merchantDTO == null || merchantId == null)
+        {
+            throw BizException.wrap("传入对象为空");
+        }
+        //根据id查询商户
+        Merchant merchant = this.getById(merchantId);
+        if (merchant == null)
+        {
+            throw BizException.wrap("商户不存在");
+        }
+        //对象转换
+        Merchant merchant_update = dozerUtils.map(merchantDTO, Merchant.class);
+        //已申请待审核
+        merchant_update.setAuditStatus("1");
+        //租户id
+        merchant_update.setTenantId(merchant.getTenantId());
+        //更新
+        this.updateById(merchant_update);
+
     }
 }

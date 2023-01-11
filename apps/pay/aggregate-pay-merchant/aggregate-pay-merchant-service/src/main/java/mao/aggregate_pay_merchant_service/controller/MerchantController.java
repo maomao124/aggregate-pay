@@ -32,6 +32,12 @@ public class MerchantController extends BaseController
     @Resource
     private MerchantService merchantService;
 
+    /**
+     * 根据商户id查询商户信息
+     *
+     * @param merchantId 商人id
+     * @return {@link R}<{@link MerchantDTO}>
+     */
     @ApiOperation("根据商户id查询商户信息")
     @GetMapping("/{merchantId}")
     public R<MerchantDTO> getById(@PathVariable Long merchantId)
@@ -39,10 +45,31 @@ public class MerchantController extends BaseController
         return R.success(merchantService.getMerchantById(merchantId));
     }
 
+    /**
+     * 注册商户
+     *
+     * @param merchantDTO 商人dto
+     * @return {@link R}<{@link MerchantDTO}>
+     */
     @ApiOperation("注册商户")
     @PostMapping
     public R<MerchantDTO> createMerchant(@RequestBody MerchantDTO merchantDTO)
     {
         return R.success(merchantService.createMerchant(merchantDTO));
+    }
+
+    /**
+     * 商户资质申请
+     *
+     * @param merchantId  商人id
+     * @param merchantDTO 商人dto
+     * @return {@link R}<{@link Boolean}>
+     */
+    @ApiOperation("商户资质申请")
+    @PostMapping
+    public R<Boolean> applyMerchant(@RequestParam Long merchantId,@RequestBody MerchantDTO merchantDTO)
+    {
+        merchantService.applyMerchant(merchantId, merchantDTO);
+        return R.success();
     }
 }

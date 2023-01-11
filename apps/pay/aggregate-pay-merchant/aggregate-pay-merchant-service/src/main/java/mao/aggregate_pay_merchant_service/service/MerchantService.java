@@ -36,4 +36,12 @@ public interface MerchantService extends IService<Merchant>
      */
     MerchantDTO createMerchant(MerchantDTO merchantDTO);
 
+    /**
+     * 资质申请
+     *
+     * @param merchantId  商户id
+     * @param merchantDTO 资质申请信息
+     */
+    void applyMerchant(Long merchantId, MerchantDTO merchantDTO);
+
 }

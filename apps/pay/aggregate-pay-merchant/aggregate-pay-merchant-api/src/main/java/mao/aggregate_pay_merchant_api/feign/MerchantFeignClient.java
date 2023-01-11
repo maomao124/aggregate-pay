@@ -4,10 +4,7 @@ import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -25,9 +22,32 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(value = "aggregate-pay-merchant-service", path = "/merchant")
 public interface MerchantFeignClient
 {
+    /**
+     * 根据商户id查询商户信息
+     *
+     * @param merchantId 商人id
+     * @return {@link R}<{@link MerchantDTO}>
+     */
     @GetMapping("/{merchantId}")
     R<MerchantDTO> getById(@PathVariable Long merchantId);
 
+    /**
+     * 创建商户
+     *
+     * @param merchantDTO 商人dto
+     * @return {@link R}<{@link MerchantDTO}>
+     */
     @PostMapping
     R<MerchantDTO> createMerchant(@RequestBody MerchantDTO merchantDTO);
+
+    /**
+     * 商户资质申请
+     *
+     * @param merchantId  商人id
+     * @param merchantDTO 商人dto
+     * @return {@link R}<{@link Boolean}>
+     */
+    @ApiOperation("商户资质申请")
+    @PostMapping
+     R<Boolean> applyMerchant(@RequestParam Long merchantId, @RequestBody MerchantDTO merchantDTO);
 }
