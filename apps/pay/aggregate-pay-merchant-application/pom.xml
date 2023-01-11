@@ -99,6 +99,11 @@
             <artifactId>tools-core</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-xss</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
