@@ -3,24 +3,30 @@ package mao.aggregate_pay_merchant_application.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.BusinessException;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
 import mao.aggregate_pay_common.utils.PhoneUtil;
+import mao.aggregate_pay_common.utils.RandomUuidUtil;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
+import mao.aggregate_pay_merchant_application.service.FileService;
 import mao.aggregate_pay_merchant_application.service.SmsService;
 import mao.aggregate_pay_merchant_application.vo.MerchantRegisterVO;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -49,6 +55,9 @@ public class MerchantController
 
     @Resource
     private MerchantFeignClient merchantFeignClient;
+
+    @Resource
+    private FileService fileService;
 
     /**
      * 发送验证码
@@ -133,5 +142,27 @@ public class MerchantController
         //返回
         return merchantRegisterVO;
 
+    }
+
+    /**
+     * 上传证件照
+     *
+     * @param multipartFile 多部分文件
+     * @return {@link String}
+     * @throws IOException io异常
+     */
+    @ApiOperation("上传证件照")
+    @PostMapping("/upload")
+    public String upload(@ApiParam(value = "证件照", required = true) @RequestParam("file") MultipartFile multipartFile)
+            throws IOException
+    {
+        //调用fileService上传文件
+        //生成的文件名称fileName，要保证它的唯一
+        //文件原始名称
+        String originalFilename = multipartFile.getOriginalFilename();
+        //文件名称
+        String fileName = RandomUuidUtil.getUUID() + "_" + originalFilename;
+        //byte[] bytes,String fileName
+        return fileService.upload(multipartFile.getBytes(), fileName);
     }
 }

@@ -1,6 +1,10 @@
 package mao.aggregate_pay_common.utils;
 
+import com.qiniu.util.IOUtils;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
+
+import java.io.FileInputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,9 +24,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class QiniuUtilsTest
 {
 
+    @SneakyThrows
     @Test
     void upload2qiniu()
     {
-
+        String accessKey = "iCXS8pn-PiJ77RYpkFd9UH5alX9b_0oiB......";
+        String SecretKey = "w65H_JovJdjWpTQwYcFw63OCIVIS_o6......";
+        String bucket = "......";
+        String fileName = "image-20230110151739681.png";
+        String filePath = "C:\\Users\\mao\\Desktop\\image-20230110151739681.png";
+        byte[] bytes = IOUtils.toByteArray(new FileInputStream(filePath));
+        QiniuUtils.upload2qiniu(accessKey, SecretKey, bucket, bytes, fileName);
     }
+
 }

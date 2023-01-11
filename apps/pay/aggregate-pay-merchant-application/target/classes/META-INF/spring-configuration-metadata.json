@@ -1,0 +1,35 @@
+{
+  "groups": [
+    {
+      "name": "qn",
+      "type": "mao.aggregate_pay_merchant_application.config.QNFileConfigurationProperties",
+      "sourceType": "mao.aggregate_pay_merchant_application.config.QNFileConfigurationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "qn.access-key",
+      "type": "java.lang.String",
+      "description": "访问密钥",
+      "sourceType": "mao.aggregate_pay_merchant_application.config.QNFileConfigurationProperties"
+    },
+    {
+      "name": "qn.bucket",
+      "type": "java.lang.String",
+      "description": "桶",
+      "sourceType": "mao.aggregate_pay_merchant_application.config.QNFileConfigurationProperties"
+    },
+    {
+      "name": "qn.secret-key",
+      "type": "java.lang.String",
+      "description": "秘密密钥",
+      "sourceType": "mao.aggregate_pay_merchant_application.config.QNFileConfigurationProperties"
+    },
+    {
+      "name": "qn.url",
+      "type": "java.lang.String",
+      "sourceType": "mao.aggregate_pay_merchant_application.config.QNFileConfigurationProperties"
+    }
+  ],
+  "hints": []
+}

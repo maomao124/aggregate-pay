@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 
 public class QiniuUtils
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(QiniuUtils.class);
+    private static final Logger log = LoggerFactory.getLogger(QiniuUtils.class);
 
     /**
      * 文件上传的工具方法
@@ -63,17 +63,18 @@ public class QiniuUtils
                 Response response = uploadManager.put(bytes, key, upToken);
                 //解析上传成功的结果
                 DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
-                System.out.println(putRet.key);
-                System.out.println(putRet.hash);
+                //System.out.println(putRet.key);
+                //System.out.println(putRet.hash);
+                log.info("上传文件到七牛云：" + putRet.key);
             }
             catch (QiniuException ex)
             {
                 Response r = ex.response;
                 System.err.println(r.toString());
-                LOGGER.error("上传文件到七牛：{}", ex.getMessage());
+                log.error("上传文件到七牛：{}", ex.getMessage());
                 try
                 {
-                    LOGGER.error(r.bodyString());
+                    log.error(r.bodyString());
                 }
                 catch (QiniuException ex2)
                 {
@@ -84,7 +85,7 @@ public class QiniuUtils
         }
         catch (Exception ex)
         {
-            LOGGER.error("上传文件到七牛：{}", ex.getMessage());
+            log.error("上传文件到七牛：{}", ex.getMessage());
             throw new RuntimeException(ex.getMessage());
         }
     }
