@@ -69,3 +69,358 @@ docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', descrip
 2023-01-11 13:35:02.074  INFO 23088 --- [RMI TCP Connection(4)-172.29.144.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-01-11 13:35:02.086  INFO 23088 --- [RMI TCP Connection(4)-172.29.144.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
 2023-01-11 13:35:15.246  INFO 23088 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1673415315245,\"checksum\":\"40c1e9ad967de196120fa5d381ef2d75\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":148826946588500} from /172.29.144.1
+2023-01-11 14:02:03.882  WARN 23088 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-11 14:02:03.882  WARN 23088 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-11 14:02:03.883  WARN 23088 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-11 14:02:03.883  WARN 23088 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-11 14:02:03.884  INFO 23088 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-11 14:02:03.886  INFO 23088 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-01-11 14:02:03.886  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-merchant-application:192.168.3.143:57010 from beat map.
+2023-01-11 14:02:03.886  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-merchant-application with instance: Instance{instanceId='null', ip='192.168.3.143', port=57010, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-11 14:02:03.891  INFO 23088 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-01-11 14:02:03.891  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-11 14:02:03.891  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-11 14:02:03.892  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-11 14:02:04.894  INFO 23088 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1673416924893,\"checksum\":\"e091f03e5dbf474f90a9f95b349bfee8\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":150436593969500} from /172.29.144.1
+2023-01-11 14:02:06.912  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-11 14:02:09.946  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-11 14:02:09.946  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-11 14:02:09.946  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-11 14:02:09.946  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-11 14:02:09.946  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-11 14:02:09.947  WARN 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-11 14:02:09.947  WARN 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-11 14:02:09.947  INFO 23088 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-11 14:02:09.947  INFO 23088 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-11 14:02:09.947  INFO 23088 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-11 14:02:09.947  INFO 23088 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-11 14:02:09.950  WARN 23088 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-11 14:02:19.426  WARN 24424 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-11 14:02:19.434  INFO 24424 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-11 14:02:19.475  INFO 24424 --- [main] m.a.AggregatePayMerchantApplication      : The following profiles are active: dev
+2023-01-11 14:02:20.432  WARN 24424 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-11 14:02:20.576  INFO 24424 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3847342-e49b-33e9-b03e-7d31c3b9ad65
+2023-01-11 14:02:20.886  INFO 24424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 57010 (http)
+2023-01-11 14:02:20.896  INFO 24424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-11 14:02:20.896  INFO 24424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-11 14:02:21.032  INFO 24424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-11 14:02:21.032  INFO 24424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1543 ms
+2023-01-11 14:02:21.035  INFO 24424 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-01-11 14:02:21.231 DEBUG 24424 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init start ...
+2023-01-11 14:02:21.276 DEBUG 24424 --- [main] mao.tools_xss.filter.XssFilter           : ignorePathList=null
+2023-01-11 14:02:21.279 DEBUG 24424 --- [main] mao.tools_xss.filter.XssFilter           : ignoreParamValueList=["samlp:LogoutRequest"]
+2023-01-11 14:02:21.279 DEBUG 24424 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init end
+2023-01-11 14:02:22.128  INFO 24424 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-11 14:02:22.129  INFO 24424 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-11 14:02:22.129  INFO 24424 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-11 14:02:22.223  INFO 24424 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-11 14:02:22.270  WARN 24424 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-11 14:02:22.270  INFO 24424 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-11 14:02:22.274  WARN 24424 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-11 14:02:22.274  INFO 24424 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-11 14:02:22.367  INFO 24424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-11 14:02:22.444  INFO 24424 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-11 14:02:22.463  INFO 24424 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-11 14:02:22.463  INFO 24424 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-11 14:02:22.469  INFO 24424 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-11 14:02:22.473  INFO 24424 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-11 14:02:22.478  INFO 24424 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-11 14:02:22.500  INFO 24424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-11 14:02:22.763  INFO 24424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:02:22.765  INFO 24424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:02:22.809  INFO 24424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-11 14:02:22.810  INFO 24424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-11 14:02:22.813  INFO 24424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:02:22.814  INFO 24424 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:02:22.819  INFO 24424 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-11 14:02:22.925  INFO 24424 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-11 14:02:22.940  INFO 24424 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-11 14:02:22.948  INFO 24424 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-11 14:02:22.948  INFO 24424 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-11 14:02:23.475  INFO 24424 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-11 14:02:23.484  INFO 24424 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-11 14:02:23.487  INFO 24424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-11 14:02:23.509  INFO 24424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-11 14:02:23.543  INFO 24424 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-11 14:02:23.683  INFO 24424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 57010 (http) with context path ''
+2023-01-11 14:02:23.687  INFO 24424 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-merchant-application with instance: Instance{instanceId='null', ip='192.168.3.143', port=57010, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-01-11 14:02:23.691  INFO 24424 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-merchant-application 192.168.3.143:57010 register finished
+2023-01-11 14:02:23.933  INFO 24424 --- [main] m.a.AggregatePayMerchantApplication      : Started AggregatePayMerchantApplication in 6.009 seconds (JVM running for 6.961)
+2023-01-11 14:02:23.940  INFO 24424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:02:23.940  INFO 24424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:02:23.942  INFO 24424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:02:23.942  INFO 24424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:02:23.943  INFO 24424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:02:23.944  INFO 24424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:02:23.945  INFO 24424 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:02:23.945  INFO 24424 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:02:23.946  INFO 24424 --- [main] m.a.AggregatePayMerchantApplication      : 应用aggregate-pay-merchant-application启动成功!swagger地址：http://172.29.144.1:57010/doc.html
+2023-01-11 14:02:23.946  INFO 24424 --- [main] m.a.AggregatePayMerchantApplication      : 启动耗时：6139ms
+2023-01-11 14:02:24.702  INFO 24424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1673416944701,\"checksum\":\"40c1e9ad967de196120fa5d381ef2d75\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":150456401907900} from /172.29.144.1
+2023-01-11 14:02:24.782  INFO 24424 --- [RMI TCP Connection(3)-172.29.144.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-11 14:02:24.782  INFO 24424 --- [RMI TCP Connection(3)-172.29.144.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-11 14:02:24.788  INFO 24424 --- [RMI TCP Connection(3)-172.29.144.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-01-11 14:02:35.115  INFO 24424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1673416955115,\"checksum\":\"40c1e9ad967de196120fa5d381ef2d75\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":150466815747900} from /172.29.144.1
+2023-01-11 14:03:24.887 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-11 14:03:24.887 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources] need XssFilter, go to XssRequestWrapper
+2023-01-11 14:03:24.887 DEBUG 24424 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-11 14:03:24.887 DEBUG 24424 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2023-01-11 14:03:24.928 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-11 14:03:24.928 DEBUG 24424 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-11 14:03:24.944 DEBUG 24424 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-11 14:03:24.944 DEBUG 24424 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2023-01-11 14:03:24.947 DEBUG 24424 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2023-01-11 14:03:24.960 DEBUG 24424 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2023-01-11 14:03:24.961 DEBUG 24424 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 商户平台应用
+2023-01-11 14:03:24.999 DEBUG 24424 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 商户平台应用
+2023-01-11 14:03:25.076 DEBUG 24424 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-11 14:03:33.150 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-11 14:03:33.150 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/sms] need XssFilter, go to XssRequestWrapper
+2023-01-11 14:03:33.151 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 1
+2023-01-11 14:03:33.152 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 1
+2023-01-11 14:03:33.157 DEBUG 24424 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-11 14:04:51.731  WARN 24424 --- [Thread-22] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-11 14:04:51.731  WARN 24424 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-11 14:04:51.731  WARN 24424 --- [Thread-22] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-11 14:04:51.732  WARN 24424 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-11 14:04:51.733  INFO 24424 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-11 14:04:51.735  INFO 24424 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-01-11 14:04:51.735  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-merchant-application:192.168.3.143:57010 from beat map.
+2023-01-11 14:04:51.736  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-merchant-application with instance: Instance{instanceId='null', ip='192.168.3.143', port=57010, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-11 14:04:51.738  INFO 24424 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-01-11 14:04:51.739  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-11 14:04:51.739  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-11 14:04:51.739  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-11 14:04:52.745  INFO 24424 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1673417092745,\"checksum\":\"e091f03e5dbf474f90a9f95b349bfee8\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":150604445766200} from /172.29.144.1
+2023-01-11 14:04:54.669  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-11 14:04:57.709  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-11 14:04:57.709  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-11 14:04:57.710  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-11 14:04:57.710  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-11 14:04:57.710  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-11 14:04:57.710  WARN 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-11 14:04:57.711  WARN 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-11 14:04:57.711  INFO 24424 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-11 14:04:57.711  INFO 24424 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-11 14:04:57.711  INFO 24424 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-11 14:04:57.712  INFO 24424 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-11 14:04:57.716  WARN 24424 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-11 14:04:57.900 DEBUG 24424 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy
+2023-01-11 14:05:05.579  WARN 15692 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-11 14:05:05.589  INFO 15692 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-11 14:05:05.629  INFO 15692 --- [main] m.a.AggregatePayMerchantApplication      : The following profiles are active: dev
+2023-01-11 14:05:06.530  WARN 15692 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-11 14:05:06.651  INFO 15692 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3847342-e49b-33e9-b03e-7d31c3b9ad65
+2023-01-11 14:05:06.961  INFO 15692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 57010 (http)
+2023-01-11 14:05:06.971  INFO 15692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-11 14:05:06.971  INFO 15692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-11 14:05:07.110  INFO 15692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-11 14:05:07.111  INFO 15692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1465 ms
+2023-01-11 14:05:07.113  INFO 15692 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-01-11 14:05:07.301 DEBUG 15692 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init start ...
+2023-01-11 14:05:07.344 DEBUG 15692 --- [main] mao.tools_xss.filter.XssFilter           : ignorePathList=null
+2023-01-11 14:05:07.346 DEBUG 15692 --- [main] mao.tools_xss.filter.XssFilter           : ignoreParamValueList=["samlp:LogoutRequest"]
+2023-01-11 14:05:07.346 DEBUG 15692 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init end
+2023-01-11 14:05:08.179  INFO 15692 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-11 14:05:08.179  INFO 15692 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-11 14:05:08.180  INFO 15692 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-11 14:05:08.282  INFO 15692 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-11 14:05:08.330  WARN 15692 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-11 14:05:08.331  INFO 15692 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-11 14:05:08.334  WARN 15692 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-11 14:05:08.334  INFO 15692 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-11 14:05:08.427  INFO 15692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-11 14:05:08.504  INFO 15692 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-11 14:05:08.520  INFO 15692 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-11 14:05:08.521  INFO 15692 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-11 14:05:08.526  INFO 15692 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-11 14:05:08.531  INFO 15692 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-11 14:05:08.537  INFO 15692 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-11 14:05:08.560  INFO 15692 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-11 14:05:08.816  INFO 15692 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:05:08.818  INFO 15692 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:05:08.859  INFO 15692 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-11 14:05:08.860  INFO 15692 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-11 14:05:08.862  INFO 15692 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:05:08.862  INFO 15692 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-11 14:05:08.867  INFO 15692 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-11 14:05:08.917  INFO 15692 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-11 14:05:08.930  INFO 15692 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-11 14:05:08.937  INFO 15692 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-11 14:05:08.937  INFO 15692 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-11 14:05:09.456  INFO 15692 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-11 14:05:09.464  INFO 15692 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-11 14:05:09.467  INFO 15692 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-11 14:05:09.488  INFO 15692 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-11 14:05:09.521  INFO 15692 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-11 14:05:09.667  INFO 15692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 57010 (http) with context path ''
+2023-01-11 14:05:09.673  INFO 15692 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-merchant-application with instance: Instance{instanceId='null', ip='192.168.3.143', port=57010, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-01-11 14:05:09.677  INFO 15692 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-merchant-application 192.168.3.143:57010 register finished
+2023-01-11 14:05:09.913  INFO 15692 --- [main] m.a.AggregatePayMerchantApplication      : Started AggregatePayMerchantApplication in 5.798 seconds (JVM running for 6.747)
+2023-01-11 14:05:09.921  INFO 15692 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:05:09.922  INFO 15692 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:05:09.924  INFO 15692 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:05:09.924  INFO 15692 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:05:09.925  INFO 15692 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:05:09.926  INFO 15692 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:05:09.927  INFO 15692 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-11 14:05:09.927  INFO 15692 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-11 14:05:09.928  INFO 15692 --- [main] m.a.AggregatePayMerchantApplication      : 应用aggregate-pay-merchant-application启动成功!swagger地址：http://172.29.144.1:57010/doc.html
+2023-01-11 14:05:09.928  INFO 15692 --- [main] m.a.AggregatePayMerchantApplication      : 启动耗时：5926ms
+2023-01-11 14:05:10.280  INFO 15692 --- [RMI TCP Connection(3)-172.29.144.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-11 14:05:10.280  INFO 15692 --- [RMI TCP Connection(3)-172.29.144.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-11 14:05:10.286  INFO 15692 --- [RMI TCP Connection(3)-172.29.144.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-01-11 14:05:10.686  INFO 15692 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1673417110686,\"checksum\":\"40c1e9ad967de196120fa5d381ef2d75\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":150622387452100} from /172.29.144.1
+2023-01-11 14:05:14.764 DEBUG 15692 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-11 14:05:14.764 DEBUG 15692 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/sms] need XssFilter, go to XssRequestWrapper
+2023-01-11 14:05:14.783 DEBUG 15692 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2023-01-11 14:05:14.792 DEBUG 15692 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2023-01-11 14:05:14.793 DEBUG 15692 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 1
+2023-01-11 14:05:14.832 DEBUG 15692 --- [http-nio-57010-exec-2] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 1
+2023-01-11 14:05:14.841  INFO 15692 --- [http-nio-57010-exec-2] m.a.handler.GlobalExceptionHandler       : 发送错误
+
+mao.tools_core.exception.BizException: 发送错误
+	at mao.aggregate_pay_merchant_application.controller.MerchantController.getSMSCode(MerchantController.java:60) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-11 14:05:14.859 DEBUG 15692 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-11 14:05:17.573  INFO 15692 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1673417117573,\"checksum\":\"40c1e9ad967de196120fa5d381ef2d75\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":150629273734300} from /172.29.144.1
+2023-01-11 14:05:17.727 DEBUG 15692 --- [http-nio-57010-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-11 14:05:17.727 DEBUG 15692 --- [http-nio-57010-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/sms] need XssFilter, go to XssRequestWrapper
+2023-01-11 14:05:17.728 DEBUG 15692 --- [http-nio-57010-exec-4] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 1
+2023-01-11 14:05:17.728 DEBUG 15692 --- [http-nio-57010-exec-4] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 1
+2023-01-11 14:05:17.729  INFO 15692 --- [http-nio-57010-exec-4] m.a.handler.GlobalExceptionHandler       : 发送错误
+
+mao.tools_core.exception.BizException: 发送错误
+	at mao.aggregate_pay_merchant_application.controller.MerchantController.getSMSCode(MerchantController.java:60) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-11 14:05:17.731 DEBUG 15692 --- [http-nio-57010-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop

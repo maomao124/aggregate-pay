@@ -9,6 +9,7 @@ import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient;
 import mao.aggregate_pay_merchant_application.service.SmsService;
 import mao.aggregate_pay_merchant_application.vo.MerchantRegisterVO;
+import mao.tools_core.exception.BizException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

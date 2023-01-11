@@ -58,6 +58,7 @@ public class GlobalExceptionHandler
         //系统业务异常
         if (e instanceof BizException)
         {
+            log.info(e.getMessage(), e);
             int code = ((BizException) e).getCode();
             //错误信息
             String desc = e.getMessage();
