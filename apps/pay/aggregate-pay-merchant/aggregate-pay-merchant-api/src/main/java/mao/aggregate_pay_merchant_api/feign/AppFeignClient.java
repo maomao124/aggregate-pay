@@ -4,9 +4,9 @@ import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.AppDTO;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -33,4 +33,22 @@ public interface AppFeignClient
      */
     @PostMapping("/{merchantId}")
     R<AppDTO> createApp(@PathVariable Long merchantId, @RequestBody AppDTO app);
+
+    /**
+     * 查询商户下的应用列表
+     *
+     * @param merchantId 商户id
+     * @return {@link R}<{@link List}<{@link AppDTO}>>
+     */
+    @GetMapping("/queryAppByMerchantId")
+    R<List<AppDTO>> queryAppByMerchantId(@RequestParam Long merchantId);
+
+    /**
+     * 通过id获取应用
+     *
+     * @param id id
+     * @return {@link R}<{@link AppDTO}>
+     */
+    @GetMapping("/getAppById")
+    R<AppDTO> getAppById(@RequestParam String id);
 }

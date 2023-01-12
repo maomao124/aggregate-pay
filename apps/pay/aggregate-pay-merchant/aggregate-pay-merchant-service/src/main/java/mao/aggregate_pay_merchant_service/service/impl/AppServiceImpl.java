@@ -11,10 +11,14 @@ import mao.aggregate_pay_merchant_service.service.AppService;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
 import mao.tools_core.base.R;
 import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_redis_cache.utils.RedisUtils;
 import mao.toolsdozer.utils.DozerUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -39,6 +43,9 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
 
     @Resource
     private MerchantService merchantService;
+
+    @Resource
+    private RedisUtils redisUtils;
 
     @Override
     public R<AppDTO> createApp(Long merchantId, AppDTO app)
@@ -76,5 +83,30 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
         }
         //保存成功，主要是返回主键
         return R.success(dozerUtils.map(app1, AppDTO.class));
+    }
+
+    @Override
+    public List<AppDTO> queryAppByMerchantId(Long merchantId)
+    {
+        //查询
+        List<App> appList = this.list(Wraps.<App>lbQ().eq(App::getMerchantId, merchantId));
+        //转换并返回
+        return dozerUtils.mapList(appList, AppDTO.class);
+    }
+
+    @Override
+    public R<AppDTO> getAppById(String id)
+    {
+        //查询，添加到缓存
+        AppDTO appDTO = redisUtils.query("pay:AppDTO:getAppById:", "pay:AppDTO:getAppById:Lock:", id, AppDTO.class, new Function<String, AppDTO>()
+        {
+            @Override
+            public AppDTO apply(String s)
+            {
+                App app1 = getOne(Wraps.<App>lbQ().eq(App::getAppId, id));
+                return dozerUtils.map(app1, AppDTO.class);
+            }
+        }, 120L, TimeUnit.SECONDS, 30);
+        return R.success(appDTO);
     }
 }

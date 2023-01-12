@@ -5,6 +5,8 @@ import mao.aggregate_pay_merchant_api.dto.AppDTO;
 import mao.aggregate_pay_merchant_service.entity.App;
 import mao.tools_core.base.R;
 
+import java.util.List;
+
 /**
  * Project name(项目名称)：aggregate-pay
  * Package(包名): mao.aggregate_pay_merchant_service.service
@@ -28,4 +30,20 @@ public interface AppService extends IService<App>
      * @return {@link AppDTO}
      */
     R<AppDTO> createApp(Long merchantId, AppDTO app);
+
+    /**
+     * 查询商户下的应用列表
+     *
+     * @param merchantId 商户id
+     * @return {@link List}<{@link AppDTO}>
+     */
+    List<AppDTO> queryAppByMerchantId(Long merchantId);
+
+    /**
+     * 根据id查询应用
+     *
+     * @param id id
+     * @return {@link R}<{@link AppDTO}>
+     */
+    R<AppDTO> getAppById(String id);
 }

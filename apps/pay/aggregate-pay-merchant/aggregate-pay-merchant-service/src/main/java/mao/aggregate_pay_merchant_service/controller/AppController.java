@@ -8,6 +8,7 @@ import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -43,5 +44,31 @@ public class AppController
     public R<AppDTO> createApp(@PathVariable Long merchantId, @RequestBody AppDTO app)
     {
         return appService.createApp(merchantId, app);
+    }
+
+    /**
+     * 查询商户下的应用列表
+     *
+     * @param merchantId 商户id
+     * @return {@link R}<{@link List}<{@link AppDTO}>>
+     */
+    @ApiOperation("查询商户下的应用列表")
+    @GetMapping("/queryAppByMerchantId")
+    public R<List<AppDTO>> queryAppByMerchantId(@RequestParam Long merchantId)
+    {
+        return R.success(appService.queryAppByMerchantId(merchantId));
+    }
+
+    /**
+     * 通过id获取应用
+     *
+     * @param id id
+     * @return {@link R}<{@link AppDTO}>
+     */
+    @ApiOperation("根据id查询应用")
+    @GetMapping("/getAppById")
+    public R<AppDTO> getAppById(@RequestParam String id)
+    {
+        return appService.getAppById(id);
     }
 }

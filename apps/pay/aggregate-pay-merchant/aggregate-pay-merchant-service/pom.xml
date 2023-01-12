@@ -107,6 +107,11 @@
             <artifactId>tools-log</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-redis-cache</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
