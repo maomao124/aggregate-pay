@@ -11,11 +11,10 @@ import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import org.apache.catalina.security.SecurityUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -66,6 +65,46 @@ public class AppController
 
         //远程调用
         R<AppDTO> r = appFeignClient.createApp(merchantId, app);
+        //断言
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
+    }
+
+
+    /**
+     * 查询商户下的应用列表
+     *
+     * @return {@link List}<{@link AppDTO}>
+     */
+    @ApiOperation("查询商户下的应用列表")
+    @GetMapping(value = "/my/apps")
+    public List<AppDTO> queryMyApps()
+    {
+        //商户id
+        //todo：暂时
+        Long merchantId = 124619633188667425L;
+        //远程调用
+        R<List<AppDTO>> r = appFeignClient.queryAppByMerchantId(merchantId);
+        //断言
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
+    }
+
+    /**
+     * 根据应用id查询应用信息
+     *
+     * @param appId 应用id
+     * @return {@link AppDTO}
+     */
+    @ApiOperation("根据应用id查询应用信息")
+    @ApiImplicitParam(value = "应用id", name = "appId", dataType = "String", paramType = "path")
+    @GetMapping(value = "/my/apps/{appId}")
+    public AppDTO getApp(@PathVariable("appId") String appId)
+    {
+        //查询
+        R<AppDTO> r = appFeignClient.getAppById(appId);
         //断言
         AssertResult.handler(r);
         //返回

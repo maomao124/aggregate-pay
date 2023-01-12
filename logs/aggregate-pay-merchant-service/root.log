@@ -1380,3 +1380,7 @@ docket：{aggregate_pay=DocketInfo{title='商户服务', group='', description='
 2023-01-12 20:47:02.469 DEBUG 22644 --- [http-nio-56040-exec-3] m.a.mapper.AppMapper.selectOne           : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app WHERE (APP_ID = ?) 
 2023-01-12 20:47:02.471 DEBUG 22644 --- [http-nio-56040-exec-3] m.a.mapper.AppMapper.selectOne           : ==> Parameters: 45(String)
 2023-01-12 20:47:02.472 DEBUG 22644 --- [http-nio-56040-exec-3] m.a.mapper.AppMapper.selectOne           : <==      Total: 0
+2023-01-12 20:47:36.519 DEBUG 22644 --- [http-nio-56040-exec-5] mao.tools_redis_cache.utils.RedisUtils   : pay:AppDTO:getAppById:7a6e88fba94742069ef3bc40ee70ef18 获取分布式锁后，缓存未命中，查询数据库
+2023-01-12 20:47:36.520 DEBUG 22644 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectOne           : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app WHERE (APP_ID = ?) 
+2023-01-12 20:47:36.521 DEBUG 22644 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectOne           : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String)
+2023-01-12 20:47:36.523 DEBUG 22644 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectOne           : <==      Total: 1
