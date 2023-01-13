@@ -17,7 +17,8 @@
       "name": "swagger.base-package",
       "type": "java.lang.String",
       "description": "swagger会解析的包路径",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties",
+      "defaultValue": ""
     },
     {
       "name": "swagger.base-path",
@@ -29,25 +30,29 @@
       "name": "swagger.contact.email",
       "type": "java.lang.String",
       "description": "电子邮件",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact",
+      "defaultValue": ""
     },
     {
       "name": "swagger.contact.name",
       "type": "java.lang.String",
       "description": "联系人名称",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact",
+      "defaultValue": ""
     },
     {
       "name": "swagger.contact.url",
       "type": "java.lang.String",
       "description": "url",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties$Contact",
+      "defaultValue": ""
     },
     {
       "name": "swagger.description",
       "type": "java.lang.String",
       "description": "描述",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties",
+      "defaultValue": "在线文档"
     },
     {
       "name": "swagger.docket",
@@ -65,19 +70,22 @@
       "name": "swagger.group",
       "type": "java.lang.String",
       "description": "自定义组名",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties",
+      "defaultValue": ""
     },
     {
       "name": "swagger.title",
       "type": "java.lang.String",
       "description": "标题",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties",
+      "defaultValue": "在线文档"
     },
     {
       "name": "swagger.version",
       "type": "java.lang.String",
       "description": "版本",
-      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties"
+      "sourceType": "mao.toolsswagger2.config.SwaggerConfigurationProperties",
+      "defaultValue": "1.0"
     }
   ],
   "hints": []
