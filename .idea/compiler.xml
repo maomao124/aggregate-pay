@@ -8,6 +8,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="aggregate-pay-transaction-service" />
         <module name="tools-xss" />
         <module name="sms-entity" />
         <module name="sms-dao" />
@@ -22,9 +23,11 @@
         <module name="aggregate-pay-sms" />
         <module name="auth-entity" />
         <module name="tools-common" />
+        <module name="aggregate-pay-transaction" />
         <module name="auth-server" />
         <module name="tools-j2cache" />
         <module name="aggregate-pay-merchant-service" />
+        <module name="aggregate-pay-transaction-api" />
         <module name="sms-api" />
         <module name="sms-server" />
         <module name="tools-validator" />
@@ -45,6 +48,9 @@
       <module name="aggregate-pay-merchant-application" options="-parameters" />
       <module name="aggregate-pay-merchant-service" options="-parameters" />
       <module name="aggregate-pay-sms" options="-parameters" />
+      <module name="aggregate-pay-transaction" options="-parameters" />
+      <module name="aggregate-pay-transaction-api" options="-parameters" />
+      <module name="aggregate-pay-transaction-service" options="-parameters" />
       <module name="auth-entity" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
