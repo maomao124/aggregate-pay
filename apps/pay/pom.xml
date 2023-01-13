@@ -24,6 +24,7 @@
         <module>aggregate-pay-merchant</module>
         <module>aggregate-pay-merchant-application</module>
         <module>aggregate-pay-sms</module>
+        <module>aggregate-pay-transaction</module>
     </modules>
 
     <dependencyManagement>
@@ -52,6 +53,16 @@
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>aggregate-pay-sms</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-transaction-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-transaction-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
