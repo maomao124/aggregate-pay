@@ -111,6 +111,11 @@
         <gson.version>2.8.2</gson.version>
         <zxing.core.version>3.3.3</zxing.core.version>
         <zxing.javase.version>3.3.3</zxing.javase.version>
+        <alipay-sdk.version>3.7.73.ALL</alipay-sdk.version>
+        <wxpay-sdk.version>3.0.10</wxpay-sdk.version>
+        <weixin-java-pay.version>3.4.0</weixin-java-pay.version>
+        <rocketmq-spring-boot-starter.version>2.2.2</rocketmq-spring-boot-starter.version>
+
 
 
         <hutool.version>5.1.0</hutool.version>
@@ -424,7 +429,32 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>com.alipay.sdk</groupId>
+                <artifactId>alipay-sdk-java</artifactId>
+                <version>${alipay-sdk.version}</version>
+            </dependency>
+
+            <!--微信相关-->
+            <dependency>
+                <groupId>com.github.tedzhdz</groupId>
+                <artifactId>wxpay-sdk</artifactId>
+                <version>${wxpay-sdk.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-pay</artifactId>
+                <version>${weixin-java-pay.version}</version>
+            </dependency>
+
+            <!--RocketMQ spring boot 依赖-->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-spring-boot-starter.version}</version>
             </dependency>
 
         </dependencies>

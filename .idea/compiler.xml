@@ -23,7 +23,6 @@
         <module name="aggregate-pay-sms" />
         <module name="auth-entity" />
         <module name="tools-common" />
-        <module name="aggregate-pay-transaction" />
         <module name="auth-server" />
         <module name="tools-j2cache" />
         <module name="aggregate-pay-merchant-service" />
