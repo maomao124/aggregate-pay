@@ -1,6 +1,6 @@
 package mao.aggregate_pay_transaction_api.dto;
 
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -18,6 +18,10 @@ import java.io.Serializable;
  */
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 public class QRCodeDto implements Serializable
 {
     /**

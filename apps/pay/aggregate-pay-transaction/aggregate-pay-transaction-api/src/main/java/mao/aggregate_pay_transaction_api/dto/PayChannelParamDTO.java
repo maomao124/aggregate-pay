@@ -2,7 +2,7 @@ package mao.aggregate_pay_transaction_api.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -20,6 +20,10 @@ import java.io.Serializable;
  */
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 @ApiModel(value = "PayChannelParamDTO", description = "商户原始支付渠道参数配置")
 public class PayChannelParamDTO implements Serializable
 {

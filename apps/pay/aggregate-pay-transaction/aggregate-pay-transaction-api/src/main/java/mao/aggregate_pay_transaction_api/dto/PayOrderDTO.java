@@ -1,6 +1,6 @@
 package mao.aggregate_pay_transaction_api.dto;
 
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -19,6 +19,10 @@ import java.time.LocalDateTime;
  */
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 public class PayOrderDTO implements Serializable
 {
     /**
