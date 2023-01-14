@@ -24,6 +24,7 @@
         <module name="aggregate-pay-sms" />
         <module name="auth-entity" />
         <module name="tools-common" />
+        <module name="aggregate-pay-entity" />
         <module name="auth-server" />
         <module name="tools-j2cache" />
         <module name="aggregate-pay-merchant-service" />
@@ -43,6 +44,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aggregate-pay-common" options="-parameters" />
+      <module name="aggregate-pay-entity" options="-parameters" />
       <module name="aggregate-pay-log" options="-parameters" />
       <module name="aggregate-pay-merchant" options="-parameters" />
       <module name="aggregate-pay-merchant-api" options="-parameters" />

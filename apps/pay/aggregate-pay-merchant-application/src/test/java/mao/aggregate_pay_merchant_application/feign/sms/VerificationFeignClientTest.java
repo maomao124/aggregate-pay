@@ -1,7 +1,7 @@
 package mao.aggregate_pay_merchant_application.feign.sms;
 
 import mao.aggregate_pay_common.domain.RestResponse;
-import mao.aggregate_pay_merchant_application.dto.VerificationInfo;
+import mao.aggregate_pay_entity.dto.VerificationInfo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

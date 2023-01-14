@@ -583,3 +583,124 @@ Caused by: java.lang.NumberFormatException: For input string: "undefined"
 2023-01-14 15:10:09.470 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
 2023-01-14 15:10:09.470 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
 2023-01-14 15:10:09.472 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:32:17.945  WARN 23804 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-14 15:32:17.946  WARN 23804 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-14 15:32:17.947  INFO 23804 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-14 15:32:17.949  INFO 23804 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-14 15:32:17.960  INFO 23804 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-14 15:32:31.258  WARN 22404 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-log] & group[DEFAULT_GROUP]
+2023-01-14 15:32:31.268  INFO 22404 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-14 15:32:31.315  INFO 22404 --- [main] m.a.AggregatePayLogApplication           : The following profiles are active: dev
+2023-01-14 15:32:32.183  INFO 22404 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0ca08895-d718-376b-b1f4-261bf913768a
+2023-01-14 15:32:32.236  INFO 22404 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-14 15:32:32.289  INFO 22404 --- [main] mao.aggregate_pay_log.config.WebConfig   : 初始化 WebConfig
+2023-01-14 15:32:32.481  INFO 22404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 27914 (http)
+2023-01-14 15:32:32.489  INFO 22404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-14 15:32:32.489  INFO 22404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-14 15:32:32.583  INFO 22404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-14 15:32:32.583  INFO 22404 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1250 ms
+2023-01-14 15:32:32.715  INFO 22404 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-14 15:32:32.729  INFO 22404 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-14 15:32:32.731  INFO 22404 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-01-14 15:32:33.422  INFO 22404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-14 15:32:33.541  INFO 22404 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-14 15:32:33.549  INFO 22404 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-14 15:32:33.549  INFO 22404 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_log', basePath=[], excludePath=[]}}
+
+2023-01-14 15:32:33.939  INFO 22404 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-14 15:32:33.957  INFO 22404 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-14 15:32:33.986  INFO 22404 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-14 15:32:34.116  INFO 22404 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2023-01-14 15:32:34.177  INFO 22404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 27914 (http) with context path ''
+2023-01-14 15:32:34.439  INFO 22404 --- [main] m.a.AggregatePayLogApplication           : Started AggregatePayLogApplication in 4.763 seconds (JVM running for 5.723)
+2023-01-14 15:32:34.443  INFO 22404 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:32:34.445  INFO 22404 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:32:34.446  INFO 22404 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:32:34.446  INFO 22404 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:32:34.447  INFO 22404 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:32:34.448  INFO 22404 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:32:34.449  INFO 22404 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:32:34.449  INFO 22404 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:32:34.450  INFO 22404 --- [main] m.a.AggregatePayLogApplication           : 应用aggregate-pay-log启动成功!swagger地址：http://192.168.202.1:27914/doc.html  或者：http://127.0.0.1:27914/doc.html
+2023-01-14 15:32:34.450  INFO 22404 --- [main] m.a.AggregatePayLogApplication           : 数据库监控地址：http://192.168.202.1:27914/druid  或者：http://127.0.0.1:27914/druid
+2023-01-14 15:32:34.450  INFO 22404 --- [main] m.a.AggregatePayLogApplication           : 启动耗时：4868ms
+2023-01-14 15:32:40.525  INFO 22404 --- [http-nio-27914-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 15:32:40.525  INFO 22404 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-14 15:32:40.530  INFO 22404 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-01-14 15:32:40.902  INFO 22404 --- [http-nio-27914-exec-2] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/service-worker.js
+2023-01-14 15:32:51.714  INFO 22404 --- [http-nio-27914-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-14 15:32:51.729 DEBUG 22404 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:51.917 DEBUG 22404 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:51.942 DEBUG 22404 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:57.512 DEBUG 22404 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:57.512 DEBUG 22404 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:57.514 DEBUG 22404 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:57.682 DEBUG 22404 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:57.682 DEBUG 22404 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:57.683 DEBUG 22404 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:57.918 DEBUG 22404 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:57.919 DEBUG 22404 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:57.920 DEBUG 22404 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:58.165 DEBUG 22404 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:58.166 DEBUG 22404 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:58.167 DEBUG 22404 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:58.385 DEBUG 22404 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:58.385 DEBUG 22404 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:58.387 DEBUG 22404 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:58.568 DEBUG 22404 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:58.569 DEBUG 22404 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:58.570 DEBUG 22404 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:58.778 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:58.779 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:58.780 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:58.967 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:58.967 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:58.968 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:59.145 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:59.145 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:59.145 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:59.321 DEBUG 22404 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:59.321 DEBUG 22404 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:59.321 DEBUG 22404 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:59.481 DEBUG 22404 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:59.482 DEBUG 22404 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:59.483 DEBUG 22404 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:59.645 DEBUG 22404 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:59.645 DEBUG 22404 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:59.646 DEBUG 22404 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:59.810 DEBUG 22404 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:59.810 DEBUG 22404 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:59.811 DEBUG 22404 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:32:59.996 DEBUG 22404 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:32:59.997 DEBUG 22404 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:32:59.998 DEBUG 22404 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:33:00.167 DEBUG 22404 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:33:00.169 DEBUG 22404 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:33:00.171 DEBUG 22404 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:33:00.333 DEBUG 22404 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:33:00.333 DEBUG 22404 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:33:00.334 DEBUG 22404 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:33:07.195 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-14 15:33:07.197 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-14 15:33:07.202 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:33:07.206 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-14 15:33:07.212 DEBUG 22404 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:33:17.866 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-14 15:33:17.866 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-14 15:33:17.868 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:33:17.869 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 100(Long)
+2023-01-14 15:33:17.871 DEBUG 22404 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:33:22.682 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-14 15:33:22.682 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-14 15:33:22.685 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:33:22.685 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 100(Long)
+2023-01-14 15:33:22.687 DEBUG 22404 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
