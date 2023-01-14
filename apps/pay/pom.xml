@@ -25,6 +25,7 @@
         <module>aggregate-pay-merchant-application</module>
         <module>aggregate-pay-sms</module>
         <module>aggregate-pay-transaction</module>
+        <module>aggregate-pay-log</module>
     </modules>
 
     <dependencyManagement>
