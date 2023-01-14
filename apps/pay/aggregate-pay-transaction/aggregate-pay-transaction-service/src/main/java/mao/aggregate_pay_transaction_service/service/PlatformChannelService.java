@@ -28,4 +28,13 @@ public interface PlatformChannelService extends IService<PlatformChannel>
      * @return {@link R}<{@link List}<{@link PlatformChannelDTO}>>
      */
     R<List<PlatformChannelDTO>> queryAll();
+
+
+    /**
+     * 为app绑定平台服务类型
+     *
+     * @param appId                应用id
+     * @param platformChannelCodes 平台服务类型
+     */
+    void bindPlatformChannelForApp(String appId, String platformChannelCodes);
 }

@@ -3,11 +3,15 @@ package mao.aggregate_pay_transaction_service.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_transaction_api.dto.PlatformChannelDTO;
+import mao.aggregate_pay_transaction_service.entity.AppPlatformChannel;
 import mao.aggregate_pay_transaction_service.entity.PayChannel;
 import mao.aggregate_pay_transaction_service.entity.PlatformChannel;
+import mao.aggregate_pay_transaction_service.mapper.AppPlatformChannelMapper;
 import mao.aggregate_pay_transaction_service.mapper.PlatformChannelMapper;
 import mao.aggregate_pay_transaction_service.service.PlatformChannelService;
 import mao.tools_core.base.R;
+import mao.tools_core.exception.BizException;
+import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.tools_redis_cache.entity.RedisData;
 import mao.tools_redis_cache.utils.RedisUtils;
 import mao.toolsdozer.utils.DozerUtils;
@@ -41,6 +45,9 @@ public class PlatformChannelServiceImpl extends ServiceImpl<PlatformChannelMappe
     @Resource
     private RedisUtils redisUtils;
 
+    @Resource
+    private AppPlatformChannelMapper appPlatformChannelMapper;
+
     @Override
     public R<List<PlatformChannelDTO>> queryAll()
     {
@@ -65,5 +72,30 @@ public class PlatformChannelServiceImpl extends ServiceImpl<PlatformChannelMappe
         List<PlatformChannelDTO> platformChannelDTOList = (List<PlatformChannelDTO>) redisData.getData();
         return R.success(platformChannelDTOList);
 
+    }
+
+    @Override
+    public void bindPlatformChannelForApp(String appId, String platformChannelCodes)
+    {
+        //根据appId和平台服务类型code查询app_platform_channel
+        AppPlatformChannel appPlatformChannel = appPlatformChannelMapper.selectOne(Wraps.<AppPlatformChannel>lbQ()
+                .eq(AppPlatformChannel::getAppId, appId)
+                .eq(AppPlatformChannel::getPlatformChannel, platformChannelCodes));
+        //判断是否已绑定
+        if (appPlatformChannel == null)
+        {
+            //目前还没有绑定
+            //绑定
+            appPlatformChannel = new AppPlatformChannel();
+            appPlatformChannel.setAppId(appId);
+            appPlatformChannel.setPlatformChannel(platformChannelCodes);
+            //插入
+            int insert = appPlatformChannelMapper.insert(appPlatformChannel);
+            if (insert <= 0)
+            {
+                throw BizException.wrap("绑定失败");
+            }
+        }
+        //已经绑定了，什么都不做
     }
 }

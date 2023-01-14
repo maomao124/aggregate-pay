@@ -5,9 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_transaction_api.dto.PlatformChannelDTO;
 import mao.aggregate_pay_transaction_service.service.PlatformChannelService;
 import mao.tools_core.base.R;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -44,5 +42,19 @@ public class PlatformChannelController
     public R<List<PlatformChannelDTO>> queryAll()
     {
         return platformChannelService.queryAll();
+    }
+
+
+    /**
+     * 为app绑定平台服务类型
+     *
+     * @param appId                应用id
+     * @param platformChannelCodes 平台服务类型
+     */
+    @PutMapping("/bind")
+    public R<Boolean> bindPlatformChannelForApp(@RequestParam String appId, @RequestParam String platformChannelCodes)
+    {
+        platformChannelService.bindPlatformChannelForApp(appId, platformChannelCodes);
+        return R.success();
     }
 }
