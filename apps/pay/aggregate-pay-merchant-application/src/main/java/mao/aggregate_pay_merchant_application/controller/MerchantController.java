@@ -16,6 +16,7 @@ import mao.aggregate_pay_merchant_application.vo.MerchantDetailVO;
 import mao.aggregate_pay_merchant_application.vo.MerchantRegisterVO;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import mao.tools_log.annotation.SysLog;
 import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -67,6 +68,7 @@ public class MerchantController
      * @param phone 电话
      * @return {@link String} 验证码的key
      */
+    @SysLog(value = "获取手机验证码", recordResponseParam = false)
     @ApiOperation("获取手机验证码")
     @GetMapping("/sms")
     @ApiImplicitParam(value = "手机号", name = "phone", required = true, dataType = "string", paramType = "query")
