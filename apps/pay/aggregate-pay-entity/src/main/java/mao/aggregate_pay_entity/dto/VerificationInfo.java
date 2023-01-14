@@ -1,4 +1,4 @@
-package mao.aggregate_pay_merchant_application.dto;
+package mao.aggregate_pay_entity.dto;
 
 
 import lombok.AllArgsConstructor;

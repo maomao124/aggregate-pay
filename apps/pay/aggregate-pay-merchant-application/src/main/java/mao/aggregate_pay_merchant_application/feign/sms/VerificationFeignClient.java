@@ -1,7 +1,7 @@
 package mao.aggregate_pay_merchant_application.feign.sms;
 
 import mao.aggregate_pay_common.domain.RestResponse;
-import mao.aggregate_pay_merchant_application.dto.VerificationInfo;
+import mao.aggregate_pay_entity.dto.VerificationInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
