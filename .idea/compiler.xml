@@ -18,6 +18,7 @@
         <module name="sms-sdk" />
         <module name="sms-manage" />
         <module name="aggregate-pay-merchant-api" />
+        <module name="aggregate-pay-log" />
         <module name="tools-user" />
         <module name="tools-dozer" />
         <module name="aggregate-pay-sms" />
@@ -42,6 +43,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aggregate-pay-common" options="-parameters" />
+      <module name="aggregate-pay-log" options="-parameters" />
       <module name="aggregate-pay-merchant" options="-parameters" />
       <module name="aggregate-pay-merchant-api" options="-parameters" />
       <module name="aggregate-pay-merchant-application" options="-parameters" />
