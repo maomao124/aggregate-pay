@@ -77,6 +77,12 @@ public class PlatformChannelServiceImpl extends ServiceImpl<PlatformChannelMappe
     @Override
     public void bindPlatformChannelForApp(String appId, String platformChannelCodes)
     {
+        //查询平台服务类型code是否存在
+        int count = this.count(Wraps.<PlatformChannel>lbQ().eq(PlatformChannel::getChannelCode, platformChannelCodes));
+        if (count <= 0)
+        {
+            throw BizException.wrap("平台服务类型码不存在");
+        }
         //根据appId和平台服务类型code查询app_platform_channel
         AppPlatformChannel appPlatformChannel = appPlatformChannelMapper.selectOne(Wraps.<AppPlatformChannel>lbQ()
                 .eq(AppPlatformChannel::getAppId, appId)

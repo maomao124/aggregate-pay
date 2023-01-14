@@ -5,6 +5,8 @@ import mao.aggregate_pay_transaction_api.dto.PlatformChannelDTO;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -31,4 +33,14 @@ public interface PlatformChannelFeignClient
      */
     @GetMapping
     R<List<PlatformChannelDTO>> queryAll();
+
+
+    /**
+     * 为app绑定平台服务类型
+     *
+     * @param appId                应用id
+     * @param platformChannelCodes 平台服务类型
+     */
+    @PutMapping("/bind")
+    R<Boolean> bindPlatformChannelForApp(@RequestParam String appId, @RequestParam String platformChannelCodes);
 }

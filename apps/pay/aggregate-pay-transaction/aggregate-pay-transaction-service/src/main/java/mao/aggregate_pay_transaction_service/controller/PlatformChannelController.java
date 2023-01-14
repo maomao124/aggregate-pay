@@ -52,6 +52,7 @@ public class PlatformChannelController
      * @param platformChannelCodes 平台服务类型
      */
     @PutMapping("/bind")
+    @ApiOperation("为app绑定平台服务类型")
     public R<Boolean> bindPlatformChannelForApp(@RequestParam String appId, @RequestParam String platformChannelCodes)
     {
         platformChannelService.bindPlatformChannelForApp(appId, platformChannelCodes);
