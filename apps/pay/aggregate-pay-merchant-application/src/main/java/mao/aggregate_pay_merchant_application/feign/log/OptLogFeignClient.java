@@ -1,13 +1,11 @@
 package mao.aggregate_pay_merchant_application.feign.log;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import mao.aggregate_pay_entity.entity.OptLog;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -36,29 +34,29 @@ public interface OptLogFeignClient
 
 
     /**
-     * 分页查询系统操作日志
+     * 分页查询系统操作日志，返回值类型为R<Page<OptLog>>
      */
 
     @GetMapping("/page")
-    R<IPage<OptLog>> page();
+    String page(@RequestParam Long current, @RequestParam Long size);
 
 
     /**
-     * 分页查询某个商户的系统操作日志
+     * 分页查询某个商户的系统操作日志，返回值类型为R<Page<OptLog>>
      */
     @GetMapping("/page/{merchantId}")
-    R<IPage<OptLog>> page(@PathVariable Long merchantId);
+    String page(@RequestParam Long current, @RequestParam Long size, @PathVariable Long merchantId);
 
     /**
-     * 分页查询某个商户的系统操作日志，给商户看的
+     * 分页查询某个商户的系统操作日志，给商户看的，返回值类型为R<Page<OptLog>>
      */
     @GetMapping("/page2/{merchantId}")
-    R<IPage<OptLog>> page2(@PathVariable Long merchantId);
+    String page2(@RequestParam Long current, @RequestParam Long size, @PathVariable Long merchantId);
 
 
     /**
-     * 查询系统操作日志
+     * 查询系统操作日志，返回值类型为R<Page<OptLog>>
      */
     @GetMapping("/{id}")
-    R<OptLog> get(@PathVariable Long id);
+    String get(@PathVariable Long id);
 }

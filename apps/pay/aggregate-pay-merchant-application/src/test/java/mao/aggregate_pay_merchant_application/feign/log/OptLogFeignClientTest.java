@@ -1,5 +1,7 @@
 package mao.aggregate_pay_merchant_application.feign.log;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import mao.aggregate_pay_entity.entity.OptLog;
 import mao.tools_core.base.R;
 import org.junit.jupiter.api.Test;
@@ -35,6 +37,8 @@ class OptLogFeignClientTest
     @Test
     void page()
     {
+        String page = optLogFeignClient.page(1L, 20L);
+        System.out.println(page);
     }
 
     @Test
@@ -50,7 +54,7 @@ class OptLogFeignClientTest
     @Test
     void get()
     {
-        R<OptLog> optLogR = optLogFeignClient.get(0L);
-        System.out.println(optLogR.getData());
+        String optLogR = optLogFeignClient.get(125955377232609313L);
+        System.out.println(optLogR);
     }
 }
