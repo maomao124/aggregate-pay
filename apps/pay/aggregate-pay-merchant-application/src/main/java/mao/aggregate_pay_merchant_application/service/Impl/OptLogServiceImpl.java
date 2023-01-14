@@ -44,8 +44,8 @@ public class OptLogServiceImpl implements OptLogService
         //todo
         optLog.setUserName(123456L);
         //打印日志
-        log.info("商户id：" + optLog.getUserName() + " 请求：" + optLog.getRequestUri() + " 描述："
-                + optLog.getDescription() + " ip：" + optLog.getRequestIp() + " 耗时：" + optLog.getConsumingTime() + "ms");
+        log.info("商户id：" + optLog.getUserName() + "  请求：" + optLog.getRequestUri() + "  描述："
+                + optLog.getDescription() + "  ip：" + optLog.getRequestIp() + "  耗时：" + optLog.getConsumingTime() + "ms");
         //远程调用，保存
         R<Boolean> r = optLogFeignClient.save(optLog);
         if (r.getIsError())

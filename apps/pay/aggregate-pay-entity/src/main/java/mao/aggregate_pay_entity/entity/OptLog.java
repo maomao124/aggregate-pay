@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
@@ -141,6 +142,7 @@ public class OptLog implements Serializable
     /**
      * 开始时间
      */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss[.SSS]")
     @ApiModelProperty(value = "开始时间")
     @TableField("start_time")
     private LocalDateTime startTime;
@@ -148,6 +150,7 @@ public class OptLog implements Serializable
     /**
      * 完成时间
      */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss[.SSS]")
     @ApiModelProperty(value = "完成时间")
     @TableField("finish_time")
     private LocalDateTime finishTime;
