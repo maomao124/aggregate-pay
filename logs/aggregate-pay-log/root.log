@@ -96,3 +96,490 @@ docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='
 2023-01-14 14:42:43.584 DEBUG 6672 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, ex_desc, result, consuming_time, ex_detail, class_path ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
 2023-01-14 14:42:43.725 DEBUG 6672 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 125955377232609313(Long), (String), (String), (String), (String), (String), (String), GET(String), 0(Long), OPT(String), (String), (String), 0(Long), (String), (String)
 2023-01-14 14:42:43.734 DEBUG 6672 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-14 14:50:32.685  WARN 6672 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-14 14:50:32.686  WARN 6672 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-14 14:50:32.687  INFO 6672 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-14 14:50:32.689  INFO 6672 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-14 14:50:32.700  INFO 6672 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-14 14:50:40.908  WARN 18928 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-log] & group[DEFAULT_GROUP]
+2023-01-14 14:50:40.916  INFO 18928 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-14 14:50:40.953  INFO 18928 --- [main] m.a.AggregatePayLogApplication           : The following profiles are active: dev
+2023-01-14 14:50:41.682  INFO 18928 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0ca08895-d718-376b-b1f4-261bf913768a
+2023-01-14 14:50:41.723  INFO 18928 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-14 14:50:41.769  INFO 18928 --- [main] mao.aggregate_pay_log.config.WebConfig   : 初始化 WebConfig
+2023-01-14 14:50:41.932  INFO 18928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 27914 (http)
+2023-01-14 14:50:41.940  INFO 18928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-14 14:50:41.940  INFO 18928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-14 14:50:42.037  INFO 18928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-14 14:50:42.037  INFO 18928 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1071 ms
+2023-01-14 14:50:42.191  INFO 18928 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-14 14:50:42.206  INFO 18928 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-14 14:50:42.208  INFO 18928 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-01-14 14:50:42.897  INFO 18928 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-14 14:50:43.007  INFO 18928 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-14 14:50:43.016  INFO 18928 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-14 14:50:43.016  INFO 18928 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_log', basePath=[], excludePath=[]}}
+
+2023-01-14 14:50:43.390  INFO 18928 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-14 14:50:43.407  INFO 18928 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-14 14:50:43.434  INFO 18928 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-14 14:50:43.639  INFO 18928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 27914 (http) with context path ''
+2023-01-14 14:50:43.880  INFO 18928 --- [main] m.a.AggregatePayLogApplication           : Started AggregatePayLogApplication in 4.485 seconds (JVM running for 5.294)
+2023-01-14 14:50:43.884  INFO 18928 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:50:43.886  INFO 18928 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:50:43.887  INFO 18928 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:50:43.887  INFO 18928 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:50:43.892  INFO 18928 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:50:43.892  INFO 18928 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:50:43.893  INFO 18928 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:50:43.893  INFO 18928 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:50:43.894  INFO 18928 --- [main] m.a.AggregatePayLogApplication           : 应用aggregate-pay-log启动成功!swagger地址：http://192.168.202.1:27914/doc.html  或者：http://127.0.0.1:27914/doc.html
+2023-01-14 14:50:43.894  INFO 18928 --- [main] m.a.AggregatePayLogApplication           : 数据库监控地址：http://192.168.202.1:27914/druid  或者：http://127.0.0.1:27914/druid
+2023-01-14 14:50:43.894  INFO 18928 --- [main] m.a.AggregatePayLogApplication           : 启动耗时：4613ms
+2023-01-14 14:51:07.000  INFO 18928 --- [http-nio-27914-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:51:07.001  INFO 18928 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-14 14:51:07.005  INFO 18928 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-01-14 14:51:07.487  INFO 18928 --- [http-nio-27914-exec-2] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/service-worker.js
+2023-01-14 14:51:28.909  INFO 18928 --- [http-nio-27914-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-14 14:51:28.924 DEBUG 18928 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 14:51:29.103 DEBUG 18928 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 14:51:29.127 DEBUG 18928 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 14:51:42.880  WARN 18928 --- [http-nio-27914-exec-8] m.t.h.DefaultGlobalExceptionHandler      : Exception:
+
+org.springframework.beans.NullValueInNestedPathException: Invalid property 'httpMethod' of bean class [mao.aggregate_pay_log.entity.OptLog]: Could not instantiate property type [mao.tools_common.enums.HttpMethod] to auto-grow nested property path; nested exception is java.lang.NoSuchMethodException: mao.tools_common.enums.HttpMethod.<init>()
+	at org.springframework.beans.AbstractNestablePropertyAccessor.newValue(AbstractNestablePropertyAccessor.java:919) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.createDefaultPropertyValue(AbstractNestablePropertyAccessor.java:883) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setDefaultValue(AbstractNestablePropertyAccessor.java:870) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getNestedPropertyAccessor(AbstractNestablePropertyAccessor.java:842) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyAccessorForPropertyPath(AbstractNestablePropertyAccessor.java:816) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:256) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:97) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.validation.DataBinder.applyPropertyValues(DataBinder.java:848) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.validation.DataBinder.doBind(DataBinder.java:744) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.bind.WebDataBinder.doBind(WebDataBinder.java:197) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.bind.ServletRequestDataBinder.bind(ServletRequestDataBinder.java:107) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.bindRequestParameters(ServletModelAttributeMethodProcessor.java:158) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:160) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+Caused by: java.lang.NoSuchMethodException: mao.tools_common.enums.HttpMethod.<init>()
+	at java.lang.Class.getConstructor0(Class.java:3110) ~[na:1.8.0_332]
+	at java.lang.Class.getDeclaredConstructor(Class.java:2206) ~[na:1.8.0_332]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.newValue(AbstractNestablePropertyAccessor.java:910) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 60 common frames omitted
+
+2023-01-14 14:55:27.883  WARN 18928 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-14 14:55:27.884  WARN 18928 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-14 14:55:27.886  INFO 18928 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-14 14:55:27.888  INFO 18928 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-14 14:55:27.898  INFO 18928 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-14 14:55:35.664  WARN 9140 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-log] & group[DEFAULT_GROUP]
+2023-01-14 14:55:35.672  INFO 9140 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-14 14:55:35.712  INFO 9140 --- [main] m.a.AggregatePayLogApplication           : The following profiles are active: dev
+2023-01-14 14:55:36.462  INFO 9140 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0ca08895-d718-376b-b1f4-261bf913768a
+2023-01-14 14:55:36.503  INFO 9140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-14 14:55:36.548  INFO 9140 --- [main] mao.aggregate_pay_log.config.WebConfig   : 初始化 WebConfig
+2023-01-14 14:55:36.717  INFO 9140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 27914 (http)
+2023-01-14 14:55:36.725  INFO 9140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-14 14:55:36.725  INFO 9140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-14 14:55:36.825  INFO 9140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-14 14:55:36.825  INFO 9140 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2023-01-14 14:55:36.975  INFO 9140 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-14 14:55:36.989  INFO 9140 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-14 14:55:36.991  INFO 9140 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-01-14 14:55:37.698  INFO 9140 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-14 14:55:37.810  INFO 9140 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-14 14:55:37.819  INFO 9140 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-14 14:55:37.819  INFO 9140 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_log', basePath=[], excludePath=[]}}
+
+2023-01-14 14:55:38.194  INFO 9140 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-14 14:55:38.210  INFO 9140 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-14 14:55:38.238  INFO 9140 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-14 14:55:38.419  INFO 9140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 27914 (http) with context path ''
+2023-01-14 14:55:38.659  INFO 9140 --- [main] m.a.AggregatePayLogApplication           : Started AggregatePayLogApplication in 4.416 seconds (JVM running for 5.235)
+2023-01-14 14:55:38.663  INFO 9140 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:55:38.665  INFO 9140 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:55:38.667  INFO 9140 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:55:38.667  INFO 9140 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:55:38.672  INFO 9140 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:55:38.673  INFO 9140 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:55:38.673  INFO 9140 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 14:55:38.673  INFO 9140 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log, group=DEFAULT_GROUP, cnt=1
+2023-01-14 14:55:38.674  INFO 9140 --- [main] m.a.AggregatePayLogApplication           : 应用aggregate-pay-log启动成功!swagger地址：http://192.168.202.1:27914/doc.html  或者：http://127.0.0.1:27914/doc.html
+2023-01-14 14:55:38.674  INFO 9140 --- [main] m.a.AggregatePayLogApplication           : 数据库监控地址：http://192.168.202.1:27914/druid  或者：http://127.0.0.1:27914/druid
+2023-01-14 14:55:38.674  INFO 9140 --- [main] m.a.AggregatePayLogApplication           : 启动耗时：4565ms
+2023-01-14 14:55:42.583  INFO 9140 --- [http-nio-27914-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:55:42.584  INFO 9140 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-14 14:55:42.589  INFO 9140 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-01-14 14:55:42.977  INFO 9140 --- [http-nio-27914-exec-2] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/service-worker.js
+2023-01-14 14:55:49.260  INFO 9140 --- [http-nio-27914-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-14 14:55:49.297 DEBUG 9140 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-14 14:55:49.559 DEBUG 9140 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-14 14:55:49.586 DEBUG 9140 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-14 14:55:49.592 DEBUG 9140 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-14 14:55:49.600 DEBUG 9140 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 14:56:21.580 DEBUG 9140 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-14 14:56:21.580 DEBUG 9140 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-14 14:56:21.583 DEBUG 9140 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-14 14:56:21.583 DEBUG 9140 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-14 14:56:21.585 DEBUG 9140 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:07:03.915  WARN 9140 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-14 15:07:03.916  WARN 9140 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-14 15:07:03.917  INFO 9140 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-14 15:07:03.919  INFO 9140 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-14 15:07:03.928  INFO 9140 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-14 15:07:11.798  WARN 8416 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-log] & group[DEFAULT_GROUP]
+2023-01-14 15:07:11.806  INFO 8416 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-14 15:07:11.843  INFO 8416 --- [main] m.a.AggregatePayLogApplication           : The following profiles are active: dev
+2023-01-14 15:07:12.587  INFO 8416 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0ca08895-d718-376b-b1f4-261bf913768a
+2023-01-14 15:07:12.630  INFO 8416 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-14 15:07:12.679  INFO 8416 --- [main] mao.aggregate_pay_log.config.WebConfig   : 初始化 WebConfig
+2023-01-14 15:07:12.851  INFO 8416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 27914 (http)
+2023-01-14 15:07:12.860  INFO 8416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-14 15:07:12.860  INFO 8416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-14 15:07:12.954  INFO 8416 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-14 15:07:12.955  INFO 8416 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1098 ms
+2023-01-14 15:07:13.104  INFO 8416 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-14 15:07:13.119  INFO 8416 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-14 15:07:13.121  INFO 8416 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-01-14 15:07:13.680  WARN 8416 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/mao/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/mao/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'optLogController' method 
+mao.aggregate_pay_log.controller.OptLogController#page2(Long)
+to {GET /log/opt/page/{merchantId}}: There is already 'optLogController' bean method
+mao.aggregate_pay_log.controller.OptLogController#page(Long) mapped.
+2023-01-14 15:07:13.681  INFO 8416 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-01-14 15:07:13.682  INFO 8416 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-14 15:07:13.697  INFO 8416 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-14 15:07:13.705 ERROR 8416 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/mao/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/mao/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'optLogController' method 
+mao.aggregate_pay_log.controller.OptLogController#page2(Long)
+to {GET /log/opt/page/{merchantId}}: There is already 'optLogController' bean method
+mao.aggregate_pay_log.controller.OptLogController#page(Long) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/mao/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'optLogController' method 
+mao.aggregate_pay_log.controller.OptLogController#page2(Long)
+to {GET /log/opt/page/{merchantId}}: There is already 'optLogController' bean method
+mao.aggregate_pay_log.controller.OptLogController#page(Long) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'optLogController' method 
+mao.aggregate_pay_log.controller.OptLogController#page2(Long)
+to {GET /log/opt/page/{merchantId}}: There is already 'optLogController' bean method
+mao.aggregate_pay_log.controller.OptLogController#page(Long) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'optLogController' method 
+mao.aggregate_pay_log.controller.OptLogController#page2(Long)
+to {GET /log/opt/page/{merchantId}}: There is already 'optLogController' bean method
+mao.aggregate_pay_log.controller.OptLogController#page(Long) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:633) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:600) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:350) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:67) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:171) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 50 common frames omitted
+
+2023-01-14 15:07:13.707  WARN 8416 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-14 15:07:13.708  WARN 8416 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-14 15:07:50.430  WARN 23804 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-log] & group[DEFAULT_GROUP]
+2023-01-14 15:07:50.439  INFO 23804 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-14 15:07:50.480  INFO 23804 --- [main] m.a.AggregatePayLogApplication           : The following profiles are active: dev
+2023-01-14 15:07:51.215  INFO 23804 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0ca08895-d718-376b-b1f4-261bf913768a
+2023-01-14 15:07:51.255  INFO 23804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-14 15:07:51.305  INFO 23804 --- [main] mao.aggregate_pay_log.config.WebConfig   : 初始化 WebConfig
+2023-01-14 15:07:51.496  INFO 23804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 27914 (http)
+2023-01-14 15:07:51.504  INFO 23804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-14 15:07:51.504  INFO 23804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-14 15:07:51.601  INFO 23804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-14 15:07:51.602  INFO 23804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2023-01-14 15:07:51.761  INFO 23804 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-14 15:07:51.776  INFO 23804 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-14 15:07:51.778  INFO 23804 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-01-14 15:07:52.696  INFO 23804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-14 15:07:52.810  INFO 23804 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-14 15:07:52.818  INFO 23804 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-14 15:07:52.826  INFO 23804 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_log', basePath=[], excludePath=[]}}
+
+2023-01-14 15:07:53.192  INFO 23804 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-14 15:07:53.208  INFO 23804 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-14 15:07:53.236  INFO 23804 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-14 15:07:53.363  INFO 23804 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2023-01-14 15:07:53.426  INFO 23804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 27914 (http) with context path ''
+2023-01-14 15:07:53.666  INFO 23804 --- [main] m.a.AggregatePayLogApplication           : Started AggregatePayLogApplication in 4.751 seconds (JVM running for 5.533)
+2023-01-14 15:07:53.674  INFO 23804 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:07:53.676  INFO 23804 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:07:53.677  INFO 23804 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:07:53.678  INFO 23804 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:07:53.682  INFO 23804 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:07:53.683  INFO 23804 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:07:53.684  INFO 23804 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-14 15:07:53.684  INFO 23804 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log, group=DEFAULT_GROUP, cnt=1
+2023-01-14 15:07:53.684  INFO 23804 --- [main] m.a.AggregatePayLogApplication           : 应用aggregate-pay-log启动成功!swagger地址：http://192.168.202.1:27914/doc.html  或者：http://127.0.0.1:27914/doc.html
+2023-01-14 15:07:53.684  INFO 23804 --- [main] m.a.AggregatePayLogApplication           : 数据库监控地址：http://192.168.202.1:27914/druid  或者：http://127.0.0.1:27914/druid
+2023-01-14 15:07:53.684  INFO 23804 --- [main] m.a.AggregatePayLogApplication           : 启动耗时：4867ms
+2023-01-14 15:08:00.736  INFO 23804 --- [http-nio-27914-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 15:08:00.737  INFO 23804 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-14 15:08:00.742  INFO 23804 --- [http-nio-27914-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-01-14 15:08:01.196  INFO 23804 --- [http-nio-27914-exec-2] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/service-worker.js
+2023-01-14 15:08:17.213  INFO 23804 --- [http-nio-27914-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-14 15:08:17.247 DEBUG 23804 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:08:17.542 DEBUG 23804 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 1(Long)
+2023-01-14 15:08:31.975 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:08:31.975 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 1(Long)
+2023-01-14 15:08:54.866 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:08:54.866 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:08:54.871 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:08:54.875 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:08:54.881 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:09:09.985 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:09.985 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:09.986 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:09.987 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long), 10(Long)
+2023-01-14 15:09:09.988 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 0
+2023-01-14 15:09:16.183 DEBUG 23804 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-14 15:09:16.185 DEBUG 23804 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-14 15:09:16.186 DEBUG 23804 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-14 15:09:42.034  WARN 23804 --- [http-nio-27914-exec-4] m.t.h.DefaultGlobalExceptionHandler      : MethodArgumentTypeMismatchException:
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_332]
+	at java.lang.Long.parseLong(Long.java:589) ~[na:1.8.0_332]
+	at java.lang.Long.valueOf(Long.java:803) ~[na:1.8.0_332]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 48 common frames omitted
+
+2023-01-14 15:09:44.510 DEBUG 23804 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:44.511 DEBUG 23804 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:44.512 DEBUG 23804 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:44.512 DEBUG 23804 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:09:44.514 DEBUG 23804 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:09:46.979 DEBUG 23804 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:46.980 DEBUG 23804 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:46.981 DEBUG 23804 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:46.982 DEBUG 23804 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:09:46.983 DEBUG 23804 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:09:47.836 DEBUG 23804 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:47.836 DEBUG 23804 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:47.837 DEBUG 23804 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:47.838 DEBUG 23804 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:09:47.839 DEBUG 23804 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:09:51.470 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:51.470 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 1(Long)
+2023-01-14 15:09:54.799 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:54.800 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:54.801 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:54.802 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:09:54.804 DEBUG 23804 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:09:55.324 DEBUG 23804 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:55.324 DEBUG 23804 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:55.326 DEBUG 23804 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:55.326 DEBUG 23804 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:09:55.327 DEBUG 23804 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:09:55.590 DEBUG 23804 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:55.591 DEBUG 23804 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:55.592 DEBUG 23804 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:55.593 DEBUG 23804 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:09:55.594 DEBUG 23804 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:09:55.806 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:09:55.806 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:09:55.808 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:09:55.808 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:09:55.809 DEBUG 23804 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-14 15:10:06.239  INFO 23804 --- [http-nio-27914-exec-4] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/service-worker.js
+2023-01-14 15:10:09.468 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-14 15:10:09.468 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-14 15:10:09.470 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-14 15:10:09.470 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-14 15:10:09.472 DEBUG 23804 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1

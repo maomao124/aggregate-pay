@@ -1,15 +1,17 @@
 package mao.aggregate_pay_log.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_log.entity.OptLog;
 import mao.aggregate_pay_log.service.OptLogService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_databases.mybatis.conditions.query.LbqWrapper;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -50,6 +52,87 @@ public class OptLogController extends BaseController
             return fail("保存失败");
         }
         return success();
+    }
+
+
+    /**
+     * 分页查询系统操作日志
+     */
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "current", value = "当前页", dataType = "long", paramType = "query", defaultValue = "1"),
+                    @ApiImplicitParam(name = "size", value = "每页显示几条", dataType = "long", paramType = "query", defaultValue = "10"),
+            })
+    @ApiOperation(value = "分页查询系统操作日志", notes = "分页查询系统操作日志")
+    @GetMapping("/page")
+    public R<IPage<OptLog>> page()
+    {
+        IPage<OptLog> page = getPage();
+        LbqWrapper<OptLog> query = Wraps.<OptLog>lbQ()
+                .orderByDesc(OptLog::getId);
+        optLogService.page(page, query);
+        return success(page);
+    }
+
+
+    /**
+     * 分页查询某个商户的系统操作日志
+     */
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "current", value = "当前页", dataType = "long", paramType = "query", defaultValue = "1"),
+                    @ApiImplicitParam(name = "size", value = "每页显示几条", dataType = "long", paramType = "query", defaultValue = "10"),
+            })
+    @ApiOperation(value = "分页查询某个商户的系统操作日志", notes = "分页查询某个商户的系统操作日志")
+    @GetMapping("/page/{merchantId}")
+    public R<IPage<OptLog>> page(@PathVariable Long merchantId)
+    {
+        if (merchantId == null || merchantId < 0)
+        {
+            return R.success(getPage());
+        }
+        IPage<OptLog> page = getPage();
+        LbqWrapper<OptLog> query = Wraps.<OptLog>lbQ()
+                .eq(OptLog::getUserName, merchantId)
+                .orderByDesc(OptLog::getId);
+        optLogService.page(page, query);
+        return success(page);
+    }
+
+    /**
+     * 分页查询某个商户的系统操作日志，给商户看的
+     */
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "current", value = "当前页", dataType = "long", paramType = "query", defaultValue = "1"),
+                    @ApiImplicitParam(name = "size", value = "每页显示几条", dataType = "long", paramType = "query", defaultValue = "10"),
+            })
+    @ApiOperation(value = "商户分页查询的系统操作日志", notes = "商户分页查询的系统操作日志")
+    @GetMapping("/page2/{merchantId}")
+    public R<IPage<OptLog>> page2(@PathVariable Long merchantId)
+    {
+        if (merchantId == null || merchantId < 0)
+        {
+            return R.success(getPage());
+        }
+        IPage<OptLog> page = getPage();
+        LbqWrapper<OptLog> query = Wraps.<OptLog>lbQ()
+                .select(OptLog::getDescription, OptLog::getId, OptLog::getFinishTime, OptLog::getRequestIp, OptLog::getType)
+                .eq(OptLog::getUserName, merchantId)
+                .orderByDesc(OptLog::getId);
+        optLogService.page(page, query);
+        return success(page);
+    }
+
+
+    /**
+     * 查询系统操作日志
+     */
+    @ApiOperation(value = "查询系统操作日志", notes = "查询系统操作日志")
+    @GetMapping("/{id}")
+    public R<OptLog> get(@PathVariable Long id)
+    {
+        return success(optLogService.getById(id));
     }
 
 }
