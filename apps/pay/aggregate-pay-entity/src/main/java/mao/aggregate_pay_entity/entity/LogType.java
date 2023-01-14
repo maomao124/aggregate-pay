@@ -1,4 +1,5 @@
-package mao.aggregate_pay_log.entity;
+package mao.aggregate_pay_entity.entity;
+
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;

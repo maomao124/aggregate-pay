@@ -1,7 +1,8 @@
 package mao.aggregate_pay_log.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import mao.aggregate_pay_log.entity.OptLog;
+import mao.aggregate_pay_entity.entity.OptLog;
+
 
 /**
  * Project name(项目名称)：aggregate-pay

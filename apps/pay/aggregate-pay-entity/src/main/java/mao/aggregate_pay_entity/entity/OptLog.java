@@ -1,4 +1,4 @@
-package mao.aggregate_pay_log.entity;
+package mao.aggregate_pay_entity.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -9,6 +9,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import lombok.experimental.Accessors;
 import mao.tools_common.enums.HttpMethod;
+
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -26,6 +28,7 @@ import static com.baomidou.mybatisplus.annotation.SqlCondition.LIKE;
  * Version(版本): 1.0
  * Description(描述)： 操作日志
  */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

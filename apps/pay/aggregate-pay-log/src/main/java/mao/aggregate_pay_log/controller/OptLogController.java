@@ -1,11 +1,13 @@
 package mao.aggregate_pay_log.controller;
 
+
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import mao.aggregate_pay_log.entity.OptLog;
+
+import mao.aggregate_pay_entity.entity.OptLog;
 import mao.aggregate_pay_log.service.OptLogService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;

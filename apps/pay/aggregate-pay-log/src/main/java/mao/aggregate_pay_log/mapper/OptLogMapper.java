@@ -1,7 +1,8 @@
 package mao.aggregate_pay_log.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import mao.aggregate_pay_log.entity.OptLog;
+
+import mao.aggregate_pay_entity.entity.OptLog;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

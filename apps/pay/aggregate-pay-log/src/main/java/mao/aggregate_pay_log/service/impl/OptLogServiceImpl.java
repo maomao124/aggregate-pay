@@ -1,7 +1,8 @@
 package mao.aggregate_pay_log.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import mao.aggregate_pay_log.entity.OptLog;
+
+import mao.aggregate_pay_entity.entity.OptLog;
 import mao.aggregate_pay_log.mapper.OptLogMapper;
 import mao.aggregate_pay_log.service.OptLogService;
 import org.springframework.stereotype.Service;
