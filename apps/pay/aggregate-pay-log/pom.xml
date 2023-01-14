@@ -30,6 +30,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- nacos 客户端依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!--Nacos配置管理客户端依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>mao</groupId>
             <artifactId>tools-databases</artifactId>

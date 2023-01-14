@@ -68,7 +68,6 @@ public class MerchantController
      * @param phone 电话
      * @return {@link String} 验证码的key
      */
-    @SysLog(value = "获取手机验证码", recordResponseParam = false)
     @ApiOperation("获取手机验证码")
     @GetMapping("/sms")
     @ApiImplicitParam(value = "手机号", name = "phone", required = true, dataType = "string", paramType = "query")
