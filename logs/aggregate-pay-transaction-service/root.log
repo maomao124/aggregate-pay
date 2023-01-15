@@ -790,3 +790,728 @@ docket：{aggregate_pay=DocketInfo{title='交易服务', group='', description='
 2023-01-15 13:44:11.817  INFO 6744 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":49829,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#49829#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":49828,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#49828#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":49827,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#49827#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"cacheMillis\":10000,\"lastRefTime\":1673761451816,\"checksum\":\"185a46ac2499787eb98df7ee0bafc97c\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":227621736600} from /192.168.202.1
 2023-01-15 13:44:11.818  INFO 6744 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : modified ips(2) service: DEFAULT_GROUP@@aggregate-pay-transaction-service@@DEFAULT -> [{"instanceId":"192.168.3.143#49828#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49828,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#49829#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49829,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
 2023-01-15 13:44:11.823  INFO 6744 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@aggregate-pay-transaction-service@@DEFAULT -> [{"instanceId":"192.168.3.143#49829#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49829,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#49828#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49828,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#49827#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49827,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-01-15 13:53:57.030  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596420
+2023-01-15 13:53:57.032  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596448
+2023-01-15 13:53:57.033  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596471
+2023-01-15 13:53:57.035  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596494
+2023-01-15 13:53:57.037  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596515
+2023-01-15 13:53:57.039  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596538
+2023-01-15 13:53:57.040  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596561
+2023-01-15 13:53:57.042  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596584
+2023-01-15 13:53:57.043  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596608
+2023-01-15 13:53:57.045  WARN 6744 --- [http-nio-49827-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 596639
+2023-01-15 13:53:57.062 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:53:57.143 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: 2124(String)
+2023-01-15 13:53:57.162 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:53:57.169  WARN 6744 --- [http-nio-49827-exec-10] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 平台服务类型码不存在
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl.bindPlatformChannelForApp(PlatformChannelServiceImpl.java:84) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$FastClassBySpringCGLIB$$50c30cb6.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$EnhancerBySpringCGLIB$$510da327.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController.bindPlatformChannelForApp(PlatformChannelController.java:58) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$FastClassBySpringCGLIB$$9a34565e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$EnhancerBySpringCGLIB$$5408c91f.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 13:54:42.049 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:54:42.050 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: 124619633188667425(String)
+2023-01-15 13:54:42.051 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:54:42.052  WARN 6744 --- [http-nio-49827-exec-10] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 平台服务类型码不存在
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl.bindPlatformChannelForApp(PlatformChannelServiceImpl.java:84) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$FastClassBySpringCGLIB$$50c30cb6.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$EnhancerBySpringCGLIB$$510da327.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController.bindPlatformChannelForApp(PlatformChannelController.java:58) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$FastClassBySpringCGLIB$$9a34565e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$EnhancerBySpringCGLIB$$5408c91f.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 13:55:13.961 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:55:13.961 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: 124619633188667425(String)
+2023-01-15 13:55:13.963 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:55:13.964  WARN 6744 --- [http-nio-49827-exec-8] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 平台服务类型码不存在
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl.bindPlatformChannelForApp(PlatformChannelServiceImpl.java:84) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$FastClassBySpringCGLIB$$50c30cb6.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$EnhancerBySpringCGLIB$$510da327.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController.bindPlatformChannelForApp(PlatformChannelController.java:58) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$FastClassBySpringCGLIB$$9a34565e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$EnhancerBySpringCGLIB$$5408c91f.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 13:55:14.717 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:55:14.717 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: 124619633188667425(String)
+2023-01-15 13:55:14.718 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:55:14.719  WARN 6744 --- [http-nio-49827-exec-9] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 平台服务类型码不存在
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl.bindPlatformChannelForApp(PlatformChannelServiceImpl.java:84) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$FastClassBySpringCGLIB$$50c30cb6.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$EnhancerBySpringCGLIB$$510da327.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController.bindPlatformChannelForApp(PlatformChannelController.java:58) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$FastClassBySpringCGLIB$$9a34565e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$EnhancerBySpringCGLIB$$5408c91f.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 13:55:15.625 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:55:15.625 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: 124619633188667425(String)
+2023-01-15 13:55:15.627 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:55:15.628  WARN 6744 --- [http-nio-49827-exec-10] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 平台服务类型码不存在
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl.bindPlatformChannelForApp(PlatformChannelServiceImpl.java:84) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$FastClassBySpringCGLIB$$50c30cb6.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$EnhancerBySpringCGLIB$$510da327.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController.bindPlatformChannelForApp(PlatformChannelController.java:58) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$FastClassBySpringCGLIB$$9a34565e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$EnhancerBySpringCGLIB$$5408c91f.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 13:55:16.051 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:55:16.051 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: 124619633188667425(String)
+2023-01-15 13:55:16.053 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:55:16.054  WARN 6744 --- [http-nio-49827-exec-1] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 平台服务类型码不存在
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl.bindPlatformChannelForApp(PlatformChannelServiceImpl.java:84) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$FastClassBySpringCGLIB$$50c30cb6.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$EnhancerBySpringCGLIB$$510da327.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController.bindPlatformChannelForApp(PlatformChannelController.java:58) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$FastClassBySpringCGLIB$$9a34565e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$EnhancerBySpringCGLIB$$5408c91f.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 13:55:54.669 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:55:54.669 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:55:54.670 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:55:54.675 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:55:54.676 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:55:54.677 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : <==      Total: 0
+2023-01-15 13:55:54.844 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.AppPlatformChannelMapper.insert    : ==>  Preparing: INSERT INTO app_platform_channel ( ID, APP_ID, PLATFORM_CHANNEL ) VALUES ( ?, ?, ? ) 
+2023-01-15 13:55:54.854 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.AppPlatformChannelMapper.insert    : ==> Parameters: 126305986540470305(Long), 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:55:54.857 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.AppPlatformChannelMapper.insert    : <==    Updates: 1
+2023-01-15 13:55:57.773 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:55:57.774 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:55:57.776 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:55:57.777 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:55:57.778 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:55:57.780 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:55:58.390 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:55:58.390 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:55:58.391 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:55:58.393 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:55:58.393 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:55:58.394 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:56:44.183 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:56:44.183 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: 124619633188667425(String)
+2023-01-15 13:56:44.185 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:56:44.186  WARN 6744 --- [http-nio-49827-exec-4] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 平台服务类型码不存在
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl.bindPlatformChannelForApp(PlatformChannelServiceImpl.java:84) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$FastClassBySpringCGLIB$$50c30cb6.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.service.impl.PlatformChannelServiceImpl$$EnhancerBySpringCGLIB$$510da327.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController.bindPlatformChannelForApp(PlatformChannelController.java:58) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$FastClassBySpringCGLIB$$9a34565e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.controller.PlatformChannelController$$EnhancerBySpringCGLIB$$5408c91f.bindPlatformChannelForApp(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 13:56:57.719 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:56:57.719 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:56:57.720 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:56:57.722 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:56:57.723 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:56:57.724 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:01.797 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:01.797 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:01.799 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:01.800 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:01.801 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:01.802 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:01.986 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:01.986 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:01.987 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:01.989 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:01.989 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:01.991 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:02.230 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:02.230 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:02.231 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:02.232 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:02.232 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:02.233 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:02.679 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:02.679 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:02.680 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:02.681 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:02.682 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:02.683 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:02.843 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:02.844 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:02.845 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:02.846 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:02.847 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:02.848 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:02.999 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:02.999 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:03.000 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:03.002 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:03.002 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:03.003 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:03.170 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:03.170 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:03.171 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:03.172 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:03.172 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:03.174 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:03.342 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:03.342 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:03.343 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:03.344 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:03.345 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:03.346 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:03.514 DEBUG 6744 --- [http-nio-49827-exec-7] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:03.514 DEBUG 6744 --- [http-nio-49827-exec-7] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:03.515 DEBUG 6744 --- [http-nio-49827-exec-7] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:03.516 DEBUG 6744 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:03.516 DEBUG 6744 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:03.517 DEBUG 6744 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:03.691 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:03.691 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:03.692 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:03.693 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:03.694 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:03.695 DEBUG 6744 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:03.860 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:03.860 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:03.861 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:03.862 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:03.862 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:03.864 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:04.036 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:04.036 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:04.037 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:04.038 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:04.038 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:04.039 DEBUG 6744 --- [http-nio-49827-exec-10] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:04.210 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:04.210 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:04.211 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:04.212 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:04.212 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:04.214 DEBUG 6744 --- [http-nio-49827-exec-1] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:05.520 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:05.520 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:05.521 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:05.522 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:05.522 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:05.523 DEBUG 6744 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:05.683 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:05.683 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:05.684 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:05.685 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:05.685 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:05.687 DEBUG 6744 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:05.869 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:05.869 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:05.870 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:05.871 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:05.871 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:05.872 DEBUG 6744 --- [http-nio-49827-exec-3] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:06.042 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:06.042 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:06.043 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:06.044 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:06.044 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:06.045 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:06.217 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:06.217 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:06.218 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:06.219 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:06.219 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:06.220 DEBUG 6744 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:57:14.942 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:57:14.942 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:57:14.943 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:57:14.945 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:57:14.945 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:57:14.946 DEBUG 6744 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 13:58:24.577  WARN 6744 --- [http-nio-49827-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 69630
+2023-01-15 13:58:24.596 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 13:58:24.596 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 13:58:24.598 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 13:58:24.599 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 13:58:24.599 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 13:58:24.600 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-15 14:01:37.345  WARN 6744 --- [http-nio-49827-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 192744
+2023-01-15 14:01:37.365 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-15 14:01:37.365 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-15 14:01:37.367 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-15 14:01:37.368 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-15 14:01:37.369 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==> Parameters: 7a6e88fba94742069ef3bc40ee70ef18(String), aggregate_pay_c2b(String)
+2023-01-15 14:01:37.370 DEBUG 6744 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : <==      Total: 1

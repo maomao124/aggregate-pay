@@ -53,6 +53,6 @@ public class OptLogServiceImpl implements OptLogService
             //错误，只打印警告信息
             log.warn("日志保存失败！ 信息：" + r.getMsg());
         }
-        //保存成功，什么都不做，抛出异常可能就是服务宕机
+        //保存成功，什么都不做，抛出异常可能就是服务宕机，不在同一线程，不会影响服务
     }
 }
