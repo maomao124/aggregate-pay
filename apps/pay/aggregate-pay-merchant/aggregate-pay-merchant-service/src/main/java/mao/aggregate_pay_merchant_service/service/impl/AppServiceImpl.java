@@ -13,6 +13,7 @@ import mao.tools_core.base.R;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.tools_redis_cache.utils.RedisUtils;
 import mao.toolsdozer.utils.DozerUtils;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -46,6 +47,9 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
 
     @Resource
     private RedisUtils redisUtils;
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
 
     @Override
     public R<AppDTO> createApp(Long merchantId, AppDTO app)
@@ -82,6 +86,8 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
             return R.fail("保存失败");
         }
         //保存成功，主要是返回主键
+        //清除缓存
+        stringRedisTemplate.delete("pay:AppDTO:getAppById:" + app1.getAppId());
         return R.success(dozerUtils.map(app1, AppDTO.class));
     }
 

@@ -7,8 +7,10 @@ import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.AppDTO;
 import mao.aggregate_pay_merchant_api.feign.AppFeignClient;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
+import mao.aggregate_pay_transaction_api.feign.PlatformChannelFeignClient;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import mao.tools_log.annotation.SysLog;
 import org.apache.catalina.security.SecurityUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +37,9 @@ public class AppController
 {
     @Resource
     private AppFeignClient appFeignClient;
+
+    @Resource
+    private PlatformChannelFeignClient platformChannelFeignClient;
 
     /**
      * 创建应用
@@ -109,5 +114,47 @@ public class AppController
         AssertResult.handler(r);
         //返回
         return r.getData();
+    }
+
+    /**
+     * 绑定服务类型
+     *
+     * @param appId                应用程序id
+     * @param platformChannelCodes 平台通道编码
+     */
+    @SysLog(value = "绑定服务类型", recordResponseParam = false)
+    @ApiOperation("绑定服务类型")
+    @PostMapping(value = "/my/apps/{appId}/platform‐channels")
+    @ApiImplicitParams({
+            @ApiImplicitParam(value = "应用id", name = "appId", dataType = "string", paramType =
+                    "path"),
+            @ApiImplicitParam(value = "服务类型code", name = "platformChannelCodes", dataType =
+                    "string", paramType = "query")
+    })
+    public void bindPlatformForApp(@PathVariable("appId") String appId,
+                                   @RequestParam("platformChannelCodes") String platformChannelCodes)
+    {
+        if (StringUtils.isBlank(appId))
+        {
+            throw BizException.wrap("appID为空");
+        }
+        if (StringUtils.isBlank(platformChannelCodes))
+        {
+            throw BizException.wrap("platformChannelCodes为空");
+        }
+        //查询appid是否存在
+        R<AppDTO> appById = appFeignClient.getAppById(appId);
+        //断言结果
+        AssertResult.handler(appById);
+        //如果不存在
+        if (appById.getData() == null)
+        {
+            throw BizException.wrap("appId不存在");
+        }
+        //远程调用
+        R<Boolean> r = platformChannelFeignClient.bindPlatformChannelForApp(appId, platformChannelCodes);
+        //断言结果
+        AssertResult.handler(r);
+
     }
 }

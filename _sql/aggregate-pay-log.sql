@@ -9,7 +9,7 @@ CREATE TABLE `opt_log`
     `user_name`      bigint(20)     DEFAULT NULL COMMENT '操作人(商户id)',
     `description`    varchar(255)    DEFAULT '' COMMENT '操作描述',
     `class_path`     varchar(255)    DEFAULT '' COMMENT '类路径',
-    `action_method`  varchar(50)     DEFAULT '' COMMENT '请求方法',
+    `action_method`  varchar(150)     DEFAULT '' COMMENT '请求方法',
     `request_uri`    varchar(50)     DEFAULT '' COMMENT '请求地址',
     `http_method`    varchar(10)     DEFAULT 'GET' COMMENT '请求类型\n#HttpMethod{GET:GET请求;POST:POST请求;PUT:PUT请求;DELETE:DELETE请求;PATCH:PATCH请求;TRACE:TRACE请求;HEAD:HEAD请求;OPTIONS:OPTIONS请求;}',
     `params`         longtext COMMENT '请求参数',
