@@ -34,6 +34,12 @@ class PayChannelServiceImplTest
     @Test
     void queryAll()
     {
+        System.out.println(payChannelService.list());
+    }
 
+    @Test
+    void queryPayChannelByPlatformChannel()
+    {
+        System.out.println(payChannelService.queryPayChannelByPlatformChannel("aggregate_pay_c2b"));
     }
 }
