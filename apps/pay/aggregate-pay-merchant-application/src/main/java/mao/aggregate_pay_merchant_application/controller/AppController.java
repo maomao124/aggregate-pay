@@ -157,4 +157,37 @@ public class AppController
         AssertResult.handler(r);
 
     }
+
+
+    /**
+     * 查询应用是否绑定了某个服务类型
+     *
+     * @param appId           应用程序id
+     * @param platformChannel 平台通道
+     * @return 1为绑定了，0为没有绑定
+     */
+    @ApiOperation("查询应用是否绑定了某个服务类型")
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "appId", value = "应用appId", required = true, dataType =
+                            "String", paramType = "query"),
+                    @ApiImplicitParam(name = "platformChannel", value = "服务类型", required = true, dataType =
+                            "String", paramType = "query")
+            })
+    @GetMapping("/my/merchants/apps/platformchannels")
+    public int queryAppBindPlatformChannel(@RequestParam String appId, @RequestParam String
+            platformChannel)
+    {
+        //远程调用
+        R<Boolean> r = platformChannelFeignClient.queryAppBindPlatformChannel(appId, platformChannel);
+        //断言结果
+        AssertResult.handler(r);
+        //返回
+        if (!r.getData())
+        {
+            return 0;
+        }
+        return 1;
+    }
+
 }

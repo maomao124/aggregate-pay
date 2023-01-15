@@ -3,6 +3,7 @@ package mao.aggregate_pay_transaction_service.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_transaction_api.dto.PlatformChannelDTO;
+import mao.aggregate_pay_transaction_service.service.AppPlatformChannelService;
 import mao.aggregate_pay_transaction_service.service.PlatformChannelService;
 import mao.tools_core.base.R;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,9 @@ public class PlatformChannelController
     @Resource
     private PlatformChannelService platformChannelService;
 
+    @Resource
+    private AppPlatformChannelService appPlatformChannelService;
+
 
     /**
      * 获取平台所有服务类型
@@ -57,5 +61,19 @@ public class PlatformChannelController
     {
         platformChannelService.bindPlatformChannelForApp(appId, platformChannelCodes);
         return R.success();
+    }
+
+    /**
+     * 查询应用是否已经绑定了某个服务类型
+     *
+     * @param appId           应用程序id
+     * @param platformChannel 平台通道
+     * @return boolean
+     */
+    @GetMapping("/bind")
+    @ApiOperation("查询应用是否已经绑定了某个服务类型")
+    public R<Boolean> queryAppBindPlatformChannel(@RequestParam String appId, @RequestParam String platformChannel)
+    {
+        return R.success(appPlatformChannelService.queryAppBindPlatformChannel(appId, platformChannel));
     }
 }

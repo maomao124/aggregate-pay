@@ -43,4 +43,15 @@ public interface PlatformChannelFeignClient
      */
     @PutMapping("/bind")
     R<Boolean> bindPlatformChannelForApp(@RequestParam String appId, @RequestParam String platformChannelCodes);
+
+
+    /**
+     * 查询应用是否已经绑定了某个服务类型
+     *
+     * @param appId           应用程序id
+     * @param platformChannel 平台通道
+     * @return boolean
+     */
+    @GetMapping("/bind")
+    R<Boolean> queryAppBindPlatformChannel(@RequestParam String appId, @RequestParam String platformChannel);
 }

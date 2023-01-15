@@ -4411,3 +4411,801 @@ Caused by: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Da
 2023-01-15 14:01:37.398 DEBUG 22044 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
 2023-01-15 14:01:37.399 DEBUG 22044 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 126307423236392033(Long), 2023-01-15T14:01:37.372(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 192.168.202.1(String), /my/apps/7a6e88fba94742069ef3bc40ee70ef18/platform‐channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.76(String), [7a6e88fba94742069ef3bc40ee70ef18, aggregate_pay_c2b](String), POST(String), 123456(Long), OPT(String), 68(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-15T14:01:37.304(LocalDateTime)
 2023-01-15 14:01:37.402 DEBUG 22044 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-15 18:28:17.829  WARN 6796 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-log] & group[DEFAULT_GROUP]
+2023-01-15 18:28:23.909  INFO 6796 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-15 18:28:23.950  INFO 6796 --- [main] m.a.AggregatePayLogApplication           : The following profiles are active: dev
+2023-01-15 18:28:24.891  INFO 6796 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3b00adf-8de8-3dce-b755-e600f52dac82
+2023-01-15 18:28:24.949  INFO 6796 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-15 18:28:25.000  INFO 6796 --- [main] mao.aggregate_pay_log.config.WebConfig   : 初始化 WebConfig
+2023-01-15 18:28:25.196  INFO 6796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 27914 (http)
+2023-01-15 18:28:25.205  INFO 6796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-15 18:28:25.205  INFO 6796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-15 18:28:25.329  INFO 6796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-15 18:28:25.329  INFO 6796 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1364 ms
+2023-01-15 18:28:25.478  INFO 6796 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-15 18:28:25.494  INFO 6796 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-15 18:28:25.496  INFO 6796 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-01-15 18:28:26.221  WARN 6796 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-15 18:28:26.221  INFO 6796 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-15 18:28:26.232  WARN 6796 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-15 18:28:26.232  INFO 6796 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-15 18:28:26.295  INFO 6796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-15 18:28:26.706  INFO 6796 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-15 18:28:26.751  INFO 6796 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-15 18:28:26.759  INFO 6796 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-15 18:28:26.759  INFO 6796 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_log', basePath=[], excludePath=[]}}
+
+2023-01-15 18:28:27.150  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-15 18:28:27.151  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-15 18:28:27.151  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-15 18:28:29.232 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:31.268 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:33.295 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:33.296 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance/list failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-01-15 18:28:33.297 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to update serviceName: DEFAULT_GROUP@@aggregate-pay-log
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:345) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:320) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:131) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:33.300  INFO 6796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-15 18:28:33.330  INFO 6796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-15 18:28:33.393  INFO 6796 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-15 18:28:33.626  INFO 6796 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2023-01-15 18:28:33.722  INFO 6796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 27914 (http) with context path ''
+2023-01-15 18:28:33.727  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-log with instance: Instance{instanceId='null', ip='192.168.3.143', port=27914, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-01-15 18:28:35.769 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:36.339 ERROR 6796 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 18:28:37.818 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:38.352 ERROR 6796 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 18:28:39.856 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:39.857 ERROR 6796 --- [main] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-01-15 18:28:39.858 ERROR 6796 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, aggregate-pay-log register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='127.0.0.1:8848', endpoint='', namespace='51637975-182d-43e2-ab58-d012723411d5', watchDelay=30000, logName='', service='aggregate-pay-log', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}, registerEnabled=true, ip='192.168.3.143', networkInterface='', port=27914, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null, failFast=true}},
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+
+2023-01-15 18:28:40.093  INFO 6796 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-15 18:28:40.115  INFO 6796 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-15 18:28:40.117  INFO 6796 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-15 18:28:40.119  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-15 18:28:40.119  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-15 18:28:40.119  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-15 18:28:40.374 ERROR 6796 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 18:28:40.375 ERROR 6796 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance/list failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-01-15 18:28:40.375  WARN 6796 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to update serviceName: DEFAULT_GROUP@@aggregate-pay-log
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-15 18:28:40.375  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-15 18:28:43.404  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-15 18:28:43.404  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-15 18:28:43.405  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-15 18:28:43.405  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-15 18:28:43.405  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-15 18:28:43.405  WARN 6796 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-15 18:28:43.405  WARN 6796 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-15 18:28:43.405  INFO 6796 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-15 18:28:43.406  INFO 6796 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-15 18:28:43.406  INFO 6796 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-15 18:28:43.407  INFO 6796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-15 18:28:43.412  INFO 6796 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-01-15 18:28:43.425 ERROR 6796 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.reflect.UndeclaredThrowableException: null
+	at org.springframework.util.ReflectionUtils.rethrowRuntimeException(ReflectionUtils.java:147) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:82) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_log.AggregatePayLogApplication.main(AggregatePayLogApplication.java:30) [classes/:na]
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 20 common frames omitted
+
+2023-01-15 18:28:43.429  WARN 6796 --- [Thread-54] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-15 18:28:43.429  WARN 6796 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-15 18:28:43.429  WARN 6796 --- [Thread-54] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-15 18:28:43.430  WARN 6796 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-15 18:29:07.246  WARN 11724 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-log] & group[DEFAULT_GROUP]
+2023-01-15 18:29:07.263  INFO 11724 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-log,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-15 18:29:07.310  INFO 11724 --- [main] m.a.AggregatePayLogApplication           : The following profiles are active: dev
+2023-01-15 18:29:08.586  INFO 11724 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3b00adf-8de8-3dce-b755-e600f52dac82
+2023-01-15 18:29:08.646  INFO 11724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-15 18:29:08.713  INFO 11724 --- [main] mao.aggregate_pay_log.config.WebConfig   : 初始化 WebConfig
+2023-01-15 18:29:08.930  INFO 11724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 27914 (http)
+2023-01-15 18:29:08.941  INFO 11724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-15 18:29:08.942  INFO 11724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-15 18:29:09.068  INFO 11724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-15 18:29:09.068  INFO 11724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1736 ms
+2023-01-15 18:29:09.214  INFO 11724 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-01-15 18:29:09.230  INFO 11724 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-01-15 18:29:09.232  INFO 11724 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-01-15 18:29:10.006  WARN 11724 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-15 18:29:10.007  INFO 11724 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-15 18:29:10.011  WARN 11724 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-15 18:29:10.011  INFO 11724 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-15 18:29:10.089  INFO 11724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-15 18:29:10.507  INFO 11724 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-15 18:29:10.547  INFO 11724 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-15 18:29:10.556  INFO 11724 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-15 18:29:10.557  INFO 11724 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_log', basePath=[], excludePath=[]}}
+
+2023-01-15 18:29:11.026  INFO 11724 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-15 18:29:11.027  INFO 11724 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-15 18:29:11.027  INFO 11724 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-15 18:29:11.121  INFO 11724 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-log@@DEFAULT -> [{"instanceId":"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log","ip":"192.168.3.143","port":27914,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-log","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-15 18:29:11.130  INFO 11724 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-log@@DEFAULT -> [{"instanceId":"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log","ip":"192.168.3.143","port":27914,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-log","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-15 18:29:11.133  INFO 11724 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-15 18:29:11.155  INFO 11724 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-15 18:29:11.204  INFO 11724 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-15 18:29:11.439  INFO 11724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageUsingGET_1
+2023-01-15 18:29:11.531  INFO 11724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 27914 (http) with context path ''
+2023-01-15 18:29:11.536  INFO 11724 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-log with instance: Instance{instanceId='null', ip='192.168.3.143', port=27914, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-01-15 18:29:11.545  INFO 11724 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-log 192.168.3.143:27914 register finished
+2023-01-15 18:29:11.829  INFO 11724 --- [main] m.a.AggregatePayLogApplication           : Started AggregatePayLogApplication in 6.494 seconds (JVM running for 7.589)
+2023-01-15 18:29:11.832  INFO 11724 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-15 18:29:11.833  INFO 11724 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-15 18:29:11.835  INFO 11724 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-15 18:29:11.835  INFO 11724 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-15 18:29:11.837  INFO 11724 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-15 18:29:11.837  INFO 11724 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-15 18:29:11.837  INFO 11724 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-log+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-15 18:29:11.837  INFO 11724 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-log, group=DEFAULT_GROUP, cnt=1
+2023-01-15 18:29:11.837  INFO 11724 --- [main] m.a.AggregatePayLogApplication           : 应用aggregate-pay-log启动成功!swagger地址：http://192.168.202.1:27914/doc.html  或者：http://127.0.0.1:27914/doc.html
+2023-01-15 18:29:11.838  INFO 11724 --- [main] m.a.AggregatePayLogApplication           : 数据库监控地址：http://192.168.202.1:27914/druid  或者：http://127.0.0.1:27914/druid
+2023-01-15 18:29:11.838  INFO 11724 --- [main] m.a.AggregatePayLogApplication           : 启动耗时：6631ms
+2023-01-15 18:29:12.551  INFO 11724 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":27914,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"cacheMillis\":10000,\"lastRefTime\":1673778552550,\"checksum\":\"8de5edc44cd0ec1c1ac900a1d3f02d4d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":499355895300} from /192.168.202.1
+2023-01-15 18:29:25.814  INFO 11724 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":27914,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"cacheMillis\":10000,\"lastRefTime\":1673778565813,\"checksum\":\"8de5edc44cd0ec1c1ac900a1d3f02d4d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":512618865000} from /192.168.202.1
+2023-01-15 18:52:55.655  INFO 11724 --- [http-nio-27914-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-15 18:52:55.655  INFO 11724 --- [http-nio-27914-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-15 18:52:55.662  INFO 11724 --- [http-nio-27914-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-01-15 18:52:56.201  INFO 11724 --- [http-nio-27914-exec-1] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/service-worker.js
+2023-01-15 18:53:05.198  INFO 11724 --- [http-nio-27914-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-15 18:53:05.231 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:53:05.476 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:53:05.532 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:53:05.537 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:53:05.550 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:54:06.768  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61219
+2023-01-15 18:54:06.769  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61592
+2023-01-15 18:54:06.772  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61613
+2023-01-15 18:54:06.773  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61636
+2023-01-15 18:54:06.774  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61657
+2023-01-15 18:54:06.776  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61679
+2023-01-15 18:54:06.778  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61702
+2023-01-15 18:54:06.779  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61725
+2023-01-15 18:54:06.781  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61748
+2023-01-15 18:54:06.782  WARN 11724 --- [http-nio-27914-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 61777
+2023-01-15 18:54:06.797 DEBUG 11724 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-15 18:54:06.837 DEBUG 11724 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 1(Long)
+2023-01-15 18:54:11.240 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log WHERE (user_name = ?) 
+2023-01-15 18:54:11.240 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long)
+2023-01-15 18:54:11.242 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT description,id,finish_time,request_ip,type FROM opt_log WHERE (user_name = ?) ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:54:11.243 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 0(Long), 10(Long)
+2023-01-15 18:54:11.244 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 1
+2023-01-15 18:54:23.758 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log WHERE id=? 
+2023-01-15 18:54:23.759 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : ==> Parameters: 2(Long)
+2023-01-15 18:54:23.760 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectById       : <==      Total: 0
+2023-01-15 18:57:26.230  WARN 11724 --- [http-nio-27914-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 182469
+2023-01-15 18:57:26.250 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:26.250 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:26.253 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:26.254 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:26.259 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:27.020 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:27.020 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:27.023 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:27.023 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:27.029 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:27.431 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:27.431 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:27.433 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:27.433 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:27.437 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:27.700 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:27.701 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:27.703 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:27.703 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:27.707 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:28.007 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:28.007 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:28.009 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:28.010 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:28.013 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:28.303 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:28.303 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:28.305 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:28.305 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:28.309 DEBUG 11724 --- [http-nio-27914-exec-4] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:28.595 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:28.595 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:28.597 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:28.598 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:28.601 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:28.838 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:28.838 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:28.840 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:28.841 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 20(Long)
+2023-01-15 18:57:28.843 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:32.518  INFO 11724 --- [http-nio-27914-exec-3] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/service-worker.js
+2023-01-15 18:57:32.535  INFO 11724 --- [http-nio-27914-exec-2] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://127.0.0.1:27914/favicon.ico
+2023-01-15 18:57:35.050 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:35.051 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:35.053 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:35.053 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:35.056 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:35.894 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:35.895 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:35.897 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:35.897 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:35.900 DEBUG 11724 --- [http-nio-27914-exec-3] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:36.401 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:36.401 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:36.403 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:36.403 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:36.406 DEBUG 11724 --- [http-nio-27914-exec-5] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:36.828 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:36.828 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:36.830 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:36.831 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:36.833 DEBUG 11724 --- [http-nio-27914-exec-2] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:37.246 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:37.246 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:37.249 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:37.249 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:37.253 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:37.571 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:37.571 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:37.573 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:37.573 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:37.576 DEBUG 11724 --- [http-nio-27914-exec-9] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:37.871 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:37.872 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:37.874 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:37.874 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:37.877 DEBUG 11724 --- [http-nio-27914-exec-1] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:38.089 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:38.089 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:38.091 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:38.091 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:38.094 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:38.282 DEBUG 11724 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:38.282 DEBUG 11724 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:38.284 DEBUG 11724 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:38.284 DEBUG 11724 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:38.287 DEBUG 11724 --- [http-nio-27914-exec-7] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:42.356 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:42.356 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:42.358 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:42.358 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:42.361 DEBUG 11724 --- [http-nio-27914-exec-10] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:43.526 DEBUG 11724 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:43.526 DEBUG 11724 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:43.528 DEBUG 11724 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:43.528 DEBUG 11724 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:43.531 DEBUG 11724 --- [http-nio-27914-exec-6] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
+2023-01-15 18:57:44.285 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT COUNT(1) FROM opt_log 
+2023-01-15 18:57:44.286 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 
+2023-01-15 18:57:44.287 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==>  Preparing: SELECT id,finish_time,action_method,description,request_ip,request_uri,ua,params,http_method,user_name,type,ex_desc,result,consuming_time,ex_detail,class_path,start_time FROM opt_log ORDER BY id DESC LIMIT ?,? 
+2023-01-15 18:57:44.288 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : ==> Parameters: 0(Long), 10(Long)
+2023-01-15 18:57:44.290 DEBUG 11724 --- [http-nio-27914-exec-8] m.a.mapper.OptLogMapper.selectPage       : <==      Total: 7
