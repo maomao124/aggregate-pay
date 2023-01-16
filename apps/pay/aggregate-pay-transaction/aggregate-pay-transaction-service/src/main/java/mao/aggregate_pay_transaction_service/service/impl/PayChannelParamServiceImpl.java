@@ -17,6 +17,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -85,6 +86,49 @@ public class PayChannelParamServiceImpl extends ServiceImpl<PayChannelParamMappe
             return R.success();
         }
 
+    }
+
+    @Override
+    public R<List<PayChannelParamDTO>> queryPayChannelParamByAppAndPlatform(String appId, String platformChannel)
+    {
+        //查出应用id和服务类型代码在app_platform_channel主键
+        Long appPlatformChannelId = selectIdByAppPlatformChannel(appId, platformChannel);
+        if (appPlatformChannelId == null)
+        {
+            //应用未绑定该服务类型不可进行支付渠道参数配置
+            throw new BizException("应用没有绑定服务类型");
+        }
+        //查询
+        List<PayChannelParam> payChannelParamList = this.list(Wraps.<PayChannelParam>lbQ()
+                .eq(PayChannelParam::getAppPlatformChannelId, appPlatformChannelId));
+        //转换
+        List<PayChannelParamDTO> payChannelParamDTOList = dozerUtils.mapList(payChannelParamList, PayChannelParamDTO.class);
+        //返回
+        return R.success(payChannelParamDTOList);
+    }
+
+    @Override
+    public R<PayChannelParamDTO> queryParamByAppPlatformAndPayChannel(String appId, String platformChannel, String payChannel)
+    {
+        //查出应用id和服务类型代码在app_platform_channel主键
+        Long appPlatformChannelId = selectIdByAppPlatformChannel(appId, platformChannel);
+        if (appPlatformChannelId == null)
+        {
+            //应用未绑定该服务类型不可进行支付渠道参数配置
+            throw new BizException("应用没有绑定服务类型");
+        }
+        //查询
+        PayChannelParam payChannelParam = this.getOne(Wraps.<PayChannelParam>lbQ()
+                .eq(PayChannelParam::getAppPlatformChannelId, appPlatformChannelId)
+                .eq(PayChannelParam::getPayChannel, payChannel));
+        if (payChannelParam == null)
+        {
+            return R.success(null);
+        }
+        //转换
+        PayChannelParamDTO payChannelParamDTO = dozerUtils.map(payChannelParam, PayChannelParamDTO.class);
+        //返回
+        return R.success(payChannelParamDTO);
     }
 
 
