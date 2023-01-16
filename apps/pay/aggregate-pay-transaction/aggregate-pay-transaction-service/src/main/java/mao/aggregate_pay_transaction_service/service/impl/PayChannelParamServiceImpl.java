@@ -48,13 +48,6 @@ public class PayChannelParamServiceImpl extends ServiceImpl<PayChannelParamMappe
     {
         //去掉id
         payChannelParam.setId(null);
-        //校验
-        if (StringUtils.isBlank(payChannelParam.getAppId()) ||
-                StringUtils.isBlank(payChannelParam.getPlatformChannelCode()) ||
-                StringUtils.isBlank(payChannelParam.getPayChannel()))
-        {
-            throw new BizException("传入对象为空或者缺少必要的参数");
-        }
         //根据appid和服务类型查询应用与服务类型绑定id
         Long appPlatformChannelId = selectIdByAppPlatformChannel(payChannelParam.getAppId(),
                 payChannelParam.getPlatformChannelCode());

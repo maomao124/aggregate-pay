@@ -96,6 +96,7 @@ public class MerchantController
      * @param merchantRegisterVO MerchantRegisterVO
      * @return {@link MerchantRegisterVO}
      */
+    @SysLog(value = "商户注册", recordResponseParam = false)
     @PostMapping("/merchants/register")
     @ApiOperation("商户注册")
     @ApiImplicitParam(value = "商户注册信息", name = "merchantRegisterVO", required = true, dataType = "MerchantRegisterVO", paramType = "body")
@@ -156,6 +157,7 @@ public class MerchantController
      */
     @ApiOperation("上传证件照")
     @PostMapping("/upload")
+    @SysLog(value = "上传证件照",recordResponseParam = false)
     public String upload(@ApiParam(value = "证件照", required = true) @RequestParam("file") MultipartFile multipartFile)
             throws IOException
     {
@@ -181,6 +183,7 @@ public class MerchantController
                     @ApiImplicitParam(name = "merchantDetailVO", value = "商户认证资料", required = true,
                             dataType = "MerchantDetailVO", paramType = "body")
             })
+    @SysLog(value = "商户资质申请",recordResponseParam = false)
     @PostMapping("/my/merchants/save")
     public void saveMerchant(@RequestBody MerchantDetailVO merchantDetailVO)
     {

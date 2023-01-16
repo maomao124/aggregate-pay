@@ -47,6 +47,7 @@ public class AppController
      * @param app {@link AppDTO}
      * @return {@link AppDTO}
      */
+    @SysLog(value = "商户创建应用",recordResponseParam = false)
     @ApiOperation("商户创建应用")
     @ApiImplicitParams
             ({

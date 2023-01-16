@@ -7,13 +7,16 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
 import mao.aggregate_pay_transaction_api.dto.PayChannelDTO;
+import mao.aggregate_pay_transaction_api.dto.PayChannelParamDTO;
 import mao.aggregate_pay_transaction_api.dto.PlatformChannelDTO;
 import mao.aggregate_pay_transaction_api.feign.PayChannelFeignClient;
+import mao.aggregate_pay_transaction_api.feign.PayChannelParamFeignClient;
 import mao.aggregate_pay_transaction_api.feign.PlatformChannelFeignClient;
 import mao.tools_core.base.R;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import mao.tools_core.exception.BizException;
+import mao.tools_log.annotation.SysLog;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -41,6 +44,9 @@ public class PlatformParamController
 
     @Resource
     private PayChannelFeignClient payChannelFeignClient;
+
+    @Resource
+    private PayChannelParamFeignClient payChannelParamFeignClient;
 
 
     /**
@@ -81,6 +87,39 @@ public class PlatformParamController
         AssertResult.handler(r);
         //返回
         return r.getData();
+    }
+
+
+    /**
+     * 商户配置支付渠道参数
+     *
+     * @param payChannelParam 支付通道参数
+     */
+    @SysLog(value = "商户配置支付渠道参数", recordResponseParam = false)
+    @ApiOperation("商户配置支付渠道参数")
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "payChannelParam", value = "商户配置支付渠道参数", required =
+                            true, dataType = "PayChannelParamDTO", paramType = "body")
+            })
+    @RequestMapping(value = "/my/pay‐channel‐params", method = {RequestMethod.POST, RequestMethod.PUT})
+    public void createPayChannelParam(@RequestBody PayChannelParamDTO payChannelParam)
+    {
+        //设置商户id，商户id不能从请求里拿
+        //todo
+        Long merchantId = 12243556L;
+        payChannelParam.setMerchantId(merchantId);
+        //校验
+        if (StringUtils.isBlank(payChannelParam.getAppId()) ||
+                StringUtils.isBlank(payChannelParam.getPlatformChannelCode()) ||
+                StringUtils.isBlank(payChannelParam.getPayChannel()))
+        {
+            throw new BizException("传入对象为空或者缺少必要的参数");
+        }
+        //远程调用
+        R<Boolean> r = payChannelParamFeignClient.savePayChannelParam(payChannelParam);
+        //断言结果
+        AssertResult.handler(r);
     }
 
 
