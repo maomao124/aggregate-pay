@@ -39,9 +39,27 @@ public class PayChannelServiceImpl extends ServiceImpl<PayChannelMapper, PayChan
     @Resource
     private PlatformChannelMapper platformChannelMapper;
 
+    @Resource
+    private RedisUtils redisUtils;
+
     @Override
     public List<PayChannelDTO> queryPayChannelByPlatformChannel(String platformChannelCode)
     {
-        return platformChannelMapper.selectPayChannelByPlatformChannel(platformChannelCode);
+        RedisData redisData = redisUtils.query("pay:List_PayChannelDTO:queryPayChannelByPlatformChannel:",
+                "pay:List_PayChannelDTO:queryPayChannelByPlatformChannel:lock:", platformChannelCode,
+                RedisData.class, new Function<String, RedisData>()
+                {
+                    @Override
+                    public RedisData apply(String s)
+                    {
+                        List<PayChannelDTO> payChannelDTOS = platformChannelMapper.selectPayChannelByPlatformChannel(platformChannelCode);
+                        RedisData redisData = new RedisData();
+                        redisData.setData(payChannelDTOS);
+                        return redisData;
+                    }
+                },
+                300L, TimeUnit.MINUTES, 60);
+        return (List<PayChannelDTO>) redisData.getData();
+
     }
 }
