@@ -123,4 +123,61 @@ public class PlatformParamController
     }
 
 
+    /**
+     * 获取指定应用指定服务类型下所包含的原始支付渠道参数列表
+     *
+     * @param appId           应用id
+     * @param platformChannel 平台支付渠道编码
+     * @return {@link List}<{@link PayChannelParamDTO}>
+     */
+    @ApiOperation("获取指定应用指定服务类型下所包含的原始支付渠道参数列表")
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "appId", value = "应用id", required = true,
+                            dataType = "String", paramType = "path"),
+                    @ApiImplicitParam(name = "platformChannel", value = "服务类型",
+                            required = true, dataType = "String", paramType = "path")})
+    @GetMapping(value = "/my/pay‐channel‐params/apps/{appId}/platform‐ channels/{platformChannel}")
+    public List<PayChannelParamDTO> queryPayChannelParam(@PathVariable String appId,
+                                                         @PathVariable String platformChannel)
+    {
+        //查询
+        R<List<PayChannelParamDTO>> r = payChannelParamFeignClient.queryPayChannelParamByAppAndPlatform(appId, platformChannel);
+        //断言结果
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
+    }
+
+
+    /**
+     * 获取指定应用指定服务类型下所包含的某个原始支付参数
+     *
+     * @param appId           应用id
+     * @param platformChannel 平台支付渠道编码
+     * @param payChannel      实际支付渠道编码
+     * @return {@link PayChannelParamDTO}
+     */
+    @ApiOperation("获取指定应用指定服务类型下所包含的某个原始支付参数")
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "appId", value = "应用id",
+                            required = true, dataType = "String", paramType = "path"),
+                    @ApiImplicitParam(name = "platformChannel", value = "平台支付渠道编码",
+                            required = true, dataType = "String", paramType = "path"),
+                    @ApiImplicitParam(name = "payChannel", value = "实际支付渠道编码",
+                            required = true, dataType = "String", paramType = "path")})
+    @GetMapping(value = "/my/pay‐channel‐params/apps/{appId}/platform‐ channels/{platformChannel}/pay‐channels/{payChannel}")
+    public PayChannelParamDTO queryPayChannelParam(@PathVariable String appId,
+                                                   @PathVariable String platformChannel, @PathVariable String payChannel)
+    {
+        //查询
+        R<PayChannelParamDTO> r = payChannelParamFeignClient.queryParamByAppPlatformAndPayChannel(appId, platformChannel, payChannel);
+        //断言结果
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
+    }
+
+
 }
