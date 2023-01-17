@@ -14,6 +14,7 @@
         <module name="sms-dao" />
         <module name="aggregate-pay-common" />
         <module name="tools-core" />
+        <module name="aggregate-pay-uaa-service" />
         <module name="tools-databases" />
         <module name="sms-sdk" />
         <module name="sms-manage" />
@@ -60,6 +61,7 @@
       <module name="aggregate-pay-transaction-service" options="-parameters" />
       <module name="aggregate-pay-uaa" options="-parameters" />
       <module name="aggregate-pay-uaa-api" options="-parameters" />
+      <module name="aggregate-pay-uaa-service" options="-parameters" />
       <module name="auth-entity" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="gateway" options="-parameters" />

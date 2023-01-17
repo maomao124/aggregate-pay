@@ -38,6 +38,7 @@
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-uaa/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-uaa/aggregate-pay-uaa-api/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-uaa/aggregate-pay-uaa-service/pom.xml" />
       </list>
     </option>
   </component>
