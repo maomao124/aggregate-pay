@@ -27,6 +27,9 @@
         <module>aggregate-pay-transaction</module>
         <module>aggregate-pay-log</module>
         <module>aggregate-pay-entity</module>
+        <module>aggregate-pay-gateway</module>
+        <module>aggregate-pay-uaa</module>
+        <module>aggregate-pay-user</module>
     </modules>
 
     <dependencyManagement>
@@ -75,6 +78,31 @@
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>aggregate-pay-entity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-gateway</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-uaa-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-uaa-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-user-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-user-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
