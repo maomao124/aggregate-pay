@@ -24,6 +24,7 @@
         <module name="aggregate-pay-sms" />
         <module name="auth-entity" />
         <module name="tools-common" />
+        <module name="aggregate-pay-uaa" />
         <module name="aggregate-pay-entity" />
         <module name="auth-server" />
         <module name="tools-j2cache" />
@@ -34,6 +35,7 @@
         <module name="sms-server" />
         <module name="tools-validator" />
         <module name="tools-jwt" />
+        <module name="aggregate-pay-uaa-api" />
         <module name="tools-log" />
         <module name="gateway" />
         <module name="tools-swagger2" />
@@ -56,6 +58,8 @@
       <module name="aggregate-pay-transaction" options="-parameters" />
       <module name="aggregate-pay-transaction-api" options="-parameters" />
       <module name="aggregate-pay-transaction-service" options="-parameters" />
+      <module name="aggregate-pay-uaa" options="-parameters" />
+      <module name="aggregate-pay-uaa-api" options="-parameters" />
       <module name="auth-entity" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
