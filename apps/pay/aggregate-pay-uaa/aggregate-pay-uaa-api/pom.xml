@@ -14,9 +14,19 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>aggregate-pay-common</artifactId>
+        </dependency>
+
+        <!--feign 依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
-
 
 
 </project>
