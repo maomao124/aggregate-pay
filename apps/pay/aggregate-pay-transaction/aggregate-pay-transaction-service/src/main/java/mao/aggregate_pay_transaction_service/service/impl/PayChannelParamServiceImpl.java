@@ -12,12 +12,17 @@ import mao.aggregate_pay_transaction_service.service.PayChannelParamService;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_redis_cache.entity.RedisData;
+import mao.tools_redis_cache.utils.RedisUtils;
 import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -43,6 +48,12 @@ public class PayChannelParamServiceImpl extends ServiceImpl<PayChannelParamMappe
     @Resource
     private DozerUtils dozerUtils;
 
+    @Resource
+    private RedisUtils redisUtils;
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
 
     @Override
     public R<Boolean> savePayChannelParam(PayChannelParamDTO payChannelParam)
@@ -62,6 +73,13 @@ public class PayChannelParamServiceImpl extends ServiceImpl<PayChannelParamMappe
         PayChannelParam payChannelParam1 = this.getOne(Wraps.<PayChannelParam>lbQ()
                 .eq(PayChannelParam::getAppPlatformChannelId, appPlatformChannelId)
                 .eq(PayChannelParam::getPayChannel, payChannelParam.getPayChannel()));
+
+        //让缓存过期
+        String redisKey1 = payChannelParam.getAppId() + "__" + payChannelParam.getPlatformChannelCode();
+        String redisKey2 = payChannelParam.getAppId() + "__" + payChannelParam.getPlatformChannelCode() + "__" + payChannelParam.getPayChannel();
+        stringRedisTemplate.delete("pay:List_PayChannelParamDTO:query1:" + redisKey1);
+        stringRedisTemplate.delete("pay:PayChannelParamDTO:query2:" + redisKey2);
+
         //判断是否为空
         if (payChannelParam1 == null)
         {
@@ -85,11 +103,45 @@ public class PayChannelParamServiceImpl extends ServiceImpl<PayChannelParamMappe
             //返回
             return R.success();
         }
-
     }
 
     @Override
     public R<List<PayChannelParamDTO>> queryPayChannelParamByAppAndPlatform(String appId, String platformChannel)
+    {
+        //redisKey
+        String redisKey = appId + "__" + platformChannel;
+        //查询
+        RedisData redisData = redisUtils.query("pay:List_PayChannelParamDTO:query1:"
+                , "pay:List_PayChannelParamDTO:query1:lock:"
+                , redisKey, RedisData.class, new Function<String, RedisData>()
+                {
+                    @Override
+                    public RedisData apply(String s)
+                    {
+                        //查询数据库
+                        List<PayChannelParamDTO> payChannelParamDTOList = queryPayChannelParamByAppAndPlatformByDatabase(appId, platformChannel);
+                        //封装
+                        RedisData redisData = new RedisData();
+                        redisData.setData(payChannelParamDTOList);
+                        //返回
+                        return redisData;
+                    }
+                }, 300L, TimeUnit.MINUTES, 120);
+
+        List<PayChannelParamDTO> payChannelParamDTOList = (List<PayChannelParamDTO>) redisData.getData();
+        //返回
+        return R.success(payChannelParamDTOList);
+    }
+
+
+    /**
+     * 获取指定应用指定服务类型下所包含的原始支付渠道参数列表，从数据库里查询
+     *
+     * @param appId           应用id
+     * @param platformChannel 平台通道
+     * @return {@link List}<{@link PayChannelParamDTO}>
+     */
+    private List<PayChannelParamDTO> queryPayChannelParamByAppAndPlatformByDatabase(String appId, String platformChannel)
     {
         //查出应用id和服务类型代码在app_platform_channel主键
         Long appPlatformChannelId = selectIdByAppPlatformChannel(appId, platformChannel);
@@ -102,13 +154,42 @@ public class PayChannelParamServiceImpl extends ServiceImpl<PayChannelParamMappe
         List<PayChannelParam> payChannelParamList = this.list(Wraps.<PayChannelParam>lbQ()
                 .eq(PayChannelParam::getAppPlatformChannelId, appPlatformChannelId));
         //转换
-        List<PayChannelParamDTO> payChannelParamDTOList = dozerUtils.mapList(payChannelParamList, PayChannelParamDTO.class);
-        //返回
-        return R.success(payChannelParamDTOList);
+        return dozerUtils.mapList(payChannelParamList, PayChannelParamDTO.class);
     }
+
 
     @Override
     public R<PayChannelParamDTO> queryParamByAppPlatformAndPayChannel(String appId, String platformChannel, String payChannel)
+    {
+        //redisKey
+        String redisKey = appId + "__" + platformChannel + "__" + payChannel;
+        //查询
+        PayChannelParamDTO payChannelParamDTO = redisUtils.query("pay:PayChannelParamDTO:query2:"
+                , "pay:PayChannelParamDTO:query2:lock:"
+                , redisKey, PayChannelParamDTO.class, new Function<String, PayChannelParamDTO>()
+                {
+                    @Override
+                    public PayChannelParamDTO apply(String s)
+                    {
+                        //查询数据库
+                        return queryParamByAppPlatformAndPayChannelBydatabase(appId, platformChannel, payChannel);
+                    }
+                }, 300L, TimeUnit.MINUTES, 120);
+
+        //返回
+        return R.success(payChannelParamDTO);
+    }
+
+
+    /**
+     * 获取指定应用指定服务类型下所包含的某个原始支付参数，从数据库里查询
+     *
+     * @param appId           应用程序id
+     * @param platformChannel 平台通道
+     * @param payChannel      支付通道
+     * @return {@link R}<{@link PayChannelParamDTO}>
+     */
+    private PayChannelParamDTO queryParamByAppPlatformAndPayChannelBydatabase(String appId, String platformChannel, String payChannel)
     {
         //查出应用id和服务类型代码在app_platform_channel主键
         Long appPlatformChannelId = selectIdByAppPlatformChannel(appId, platformChannel);
@@ -123,12 +204,10 @@ public class PayChannelParamServiceImpl extends ServiceImpl<PayChannelParamMappe
                 .eq(PayChannelParam::getPayChannel, payChannel));
         if (payChannelParam == null)
         {
-            return R.success(null);
+            return null;
         }
         //转换
-        PayChannelParamDTO payChannelParamDTO = dozerUtils.map(payChannelParam, PayChannelParamDTO.class);
-        //返回
-        return R.success(payChannelParamDTO);
+        return dozerUtils.map(payChannelParam, PayChannelParamDTO.class);
     }
 
 
