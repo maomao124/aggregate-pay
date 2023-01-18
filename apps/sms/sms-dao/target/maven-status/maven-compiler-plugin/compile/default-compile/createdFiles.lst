@@ -1,0 +1,11 @@
+mao\sms_dao\mapper\BlackListMapper.class
+mao\sms_dao\mapper\TimingPushMapper.class
+mao\sms_dao\mapper\ConfigMapper.class
+mao\sms_dao\mapper\ReceiveLogMapper.class
+mao\sms_dao\mapper\SendLogMapper.class
+mao\sms_dao\mapper\ConfigTemplateMapper.class
+mao\sms_dao\mapper\ConfigSignatureMapper.class
+mao\sms_dao\mapper\TemplateMapper.class
+mao\sms_dao\mapper\ManualProcessMapper.class
+mao\sms_dao\mapper\PlatformMapper.class
+mao\sms_dao\mapper\SignatureMapper.class

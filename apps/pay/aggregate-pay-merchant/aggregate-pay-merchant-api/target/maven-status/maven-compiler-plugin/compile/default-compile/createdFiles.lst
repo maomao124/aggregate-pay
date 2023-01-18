@@ -1,0 +1,7 @@
+mao\aggregate_pay_merchant_api\feign\AppFeignClient.class
+mao\aggregate_pay_merchant_api\dto\StoreStaffDTO.class
+mao\aggregate_pay_merchant_api\dto\AppDTO.class
+mao\aggregate_pay_merchant_api\dto\StaffDTO.class
+mao\aggregate_pay_merchant_api\feign\MerchantFeignClient.class
+mao\aggregate_pay_merchant_api\dto\StoreDTO.class
+mao\aggregate_pay_merchant_api\dto\MerchantDTO.class

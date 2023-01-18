@@ -1,0 +1,9 @@
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\dto\PayOrderDTO.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\dto\PlatformChannelDTO.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\dto\PayChannelParamDTO.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\dto\OrderResultDTO.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\feign\PayChannelParamFeignClient.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\feign\PlatformChannelFeignClient.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\dto\QRCodeDto.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\feign\PayChannelFeignClient.java
+H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-api\src\main\java\mao\aggregate_pay_transaction_api\dto\PayChannelDTO.java

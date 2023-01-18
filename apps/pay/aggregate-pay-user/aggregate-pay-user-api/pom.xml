@@ -20,10 +20,10 @@
             <artifactId>aggregate-pay-common</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.baomidou</groupId>-->
+        <!--            <artifactId>mybatis-plus-extension</artifactId>-->
+        <!--        </dependency>-->
 
         <!--feign 依赖-->
         <dependency>

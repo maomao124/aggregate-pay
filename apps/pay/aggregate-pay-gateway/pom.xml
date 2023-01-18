@@ -27,6 +27,12 @@
         <dependency>
             <groupId>mao</groupId>
             <artifactId>aggregate-pay-common</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>mao</groupId>
+                    <artifactId>tools-swagger2</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- nacos 客户端依赖 -->
