@@ -28,7 +28,7 @@ public interface AccountRoleMapper extends BaseMapper<AccountRole>
      * @param tenantId 承租者id
      * @param username 用户名
      */
-    @Delete("delete from account_role r where  r.TENANT_ID=#{tenantId} and a.username=#{username} ")
+    @Delete("delete from account_role r where  r.TENANT_ID=#{tenantId} and r.USERNAME=#{username} ")
     void deleteByUsernameInTenant(@Param("tenantId") Long tenantId, @Param("username") String username);
 
     /**
