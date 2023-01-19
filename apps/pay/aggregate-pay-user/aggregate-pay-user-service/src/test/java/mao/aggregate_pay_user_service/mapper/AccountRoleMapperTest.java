@@ -22,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Description(描述)： 测试类
  */
 
+
 @Transactional
 @SpringBootTest
 class AccountRoleMapperTest
@@ -30,24 +31,36 @@ class AccountRoleMapperTest
     @Autowired
     private AccountRoleMapper accountRoleMapper;
 
+    /**
+     * List.
+     */
     @Test
     void list()
     {
         System.out.println(accountRoleMapper.selectList(null));
     }
 
+    /**
+     * Delete by username in tenant.
+     */
     @Test
     void deleteByUsernameInTenant()
     {
         accountRoleMapper.deleteByUsernameInTenant(1L, "134");
     }
 
+    /**
+     * Select role by username in tenants.
+     */
     @Test
     void selectRoleByUsernameInTenants()
     {
         System.out.println(accountRoleMapper.selectRoleByUsernameInTenants("sfasg", Collections.singletonList(1L)));
     }
 
+    /**
+     * Insert account role.
+     */
     @Test
     void insertAccountRole()
     {

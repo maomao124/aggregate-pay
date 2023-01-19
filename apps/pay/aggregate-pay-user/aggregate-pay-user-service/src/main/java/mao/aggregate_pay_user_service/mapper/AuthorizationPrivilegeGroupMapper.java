@@ -24,6 +24,11 @@ import java.util.List;
 @Mapper
 public interface AuthorizationPrivilegeGroupMapper extends BaseMapper<AuthorizationPrivilegeGroup>
 {
+    /**
+     * 查询权限组
+     *
+     * @return {@link List}<{@link PrivilegeTreeDTO}>
+     */
     @Select("select * from authorization_privilege_group")
     List<PrivilegeTreeDTO> selectPrivilegeGroup();
 }
