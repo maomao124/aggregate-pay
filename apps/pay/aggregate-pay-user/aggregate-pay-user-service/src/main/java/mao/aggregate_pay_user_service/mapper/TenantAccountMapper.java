@@ -52,7 +52,7 @@ public interface TenantAccountMapper extends BaseMapper<TenantAccount>
      * @param tenantId 承租者id
      * @return {@link AccountRoleQueryDTO}
      */
-    @Select("select ar.USERNAME as username,r.`NAME` as roleName,r.TENANT_ID as tenantId，ar.ID as id " +
+    @Select("select ar.USERNAME as username,r.`NAME` as roleName,r.TENANT_ID as tenantId, ar.ID as id " +
             "from account_role ar " +
             "join authorization_role r on ar.ROLE_CODE=r.`CODE` " +
             "and ar.TENANT_ID=r.TENANT_ID " +
