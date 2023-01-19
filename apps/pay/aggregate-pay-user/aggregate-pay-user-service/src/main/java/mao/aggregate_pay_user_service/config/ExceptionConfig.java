@@ -1,6 +1,8 @@
 package mao.aggregate_pay_user_service.config;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_common.domain.BusinessException;
+import mao.aggregate_pay_common.domain.ErrorCode;
 import mao.tools_common.handler.DefaultGlobalExceptionHandler;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
@@ -46,6 +48,23 @@ public class ExceptionConfig extends DefaultGlobalExceptionHandler
     {
         log.warn("BizException:", ex);
         R<String> r = R.result(ex.getCode(), StrPool.EMPTY, ex.getMessage()).setPath(request.getRequestURI());
+        r.setData(null);
+        return r;
+    }
+
+    /**
+     * 业务异常
+     *
+     * @param ex      业务异常
+     * @param request 请求
+     * @return {@link R}<{@link String}>
+     */
+    @ExceptionHandler(BusinessException.class)
+    public R<String> BusinessException(BusinessException ex, HttpServletRequest request)
+    {
+        log.warn("BusinessException:", ex);
+        ErrorCode errorCode = ex.getErrorCode();
+        R<String> r = R.result(errorCode.getCode(), StrPool.EMPTY, errorCode.getDesc()).setPath(request.getRequestURI());
         r.setData(null);
         return r;
     }
