@@ -107,7 +107,7 @@ public interface AccountMapper extends BaseMapper<Account>
             "LEFT JOIN authorization_role r ON r.`CODE`=ar.ROLE_CODE " +
             "WHERE r.TENANT_ID=#{tenantId}  " +
             "AND r.`CODE`=#{roleCode} ")
-    boolean selectAccountByRole(@Param("tenantId") Long tenantId, @Param("tenantId") String roleCode);
+    Boolean selectAccountByRole(@Param("tenantId") Long tenantId, @Param("roleCode") String roleCode);
 
     /**
      * 选择账户页面
