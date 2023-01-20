@@ -50,7 +50,7 @@ import java.util.List;
 @Slf4j
 @Configuration
 @MapperScan(
-        basePackages = {"mao.aggregate_pay_transaction_service.mapper"},
+        basePackages = {"mao.aggregate_pay_uaa_service.mapper"},
         sqlSessionFactoryRef = DatabaseConfig.DATABASE_PREFIX + "SqlSessionFactory")
 @EnableConfigurationProperties({MybatisPlusProperties.class, DatabaseProperties.class})
 public class DatabaseConfig extends BaseDatabaseConfiguration
