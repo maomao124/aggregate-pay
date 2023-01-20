@@ -30,14 +30,9 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -62,36 +57,35 @@ import java.util.Map;
 @Service
 public class TenantServiceImpl implements TenantService
 {
-    @Autowired
+    @Resource
     private TenantMapper tenantMapper;
 
-    @Autowired
+    @Resource
     private BundleMapper bundleMapper;
 
-    @Autowired
+    @Resource
     private AccountMapper accountMapper;
 
-    @Autowired
+    @Resource
     private TenantAccountMapper tenantAccountMapper;
 
-    @Autowired
+    @Resource
     private AccountRoleMapper accountRoleMapper;
 
-    @Autowired
-    private AuthorizationRoleMapper roleMapper;
+    @Resource
+    private AuthorizationRoleMapper authorizationRoleMapper;
 
-    @Autowired
-    private AuthorizationRolePrivilegeMapper rolePrivilegeMapper;
+    @Resource
+    private AuthorizationRolePrivilegeMapper authorizationRolePrivilegeMapper;
 
-    @Autowired
+    @Resource
     private AuthorizationService authorizationService;
 
-    @Autowired
+    @Resource
     private ResourceService resourceService;
 
-    @Autowired
+    @Resource
     private ResourceApplicationMapper resourceApplicationMapper;
-
 
     @Resource
     private DozerUtils dozerUtils;
@@ -322,11 +316,11 @@ public class TenantServiceImpl implements TenantService
                 .eq(AccountRole::getTenantId, tenantId).set(AccountRole::getRoleCode, null));
 
         //2.删除租户下的所有角色
-        roleMapper.delete(new QueryWrapper<AuthorizationRole>().lambda()
+        authorizationRoleMapper.delete(new QueryWrapper<AuthorizationRole>().lambda()
                 .eq(AuthorizationRole::getTenantId, tenantId));
 
         //3.删除租户下所有角色对应的权限
-        rolePrivilegeMapper.delete(new QueryWrapper<AuthorizationRolePrivilege>().lambda()
+        authorizationRolePrivilegeMapper.delete(new QueryWrapper<AuthorizationRolePrivilege>().lambda()
                 .in(AuthorizationRolePrivilege::getRoleId, roleIds));
 
         //4.初始化套餐信息
@@ -360,7 +354,7 @@ public class TenantServiceImpl implements TenantService
             roles.forEach(role -> rCodes.add(role.getCode()));
 
             //1.在指定租户下新增角色 操作authorization_role表
-            roleMapper.createRoles(tenantId, roles);
+            authorizationRoleMapper.createRoles(tenantId, roles);
 
             //2.为租户绑定角色 操作account_role表
             Account account = accountMapper.selectAccountInfoByTenantId(tenantId);
