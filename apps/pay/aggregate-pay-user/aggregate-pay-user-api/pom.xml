@@ -32,6 +32,24 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>tools-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+
     </dependencies>
 
 
