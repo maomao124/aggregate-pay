@@ -25,6 +25,7 @@ import mao.aggregate_pay_user_service.mapper.*;
 import mao.aggregate_pay_user_service.service.AuthorizationService;
 import mao.aggregate_pay_user_service.service.ResourceService;
 import mao.aggregate_pay_user_service.service.TenantService;
+import mao.tools_core.exception.BizException;
 import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -689,6 +690,10 @@ public class TenantServiceImpl implements TenantService
     public List<TenantDTO> queryAccountInTenant(String username)
     {
         AccountDTO accountDTO = getAccountByUsername(username);
+        if (accountDTO == null)
+        {
+            throw BizException.wrap("查询结果为空");
+        }
         Long id = accountDTO.getId();
         List<TenantDTO> tenantDTOS = tenantMapper.selectAccountInTenant(id);
         return tenantDTOS;
@@ -773,7 +778,7 @@ public class TenantServiceImpl implements TenantService
             //校验手机短信验证码
             Boolean result = verificationMessageCode(smsKey, passwordOrMessage);
             //判断验证码
-            if (result==null|| !result)
+            if (result == null || !result)
             {
                 throw new BusinessException(CommonErrorCode.E_100102);
             }
