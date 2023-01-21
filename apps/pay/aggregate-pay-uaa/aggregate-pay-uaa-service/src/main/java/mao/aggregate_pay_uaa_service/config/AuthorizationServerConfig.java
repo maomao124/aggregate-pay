@@ -2,9 +2,11 @@ package mao.aggregate_pay_uaa_service.config;
 
 import mao.aggregate_pay_uaa_service.integration.RestOAuth2WebResponseExceptionTranslator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -71,20 +73,49 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         return NoOpPasswordEncoder.getInstance();
     }
 
+
+    /**
+     * 客户详细信息服务
+     *
+     * @param dataSource 数据源
+     * @return {@link ClientDetailsService}
+     */
     @Bean
-    public ClientDetailsService clientDetailsService(@Autowired DataSource dataSource)
+    public ClientDetailsService clientDetailsService(@Qualifier("masterDruidDataSource") DataSource dataSource)
     {
         ClientDetailsService clientDetailsService = new JdbcClientDetailsService(dataSource);
         ((JdbcClientDetailsService) clientDetailsService).setPasswordEncoder(passwordEncoder());
         return clientDetailsService;
     }
 
+
+    /**
+     * jdbc模板
+     *
+     * @param dataSource 数据源
+     * @return {@link JdbcTemplate}
+     */
+    @Bean
+    public JdbcTemplate jdbcTemplate(@Qualifier("masterDruidDataSource") DataSource dataSource)
+    {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        return jdbcTemplate;
+    }
+
+
+    /**
+     * 配置
+     *
+     * @param clients 客户
+     * @throws Exception 异常
+     */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients)
             throws Exception
     {
         clients.withClientDetails(clientDetailsService);
     }
+
 
     /**
      * 配置令牌服务
@@ -108,6 +139,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         return service;
     }
 
+
     /**
      * 配置令牌（token）的访问端点
      *
@@ -115,11 +147,17 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
      * @return {@link AuthorizationCodeServices}
      */
     @Bean
-    public AuthorizationCodeServices authorizationCodeServices(@Autowired DataSource dataSource)
+    public AuthorizationCodeServices authorizationCodeServices(@Qualifier("masterDruidDataSource") DataSource dataSource)
     {
         return new JdbcAuthorizationCodeServices(dataSource);
     }
 
+
+    /**
+     * 配置
+     *
+     * @param endpoints 端点
+     */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints)
     {
@@ -131,6 +169,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .allowedTokenEndpointRequestMethods(HttpMethod.POST)
                 .exceptionTranslator(new RestOAuth2WebResponseExceptionTranslator());
     }
+
 
     /**
      * 配置令牌端点(Token Endpoint)的安全约束
@@ -145,6 +184,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .checkTokenAccess("permitAll()")
                 .allowFormAuthenticationForClients()//允许表单认证
         ;
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 AuthorizationServerConfig");
     }
 
 }

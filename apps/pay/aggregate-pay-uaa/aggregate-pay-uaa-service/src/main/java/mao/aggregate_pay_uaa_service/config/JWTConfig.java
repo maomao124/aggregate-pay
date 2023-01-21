@@ -1,5 +1,6 @@
 package mao.aggregate_pay_uaa_service.config;
 
+import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_uaa_service.integration.ClientDefaultAccessTokenConverter;
 import mao.aggregate_pay_uaa_service.integration.UnifiedUserAuthenticationConverter;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -22,6 +25,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
  * Description(描述)： 无
  */
 
+@Slf4j
 @Configuration
 public class JWTConfig
 {
@@ -44,5 +48,11 @@ public class JWTConfig
         accessTokenConverter.setUserTokenConverter(new UnifiedUserAuthenticationConverter());
         converter.setAccessTokenConverter(accessTokenConverter);
         return converter;
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 JWTConfig");
     }
 }
