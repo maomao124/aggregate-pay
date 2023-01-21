@@ -111,7 +111,7 @@ public class TenantController extends BaseController
             })
     @PostMapping("/tenants/page")
     public PageVO<TenantDTO> queryTenants(@RequestBody TenantQueryDTO tenantQuery,
-                                          @RequestParam Integer pageNo, Integer pageSize,
+                                          @RequestParam Integer pageNo, @RequestParam Integer pageSize,
                                           @RequestParam String sortBy, @RequestParam String order)
     {
         return tenantService.queryTenants(tenantQuery, pageNo, pageSize, sortBy, order);
@@ -441,7 +441,7 @@ public class TenantController extends BaseController
             })
     @PostMapping("/accounts/page")
     public PageVO<AccountDTO> queryAccount(@RequestBody AccountQueryDTO accountQuery, @RequestParam Integer pageNo,
-                                           Integer pageSize, @RequestParam String sortBy, @RequestParam String order)
+                                           @RequestParam Integer pageSize, @RequestParam String sortBy, @RequestParam String order)
     {
         return tenantService.queryAccount(accountQuery, pageNo, pageSize, sortBy, order);
     }

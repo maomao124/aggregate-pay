@@ -208,7 +208,7 @@ public class ResourceController extends BaseController
                     @ApiImplicitParam(name = "pageSize", value = "每页记录数", required = true, dataType = "int", paramType = "query")
             })
     @PostMapping("/menus/page")
-    public PageVO<MenuDTO> queryMenu(@RequestBody MenuQueryDTO params, @RequestParam Integer pageNo, Integer pageSize)
+    public PageVO<MenuDTO> queryMenu(@RequestBody MenuQueryDTO params, @RequestParam Integer pageNo, @RequestParam Integer pageSize)
     {
         return menuService.queryMenu(params, pageNo, pageSize);
     }
