@@ -167,7 +167,7 @@ public interface ResourceFeignClient
                     @ApiImplicitParam(name = "pageSize", value = "每页记录数", required = true, dataType = "int", paramType = "query")
             })
     @PostMapping("/menus/page")
-    PageVO<MenuDTO> queryMenu(@RequestBody MenuQueryDTO params, @RequestParam Integer pageNo, Integer pageSize);
+    PageVO<MenuDTO> queryMenu(@RequestBody MenuQueryDTO params, @RequestParam Integer pageNo, @RequestParam Integer pageSize);
 
 
     /**

@@ -87,7 +87,7 @@ public interface TenantFeignClient
             })
     @PostMapping("/tenants/page")
     PageVO<TenantDTO> queryTenants(@RequestBody TenantQueryDTO tenantQuery,
-                                   @RequestParam Integer pageNo, Integer pageSize,
+                                   @RequestParam Integer pageNo, @RequestParam Integer pageSize,
                                    @RequestParam String sortBy, @RequestParam String order);
 
 
@@ -360,7 +360,7 @@ public interface TenantFeignClient
             })
     @PostMapping("/accounts/page")
     PageVO<AccountDTO> queryAccount(@RequestBody AccountQueryDTO accountQuery, @RequestParam Integer pageNo,
-                                    Integer pageSize, @RequestParam String sortBy, @RequestParam String order);
+                                    @RequestParam Integer pageSize, @RequestParam String sortBy, @RequestParam String order);
 
 
     /**
