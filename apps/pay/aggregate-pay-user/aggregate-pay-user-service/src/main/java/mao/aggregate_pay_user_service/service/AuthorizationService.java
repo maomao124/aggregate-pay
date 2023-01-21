@@ -78,6 +78,7 @@ public interface AuthorizationService
 
 
     /**
+     * 删除角色
      * 删除租户内角色，如果有账号绑定该角色，禁止删除
      *
      * @param tenantId 承租者id
