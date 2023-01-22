@@ -42,6 +42,7 @@ class PageControllerTest
         //   See https://diff.blue/R013 to resolve this issue.
 
         assertEquals("login", (new PageController()).login());
+        assertEquals("login", (new PageController()).login());
     }
 }
 
