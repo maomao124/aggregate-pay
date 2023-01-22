@@ -6,6 +6,7 @@ import mao.aggregate_pay_uaa_service.domain.OauthClientDetails;
 import mao.aggregate_pay_uaa_service.repository.OauthRepository;
 import mao.aggregate_pay_uaa_service.service.OauthClientDetailsService;
 import mao.aggregate_pay_uaa_service.utils.WebUtils;
+import mao.tools_core.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,6 +62,10 @@ public class OauthClientDetailsServiceImpl implements OauthClientDetailsService
     public Map<String, String> getClientDetailsByClientId(String appId)
     {
         OauthClientDetails oauthClientDetails = oauthRepository.findOauthClientDetails(appId);
+        if (oauthClientDetails == null)
+        {
+            throw BizException.wrap("查询结果为空");
+        }
         log.info("getClientDetailsByClientId param appId:{} ret:{}", appId, JSON.toJSONString(oauthClientDetails));
         Map<String, String> map = new HashMap<>();
         map.put("client_id", oauthClientDetails.clientId());
