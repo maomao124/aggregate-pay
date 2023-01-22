@@ -22,7 +22,7 @@ public interface OauthClientDetailsService
      *
      * @param map 地图
      */
-    public void createClientDetails(Map map);
+     void createClientDetails(Map<String,String> map);
 
     /**
      * 根据appId查询 client信息  appId也就是client_id
@@ -30,5 +30,5 @@ public interface OauthClientDetailsService
      * @param appId 应用程序id
      * @return {@link Map}
      */
-    public Map getClientDetailsByClientId(String appId);
+     Map<String,String> getClientDetailsByClientId(String appId);
 }
