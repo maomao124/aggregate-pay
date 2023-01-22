@@ -38,11 +38,20 @@ public class AggregatePayUaaServiceApplication
         String port = environment.getProperty("server.port");
         //获取主机地址
         String hostAddress = InetAddress.getLocalHost().getHostAddress();
+        //获取上下文
+        String contextPath = environment.getProperty("server.servlet.context-path");
+        //判断上下文
+        if (contextPath == null || contextPath.length() == 0 || contextPath.equals("/"))
+        {
+            contextPath = "";
+        }
 
         //启动完成后在控制台提示项目启动成功，并且输出当前服务对应的swagger接口文档访问地址
         //http://localhost:8080/doc.html
-        log.info("应用{}启动成功!swagger地址：http://{}:{}/doc.html  或者：http://127.0.0.1:{}/uaa/doc.html", appName, hostAddress, port, port);
-        log.info("数据库监控地址：http://{}:{}/druid  或者：http://127.0.0.1:{}/uaa/druid", hostAddress, port, port);
+        log.info("应用{}启动成功!swagger地址：http://{}:{}{}/doc.html  或者：http://127.0.0.1:{}{}/doc.html",
+                appName, hostAddress, port, contextPath, port, contextPath);
+        log.info("数据库监控地址：http://{}:{}{}/druid  或者：http://127.0.0.1:{}{}/druid",
+                hostAddress, port, contextPath, port, contextPath);
         log.info("启动耗时：" + (System.currentTimeMillis() - start) + "ms");
     }
 

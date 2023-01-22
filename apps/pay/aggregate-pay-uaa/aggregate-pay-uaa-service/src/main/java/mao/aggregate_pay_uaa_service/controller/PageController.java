@@ -35,7 +35,7 @@ public class PageController
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login()
     {
-        log.info("获取登录页面");
+        log.debug("获取登录页面");
         return "login";
     }
 
