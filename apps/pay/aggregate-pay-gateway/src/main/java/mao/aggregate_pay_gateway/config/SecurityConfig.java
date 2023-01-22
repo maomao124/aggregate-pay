@@ -1,8 +1,11 @@
 package mao.aggregate_pay_gateway.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -17,6 +20,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * Description(描述)： 无
  */
 
+
+@Slf4j
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter
 {
@@ -27,5 +32,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 .antMatchers("/**").permitAll()
                 .and().csrf().disable();
 
+    }
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 SecurityConfig");
     }
 }

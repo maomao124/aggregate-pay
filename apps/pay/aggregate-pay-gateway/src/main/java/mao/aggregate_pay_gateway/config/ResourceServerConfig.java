@@ -1,5 +1,6 @@
 package mao.aggregate_pay_gateway.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,6 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 /**
@@ -25,6 +27,7 @@ import javax.annotation.Resource;
  * Description(描述)： 无
  */
 
+@Slf4j
 @Configuration
 public class ResourceServerConfig
 {
@@ -256,5 +259,12 @@ public class ResourceServerConfig
 
         }
 
+    }
+
+
+    @PostConstruct
+    public void init()
+    {
+        log.info("初始化 ResourceServerConfig");
     }
 }

@@ -27,6 +27,7 @@ import java.util.*;
  * Description(描述)： 令牌格式json与spring OAuth2Authentication的转换   增加jwt对client Authorities的支持
  */
 
+
 public class ClientDefaultAccessTokenConverter implements AccessTokenConverter
 {
     private UserAuthenticationConverter userTokenConverter = new DefaultUserAuthenticationConverter();
