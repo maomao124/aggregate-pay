@@ -1,5 +1,6 @@
 package mao.aggregate_pay_uaa_service.config;
 
+import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_uaa_service.integration.RestOAuth2WebResponseExceptionTranslator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -25,6 +26,7 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Arrays;
@@ -42,6 +44,7 @@ import java.util.Arrays;
  * Description(描述)： 认证和授权配置
  */
 
+@Slf4j
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter

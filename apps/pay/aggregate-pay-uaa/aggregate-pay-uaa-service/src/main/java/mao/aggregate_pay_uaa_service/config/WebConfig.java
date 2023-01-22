@@ -28,7 +28,7 @@ public class WebConfig extends BaseConfig implements WebMvcConfigurer
     @Override
     public void addViewControllers(ViewControllerRegistry registry)
     {
-        registry.addViewController("/login").setViewName("login");
+        //registry.addViewController("/login").setViewName("login");
         registry.addViewController("/confirm_access").setViewName("oauth_approval");
         registry.addViewController("/oauth_error").setViewName("oauth_error");
     }

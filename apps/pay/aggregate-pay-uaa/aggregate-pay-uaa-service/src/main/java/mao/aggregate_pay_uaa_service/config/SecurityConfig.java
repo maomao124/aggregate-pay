@@ -112,7 +112,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 "/static/**",
                 "/resources/**",
                 "/doc.html",
-                "/doc.html/**");
+                "/doc.html/**",
+                "/oauth/createClientDetails",
+                "/oauth/getClientDetailsByClientId");
         //web.httpFirewall(new DefaultHttpFirewall());//StrictHttpFirewall 去除验url非法验证防火墙
     }
 
