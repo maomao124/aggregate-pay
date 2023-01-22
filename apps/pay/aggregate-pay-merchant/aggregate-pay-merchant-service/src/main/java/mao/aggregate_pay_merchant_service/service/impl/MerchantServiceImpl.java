@@ -3,9 +3,12 @@ package mao.aggregate_pay_merchant_service.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
+import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.entity.Merchant;
+import mao.aggregate_pay_merchant_service.entity.Store;
 import mao.aggregate_pay_merchant_service.mapper.MerchantMapper;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
+import mao.aggregate_pay_merchant_service.service.StoreService;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
@@ -33,6 +36,9 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
 
     @Resource
     private DozerUtils dozerUtils;
+
+    @Resource
+    private StoreService storeService;
 
     @Override
     public MerchantDTO getMerchantById(Long merchantId)
@@ -95,5 +101,24 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         {
             throw BizException.wrap("商户资质申请失败");
         }
+    }
+
+    @Override
+    public StoreDTO createStore(StoreDTO storeDTO)
+    {
+        //转换
+        Store store = dozerUtils.map(storeDTO, Store.class);
+        //去掉id
+        store.setId(null);
+        //新增
+        boolean save = storeService.save(store);
+        if (!save)
+        {
+            throw BizException.wrap("新增门店失败");
+        }
+        //设置id
+        storeDTO.setId(store.getId());
+        //返回
+        return storeDTO;
     }
 }
