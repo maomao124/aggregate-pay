@@ -114,7 +114,8 @@ public class TenantServiceImpl implements TenantService
         //1.判断手机号跟用户名在账号中是否存在
         String mobile = createTenantRequest.getMobile();
         if (isExistAccountByMobile(mobile))
-        {//为true表示 手机号已存在
+        {
+            //为true表示 手机号已存在
             //throw new BusinessException(CommonErrorCode.E_200203);
             AccountDTO account = getAccountByMobile(mobile);
             Long accountId = account.getId();

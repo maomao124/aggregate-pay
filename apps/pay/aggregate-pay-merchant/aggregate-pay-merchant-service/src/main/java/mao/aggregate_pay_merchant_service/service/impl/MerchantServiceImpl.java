@@ -14,6 +14,10 @@ import mao.aggregate_pay_merchant_service.service.MerchantService;
 import mao.aggregate_pay_merchant_service.service.StaffService;
 import mao.aggregate_pay_merchant_service.service.StoreService;
 import mao.aggregate_pay_merchant_service.service.StoreStaffService;
+import mao.aggregate_pay_user_api.dto.tenant.CreateTenantRequestDTO;
+import mao.aggregate_pay_user_api.dto.tenant.TenantDTO;
+import mao.aggregate_pay_user_api.feign.TenantFeignClientV2;
+import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
@@ -52,6 +56,9 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
     @Resource
     private StoreStaffService storeStaffService;
 
+    @Resource
+    private TenantFeignClientV2 tenantFeignClient;
+
     @Override
     public MerchantDTO getMerchantById(Long merchantId)
     {
@@ -60,6 +67,30 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         //转换，并返回
         return dozerUtils.map(merchant, MerchantDTO.class);
     }
+
+//    @Override
+//    public MerchantDTO createMerchant(MerchantDTO merchantDTO)
+//    {
+//        //校验商户手机号的唯一性,根据商户的手机号查询商户表，如果存在记录则说明已有相同的手机号重复
+//        int count = this.count(Wraps.<Merchant>lbQ().eq(Merchant::getMobile, merchantDTO.getMobile()));
+//        if (count > 0)
+//        {
+//            throw BizException.wrap("手机号重复");
+//        }
+//        //构建商户
+//        Merchant merchant = new Merchant();
+//        //设置审核状态
+//        merchant.setAuditStatus("0");
+//        //设置手机号
+//        merchant.setMobile(merchantDTO.getMobile());
+//        //保存
+//        this.save(merchant);
+//        //保存id信息
+//        merchantDTO.setId(merchant.getId());
+//        //返回
+//        return merchantDTO;
+//    }
+
 
     @Override
     public MerchantDTO createMerchant(MerchantDTO merchantDTO)
@@ -70,19 +101,92 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         {
             throw BizException.wrap("手机号重复");
         }
-        //构建商户
-        Merchant merchant = new Merchant();
-        //设置审核状态
+        //构建调用参数
+        CreateTenantRequestDTO createTenantRequestDTO = new CreateTenantRequestDTO();
+        //手机号
+        createTenantRequestDTO.setMobile(merchantDTO.getMobile());
+        //用户名
+        createTenantRequestDTO.setUsername(merchantDTO.getUsername());
+        //密码
+        createTenantRequestDTO.setPassword(merchantDTO.getPassword());
+        //租户类型
+        createTenantRequestDTO.setTenantTypeCode("aggregate-pay-merchant");
+        //套餐，根据套餐进行分配权限
+        createTenantRequestDTO.setBundleCode("aggregate-pay-merchant");
+        //租户名称，和账号名一样
+        createTenantRequestDTO.setName(merchantDTO.getUsername());
+        //调用SaaS接口
+        //如果租户在SaaS已经存在，SaaS直接 返回此租户的信息，否则进行添加
+        R<TenantDTO> r = tenantFeignClient.createTenantAndInit(createTenantRequestDTO);
+        if (r.getIsError())
+        {
+            //错误，抛出异常
+            throw BizException.wrap(r.getCode(), r.getMsg());
+        }
+        //无错误，取数据
+        TenantDTO tenantDTO = r.getData();
+        //获取租户的id
+        if (tenantDTO == null || tenantDTO.getId() == null)
+        {
+            //空
+            throw BizException.wrap("租户不存在");
+        }
+        //租户的id
+        Long tenantId = tenantDTO.getId();
+        //租户id在商户表唯一
+        //根据租户id从商户表查询，如果存在记录则不允许添加商户
+        int count1 = this.count(Wraps.<Merchant>lbQ().eq(Merchant::getTenantId, tenantId));
+        //判断结果
+        if (count1 > 0)
+        {
+            //存在
+            throw BizException.wrap("商户在当前租户下已经注册，不可重复注册");
+        }
+        //对象转换
+        Merchant merchant = dozerUtils.map(merchantDTO, Merchant.class);
+        //设置所对应的租户的Id
+        merchant.setTenantId(tenantId);
+        //审核状态为0-未进行资质申请
         merchant.setAuditStatus("0");
-        //设置手机号
-        merchant.setMobile(merchantDTO.getMobile());
-        //保存
-        this.save(merchant);
-        //保存id信息
-        merchantDTO.setId(merchant.getId());
+        //去掉id
+        merchant.setId(null);
+        //插入数据
+        boolean save = this.save(merchant);
+        //判断结果
+        if (!save)
+        {
+            //保存失败
+            throw BizException.wrap("商户数据保存失败");
+        }
+        //新增门店
+        StoreDTO storeDTO = new StoreDTO();
+        storeDTO.setStoreName("根门店");
+        //商户id
+        storeDTO.setMerchantId(merchant.getId());
+        StoreDTO store = createStore(storeDTO);
+
+        //新增员工
+        StaffDTO staffDTO = new StaffDTO();
+        //手机号
+        staffDTO.setMobile(merchantDTO.getMobile());
+        //账号
+        staffDTO.setUsername(merchantDTO.getUsername());
+        //员所属门店id
+        staffDTO.setStoreId(store.getId());
+        //商户id
+        staffDTO.setMerchantId(merchant.getId());
+        //创建
+        StaffDTO staff = createStaff(staffDTO);
+
+        //为门店设置管理员
+        bindStaffToStore(store.getId(), staff.getId());
+
+        //转换
+        dozerUtils.map(merchant, merchantDTO);
         //返回
         return merchantDTO;
     }
+
 
     @Override
     @Transactional
@@ -218,5 +322,4 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
             throw BizException.wrap("为门店设置管理员失败");
         }
     }
-
 }

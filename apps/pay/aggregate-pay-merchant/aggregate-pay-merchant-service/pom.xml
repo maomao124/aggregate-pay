@@ -21,18 +21,11 @@
         <dependency>
             <groupId>mao</groupId>
             <artifactId>aggregate-pay-merchant-api</artifactId>
-            <exclusions>
-                <exclusion>
-                    <!--feign 依赖-->
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-starter-openfeign</artifactId>
-                </exclusion>
-                <exclusion>
-                    <!--httpClient的依赖 主要用于feign连接池-->
-                    <groupId>io.github.openfeign</groupId>
-                    <artifactId>feign-httpclient</artifactId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
+            <artifactId>aggregate-pay-user-api</artifactId>
         </dependency>
 
         <dependency>
