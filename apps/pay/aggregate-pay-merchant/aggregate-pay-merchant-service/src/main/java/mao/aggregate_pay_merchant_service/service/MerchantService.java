@@ -55,6 +55,7 @@ public interface MerchantService extends IService<Merchant>
      */
     StoreDTO createStore(StoreDTO storeDTO);
 
+
     /**
      * 商户新增员工
      *
@@ -62,4 +63,13 @@ public interface MerchantService extends IService<Merchant>
      * @return {@link StaffDTO}
      */
     StaffDTO createStaff(StaffDTO staffDTO);
+
+
+    /**
+     * 为门店设置管理员
+     *
+     * @param storeId 门店id
+     * @param staffId 员工id
+     */
+    void bindStaffToStore(Long storeId, Long staffId);
 }

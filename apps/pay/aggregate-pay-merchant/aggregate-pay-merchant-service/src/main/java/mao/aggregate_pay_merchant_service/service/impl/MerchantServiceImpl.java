@@ -8,10 +8,12 @@ import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.entity.Merchant;
 import mao.aggregate_pay_merchant_service.entity.Staff;
 import mao.aggregate_pay_merchant_service.entity.Store;
+import mao.aggregate_pay_merchant_service.entity.StoreStaff;
 import mao.aggregate_pay_merchant_service.mapper.MerchantMapper;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
 import mao.aggregate_pay_merchant_service.service.StaffService;
 import mao.aggregate_pay_merchant_service.service.StoreService;
+import mao.aggregate_pay_merchant_service.service.StoreStaffService;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
@@ -46,6 +48,9 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
 
     @Resource
     private StaffService staffService;
+
+    @Resource
+    private StoreStaffService storeStaffService;
 
     @Override
     public MerchantDTO getMerchantById(Long merchantId)
@@ -196,6 +201,22 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
                 .eq(Staff::getUsername, userName)
                 .eq(Staff::getMerchantId, merchantId));
         return count > 0;
+    }
+
+
+    @Override
+    public void bindStaffToStore(Long storeId, Long staffId)
+    {
+        //构建实体类对象
+        StoreStaff storeStaff = new StoreStaff();
+        storeStaff.setStaffId(staffId);
+        storeStaff.setStoreId(storeId);
+        //保存
+        boolean save = storeStaffService.save(storeStaff);
+        if (!save)
+        {
+            throw BizException.wrap("为门店设置管理员失败");
+        }
     }
 
 }
