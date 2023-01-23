@@ -2,6 +2,7 @@ package mao.aggregate_pay_merchant_api.feign;
 
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
+import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -57,7 +58,16 @@ public interface MerchantFeignClient
      * @param storeDTO 商店dto
      * @return {@link StoreDTO}
      */
-    @ApiOperation("商户资质申请")
     @PostMapping("/createStore")
     R<StoreDTO> createStore(@RequestBody StoreDTO storeDTO);
+
+
+    /**
+     * 商户新增员工
+     *
+     * @param staffDTO 员工dto
+     * @return {@link StaffDTO}
+     */
+    @PostMapping("/createStaff")
+    R<StaffDTO> createStaff(@RequestBody StaffDTO staffDTO);
 }

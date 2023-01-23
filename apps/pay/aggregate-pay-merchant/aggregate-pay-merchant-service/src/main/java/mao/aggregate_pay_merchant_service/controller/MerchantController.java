@@ -3,6 +3,7 @@ package mao.aggregate_pay_merchant_service.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
+import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
 import mao.tools_core.base.BaseController;
@@ -88,5 +89,19 @@ public class MerchantController extends BaseController
     public R<StoreDTO> createStore(@RequestBody StoreDTO storeDTO)
     {
         return success(merchantService.createStore(storeDTO));
+    }
+
+
+    /**
+     * 商户新增员工
+     *
+     * @param staffDTO 员工dto
+     * @return {@link StaffDTO}
+     */
+    @ApiOperation("商户新增员工")
+    @PostMapping("/createStaff")
+    public R<StaffDTO> createStaff(@RequestBody StaffDTO staffDTO)
+    {
+        return success(merchantService.createStaff(staffDTO));
     }
 }
