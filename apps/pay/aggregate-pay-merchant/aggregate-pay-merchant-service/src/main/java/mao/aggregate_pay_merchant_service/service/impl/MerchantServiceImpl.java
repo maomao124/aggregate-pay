@@ -93,6 +93,7 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
 
 
     @Override
+    @Transactional
     public MerchantDTO createMerchant(MerchantDTO merchantDTO)
     {
         //校验商户手机号的唯一性,根据商户的手机号查询商户表，如果存在记录则说明已有相同的手机号重复
