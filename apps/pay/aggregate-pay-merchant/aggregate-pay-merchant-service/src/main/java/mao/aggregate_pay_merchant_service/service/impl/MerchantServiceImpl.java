@@ -3,15 +3,19 @@ package mao.aggregate_pay_merchant_service.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
+import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.entity.Merchant;
+import mao.aggregate_pay_merchant_service.entity.Staff;
 import mao.aggregate_pay_merchant_service.entity.Store;
 import mao.aggregate_pay_merchant_service.mapper.MerchantMapper;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
+import mao.aggregate_pay_merchant_service.service.StaffService;
 import mao.aggregate_pay_merchant_service.service.StoreService;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -39,6 +43,9 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
 
     @Resource
     private StoreService storeService;
+
+    @Resource
+    private StaffService staffService;
 
     @Override
     public MerchantDTO getMerchantById(Long merchantId)
@@ -121,4 +128,74 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         //返回
         return storeDTO;
     }
+
+    @Override
+    public StaffDTO createStaff(StaffDTO staffDTO)
+    {
+        //判断是否为空
+        if (StringUtils.isBlank(staffDTO.getMobile()))
+        {
+            //空
+            throw BizException.wrap("手机号为空");
+        }
+        //判断是否为空
+        if (StringUtils.isBlank(staffDTO.getUsername()))
+        {
+            //空
+            throw BizException.wrap("用户名为空");
+        }
+        //根据手机号和商户id判断员工是否已在指定商户存在
+        if (isExistStaffByMobile(staffDTO.getMobile(), staffDTO.getMerchantId()))
+        {
+            //已经存在
+            throw BizException.wrap("手机号已经存在");
+        }
+        //根据账号判断员工是否已在指定商户存在
+        if (isExistStaffByUserName(staffDTO.getUsername(), staffDTO.getMerchantId()))
+        {
+            //存在
+            throw BizException.wrap("用户名已经存在");
+        }
+        //转换
+        Staff staff = dozerUtils.map(staffDTO, Staff.class);
+        //去掉id
+        staff.setId(null);
+        //保存
+        staffService.save(staff);
+        //设置id
+        staffDTO.setId(staff.getId());
+        //返回
+        return staffDTO;
+    }
+
+    /**
+     * 根据手机号和商户id判断员工是否已在指定商户存在
+     *
+     * @param mobile     手机号
+     * @param merchantId 商人id
+     * @return boolean
+     */
+    private boolean isExistStaffByMobile(String mobile, Long merchantId)
+    {
+        int count = staffService.count(Wraps.<Staff>lbQ()
+                .eq(Staff::getMobile, mobile)
+                .eq(Staff::getMerchantId, merchantId));
+        return count > 0;
+    }
+
+    /**
+     * 根据账号判断员工是否已在指定商户存在
+     *
+     * @param userName   用户名
+     * @param merchantId 商人id
+     * @return boolean
+     */
+    private boolean isExistStaffByUserName(String userName, Long merchantId)
+    {
+        int count = staffService.count(Wraps.<Staff>lbQ()
+                .eq(Staff::getUsername, userName)
+                .eq(Staff::getMerchantId, merchantId));
+        return count > 0;
+    }
+
 }

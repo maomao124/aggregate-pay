@@ -2,6 +2,7 @@ package mao.aggregate_pay_merchant_service.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
+import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.entity.Merchant;
 
@@ -53,4 +54,12 @@ public interface MerchantService extends IService<Merchant>
      * @return {@link StoreDTO}
      */
     StoreDTO createStore(StoreDTO storeDTO);
+
+    /**
+     * 商户新增员工
+     *
+     * @param staffDTO 员工dto
+     * @return {@link StaffDTO}
+     */
+    StaffDTO createStaff(StaffDTO staffDTO);
 }
