@@ -3,6 +3,7 @@ package mao.aggregate_pay_merchant_service.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
+import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.service.MerchantService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
@@ -45,6 +46,7 @@ public class MerchantController extends BaseController
         return R.success(merchantService.getMerchantById(merchantId));
     }
 
+
     /**
      * 注册商户
      *
@@ -57,6 +59,7 @@ public class MerchantController extends BaseController
     {
         return R.success(merchantService.createMerchant(merchantDTO));
     }
+
 
     /**
      * 商户资质申请
@@ -71,5 +74,19 @@ public class MerchantController extends BaseController
     {
         merchantService.applyMerchant(merchantId, merchantDTO);
         return R.success();
+    }
+
+
+    /**
+     * 商户下新增门店
+     *
+     * @param storeDTO 商店dto
+     * @return {@link StoreDTO}
+     */
+    @ApiOperation("商户资质申请")
+    @PostMapping("/createStore")
+    public R<StoreDTO> createStore(@RequestBody StoreDTO storeDTO)
+    {
+        return success(merchantService.createStore(storeDTO));
     }
 }
