@@ -70,4 +70,14 @@ public interface MerchantFeignClient
      */
     @PostMapping("/createStaff")
     R<StaffDTO> createStaff(@RequestBody StaffDTO staffDTO);
+
+
+    /**
+     * 为门店设置管理员
+     *
+     * @param storeId 门店id
+     * @param staffId 员工id
+     */
+    @PostMapping("/bindStaffToStore")
+    R<Boolean> bindStaffToStore(Long storeId, Long staffId);
 }

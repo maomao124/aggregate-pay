@@ -104,4 +104,19 @@ public class MerchantController extends BaseController
     {
         return success(merchantService.createStaff(staffDTO));
     }
+
+
+    /**
+     * 为门店设置管理员
+     *
+     * @param storeId 门店id
+     * @param staffId 员工id
+     */
+    @ApiOperation("为门店设置管理员")
+    @PostMapping("/bindStaffToStore")
+    public R<Boolean> bindStaffToStore(Long storeId, Long staffId)
+    {
+        merchantService.bindStaffToStore(storeId, staffId);
+        return success();
+    }
 }
