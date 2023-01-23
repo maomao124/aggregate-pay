@@ -78,6 +78,6 @@ public interface MerchantFeignClient
      * @param storeId 门店id
      * @param staffId 员工id
      */
-    @PostMapping("/bindStaffToStore")
-    R<Boolean> bindStaffToStore(Long storeId, Long staffId);
+    @PostMapping("/bindStaffToStore/{storeId}/{staffId}")
+    R<Boolean> bindStaffToStore(@PathVariable Long storeId, @PathVariable Long staffId);
 }

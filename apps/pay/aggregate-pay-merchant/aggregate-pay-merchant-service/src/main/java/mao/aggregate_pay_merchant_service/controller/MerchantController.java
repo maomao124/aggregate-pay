@@ -113,8 +113,8 @@ public class MerchantController extends BaseController
      * @param staffId 员工id
      */
     @ApiOperation("为门店设置管理员")
-    @PostMapping("/bindStaffToStore")
-    public R<Boolean> bindStaffToStore(Long storeId, Long staffId)
+    @PostMapping("/bindStaffToStore/{storeId}/{staffId}")
+    R<Boolean> bindStaffToStore(@PathVariable Long storeId, @PathVariable Long staffId)
     {
         merchantService.bindStaffToStore(storeId, staffId);
         return success();
