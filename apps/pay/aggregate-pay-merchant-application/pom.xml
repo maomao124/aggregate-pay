@@ -88,6 +88,12 @@
             <artifactId>okhttp</artifactId>
         </dependency>
 
+        <!--spring boot redis 依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
 
         <dependency>
             <groupId>mao</groupId>
