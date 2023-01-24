@@ -23,6 +23,7 @@ import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.tools_redis_cache.utils.RedisUtils;
 import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -64,6 +65,9 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
 
     @Resource
     private RedisUtils redisUtils;
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
 
     @Override
     public MerchantDTO getMerchantById(Long merchantId)
@@ -201,6 +205,11 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         //转换
         dozerUtils.map(merchant, merchantDTO);
         //返回
+        //让缓存过期
+        String redisKey = "pay:MerchantDTO:getMerchantById:" + merchant.getId();
+        stringRedisTemplate.delete(redisKey);
+        String redisKey2 = "pay:MerchantDTO:getMerchantByTenantId:" + tenantId;
+        stringRedisTemplate.delete(redisKey2);
         return merchantDTO;
     }
 
@@ -234,6 +243,11 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         {
             throw BizException.wrap("商户资质申请失败");
         }
+        //让缓存过期
+        String redisKey = "pay:MerchantDTO:getMerchantById:" + merchant.getId();
+        stringRedisTemplate.delete(redisKey);
+        String redisKey2 = "pay:MerchantDTO:getMerchantByTenantId:" + merchant.getTenantId();
+        stringRedisTemplate.delete(redisKey2);
     }
 
     @Override
@@ -338,5 +352,27 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
         {
             throw BizException.wrap("为门店设置管理员失败");
         }
+    }
+
+    @Override
+    public MerchantDTO getMerchantByTenantId(Long tenantId)
+    {
+        MerchantDTO merchantDTO = redisUtils.query("pay:MerchantDTO:getMerchantByTenantId:",
+                "pay:MerchantDTO:getMerchantByTenantId:",
+                tenantId, MerchantDTO.class, new Function<Long, MerchantDTO>()
+                {
+                    @Override
+                    public MerchantDTO apply(Long aLong)
+                    {
+                        //查询
+                        Merchant merchant = getOne(Wraps.<Merchant>lbQ().eq(Merchant::getTenantId, tenantId));
+                        //转换
+                        MerchantDTO merchantDTO = dozerUtils.map(merchant, MerchantDTO.class);
+                        //返回
+                        return merchantDTO;
+                    }
+                }, 180L, TimeUnit.MINUTES, 120);
+        //返回
+        return merchantDTO;
     }
 }

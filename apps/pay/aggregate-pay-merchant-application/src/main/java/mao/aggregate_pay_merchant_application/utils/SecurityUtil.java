@@ -78,7 +78,9 @@ public class SecurityUtil
             //缓存里不存在
             //发起远程调用查询
             MerchantFeignClient merchantFeignClient = ApplicationContextHelper.getBean(MerchantFeignClient.class);
-            R<MerchantDTO> r = merchantFeignClient.getById(getUser().getTenantId());
+            Long tenantId = getUser().getTenantId();
+            log.debug("租户id："+tenantId);
+            R<MerchantDTO> r = merchantFeignClient.getById(id);
             //断言结果
             AssertResult.handler(r);
             //取数据

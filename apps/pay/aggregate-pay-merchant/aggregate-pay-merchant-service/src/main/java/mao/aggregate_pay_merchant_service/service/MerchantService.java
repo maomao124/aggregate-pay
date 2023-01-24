@@ -72,4 +72,14 @@ public interface MerchantService extends IService<Merchant>
      * @param staffId 员工id
      */
     void bindStaffToStore(Long storeId, Long staffId);
+
+
+    /**
+     * 根据租户id查询商户信息
+     *
+     * @param tenantId 租户id
+     * @return {@link MerchantDTO}
+     */
+    MerchantDTO getMerchantByTenantId(Long tenantId);
+
 }
