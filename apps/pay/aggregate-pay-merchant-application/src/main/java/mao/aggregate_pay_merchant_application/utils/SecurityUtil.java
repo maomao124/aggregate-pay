@@ -59,16 +59,16 @@ public class SecurityUtil
 
 
     /**
-     * 查询商户
+     * 根据TenantId查询商户
      *
-     * @param id id
+     * @param tenantId tenantId
      * @return {@link MerchantDTO}
      */
-    private static MerchantDTO queryMerchantDtoById(Long id)
+    private static MerchantDTO queryMerchantDtoByTenantId(Long tenantId)
     {
         StringRedisTemplate stringRedisTemplate = ApplicationContextHelper.getBean(StringRedisTemplate.class);
         //redisKey
-        String redisKey = "pay:MerchantDTO:getMerchantById:" + id;
+        String redisKey = "pay:MerchantDTO:getMerchantByTenantId:" + tenantId;
         //从分布式缓存里取数据
         String json = stringRedisTemplate.opsForValue().get(redisKey);
         log.debug("从分布式缓存里取商户数据：" + json);
@@ -78,9 +78,8 @@ public class SecurityUtil
             //缓存里不存在
             //发起远程调用查询
             MerchantFeignClient merchantFeignClient = ApplicationContextHelper.getBean(MerchantFeignClient.class);
-            Long tenantId = getUser().getTenantId();
-            log.debug("租户id："+tenantId);
-            R<MerchantDTO> r = merchantFeignClient.getById(id);
+            log.debug("租户id：" + tenantId);
+            R<MerchantDTO> r = merchantFeignClient.getMerchantByTenantId(tenantId);
             //断言结果
             AssertResult.handler(r);
             //取数据
@@ -103,7 +102,7 @@ public class SecurityUtil
     public static Long getMerchantId()
     {
         //查询
-        MerchantDTO merchant = queryMerchantDtoById(getUser().getTenantId());
+        MerchantDTO merchant = queryMerchantDtoByTenantId(getUser().getTenantId());
         Long merchantId = null;
         if (merchant != null)
         {
@@ -122,12 +121,13 @@ public class SecurityUtil
     public static Long getMerchantIdThrowsException()
     {
         //查询
-        MerchantDTO merchant = queryMerchantDtoById(getUser().getTenantId());
+        MerchantDTO merchant = queryMerchantDtoByTenantId(getUser().getTenantId());
         Long merchantId = null;
         if (merchant != null)
         {
             //查询到了，返回
             merchantId = merchant.getId();
+            return merchantId;
         }
         //查询不到，抛出异常
         throw BizException.wrap("查询不到当前登录的商户信息");
@@ -142,7 +142,7 @@ public class SecurityUtil
     public static MerchantDTO getMerchant()
     {
         //查询
-        MerchantDTO merchant = queryMerchantDtoById(getUser().getTenantId());
+        MerchantDTO merchant = queryMerchantDtoByTenantId(getUser().getTenantId());
         if (merchant != null)
         {
             //查询到了，返回
@@ -161,7 +161,7 @@ public class SecurityUtil
     public static MerchantDTO getMerchantThrowsException()
     {
         //查询
-        MerchantDTO merchant = queryMerchantDtoById(getUser().getTenantId());
+        MerchantDTO merchant = queryMerchantDtoByTenantId(getUser().getTenantId());
         if (merchant != null)
         {
             //查询到了，返回

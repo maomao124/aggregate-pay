@@ -42,7 +42,7 @@ public class OptLogServiceImpl implements OptLogService
         //转换对象
         OptLog optLog = dozerUtils.map(optLogDTO, OptLog.class);
         //设置商户id，也就是用户
-        Long merchantId = SecurityUtil.getMerchantId();
+        Long merchantId = SecurityUtil.getMerchantIdThrowsException();
         optLog.setUserName(merchantId);
         //打印日志
         log.info("商户id：" + optLog.getUserName() + "  请求：" + optLog.getRequestUri() + "  描述："
