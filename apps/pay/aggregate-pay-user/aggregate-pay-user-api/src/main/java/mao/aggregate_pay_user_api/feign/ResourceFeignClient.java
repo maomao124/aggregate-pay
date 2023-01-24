@@ -29,7 +29,7 @@ import java.util.Map;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-user-service", path = "")
+@FeignClient(value = "aggregate-pay-user-service", path = "/user")
 public interface ResourceFeignClient
 {
 

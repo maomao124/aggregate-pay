@@ -25,7 +25,7 @@ import java.util.List;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-user-service", path = "/v2")
+@FeignClient(value = "aggregate-pay-user-service", path = "/user/v2")
 public interface TenantFeignClientV2
 {
 
