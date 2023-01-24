@@ -8,6 +8,8 @@ import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.tools_core.base.R;
 import mao.tools_log.entity.OptLogDTO;
 import mao.toolsdozer.utils.DozerUtils;
+import org.apache.rocketmq.client.producer.SendResult;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -36,6 +38,36 @@ public class OptLogServiceImpl implements OptLogService
     @Resource
     private OptLogFeignClient optLogFeignClient;
 
+    @Resource
+    private RocketMQTemplate rocketMQTemplate;
+
+//    @Override
+//    public void save(OptLogDTO optLogDTO)
+//    {
+//        //转换对象
+//        OptLog optLog = dozerUtils.map(optLogDTO, OptLog.class);
+//        //设置商户id，也就是用户
+//        Long merchantId = SecurityUtil.getMerchantIdThrowsException();
+//        optLog.setUserName(merchantId);
+//        //打印日志
+//        log.info("商户id：" + optLog.getUserName() + "  请求：" + optLog.getRequestUri() + "  描述："
+//                + optLog.getDescription() + "  ip：" + optLog.getRequestIp() + "  耗时：" + optLog.getConsumingTime() + "ms");
+//        //远程调用，保存
+//        R<Boolean> r = optLogFeignClient.save(optLog);
+//        if (r.getIsError())
+//        {
+//            //错误，只打印警告信息
+//            log.warn("日志保存失败！ 信息：" + r.getMsg());
+//        }
+//        //保存成功，什么都不做，抛出异常可能就是服务宕机，不在同一线程，不会影响服务
+//    }
+
+
+    /**
+     * 保存到消息队列
+     *
+     * @param optLogDTO 操作志dto
+     */
     @Override
     public void save(OptLogDTO optLogDTO)
     {
@@ -47,13 +79,8 @@ public class OptLogServiceImpl implements OptLogService
         //打印日志
         log.info("商户id：" + optLog.getUserName() + "  请求：" + optLog.getRequestUri() + "  描述："
                 + optLog.getDescription() + "  ip：" + optLog.getRequestIp() + "  耗时：" + optLog.getConsumingTime() + "ms");
-        //远程调用，保存
-        R<Boolean> r = optLogFeignClient.save(optLog);
-        if (r.getIsError())
-        {
-            //错误，只打印警告信息
-            log.warn("日志保存失败！ 信息：" + r.getMsg());
-        }
-        //保存成功，什么都不做，抛出异常可能就是服务宕机，不在同一线程，不会影响服务
+        log.debug("发送日志到消息队列");
+        SendResult sendResult = rocketMQTemplate.syncSend("pay_opt_log_topic", optLog);
+        log.debug("发送结果：" + sendResult.getSendStatus() + "   队列信息：" + sendResult.getMessageQueue());
     }
 }

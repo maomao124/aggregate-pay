@@ -1,6 +1,7 @@
 package mao.aggregate_pay_merchant_application.config;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_merchant_application.event.SysLogListenerSync;
 import mao.aggregate_pay_merchant_application.service.OptLogService;
 import mao.tools_log.entity.OptLogDTO;
 import mao.tools_log.event.SysLogListener;
@@ -31,10 +32,23 @@ public class OptLogConfig
     @Resource
     private OptLogService optLogService;
 
+//    @Bean
+//    public SysLogListener sysLogListener()
+//    {
+//        return new SysLogListener(new Consumer<OptLogDTO>()
+//        {
+//            @Override
+//            public void accept(OptLogDTO optLogDTO)
+//            {
+//                optLogService.save(optLogDTO);
+//            }
+//        });
+//    }
+
     @Bean
-    public SysLogListener sysLogListener()
+    public SysLogListenerSync sysLogListenerSync()
     {
-        return new SysLogListener(new Consumer<OptLogDTO>()
+        return new SysLogListenerSync(new Consumer<OptLogDTO>()
         {
             @Override
             public void accept(OptLogDTO optLogDTO)
