@@ -10,6 +10,7 @@ import mao.aggregate_pay_entity.entity.LoginLog;
 import mao.aggregate_pay_uaa_service.domain.AuthPrincipal;
 import mao.aggregate_pay_uaa_service.domain.UnifiedUserDetails;
 import mao.aggregate_pay_uaa_service.feign.log.LoginLogFeignClient;
+import mao.aggregate_pay_uaa_service.utils.IPUtils;
 import mao.aggregate_pay_user_api.dto.auth.AuthorizationInfoDTO;
 import mao.aggregate_pay_user_api.dto.resource.ApplicationDTO;
 import mao.aggregate_pay_user_api.dto.resource.ResourceDTO;
@@ -173,12 +174,13 @@ public class IntegrationUserDetailsAuthenticationHandler
 
         //构建登录日志
         LoginLog loginLog = new LoginLog();
-        //loginLog.setRequestIp("");
+        loginLog.setRequestIp(IPUtils.getIP());
         loginLog.setUserId(loginInfoDTO.getId());
         loginLog.setUsername(loginInfoDTO.getUsername());
         loginLog.setMobile(loginInfoDTO.getMobile());
         loginLog.setTenants(json);
         loginLog.setLoginDate(LocalDateTime.now());
+        //根据ip地址设置位置，CPU开销较大，暂时不填充此字段，可以参考tools-log模块的AddressUtil工具类
         //loginLog.setLocation("");
         //保存登录日志
         loginLogFeignClient.save(loginLog);

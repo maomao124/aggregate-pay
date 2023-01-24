@@ -1,8 +1,10 @@
 package mao.aggregate_pay_uaa_service.config;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_uaa_service.interceptor.IPHandlerInterceptor;
 import mao.tools_common.config.BaseConfig;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -23,16 +25,8 @@ import javax.annotation.PostConstruct;
 
 @Slf4j
 @Configuration
-public class WebConfig extends BaseConfig implements WebMvcConfigurer
+public class WebConfig extends BaseConfig
 {
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry)
-    {
-        //registry.addViewController("/login").setViewName("login");
-        registry.addViewController("/confirm_access").setViewName("oauth_approval");
-        registry.addViewController("/oauth_error").setViewName("oauth_error");
-    }
-
     @PostConstruct
     public void init()
     {
