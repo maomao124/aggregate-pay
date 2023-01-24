@@ -1,22 +1,28 @@
 package mao.aggregate_pay_uaa_service.integration;
 
+import java.time.LocalDateTime;
+
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.BusinessException;
 import mao.aggregate_pay_common.utils.StringUtil;
+import mao.aggregate_pay_entity.entity.LoginLog;
 import mao.aggregate_pay_uaa_service.domain.AuthPrincipal;
 import mao.aggregate_pay_uaa_service.domain.UnifiedUserDetails;
+import mao.aggregate_pay_uaa_service.feign.log.LoginLogFeignClient;
 import mao.aggregate_pay_user_api.dto.auth.AuthorizationInfoDTO;
 import mao.aggregate_pay_user_api.dto.resource.ApplicationDTO;
 import mao.aggregate_pay_user_api.dto.resource.ResourceDTO;
 import mao.aggregate_pay_user_api.dto.tenant.LoginInfoDTO;
 import mao.aggregate_pay_user_api.dto.tenant.LoginRequestDTO;
+import mao.aggregate_pay_user_api.dto.tenant.TenantDTO;
 import mao.aggregate_pay_user_api.feign.TenantFeignClient;
 import mao.aggregate_pay_user_api.feign.TenantFeignClientV2;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import org.springframework.security.authentication.BadCredentialsException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,14 +43,17 @@ import java.util.Map;
 @Slf4j
 public class IntegrationUserDetailsAuthenticationHandler
 {
-    private TenantFeignClientV2 tenantFeignClient;
+    private final TenantFeignClientV2 tenantFeignClient;
+
+    private final LoginLogFeignClient loginLogFeignClient;
 
 
-    public void setTenantService(TenantFeignClientV2 tenantFeignClient)
+    public IntegrationUserDetailsAuthenticationHandler(TenantFeignClientV2 tenantFeignClient,
+                                                       LoginLogFeignClient loginLogFeignClient)
     {
         this.tenantFeignClient = tenantFeignClient;
+        this.loginLogFeignClient = loginLogFeignClient;
     }
-
 
     /**
      * 认证处理 简易判断，后期优化结构
@@ -86,16 +95,16 @@ public class IntegrationUserDetailsAuthenticationHandler
             {
                 BusinessException be = (BusinessException) ex;
                 log.info(JSON.toJSONString(be));
-                throw new BadCredentialsException("login error-" + be.getErrorCode().getDesc());
+                throw new BadCredentialsException("登录错误 " + be.getErrorCode().getDesc());
             }
             else
             {
-                throw new BadCredentialsException("login error " + ex.getMessage());
+                throw new BadCredentialsException("登录错误 " + ex.getMessage());
             }
         }
         if (loginInfoDTO == null)
         {
-            throw new BadCredentialsException("User not found");
+            throw new BadCredentialsException("用户不存在");
         }
 
         //%%%%%%%%%%%%%%   上面是login返回的结构 自行格式化查看 需要组装成下面结构   %%%%%%%%%%%%%%%%%%
@@ -152,6 +161,28 @@ public class IntegrationUserDetailsAuthenticationHandler
             userDetails.setTenant(tenantIdMap);
         }
         log.info("@@@@@@@@@@@:{}", JSON.toJSONString(userDetails));
+
+
+        List<Long> tenants = new ArrayList<>(loginInfoDTO.getTenants().size());
+        for (TenantDTO tenantDTO : loginInfoDTO.getTenants())
+        {
+            tenants.add(tenantDTO.getId());
+        }
+        //转json
+        String json = JSON.toJSONString(tenants);
+
+        //构建登录日志
+        LoginLog loginLog = new LoginLog();
+        //loginLog.setRequestIp("");
+        loginLog.setUserId(loginInfoDTO.getId());
+        loginLog.setUsername(loginInfoDTO.getUsername());
+        loginLog.setMobile(loginInfoDTO.getMobile());
+        loginLog.setTenants(json);
+        loginLog.setLoginDate(LocalDateTime.now());
+        //loginLog.setLocation("");
+        //保存登录日志
+        loginLogFeignClient.save(loginLog);
+
         return userDetails;
     }
 

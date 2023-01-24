@@ -32,6 +32,11 @@
 
         <dependency>
             <groupId>mao</groupId>
+            <artifactId>aggregate-pay-entity</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mao</groupId>
             <artifactId>aggregate-pay-uaa-api</artifactId>
         </dependency>
 

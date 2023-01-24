@@ -1,6 +1,7 @@
 package mao.aggregate_pay_uaa_service.config;
 
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_uaa_service.feign.log.LoginLogFeignClient;
 import mao.aggregate_pay_uaa_service.integration.IntegrationUserDetailsAuthenticationHandler;
 import mao.aggregate_pay_uaa_service.integration.IntegrationUserDetailsAuthenticationProvider;
 import mao.aggregate_pay_user_api.feign.AuthorizationFeignClient;
@@ -38,6 +39,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     @Resource
     private TenantFeignClientV2 tenantFeignClient;
 
+    @Resource
+    private LoginLogFeignClient loginLogFeignClient;
+
 
     public SecurityConfig()
     {
@@ -51,9 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     @Bean
     public IntegrationUserDetailsAuthenticationHandler integrationUserDetailsAuthenticationHandler()
     {
-        IntegrationUserDetailsAuthenticationHandler authenticationHandler = new IntegrationUserDetailsAuthenticationHandler();
-        authenticationHandler.setTenantService(tenantFeignClient);
-        return authenticationHandler;
+        return new IntegrationUserDetailsAuthenticationHandler(tenantFeignClient, loginLogFeignClient);
     }
 
     /**
