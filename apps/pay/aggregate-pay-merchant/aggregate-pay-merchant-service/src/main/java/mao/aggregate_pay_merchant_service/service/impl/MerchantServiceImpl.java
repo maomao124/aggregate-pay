@@ -20,12 +20,15 @@ import mao.aggregate_pay_user_api.feign.TenantFeignClientV2;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_redis_cache.utils.RedisUtils;
 import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -59,13 +62,26 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
     @Resource
     private TenantFeignClientV2 tenantFeignClient;
 
+    @Resource
+    private RedisUtils redisUtils;
+
     @Override
     public MerchantDTO getMerchantById(Long merchantId)
     {
-        //查询
-        Merchant merchant = this.getById(merchantId);
-        //转换，并返回
-        return dozerUtils.map(merchant, MerchantDTO.class);
+        return redisUtils.query("pay:MerchantDTO:getMerchantById:",
+                "pay:MerchantDTO:getMerchantById:lock:",
+                merchantId, MerchantDTO.class, new Function<Long, MerchantDTO>()
+                {
+                    @Override
+                    public MerchantDTO apply(Long aLong)
+                    {
+                        //查询
+                        Merchant merchant = getById(merchantId);
+                        //转换，并返回
+                        return dozerUtils.map(merchant, MerchantDTO.class);
+                    }
+                }, 180L, TimeUnit.MINUTES, 120);
+
     }
 
 //    @Override
