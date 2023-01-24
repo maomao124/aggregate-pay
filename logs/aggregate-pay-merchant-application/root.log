@@ -86,3 +86,813 @@ docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', descrip
 2023-01-24 13:40:56.111  INFO 10748 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":57010,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/merchant/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1674538856110,\"checksum\":\"2bde0ad16d279bda6d9afefdc3b62722\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":405913733900} from /192.168.202.1
 2023-01-24 13:40:56.112  INFO 10748 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : modified ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"172.23.128.1","port":57010,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
 2023-01-24 13:40:56.121  INFO 10748 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"172.23.128.1","port":57010,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/merchant/actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-24 16:17:33.042  INFO 10748 --- [http-nio-57010-exec-5] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1672384634,1673070296,1673071076] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2023-01-24 16:17:33.072 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-24 16:17:33.072 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/sms] need XssFilter, go to XssRequestWrapper
+2023-01-24 16:17:33.081 DEBUG 10748 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://localhost:56010/merchant/sms
+2023-01-24 16:17:33.082 DEBUG 10748 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://localhost:56010/merchant/sms
+2023-01-24 16:17:33.120 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2023-01-24 16:17:33.138 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2023-01-24 16:17:33.139 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 18888886688
+2023-01-24 16:17:33.195 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 18888886688
+2023-01-24 16:17:33.227  INFO 10748 --- [http-nio-57010-exec-5] m.a.controller.MerchantController        : 向手机号:18888886688发送验证码
+2023-01-24 16:17:33.468 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> POST http://aggregate-pay-sms/generate?name=sms&effectiveTime=1200 HTTP/1.1
+2023-01-24 16:17:33.468 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: gzip
+2023-01-24 16:17:33.468 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: deflate
+2023-01-24 16:17:33.468 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Length: 24
+2023-01-24 16:17:33.468 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Type: application/json
+2023-01-24 16:17:33.469 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> END HTTP (24-byte body)
+2023-01-24 16:17:33.650  INFO 10748 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:17:33.670  INFO 10748 --- [hystrix-aggregate-pay-sms-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-sms instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-24 16:17:33.677  INFO 10748 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-24 16:17:33.684  INFO 10748 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-24 16:17:33.689  INFO 10748 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-24 16:17:33.700  INFO 10748 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:17:33.703  INFO 10748 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-sms initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[192.168.3.143:35478],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:35478;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@683f59f9
+2023-01-24 16:17:34.692  INFO 10748 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:17:37.907 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- HTTP/1.1 200  (4438ms)
+2023-01-24 16:17:37.907 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] connection: keep-alive
+2023-01-24 16:17:37.907 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] content-type: application/json;charset=UTF-8
+2023-01-24 16:17:37.908 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] date: Tue, 24 Jan 2023 08:17:37 GMT
+2023-01-24 16:17:37.908 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] keep-alive: timeout=60
+2023-01-24 16:17:37.908 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] transfer-encoding: chunked
+2023-01-24 16:17:37.909 DEBUG 10748 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- END HTTP (90-byte body)
+2023-01-24 16:17:37.937 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-24 16:18:13.050 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-24 16:18:13.051 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/merchants/register] need XssFilter, go to XssRequestWrapper
+2023-01-24 16:18:13.051 DEBUG 10748 --- [http-nio-57010-exec-8] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://localhost:56010/merchant/merchants/register
+2023-01-24 16:18:13.051 DEBUG 10748 --- [http-nio-57010-exec-8] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://localhost:56010/merchant/merchants/register
+2023-01-24 16:18:13.117 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 127.0.0.1
+2023-01-24 16:18:13.118 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 127.0.0.1
+2023-01-24 16:18:13.120 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:18:13.120 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:18:13.136  INFO 10748 --- [http-nio-57010-exec-8] m.a.handler.GlobalExceptionHandler       : 验证码的key为空
+
+mao.tools_core.exception.BizException: 验证码的key为空
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_merchant_application.controller.MerchantController.registerMerchant(MerchantController.java:108) ~[classes/:na]
+	at mao.aggregate_pay_merchant_application.controller.MerchantController$$FastClassBySpringCGLIB$$46ed030b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_merchant_application.controller.MerchantController$$EnhancerBySpringCGLIB$$cb42ccf8.registerMerchant(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.aggregate_pay_merchant_application.filter.TokenAuthenticationFilter.doFilterInternal(TokenAuthenticationFilter.java:66) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at mao.tools_xss.filter.XssFilter.doFilter(XssFilter.java:109) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-24 16:18:13.141 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-24 16:18:13.219  INFO 10748 --- [task-1] m.a.service.Impl.OptLogServiceImpl       : 商户id：123456  请求：/merchant/merchants/register  描述：商户平台应用接口-商户注册  ip：127.0.0.1  耗时：4ms
+2023-01-24 16:18:13.233 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] ---> POST http://aggregate-pay-log/log/opt HTTP/1.1
+2023-01-24 16:18:13.234 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Accept-Encoding: gzip
+2023-01-24 16:18:13.234 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Accept-Encoding: deflate
+2023-01-24 16:18:13.234 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Encoding: gzip
+2023-01-24 16:18:13.234 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Encoding: deflate
+2023-01-24 16:18:13.234 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Length: 8910
+2023-01-24 16:18:13.234 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Type: application/json
+2023-01-24 16:18:13.234 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] ---> END HTTP (8910-byte body)
+2023-01-24 16:18:13.295  INFO 10748 --- [hystrix-aggregate-pay-log-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-log.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:18:13.297  INFO 10748 --- [hystrix-aggregate-pay-log-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-log instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-log,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-24 16:18:13.298  INFO 10748 --- [hystrix-aggregate-pay-log-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-24 16:18:13.300  INFO 10748 --- [hystrix-aggregate-pay-log-1] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-log -> [{"instanceId":"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log","ip":"192.168.3.143","port":27914,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-log","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-24 16:18:13.304  INFO 10748 --- [hystrix-aggregate-pay-log-1] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-log -> [{"instanceId":"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log","ip":"192.168.3.143","port":27914,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-log","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-24 16:18:13.306  INFO 10748 --- [hystrix-aggregate-pay-log-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-log.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:18:13.306  INFO 10748 --- [hystrix-aggregate-pay-log-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-log initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-log,current list of Servers=[192.168.3.143:27914],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:27914;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@7d74a852
+2023-01-24 16:18:13.425 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] <--- HTTP/1.1 200  (190ms)
+2023-01-24 16:18:13.425 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] connection: keep-alive
+2023-01-24 16:18:13.425 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] content-type: application/json;charset=UTF-8
+2023-01-24 16:18:13.425 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] date: Tue, 24 Jan 2023 08:18:13 GMT
+2023-01-24 16:18:13.425 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] keep-alive: timeout=60
+2023-01-24 16:18:13.425 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] transfer-encoding: chunked
+2023-01-24 16:18:13.426 DEBUG 10748 --- [hystrix-aggregate-pay-log-1] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] <--- END HTTP (119-byte body)
+2023-01-24 16:18:14.300  INFO 10748 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-log.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:20:15.690 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-24 16:20:15.690 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/sms] need XssFilter, go to XssRequestWrapper
+2023-01-24 16:20:15.690 DEBUG 10748 --- [http-nio-57010-exec-8] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://localhost:56010/merchant/sms
+2023-01-24 16:20:15.690 DEBUG 10748 --- [http-nio-57010-exec-8] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://localhost:56010/merchant/sms
+2023-01-24 16:20:15.692 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 18888886688
+2023-01-24 16:20:15.693 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 18888886688
+2023-01-24 16:20:15.693  INFO 10748 --- [http-nio-57010-exec-8] m.a.controller.MerchantController        : 向手机号:18888886688发送验证码
+2023-01-24 16:20:15.695 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> POST http://aggregate-pay-sms/generate?name=sms&effectiveTime=1200 HTTP/1.1
+2023-01-24 16:20:15.695 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: gzip
+2023-01-24 16:20:15.695 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Accept-Encoding: deflate
+2023-01-24 16:20:15.695 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Length: 24
+2023-01-24 16:20:15.695 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] Content-Type: application/json
+2023-01-24 16:20:15.695 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] ---> END HTTP (24-byte body)
+2023-01-24 16:20:19.775 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- HTTP/1.1 200  (4079ms)
+2023-01-24 16:20:19.775 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] connection: keep-alive
+2023-01-24 16:20:19.775 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] content-type: application/json;charset=UTF-8
+2023-01-24 16:20:19.775 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] date: Tue, 24 Jan 2023 08:20:19 GMT
+2023-01-24 16:20:19.775 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] keep-alive: timeout=60
+2023-01-24 16:20:19.775 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] transfer-encoding: chunked
+2023-01-24 16:20:19.776 DEBUG 10748 --- [hystrix-aggregate-pay-sms-2] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#generateVerificationInfo] <--- END HTTP (90-byte body)
+2023-01-24 16:20:19.778 DEBUG 10748 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-24 16:20:51.419 DEBUG 10748 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-24 16:20:51.419 DEBUG 10748 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/merchants/register] need XssFilter, go to XssRequestWrapper
+2023-01-24 16:20:51.419 DEBUG 10748 --- [http-nio-57010-exec-7] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://localhost:56010/merchant/merchants/register
+2023-01-24 16:20:51.419 DEBUG 10748 --- [http-nio-57010-exec-7] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://localhost:56010/merchant/merchants/register
+2023-01-24 16:20:51.421 DEBUG 10748 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 127.0.0.1
+2023-01-24 16:20:51.421 DEBUG 10748 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 127.0.0.1
+2023-01-24 16:20:51.421 DEBUG 10748 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:20:51.421 DEBUG 10748 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:20:51.427 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> POST http://aggregate-pay-sms/verify?name=sms&verificationKey=sms%3Af9efe4800f7e481b8b0aa68a6b990807&verificationCode=899677 HTTP/1.1
+2023-01-24 16:20:51.427 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: gzip
+2023-01-24 16:20:51.428 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: deflate
+2023-01-24 16:20:51.428 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> END HTTP (0-byte body)
+2023-01-24 16:20:51.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- HTTP/1.1 200  (10ms)
+2023-01-24 16:20:51.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] connection: keep-alive
+2023-01-24 16:20:51.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] content-type: application/json;charset=UTF-8
+2023-01-24 16:20:51.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] date: Tue, 24 Jan 2023 08:20:51 GMT
+2023-01-24 16:20:51.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] keep-alive: timeout=60
+2023-01-24 16:20:51.439 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] transfer-encoding: chunked
+2023-01-24 16:20:51.439 DEBUG 10748 --- [hystrix-aggregate-pay-sms-3] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- END HTTP (33-byte body)
+2023-01-24 16:20:51.450 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] ---> POST http://aggregate-pay-merchant-service/merchant HTTP/1.1
+2023-01-24 16:20:51.450 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Accept-Encoding: gzip
+2023-01-24 16:20:51.450 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Accept-Encoding: deflate
+2023-01-24 16:20:51.450 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Content-Length: 282
+2023-01-24 16:20:51.450 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Content-Type: application/json
+2023-01-24 16:20:51.450 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] ---> END HTTP (282-byte body)
+2023-01-24 16:20:51.491  INFO 10748 --- [hystrix-aggregate-pay-merchant-service-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-merchant-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:20:51.492  INFO 10748 --- [hystrix-aggregate-pay-merchant-service-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-merchant-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-merchant-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-24 16:20:51.493  INFO 10748 --- [hystrix-aggregate-pay-merchant-service-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-24 16:20:51.497  INFO 10748 --- [hystrix-aggregate-pay-merchant-service-1] com.alibaba.nacos.client.naming          : new ips(3) service: DEFAULT_GROUP@@aggregate-pay-merchant-service -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000},{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56931,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-24 16:20:51.503  INFO 10748 --- [hystrix-aggregate-pay-merchant-service-1] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@aggregate-pay-merchant-service -> [{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56931,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000}]
+2023-01-24 16:20:51.504  INFO 10748 --- [hystrix-aggregate-pay-merchant-service-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-merchant-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:20:51.505  INFO 10748 --- [hystrix-aggregate-pay-merchant-service-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-merchant-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-merchant-service,current list of Servers=[192.168.3.143:56040],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:56040;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@1f72e733
+2023-01-24 16:20:52.314 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] <--- HTTP/1.1 200  (863ms)
+2023-01-24 16:20:52.314 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] connection: keep-alive
+2023-01-24 16:20:52.314 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] content-type: application/json;charset=UTF-8
+2023-01-24 16:20:52.314 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] date: Tue, 24 Jan 2023 08:20:52 GMT
+2023-01-24 16:20:52.314 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] keep-alive: timeout=60
+2023-01-24 16:20:52.314 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] transfer-encoding: chunked
+2023-01-24 16:20:52.314 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] <--- END HTTP (152-byte body)
+2023-01-24 16:20:52.337  INFO 10748 --- [task-2] m.a.service.Impl.OptLogServiceImpl       : 商户id：123456  请求：/merchant/merchants/register  描述：商户平台应用接口-商户注册  ip：127.0.0.1  耗时：912ms
+2023-01-24 16:20:52.337 ERROR 10748 --- [http-nio-57010-exec-7] m.a.handler.GlobalExceptionHandler       : 系统异常：
+
+com.netflix.hystrix.exception.HystrixRuntimeException: MerchantFeignClient#createMerchant(MerchantDTO) failed and no fallback available.
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:822) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:807) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:140) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnFallbackHookApplication$1.onError(AbstractCommand.java:1472) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$FallbackHookApplication$1.onError(AbstractCommand.java:1397) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:142) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$HystrixObservableTimeoutOperator$3.onError(AbstractCommand.java:1194) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.onError(OperatorSubscribeOn.java:80) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnRunHookApplication$1.onError(AbstractCommand.java:1431) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$ExecutionHookApplication$1.onError(AbstractCommand.java:1362) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.call(OperatorSubscribeOn.java:100) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55) ~[rxjava-1.3.8.jar:1.3.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_332]
+Caused by: feign.codec.DecodeException: Error while extracting response for type [mao.tools_core.base.R<mao.aggregate_pay_merchant_api.dto.MerchantDTO>] and content type [application/json;charset=UTF-8]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value (''); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at feign.AsyncResponseHandler.decode(AsyncResponseHandler.java:119) ~[feign-core-10.10.1.jar:na]
+	at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:87) ~[feign-core-10.10.1.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:138) ~[feign-core-10.10.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89) ~[feign-core-10.10.1.jar:na]
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:109) ~[feign-hystrix-10.10.1.jar:na]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar:1.3.8]
+	... 26 common frames omitted
+Caused by: org.springframework.web.client.RestClientException: Error while extracting response for type [mao.tools_core.base.R<mao.aggregate_pay_merchant_api.dto.MerchantDTO>] and content type [application/json;charset=UTF-8]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value (''); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.openfeign.support.SpringDecoder.decode(SpringDecoder.java:59) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.support.ResponseEntityDecoder.decode(ResponseEntityDecoder.java:62) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at feign.optionals.OptionalDecoder.decode(OptionalDecoder.java:36) ~[feign-core-10.10.1.jar:na]
+	at feign.AsyncResponseHandler.decode(AsyncResponseHandler.java:115) ~[feign-core-10.10.1.jar:na]
+	... 33 common frames omitted
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value (''); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:245) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:227) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:104) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 37 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1342) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1031) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.ValueInstantiator._createFromStringFallbacks(ValueInstantiator.java:370) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.std.StdValueInstantiator.createFromString(StdValueInstantiator.java:314) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1351) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:170) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:161) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:127) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:368) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4001) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3072) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:239) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 39 common frames omitted
+
+2023-01-24 16:20:52.339 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] ---> POST http://aggregate-pay-log/log/opt HTTP/1.1
+2023-01-24 16:20:52.339 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Accept-Encoding: gzip
+2023-01-24 16:20:52.339 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Accept-Encoding: deflate
+2023-01-24 16:20:52.339 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Encoding: gzip
+2023-01-24 16:20:52.340 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Encoding: deflate
+2023-01-24 16:20:52.340 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Length: 13499
+2023-01-24 16:20:52.340 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Type: application/json
+2023-01-24 16:20:52.340 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] ---> END HTTP (13499-byte body)
+2023-01-24 16:20:52.342 DEBUG 10748 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-24 16:20:52.381 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] <--- HTTP/1.1 200  (41ms)
+2023-01-24 16:20:52.381 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] connection: keep-alive
+2023-01-24 16:20:52.382 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] content-type: application/json;charset=UTF-8
+2023-01-24 16:20:52.382 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] date: Tue, 24 Jan 2023 08:20:52 GMT
+2023-01-24 16:20:52.382 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] keep-alive: timeout=60
+2023-01-24 16:20:52.382 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] transfer-encoding: chunked
+2023-01-24 16:20:52.382 DEBUG 10748 --- [hystrix-aggregate-pay-log-2] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] <--- END HTTP (119-byte body)
+2023-01-24 16:20:52.502  INFO 10748 --- [PollingServerListUpdater-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-merchant-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:28:45.432 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-24 16:28:45.432 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/merchants/register] need XssFilter, go to XssRequestWrapper
+2023-01-24 16:28:45.433 DEBUG 10748 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://localhost:56010/merchant/merchants/register
+2023-01-24 16:28:45.433 DEBUG 10748 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://localhost:56010/merchant/merchants/register
+2023-01-24 16:28:45.435 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 127.0.0.1
+2023-01-24 16:28:45.436 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 127.0.0.1
+2023-01-24 16:28:45.436 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:28:45.436 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:28:45.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> POST http://aggregate-pay-sms/verify?name=sms&verificationKey=sms%3Af9efe4800f7e481b8b0aa68a6b990807&verificationCode=899677 HTTP/1.1
+2023-01-24 16:28:45.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: gzip
+2023-01-24 16:28:45.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: deflate
+2023-01-24 16:28:45.438 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> END HTTP (0-byte body)
+2023-01-24 16:28:45.444 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- HTTP/1.1 200  (5ms)
+2023-01-24 16:28:45.444 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] connection: keep-alive
+2023-01-24 16:28:45.444 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] content-type: application/json;charset=UTF-8
+2023-01-24 16:28:45.444 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] date: Tue, 24 Jan 2023 08:28:45 GMT
+2023-01-24 16:28:45.444 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] keep-alive: timeout=60
+2023-01-24 16:28:45.444 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] transfer-encoding: chunked
+2023-01-24 16:28:45.444 DEBUG 10748 --- [hystrix-aggregate-pay-sms-4] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- END HTTP (33-byte body)
+2023-01-24 16:28:45.447 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] ---> POST http://aggregate-pay-merchant-service/merchant HTTP/1.1
+2023-01-24 16:28:45.447 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Accept-Encoding: gzip
+2023-01-24 16:28:45.447 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Accept-Encoding: deflate
+2023-01-24 16:28:45.447 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Content-Length: 282
+2023-01-24 16:28:45.447 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Content-Type: application/json
+2023-01-24 16:28:45.447 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] ---> END HTTP (282-byte body)
+2023-01-24 16:28:45.498 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] <--- HTTP/1.1 200  (50ms)
+2023-01-24 16:28:45.498 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] connection: keep-alive
+2023-01-24 16:28:45.498 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] content-type: application/json;charset=UTF-8
+2023-01-24 16:28:45.498 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] date: Tue, 24 Jan 2023 08:28:45 GMT
+2023-01-24 16:28:45.498 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] keep-alive: timeout=60
+2023-01-24 16:28:45.498 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] transfer-encoding: chunked
+2023-01-24 16:28:45.498 DEBUG 10748 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] <--- END HTTP (152-byte body)
+2023-01-24 16:28:45.507  INFO 10748 --- [task-3] m.a.service.Impl.OptLogServiceImpl       : 商户id：123456  请求：/merchant/merchants/register  描述：商户平台应用接口-商户注册  ip：127.0.0.1  耗时：66ms
+2023-01-24 16:28:45.505 ERROR 10748 --- [http-nio-57010-exec-5] m.a.handler.GlobalExceptionHandler       : 系统异常：
+
+com.netflix.hystrix.exception.HystrixRuntimeException: MerchantFeignClient#createMerchant(MerchantDTO) failed and no fallback available.
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:822) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:807) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:140) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnFallbackHookApplication$1.onError(AbstractCommand.java:1472) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$FallbackHookApplication$1.onError(AbstractCommand.java:1397) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:142) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$HystrixObservableTimeoutOperator$3.onError(AbstractCommand.java:1194) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.onError(OperatorSubscribeOn.java:80) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnRunHookApplication$1.onError(AbstractCommand.java:1431) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$ExecutionHookApplication$1.onError(AbstractCommand.java:1362) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.call(OperatorSubscribeOn.java:100) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55) ~[rxjava-1.3.8.jar:1.3.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_332]
+Caused by: feign.codec.DecodeException: Error while extracting response for type [mao.tools_core.base.R<mao.aggregate_pay_merchant_api.dto.MerchantDTO>] and content type [application/json;charset=UTF-8]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value (''); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at feign.AsyncResponseHandler.decode(AsyncResponseHandler.java:119) ~[feign-core-10.10.1.jar:na]
+	at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:87) ~[feign-core-10.10.1.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:138) ~[feign-core-10.10.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89) ~[feign-core-10.10.1.jar:na]
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:109) ~[feign-hystrix-10.10.1.jar:na]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar:1.3.8]
+	... 26 common frames omitted
+Caused by: org.springframework.web.client.RestClientException: Error while extracting response for type [mao.tools_core.base.R<mao.aggregate_pay_merchant_api.dto.MerchantDTO>] and content type [application/json;charset=UTF-8]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value (''); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.openfeign.support.SpringDecoder.decode(SpringDecoder.java:59) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.support.ResponseEntityDecoder.decode(ResponseEntityDecoder.java:62) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at feign.optionals.OptionalDecoder.decode(OptionalDecoder.java:36) ~[feign-core-10.10.1.jar:na]
+	at feign.AsyncResponseHandler.decode(AsyncResponseHandler.java:115) ~[feign-core-10.10.1.jar:na]
+	... 33 common frames omitted
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value (''); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:245) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:227) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:104) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 37 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `mao.aggregate_pay_merchant_api.dto.MerchantDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('')
+ at [Source: (ByteArrayInputStream); line: 1, column: 19] (through reference chain: mao.tools_core.base.R["data"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1342) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1031) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.ValueInstantiator._createFromStringFallbacks(ValueInstantiator.java:370) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.std.StdValueInstantiator.createFromString(StdValueInstantiator.java:314) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1351) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:170) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:161) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:127) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:368) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4001) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3072) ~[jackson-databind-2.9.2.jar:2.9.2]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:239) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 39 common frames omitted
+
+2023-01-24 16:28:45.509 DEBUG 10748 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] ---> POST http://aggregate-pay-log/log/opt HTTP/1.1
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Accept-Encoding: gzip
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Accept-Encoding: deflate
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Encoding: gzip
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Encoding: deflate
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Length: 13498
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] Content-Type: application/json
+2023-01-24 16:28:45.509 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] ---> END HTTP (13498-byte body)
+2023-01-24 16:28:45.559 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] <--- HTTP/1.1 200  (49ms)
+2023-01-24 16:28:45.559 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] connection: keep-alive
+2023-01-24 16:28:45.559 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] content-type: application/json;charset=UTF-8
+2023-01-24 16:28:45.559 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] date: Tue, 24 Jan 2023 08:28:45 GMT
+2023-01-24 16:28:45.559 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] keep-alive: timeout=60
+2023-01-24 16:28:45.559 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] transfer-encoding: chunked
+2023-01-24 16:28:45.560 DEBUG 10748 --- [hystrix-aggregate-pay-log-3] m.a.feign.log.OptLogFeignClient          : [OptLogFeignClient#save] <--- END HTTP (119-byte body)
+2023-01-24 16:29:52.376  WARN 10748 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-24 16:29:52.377  WARN 10748 --- [Thread-28] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-24 16:29:52.377  INFO 10748 --- [Thread-74] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2023-01-24 16:29:52.377  WARN 10748 --- [Thread-28] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-24 16:29:52.378  WARN 10748 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-24 16:29:52.379  INFO 10748 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-24 16:29:52.382  INFO 10748 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-01-24 16:29:52.382  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-merchant-application:192.168.3.143:57010 from beat map.
+2023-01-24 16:29:52.382  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-merchant-application with instance: Instance{instanceId='null', ip='192.168.3.143', port=57010, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-24 16:29:52.384  INFO 10748 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-01-24 16:29:52.384  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-24 16:29:52.385  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-24 16:29:52.385  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-24 16:29:53.389  INFO 10748 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":57010,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/merchant/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1674548993388,\"checksum\":\"2bde0ad16d279bda6d9afefdc3b62722\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":10543192322100} from /192.168.202.1
+2023-01-24 16:29:53.436  INFO 10748 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":56040,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56931,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"cacheMillis\":10000,\"lastRefTime\":1674548993435,\"checksum\":\"6aaf109a1989b972c14383b3ab51bbae\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":10543239480600} from /192.168.202.1
+2023-01-24 16:29:55.404  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-24 16:29:58.434  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-24 16:29:58.434  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-24 16:29:58.434  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-24 16:29:58.434  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-24 16:29:58.434  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-24 16:29:58.435  WARN 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-24 16:29:58.435  WARN 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-24 16:29:58.435  INFO 10748 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-24 16:29:58.435  INFO 10748 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-24 16:29:58.435  INFO 10748 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-24 16:29:58.436  INFO 10748 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-24 16:29:58.440  WARN 10748 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-24 16:29:58.784 DEBUG 10748 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy
+2023-01-24 16:30:11.313  WARN 26712 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-application] & group[DEFAULT_GROUP]
+2023-01-24 16:30:11.324  INFO 26712 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-application,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-01-24 16:30:11.366  INFO 26712 --- [main] m.a.AggregatePayMerchantApplication      : The following profiles are active: dev
+2023-01-24 16:30:13.054  INFO 26712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-01-24 16:30:13.057  INFO 26712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-24 16:30:13.094  INFO 26712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2023-01-24 16:30:13.187  WARN 26712 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-01-24 16:30:13.491  INFO 26712 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f6ae9762-1955-3938-bed3-aa840854ee50
+2023-01-24 16:30:14.283  INFO 26712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 57010 (http)
+2023-01-24 16:30:14.296  INFO 26712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-24 16:30:14.296  INFO 26712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-01-24 16:30:14.453  INFO 26712 --- [main] o.a.c.c.C.[.[localhost].[/merchant]      : Initializing Spring embedded WebApplicationContext
+2023-01-24 16:30:14.454  INFO 26712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3070 ms
+2023-01-24 16:30:14.457  INFO 26712 --- [main] m.tools_xss.config.XssAuthConfiguration  : 初始化 XssAuthConfiguration xss攻击配置
+2023-01-24 16:30:14.627 DEBUG 26712 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init start ...
+2023-01-24 16:30:14.682 DEBUG 26712 --- [main] mao.tools_xss.filter.XssFilter           : ignorePathList=null
+2023-01-24 16:30:14.685 DEBUG 26712 --- [main] mao.tools_xss.filter.XssFilter           : ignoreParamValueList=["samlp:LogoutRequest"]
+2023-01-24 16:30:14.685 DEBUG 26712 --- [main] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] init end
+2023-01-24 16:30:14.685 DEBUG 26712 --- [main] m.a.filter.TokenAuthenticationFilter     : Filter 'tokenAuthenticationFilter' configured for use
+2023-01-24 16:30:14.717  INFO 26712 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-01-24 16:30:14.718  INFO 26712 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-01-24 16:30:14.724  INFO 26712 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-01-24 16:30:14.728  INFO 26712 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-01-24 16:30:14.734  INFO 26712 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-01-24 16:30:14.758  INFO 26712 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-01-24 16:30:15.069  INFO 26712 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-24 16:30:15.071  INFO 26712 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-24 16:30:15.128  INFO 26712 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-24 16:30:15.129  INFO 26712 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant-application/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-01-24 16:30:15.133  INFO 26712 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-24 16:30:15.133  INFO 26712 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-01-24 16:30:15.139  INFO 26712 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-01-24 16:30:15.159  INFO 26712 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-01-24 16:30:15.698  INFO 26712 --- [main] m.a.config.OptLogConfig                  : 初始化 OptLogConfig 操作日志配置类
+2023-01-24 16:30:15.838  INFO 26712 --- [main] m.a.service.Impl.FileServiceImpl         : 初始化 FileServiceImpl ， bucket：mao123456
+2023-01-24 16:30:16.507  INFO 26712 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-24 16:30:16.508  INFO 26712 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-01-24 16:30:16.509  INFO 26712 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-01-24 16:30:16.822  INFO 26712 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-01-24 16:30:16.907  WARN 26712 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-24 16:30:16.907  INFO 26712 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-24 16:30:16.912  WARN 26712 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-01-24 16:30:16.912  INFO 26712 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-01-24 16:30:17.066  INFO 26712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-01-24 16:30:17.179  INFO 26712 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-24 16:30:17.191  INFO 26712 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2023-01-24 16:30:17.252  INFO 26712 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-01-24 16:30:17.263  INFO 26712 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-01-24 16:30:17.263  INFO 26712 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_application', basePath=[], excludePath=[]}}
+
+2023-01-24 16:30:18.167  INFO 26712 --- [main] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/merchant/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"172.23.128.1","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:30:18.177  INFO 26712 --- [main] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"172.23.128.1","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/merchant/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:30:18.180  INFO 26712 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-01-24 16:30:18.208  INFO 26712 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-01-24 16:30:18.248  INFO 26712 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-01-24 16:30:18.411  INFO 26712 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryPayChannelParamUsingGET_1
+2023-01-24 16:30:18.469  INFO 26712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 57010 (http) with context path '/merchant'
+2023-01-24 16:30:18.473  INFO 26712 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-merchant-application with instance: Instance{instanceId='null', ip='192.168.3.143', port=57010, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=/merchant/actuator}}
+2023-01-24 16:30:18.477  INFO 26712 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-merchant-application 192.168.3.143:57010 register finished
+2023-01-24 16:30:18.723  INFO 26712 --- [main] m.a.AggregatePayMerchantApplication      : Started AggregatePayMerchantApplication in 9.211 seconds (JVM running for 10.352)
+2023-01-24 16:30:18.729  INFO 26712 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-24 16:30:18.730  INFO 26712 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application, group=DEFAULT_GROUP, cnt=1
+2023-01-24 16:30:18.731  INFO 26712 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-24 16:30:18.732  INFO 26712 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-24 16:30:18.737  INFO 26712 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-24 16:30:18.737  INFO 26712 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-24 16:30:18.738  INFO 26712 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-application-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-01-24 16:30:18.739  INFO 26712 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-application-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-01-24 16:30:18.739  INFO 26712 --- [main] m.a.AggregatePayMerchantApplication      : 应用aggregate-pay-merchant-application启动成功!swagger地址：http://192.168.202.1:57010/merchant/doc.html  或者：http://127.0.0.1:57010/merchant/doc.html
+2023-01-24 16:30:18.739  INFO 26712 --- [main] m.a.AggregatePayMerchantApplication      : 启动耗时：9351ms
+2023-01-24 16:30:19.236  INFO 26712 --- [RMI TCP Connection(3)-192.168.202.1] o.a.c.c.C.[.[localhost].[/merchant]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-24 16:30:19.236  INFO 26712 --- [RMI TCP Connection(3)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-24 16:30:19.246  INFO 26712 --- [RMI TCP Connection(3)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2023-01-24 16:30:19.483  INFO 26712 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/merchant/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1674549019481,\"checksum\":\"23820261ca412134c1c9bc57726ef1b8\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":10569285036800} from /192.168.202.1
+2023-01-24 16:30:20.046  INFO 26712 --- [boundedElastic-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-01-24 16:30:20.047  INFO 26712 --- [boundedElastic-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-01-24 16:30:30.199  INFO 26712 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":57010,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/merchant/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1674549030198,\"checksum\":\"23820261ca412134c1c9bc57726ef1b8\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":10580002453700} from /192.168.202.1
+2023-01-24 16:30:30.201  INFO 26712 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : modified ips(1) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"172.23.128.1","port":57010,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:30:30.209  INFO 26712 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-merchant-application@@DEFAULT -> [{"instanceId":"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"172.23.128.1","port":57010,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application","ip":"192.168.3.143","port":57010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-application","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/merchant/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:31:08.599  INFO 26712 --- [http-nio-57010-exec-5] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1672384634,1673070296,1673071076] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2023-01-24 16:31:08.617 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-01-24 16:31:08.617 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/merchants/register] need XssFilter, go to XssRequestWrapper
+2023-01-24 16:31:08.622 DEBUG 26712 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://localhost:56010/merchant/merchants/register
+2023-01-24 16:31:08.623 DEBUG 26712 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://localhost:56010/merchant/merchants/register
+2023-01-24 16:31:08.707 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2023-01-24 16:31:08.719 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2023-01-24 16:31:08.720 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 127.0.0.1
+2023-01-24 16:31:08.764 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 127.0.0.1
+2023-01-24 16:31:08.765 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : raw value before xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:31:08.766 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61
+2023-01-24 16:31:08.969 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> POST http://aggregate-pay-sms/verify?name=sms&verificationKey=sms%3Af9efe4800f7e481b8b0aa68a6b990807&verificationCode=899677 HTTP/1.1
+2023-01-24 16:31:08.969 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: gzip
+2023-01-24 16:31:08.969 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] Accept-Encoding: deflate
+2023-01-24 16:31:08.969 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] ---> END HTTP (0-byte body)
+2023-01-24 16:31:09.118  INFO 26712 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:31:09.136  INFO 26712 --- [hystrix-aggregate-pay-sms-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-sms instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-24 16:31:09.144  INFO 26712 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-24 16:31:09.151  INFO 26712 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:31:09.158  INFO 26712 --- [hystrix-aggregate-pay-sms-1] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms -> [{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:31:09.170  INFO 26712 --- [hystrix-aggregate-pay-sms-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:31:09.172  INFO 26712 --- [hystrix-aggregate-pay-sms-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-sms initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-sms,current list of Servers=[192.168.3.143:35478],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:35478;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@360935d8
+2023-01-24 16:31:09.271 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- HTTP/1.1 200  (300ms)
+2023-01-24 16:31:09.271 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] connection: keep-alive
+2023-01-24 16:31:09.271 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] content-type: application/json;charset=UTF-8
+2023-01-24 16:31:09.271 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] date: Tue, 24 Jan 2023 08:31:09 GMT
+2023-01-24 16:31:09.271 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] keep-alive: timeout=60
+2023-01-24 16:31:09.271 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] transfer-encoding: chunked
+2023-01-24 16:31:09.272 DEBUG 26712 --- [hystrix-aggregate-pay-sms-1] m.a.feign.sms.VerificationFeignClient    : [VerificationFeignClient#verify] <--- END HTTP (33-byte body)
+2023-01-24 16:31:09.297 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] ---> POST http://aggregate-pay-merchant-service/merchant HTTP/1.1
+2023-01-24 16:31:09.297 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Accept-Encoding: gzip
+2023-01-24 16:31:09.297 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Accept-Encoding: deflate
+2023-01-24 16:31:09.298 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Content-Length: 282
+2023-01-24 16:31:09.298 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] Content-Type: application/json
+2023-01-24 16:31:09.298 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] ---> END HTTP (282-byte body)
+2023-01-24 16:31:09.329  INFO 26712 --- [hystrix-aggregate-pay-merchant-service-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-merchant-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:31:09.330  INFO 26712 --- [hystrix-aggregate-pay-merchant-service-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: aggregate-pay-merchant-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-merchant-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2023-01-24 16:31:09.331  INFO 26712 --- [hystrix-aggregate-pay-merchant-service-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2023-01-24 16:31:09.334  INFO 26712 --- [hystrix-aggregate-pay-merchant-service-1] com.alibaba.nacos.client.naming          : new ips(3) service: DEFAULT_GROUP@@aggregate-pay-merchant-service -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56931,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:31:09.340  INFO 26712 --- [hystrix-aggregate-pay-merchant-service-1] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@aggregate-pay-merchant-service -> [{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56931,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-24 16:31:09.342  INFO 26712 --- [hystrix-aggregate-pay-merchant-service-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-merchant-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:31:09.342  INFO 26712 --- [hystrix-aggregate-pay-merchant-service-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client aggregate-pay-merchant-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=aggregate-pay-merchant-service,current list of Servers=[192.168.3.143:56040],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.3.143:56040;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@2b10f491
+2023-01-24 16:31:10.152  INFO 26712 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-sms.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:31:10.343  INFO 26712 --- [PollingServerListUpdater-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: aggregate-pay-merchant-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2023-01-24 16:31:10.856 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] <--- HTTP/1.1 200  (1557ms)
+2023-01-24 16:31:10.856 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] connection: keep-alive
+2023-01-24 16:31:10.856 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] content-type: application/json;charset=UTF-8
+2023-01-24 16:31:10.856 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] date: Tue, 24 Jan 2023 08:31:10 GMT
+2023-01-24 16:31:10.856 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] keep-alive: timeout=60
+2023-01-24 16:31:10.856 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] transfer-encoding: chunked
+2023-01-24 16:31:10.864 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-1] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#createMerchant] <--- END HTTP (411-byte body)
+2023-01-24 16:31:10.939 DEBUG 26712 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-01-24 16:31:11.032 DEBUG 26712 --- [task-1] m.a.utils.SecurityUtil                   : 从分布式缓存里取商户数据：null
+2023-01-24 16:31:11.040 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] ---> GET http://aggregate-pay-merchant-service/merchant/ HTTP/1.1
+2023-01-24 16:31:11.040 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] Accept-Encoding: gzip
+2023-01-24 16:31:11.040 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] Accept-Encoding: deflate
+2023-01-24 16:31:11.040 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] ---> END HTTP (0-byte body)
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] <--- HTTP/1.1 405  (16ms)
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] allow: POST
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] connection: keep-alive
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] content-type: application/json;charset=UTF-8
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] date: Tue, 24 Jan 2023 08:31:10 GMT
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] keep-alive: timeout=60
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] transfer-encoding: chunked
+2023-01-24 16:31:11.057 DEBUG 26712 --- [hystrix-aggregate-pay-merchant-service-2] m.a.feign.MerchantFeignClient            : [MerchantFeignClient#getById] <--- END HTTP (144-byte body)
+2023-01-24 16:31:11.073 ERROR 26712 --- [task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void mao.tools_log.event.SysLogListener.saveSysLog(mao.tools_log.event.SysLogEvent)
+
+com.netflix.hystrix.exception.HystrixRuntimeException: MerchantFeignClient#getById(Long) failed and no fallback available.
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:822) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:807) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:140) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnFallbackHookApplication$1.onError(AbstractCommand.java:1472) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$FallbackHookApplication$1.onError(AbstractCommand.java:1397) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:142) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$HystrixObservableTimeoutOperator$3.onError(AbstractCommand.java:1194) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.onError(OperatorSubscribeOn.java:80) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnRunHookApplication$1.onError(AbstractCommand.java:1431) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.AbstractCommand$ExecutionHookApplication$1.onError(AbstractCommand.java:1362) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.call(OperatorSubscribeOn.java:100) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55) ~[rxjava-1.3.8.jar:1.3.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_332]
+Caused by: feign.FeignException$MethodNotAllowed: [405 ] during [GET] to [http://aggregate-pay-merchant-service/merchant/] [MerchantFeignClient#getById(Long)]: [{"timestamp":"2023-01-24 16:31:11","status":405,"error":"Method Not Allowed","message":"Request method 'GET' not supported","path":"/merchant/"}]
+	at feign.FeignException.clientErrorStatus(FeignException.java:203) ~[feign-core-10.10.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:177) ~[feign-core-10.10.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:169) ~[feign-core-10.10.1.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-10.10.1.jar:na]
+	at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:96) ~[feign-core-10.10.1.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:138) ~[feign-core-10.10.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89) ~[feign-core-10.10.1.jar:na]
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:109) ~[feign-hystrix-10.10.1.jar:na]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar:1.3.8]
+	... 26 common frames omitted
+

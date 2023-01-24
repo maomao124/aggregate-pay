@@ -95,11 +95,11 @@ public class IntegrationUserDetailsAuthenticationHandler
             {
                 BusinessException be = (BusinessException) ex;
                 log.info(JSON.toJSONString(be));
-                throw new BadCredentialsException("登录错误 " + be.getErrorCode().getDesc());
+                throw new BadCredentialsException("登录错误: " + be.getErrorCode().getDesc());
             }
             else
             {
-                throw new BadCredentialsException("登录错误 " + ex.getMessage());
+                throw new BadCredentialsException("登录错误: " + ex.getMessage());
             }
         }
         if (loginInfoDTO == null)

@@ -97,7 +97,7 @@ public class MerchantController
      * @param merchantRegisterVO MerchantRegisterVO
      * @return {@link MerchantRegisterVO}
      */
-    @SysLog(value = "商户注册", recordResponseParam = false)
+    //@SysLog(value = "商户注册", recordResponseParam = false)
     @PostMapping("/merchants/register")
     @ApiOperation("商户注册")
     @ApiImplicitParam(value = "商户注册信息", name = "merchantRegisterVO", required = true, dataType = "MerchantRegisterVO", paramType = "body")

@@ -48,7 +48,7 @@ public class LoginLogDTO
      */
     @ApiModelProperty(value = "用户名")
     @TableField(value = "username")
-    private Long username;
+    private String username;
 
 
     /**
