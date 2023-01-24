@@ -82,7 +82,7 @@ public class MerchantController extends BaseController
      * 商户下新增门店
      *
      * @param storeDTO 商店dto
-     * @return {@link StoreDTO}
+     * @return {@link R}<{@link StoreDTO}>
      */
     @ApiOperation("商户资质申请")
     @PostMapping("/createStore")
@@ -96,7 +96,7 @@ public class MerchantController extends BaseController
      * 商户新增员工
      *
      * @param staffDTO 员工dto
-     * @return {@link StaffDTO}
+     * @return {@link R}<{@link StaffDTO}>
      */
     @ApiOperation("商户新增员工")
     @PostMapping("/createStaff")
@@ -111,6 +111,7 @@ public class MerchantController extends BaseController
      *
      * @param storeId 门店id
      * @param staffId 员工id
+     * @return {@link R}<{@link Boolean}>
      */
     @ApiOperation("为门店设置管理员")
     @PostMapping("/bindStaffToStore/{storeId}/{staffId}")
@@ -118,5 +119,20 @@ public class MerchantController extends BaseController
     {
         merchantService.bindStaffToStore(storeId, staffId);
         return success();
+    }
+
+
+    /**
+     * 根据租户id查询商户信息
+     *
+     * @param tenantId 租户id
+     * @return {@link R}<{@link MerchantDTO}>
+     */
+    @ApiOperation("根据租户id查询商户信息")
+    @GetMapping("/tenantId/{tenantId}")
+    public R<MerchantDTO> getMerchantByTenantId(@PathVariable Long tenantId)
+    {
+        MerchantDTO merchantDTO = merchantService.getMerchantByTenantId(tenantId);
+        return success(merchantDTO);
     }
 }

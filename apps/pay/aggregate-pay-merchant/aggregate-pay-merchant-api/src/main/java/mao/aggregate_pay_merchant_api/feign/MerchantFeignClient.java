@@ -80,4 +80,14 @@ public interface MerchantFeignClient
      */
     @PostMapping("/bindStaffToStore/{storeId}/{staffId}")
     R<Boolean> bindStaffToStore(@PathVariable Long storeId, @PathVariable Long staffId);
+
+
+    /**
+     * 根据租户id查询商户信息
+     *
+     * @param tenantId 租户id
+     * @return {@link R}<{@link MerchantDTO}>
+     */
+    @GetMapping("/tenantId/{tenantId}")
+    R<MerchantDTO> getMerchantByTenantId(@PathVariable Long tenantId);
 }

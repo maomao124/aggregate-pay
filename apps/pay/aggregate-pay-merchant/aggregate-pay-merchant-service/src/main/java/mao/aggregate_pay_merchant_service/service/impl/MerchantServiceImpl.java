@@ -358,7 +358,7 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
     public MerchantDTO getMerchantByTenantId(Long tenantId)
     {
         MerchantDTO merchantDTO = redisUtils.query("pay:MerchantDTO:getMerchantByTenantId:",
-                "pay:MerchantDTO:getMerchantByTenantId:",
+                "pay:MerchantDTO:getMerchantByTenantId:lock:",
                 tenantId, MerchantDTO.class, new Function<Long, MerchantDTO>()
                 {
                     @Override
