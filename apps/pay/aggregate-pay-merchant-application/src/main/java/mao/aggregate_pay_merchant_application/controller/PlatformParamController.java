@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
+import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.aggregate_pay_transaction_api.dto.PayChannelDTO;
 import mao.aggregate_pay_transaction_api.dto.PayChannelParamDTO;
 import mao.aggregate_pay_transaction_api.dto.PlatformChannelDTO;
@@ -106,8 +107,8 @@ public class PlatformParamController
     public void createPayChannelParam(@RequestBody PayChannelParamDTO payChannelParam)
     {
         //设置商户id，商户id不能从请求里拿
-        //todo
-        Long merchantId = 12243556L;
+        //Long merchantId = 12243556L;
+        Long merchantId = SecurityUtil.getMerchantId();
         payChannelParam.setMerchantId(merchantId);
         //校验
         if (StringUtils.isBlank(payChannelParam.getAppId()) ||

@@ -12,6 +12,7 @@ import mao.aggregate_pay_merchant_application.feign.sms.VerificationFeignClient;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
 import mao.aggregate_pay_merchant_application.service.FileService;
 import mao.aggregate_pay_merchant_application.service.SmsService;
+import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.aggregate_pay_merchant_application.vo.MerchantDetailVO;
 import mao.aggregate_pay_merchant_application.vo.MerchantRegisterVO;
 import mao.tools_core.base.R;
@@ -157,7 +158,7 @@ public class MerchantController
      */
     @ApiOperation("上传证件照")
     @PostMapping("/upload")
-    @SysLog(value = "上传证件照",recordResponseParam = false)
+    @SysLog(value = "上传证件照", recordResponseParam = false)
     public String upload(@ApiParam(value = "证件照", required = true) @RequestParam("file") MultipartFile multipartFile)
             throws IOException
     {
@@ -183,18 +184,31 @@ public class MerchantController
                     @ApiImplicitParam(name = "merchantDetailVO", value = "商户认证资料", required = true,
                             dataType = "MerchantDetailVO", paramType = "body")
             })
-    @SysLog(value = "商户资质申请",recordResponseParam = false)
+    @SysLog(value = "商户资质申请", recordResponseParam = false)
     @PostMapping("/my/merchants/save")
     public void saveMerchant(@RequestBody MerchantDetailVO merchantDetailVO)
     {
-        //todo：商户id
-        Long merchantId = 124619633188667425L;
+        //Long merchantId = 124619633188667425L;
+        Long merchantId = SecurityUtil.getMerchantId();
         //转换
         MerchantDTO merchantDTO = dozerUtils.map(merchantDetailVO, MerchantDTO.class);
         //发起远程调用
         R<Boolean> result = merchantFeignClient.applyMerchant(merchantId, merchantDTO);
         //断言结果
         AssertResult.handler(result);
+    }
+
+
+    /**
+     * 获取登录用户的商户信息
+     *
+     * @return {@link MerchantDTO}
+     */
+    @ApiOperation("获取登录用户的商户信息")
+    @GetMapping(value = "/my/merchants")
+    public MerchantDTO getMyMerchantInfo()
+    {
+        return SecurityUtil.getMerchant();
     }
 
 }

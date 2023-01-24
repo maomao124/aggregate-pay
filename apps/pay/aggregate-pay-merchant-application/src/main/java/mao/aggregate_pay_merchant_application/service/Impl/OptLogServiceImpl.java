@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_entity.entity.OptLog;
 import mao.aggregate_pay_merchant_application.feign.log.OptLogFeignClient;
 import mao.aggregate_pay_merchant_application.service.OptLogService;
+import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.tools_core.base.R;
 import mao.tools_log.entity.OptLogDTO;
 import mao.toolsdozer.utils.DozerUtils;
@@ -41,8 +42,8 @@ public class OptLogServiceImpl implements OptLogService
         //转换对象
         OptLog optLog = dozerUtils.map(optLogDTO, OptLog.class);
         //设置商户id，也就是用户
-        //todo
-        optLog.setUserName(123456L);
+        Long merchantId = SecurityUtil.getMerchantId();
+        optLog.setUserName(merchantId);
         //打印日志
         log.info("商户id：" + optLog.getUserName() + "  请求：" + optLog.getRequestUri() + "  描述："
                 + optLog.getDescription() + "  ip：" + optLog.getRequestIp() + "  耗时：" + optLog.getConsumingTime() + "ms");

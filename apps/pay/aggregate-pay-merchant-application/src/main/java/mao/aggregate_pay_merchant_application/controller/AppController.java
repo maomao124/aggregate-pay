@@ -7,11 +7,11 @@ import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.AppDTO;
 import mao.aggregate_pay_merchant_api.feign.AppFeignClient;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
+import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.aggregate_pay_transaction_api.feign.PlatformChannelFeignClient;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
 import mao.tools_log.annotation.SysLog;
-import org.apache.catalina.security.SecurityUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,9 +65,9 @@ public class AppController
         {
             throw BizException.wrap("无法获取到公钥");
         }
-        //todo：暂时
         //不能使用前端传过来的商户id
-        Long merchantId = 124619633188667425L;
+        //Long merchantId = 124619633188667425L;
+        Long merchantId = SecurityUtil.getMerchantId();
 
         //远程调用
         R<AppDTO> r = appFeignClient.createApp(merchantId, app);
@@ -88,8 +88,8 @@ public class AppController
     public List<AppDTO> queryMyApps()
     {
         //商户id
-        //todo：暂时
-        Long merchantId = 124619633188667425L;
+        //Long merchantId = 124619633188667425L;
+        Long merchantId = SecurityUtil.getMerchantId();
         //远程调用
         R<List<AppDTO>> r = appFeignClient.queryAppByMerchantId(merchantId);
         //断言
