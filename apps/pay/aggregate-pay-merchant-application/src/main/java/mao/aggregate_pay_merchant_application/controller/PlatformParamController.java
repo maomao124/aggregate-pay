@@ -79,7 +79,7 @@ public class PlatformParamController
                     @ApiImplicitParam(name = "platformChannelCode", value = "服务类型编码", required =
                             true, dataType = "String", paramType = "path")
             })
-    @GetMapping(value = "/my/pay‐channels/platform‐channel/{platformChannelCode}")
+    @GetMapping(value = "/my/pay-channels/platform-channel/{platformChannelCode}")
     public List<PayChannelDTO> queryPayChannelByPlatformChannel(@PathVariable String platformChannelCode)
     {
         //远程调用
@@ -103,7 +103,7 @@ public class PlatformParamController
                     @ApiImplicitParam(name = "payChannelParam", value = "商户配置支付渠道参数", required =
                             true, dataType = "PayChannelParamDTO", paramType = "body")
             })
-    @RequestMapping(value = "/my/pay‐channel‐params", method = {RequestMethod.POST, RequestMethod.PUT})
+    @RequestMapping(value = "/my/pay-channel-params", method = {RequestMethod.POST, RequestMethod.PUT})
     public void createPayChannelParam(@RequestBody PayChannelParamDTO payChannelParam)
     {
         //设置商户id，商户id不能从请求里拿
@@ -138,7 +138,7 @@ public class PlatformParamController
                             dataType = "String", paramType = "path"),
                     @ApiImplicitParam(name = "platformChannel", value = "服务类型",
                             required = true, dataType = "String", paramType = "path")})
-    @GetMapping(value = "/my/pay‐channel‐params/apps/{appId}/platform‐ channels/{platformChannel}")
+    @GetMapping(value = "/my/pay-channel-params/apps/{appId}/platform-channels/{platformChannel}")
     public List<PayChannelParamDTO> queryPayChannelParam(@PathVariable String appId,
                                                          @PathVariable String platformChannel)
     {
@@ -168,7 +168,7 @@ public class PlatformParamController
                             required = true, dataType = "String", paramType = "path"),
                     @ApiImplicitParam(name = "payChannel", value = "实际支付渠道编码",
                             required = true, dataType = "String", paramType = "path")})
-    @GetMapping(value = "/my/pay‐channel‐params/apps/{appId}/platform‐ channels/{platformChannel}/pay‐channels/{payChannel}")
+    @GetMapping(value = "/my/pay-channel-params/apps/{appId}/platform-channels/{platformChannel}/pay-channels/{payChannel}")
     public PayChannelParamDTO queryPayChannelParam(@PathVariable String appId,
                                                    @PathVariable String platformChannel, @PathVariable String payChannel)
     {

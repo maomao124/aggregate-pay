@@ -134,8 +134,7 @@ public class AppController
                             "string", paramType = "query")
             })
     public void bindPlatformForApp(@PathVariable("appId") String appId,
-                                   @RequestParam("platformChannelCodes") String platformChannelCodes,
-                                   @RequestParam(required = false) Long tenantId)
+                                   @RequestParam("platformChannelCodes") String platformChannelCodes)
     {
         if (StringUtils.isBlank(appId))
         {
