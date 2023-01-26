@@ -1,5 +1,6 @@
 package mao.aggregate_pay_log.consumer;
 
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_entity.entity.OptLog;
 import mao.aggregate_pay_log.service.OptLogService;
@@ -35,14 +36,15 @@ import javax.annotation.Resource;
 @Slf4j
 @Component
 @RocketMQMessageListener(consumerGroup = "pay_group", topic = "pay_opt_log_topic")
-public class RocketMQOptLogCustomer implements RocketMQListener<OptLog>
+public class RocketMQOptLogCustomer implements RocketMQListener<String>
 {
     @Resource
     private OptLogService optLogService;
 
     @Override
-    public void onMessage(OptLog optLog)
+    public void onMessage(String optLogJson)
     {
+        OptLog optLog = JSON.parseObject(optLogJson, OptLog.class);
         log.debug("消费者监听到一条消息  消息主题[pay_opt_log_topic]");
         optLogService.save(optLog);
     }

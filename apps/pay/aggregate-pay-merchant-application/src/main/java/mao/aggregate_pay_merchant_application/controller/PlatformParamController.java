@@ -56,8 +56,8 @@ public class PlatformParamController
      * @return {@link List}<{@link PlatformChannelDTO}>
      */
     @ApiOperation("获取平台服务类型")
-    @GetMapping(value = "/my/platform‐channels")
-    public List<PlatformChannelDTO> queryPlatformChannel()
+    @GetMapping(value = "/my/platform-channels")
+    public List<PlatformChannelDTO> queryPlatformChannel(@RequestParam(required = false) Long tenantId)
     {
         //远程调用
         R<List<PlatformChannelDTO>> r = platformChannelFeignClient.queryAll();

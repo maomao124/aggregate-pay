@@ -47,7 +47,7 @@ public class AppController
      * @param app {@link AppDTO}
      * @return {@link AppDTO}
      */
-    @SysLog(value = "商户创建应用",recordResponseParam = false)
+    @SysLog(value = "商户创建应用", recordResponseParam = false)
     @ApiOperation("商户创建应用")
     @ApiImplicitParams
             ({
@@ -125,15 +125,17 @@ public class AppController
      */
     @SysLog(value = "绑定服务类型", recordResponseParam = false)
     @ApiOperation("绑定服务类型")
-    @PostMapping(value = "/my/apps/{appId}/platform‐channels")
-    @ApiImplicitParams({
-            @ApiImplicitParam(value = "应用id", name = "appId", dataType = "string", paramType =
-                    "path"),
-            @ApiImplicitParam(value = "服务类型code", name = "platformChannelCodes", dataType =
-                    "string", paramType = "query")
-    })
+    @PostMapping("/my/apps/{appId}/platform-channels")
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(value = "应用id", name = "appId", dataType = "string", paramType =
+                            "path"),
+                    @ApiImplicitParam(value = "服务类型code", name = "platformChannelCodes", dataType =
+                            "string", paramType = "query")
+            })
     public void bindPlatformForApp(@PathVariable("appId") String appId,
-                                   @RequestParam("platformChannelCodes") String platformChannelCodes)
+                                   @RequestParam("platformChannelCodes") String platformChannelCodes,
+                                   @RequestParam(required = false) Long tenantId)
     {
         if (StringUtils.isBlank(appId))
         {

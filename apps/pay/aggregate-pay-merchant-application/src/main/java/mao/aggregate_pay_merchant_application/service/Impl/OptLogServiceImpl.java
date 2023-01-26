@@ -1,5 +1,6 @@
 package mao.aggregate_pay_merchant_application.service.Impl;
 
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_entity.entity.OptLog;
 import mao.aggregate_pay_merchant_application.feign.log.OptLogFeignClient;
@@ -8,6 +9,7 @@ import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.tools_core.base.R;
 import mao.tools_log.entity.OptLogDTO;
 import mao.toolsdozer.utils.DozerUtils;
+import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Service;
@@ -80,7 +82,24 @@ public class OptLogServiceImpl implements OptLogService
         log.info("商户id：" + optLog.getUserName() + "  请求：" + optLog.getRequestUri() + "  描述："
                 + optLog.getDescription() + "  ip：" + optLog.getRequestIp() + "  耗时：" + optLog.getConsumingTime() + "ms");
         log.debug("发送日志到消息队列");
-        SendResult sendResult = rocketMQTemplate.syncSend("pay_opt_log_topic", optLog);
+        String json = JSON.toJSONString(optLog);
+        //同步发送
+        SendResult sendResult = rocketMQTemplate.syncSend("pay_opt_log_topic", json);
         log.debug("发送结果：" + sendResult.getSendStatus() + "   队列信息：" + sendResult.getMessageQueue());
+        //异步发送
+        /*rocketMQTemplate.asyncSend("pay_opt_log_topic", json, new SendCallback()
+        {
+            @Override
+            public void onSuccess(SendResult sendResult)
+            {
+                log.debug("发送结果：" + sendResult.getSendStatus() + "   队列信息：" + sendResult.getMessageQueue());
+            }
+
+            @Override
+            public void onException(Throwable throwable)
+            {
+                log.warn("操作日志发送失败：", throwable);
+            }
+        });*/
     }
 }

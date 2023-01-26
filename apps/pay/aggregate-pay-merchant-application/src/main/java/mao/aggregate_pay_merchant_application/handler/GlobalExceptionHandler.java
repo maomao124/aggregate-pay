@@ -53,6 +53,8 @@ public class GlobalExceptionHandler
             int code = errorCode.getCode();
             //错误信息
             String desc = errorCode.getDesc();
+            log.warn("业务异常：" + desc);
+            log.info(e.getMessage(), e);
             return new RestErrorResponse(String.valueOf(code), desc);
         }
         //系统业务异常
