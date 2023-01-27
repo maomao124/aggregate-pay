@@ -10,6 +10,9 @@ class AggregatePayMerchantApplicationTests
     @Test
     void contextLoads()
     {
+        System.out.println((int)('-'));
+        System.out.println((int)('-'));
+        System.out.println((int)('‐'));
     }
 
 }

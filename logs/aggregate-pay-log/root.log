@@ -210,3 +210,463 @@ docket：{aggregate_pay=DocketInfo{title='日志服务', group='', description='
 2023-01-26 22:35:28.088  INFO 16480 --- [main] m.a.AggregatePayLogApplication           : 启动耗时：15641ms
 2023-01-26 22:35:28.728  INFO 16480 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":27914,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"cacheMillis\":10000,\"lastRefTime\":1674743728726,\"checksum\":\"8de5edc44cd0ec1c1ac900a1d3f02d4d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":3454261850900} from /192.168.202.1
 2023-01-26 22:35:41.573  INFO 16480 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":27914,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#27914#DEFAULT#DEFAULT_GROUP@@aggregate-pay-log\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-log\",\"cacheMillis\":10000,\"lastRefTime\":1674743741573,\"checksum\":\"8de5edc44cd0ec1c1ac900a1d3f02d4d\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":3467108616400} from /192.168.202.1
+2023-01-26 22:39:49.433  INFO 16480 --- [http-nio-27914-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-26 22:39:49.433  INFO 16480 --- [http-nio-27914-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-26 22:39:49.439  INFO 16480 --- [http-nio-27914-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-01-26 22:39:50.240  INFO 16480 --- [http-nio-27914-exec-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-26 22:39:50.253 DEBUG 16480 --- [http-nio-27914-exec-5] m.a.mapper.LoginLogMapper.insert         : ==>  Preparing: INSERT INTO login_log ( id, tenants, mobile, login_date, request_ip, user_id, username ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 22:39:50.419 DEBUG 16480 --- [http-nio-27914-exec-5] m.a.mapper.LoginLogMapper.insert         : ==> Parameters: 130424099670327329(Long), [3](String), 18888886688(String), 2023-01-26T22:39:49(LocalDateTime), 192.168.3.143(String), 2(Long), test(String)
+2023-01-26 22:39:50.440 DEBUG 16480 --- [http-nio-27914-exec-5] m.a.mapper.LoginLogMapper.insert         : <==    Updates: 1
+2023-01-26 22:40:12.504 DEBUG 16480 --- [ConsumeMessageThread_pay_group_1] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 22:40:12.510 DEBUG 16480 --- [ConsumeMessageThread_pay_group_1] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 22:40:12.512 DEBUG 16480 --- [ConsumeMessageThread_pay_group_1] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130424196076404801(Long), 2023-01-26T22:40:11.976(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, aggregate_pay_b2c, 3](String), POST(String), 129606551068475425(Long), OPT(String), 110(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T22:40:11.866(LocalDateTime)
+2023-01-26 22:40:12.530 DEBUG 16480 --- [ConsumeMessageThread_pay_group_1] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 22:48:19.863 DEBUG 16480 --- [ConsumeMessageThread_pay_group_2] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 22:48:19.873  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 487335
+2023-01-26 22:48:19.877  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509658
+2023-01-26 22:48:19.878  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509684
+2023-01-26 22:48:19.880  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509705
+2023-01-26 22:48:19.882  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509727
+2023-01-26 22:48:19.883  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509750
+2023-01-26 22:48:19.885  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509772
+2023-01-26 22:48:19.886  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509796
+2023-01-26 22:48:19.888  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509819
+2023-01-26 22:48:19.891  WARN 16480 --- [ConsumeMessageThread_pay_group_2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 509850
+2023-01-26 22:48:19.899 DEBUG 16480 --- [ConsumeMessageThread_pay_group_2] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 22:48:19.900 DEBUG 16480 --- [ConsumeMessageThread_pay_group_2] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130426240191430753(Long), 2023-01-26T22:48:19.409(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, aggregate_pay_c2b](String), POST(String), 129606551068475425(Long), OPT(String), 74(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T22:48:19.335(LocalDateTime)
+2023-01-26 22:48:19.906 DEBUG 16480 --- [ConsumeMessageThread_pay_group_2] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 22:52:44.703 DEBUG 16480 --- [ConsumeMessageThread_pay_group_3] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 22:52:44.705  WARN 16480 --- [ConsumeMessageThread_pay_group_3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 264800
+2023-01-26 22:52:44.726 DEBUG 16480 --- [ConsumeMessageThread_pay_group_3] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 22:52:44.727 DEBUG 16480 --- [ConsumeMessageThread_pay_group_3] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130427351010902145(Long), 2023-01-26T22:52:44.698(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, aggregate_pay_c2b](String), POST(String), 129606551068475425(Long), OPT(String), 38(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T22:52:44.660(LocalDateTime)
+2023-01-26 22:52:44.731 DEBUG 16480 --- [ConsumeMessageThread_pay_group_3] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 22:54:49.039 DEBUG 16480 --- [ConsumeMessageThread_pay_group_4] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 22:54:49.042  WARN 16480 --- [ConsumeMessageThread_pay_group_4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 124310
+2023-01-26 22:54:49.062 DEBUG 16480 --- [ConsumeMessageThread_pay_group_4] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 22:54:49.063 DEBUG 16480 --- [ConsumeMessageThread_pay_group_4] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130427872513884321(Long), 2023-01-26T22:54:49.030(LocalDateTime), createPayChannelParam(String), 商户平台‐渠道和支付参数-商户配置支付渠道参数(String), 127.0.0.1(String), /merchant/my/pay-channel-params(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [{"appId":"a838b36dcbe940328ef523d7ceaca7c9","channelName":"测试配置","param":"{\"appId\":\"test123456\",\"rsaPrivateKey\":\"test\",\"notifyUrl\":\"testurl\",\"returnUrl\":\"testurl\",\"url\":\"https://openapi.alipaydev.com/gateway.do\",\"chareset\":\"UTF-8\",\"format\":\"json\",\"alipayPublicKey\":\"test\",\"signtype\":\"RSA2\"}","payChannel":"ALPAY_WEBP","platformChannelCode":"aggregate_pay_c2b"}](String), POST(String), 129606551068475425(Long), OPT(String), 265(Long), mao.aggregate_pay_merchant_application.controller.PlatformParamController(String), 2023-01-26T22:54:48.765(LocalDateTime)
+2023-01-26 22:54:49.071 DEBUG 16480 --- [ConsumeMessageThread_pay_group_4] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 23:01:50.145 DEBUG 16480 --- [ConsumeMessageThread_pay_group_5] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 23:01:50.147  WARN 16480 --- [ConsumeMessageThread_pay_group_5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 421077
+2023-01-26 23:01:50.168 DEBUG 16480 --- [ConsumeMessageThread_pay_group_5] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 23:01:50.169 DEBUG 16480 --- [ConsumeMessageThread_pay_group_5] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130429638760464577(Long), 2023-01-26T23:01:50.138(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, aggregate_pay_b2c](String), POST(String), 129606551068475425(Long), OPT(String), 67(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T23:01:50.071(LocalDateTime)
+2023-01-26 23:01:50.174 DEBUG 16480 --- [ConsumeMessageThread_pay_group_5] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 23:02:12.390 DEBUG 16480 --- [ConsumeMessageThread_pay_group_6] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 23:02:12.394 DEBUG 16480 --- [ConsumeMessageThread_pay_group_6] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 23:02:12.395 DEBUG 16480 --- [ConsumeMessageThread_pay_group_6] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130429732071145697(Long), 2023-01-26T23:02:12.366(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, aggregate_pay_c2b](String), POST(String), 129606551068475425(Long), OPT(String), 51(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T23:02:12.315(LocalDateTime)
+2023-01-26 23:02:12.399 DEBUG 16480 --- [ConsumeMessageThread_pay_group_6] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 23:02:55.126 DEBUG 16480 --- [ConsumeMessageThread_pay_group_7] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 23:02:55.128 DEBUG 16480 --- [ConsumeMessageThread_pay_group_7] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 23:02:55.129 DEBUG 16480 --- [ConsumeMessageThread_pay_group_7] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130429911310532865(Long), 2023-01-26T23:02:55.119(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, aggregate_pay_b2c](String), POST(String), 129606551068475425(Long), OPT(String), 30(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T23:02:55.089(LocalDateTime)
+2023-01-26 23:02:55.132 DEBUG 16480 --- [ConsumeMessageThread_pay_group_7] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 23:03:03.117 DEBUG 16480 --- [ConsumeMessageThread_pay_group_8] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 23:03:03.119 DEBUG 16480 --- [ConsumeMessageThread_pay_group_8] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 23:03:03.120 DEBUG 16480 --- [ConsumeMessageThread_pay_group_8] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130429944827216161(Long), 2023-01-26T23:03:03.111(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, wx_native](String), POST(String), 129606551068475425(Long), OPT(String), 42(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T23:03:03.069(LocalDateTime)
+2023-01-26 23:03:03.123 DEBUG 16480 --- [ConsumeMessageThread_pay_group_8] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 23:03:20.892 DEBUG 16480 --- [ConsumeMessageThread_pay_group_9] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-01-26 23:03:20.894 DEBUG 16480 --- [ConsumeMessageThread_pay_group_9] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-01-26 23:03:20.895 DEBUG 16480 --- [ConsumeMessageThread_pay_group_9] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 130430019380969793(Long), 2023-01-26T23:03:20.883(LocalDateTime), bindPlatformForApp(String), 商户平台‐应用管理-绑定服务类型(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/platform-channels(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61(String), [a838b36dcbe940328ef523d7ceaca7c9, aggregate_pay_c2b](String), POST(String), 129606551068475425(Long), OPT(String), 36(Long), mao.aggregate_pay_merchant_application.controller.AppController(String), 2023-01-26T23:03:20.847(LocalDateTime)
+2023-01-26 23:03:20.898 DEBUG 16480 --- [ConsumeMessageThread_pay_group_9] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-01-26 23:10:35.133 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException] currentServerAddr: http://127.0.0.1:8848, httpCode: 500
+2023-01-26 23:10:36.968  WARN 16480 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-26 23:10:36.968  WARN 16480 --- [Thread-39] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-26 23:10:36.969  WARN 16480 --- [Thread-39] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-26 23:10:36.970  WARN 16480 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-26 23:10:37.021  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10941] result: true
+2023-01-26 23:10:37.021  INFO 16480 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-26 23:10:37.023  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-01-26 23:10:37.024  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10921] result: true
+2023-01-26 23:10:37.024  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10911] result: true
+2023-01-26 23:10:37.024  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10931] result: true
+2023-01-26 23:10:37.028  INFO 16480 --- [SpringContextShutdownHook] a.r.s.s.DefaultRocketMQListenerContainer : container destroyed, DefaultRocketMQListenerContainer{consumerGroup='pay_group', namespace='', nameServer='127.0.0.1:9876', topic='pay_opt_log_topic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false}
+2023-01-26 23:10:37.052  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10941] result: true
+2023-01-26 23:10:37.052  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-01-26 23:10:37.052  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10921] result: true
+2023-01-26 23:10:37.053  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10911] result: true
+2023-01-26 23:10:37.053  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10931] result: true
+2023-01-26 23:10:37.082  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-01-26 23:10:37.083  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10921] result: true
+2023-01-26 23:10:37.083  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10941] result: true
+2023-01-26 23:10:37.083  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10911] result: true
+2023-01-26 23:10:37.083  INFO 16480 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.21.112.1:10931] result: true
+2023-01-26 23:10:37.084  INFO 16480 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-01-26 23:10:37.085  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-log:192.168.3.143:27914 from beat map.
+2023-01-26 23:10:37.085  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-log with instance: Instance{instanceId='null', ip='192.168.3.143', port=27914, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-26 23:10:37.171 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:39.142 ERROR 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:39.200 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:41.182 ERROR 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:41.244 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:41.245 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [check-update] get changed dataId exception
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:41.245 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : longPolling error : 
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:42.492 ERROR 16480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:43.239 ERROR 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:43.240 ERROR 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-01-26 23:10:43.241 ERROR 16480 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : ERR_NACOS_DEREGISTER, de-register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='127.0.0.1:8848', endpoint='', namespace='51637975-182d-43e2-ab58-d012723411d5', watchDelay=30000, logName='', service='aggregate-pay-log', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}, registerEnabled=true, ip='192.168.3.143', networkInterface='', port=27914, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null, failFast=true}},
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:43.241  INFO 16480 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-01-26 23:10:43.241  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-26 23:10:43.241  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-26 23:10:43.241  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-26 23:10:44.565 ERROR 16480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:45.288 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:46.259  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-26 23:10:46.633 ERROR 16480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:46.633 ERROR 16480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance/list failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-01-26 23:10:46.634  WARN 16480 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to update serviceName: DEFAULT_GROUP@@aggregate-pay-log
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:47.318 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:49.288  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-26 23:10:49.288  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-26 23:10:49.289  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-26 23:10:49.289  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-26 23:10:49.289  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-26 23:10:49.289  WARN 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-26 23:10:49.290  WARN 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-26 23:10:49.290  INFO 16480 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-26 23:10:49.290  INFO 16480 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-26 23:10:49.290  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-26 23:10:49.291  WARN 16480 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-26 23:10:49.294  INFO 16480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-26 23:10:49.301  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-26 23:10:49.305  INFO 16480 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-26 23:10:49.348 ERROR 16480 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect

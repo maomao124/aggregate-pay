@@ -544,3 +544,599 @@ docket：{aggregate_pay=DocketInfo{title='交易服务', group='', description='
 2023-01-26 22:35:42.526  INFO 23632 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":49829,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#49829#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":49828,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#49828#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":49827,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#49827#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-transaction-service\",\"cacheMillis\":10000,\"lastRefTime\":1674743742525,\"checksum\":\"185a46ac2499787eb98df7ee0bafc97c\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":3468060586500} from /192.168.202.1
 2023-01-26 22:35:42.527  INFO 23632 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : modified ips(2) service: DEFAULT_GROUP@@aggregate-pay-transaction-service@@DEFAULT -> [{"instanceId":"192.168.3.143#49828#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49828,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#49829#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49829,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
 2023-01-26 22:35:42.533  INFO 23632 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@aggregate-pay-transaction-service@@DEFAULT -> [{"instanceId":"192.168.3.143#49829#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49829,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#49828#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49828,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#49827#DEFAULT#DEFAULT_GROUP@@aggregate-pay-transaction-service","ip":"192.168.3.143","port":49827,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-transaction-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-01-26 22:40:00.038  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270514
+2023-01-26 22:40:00.040  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270554
+2023-01-26 22:40:00.042  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270576
+2023-01-26 22:40:00.044  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270600
+2023-01-26 22:40:00.046  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270626
+2023-01-26 22:40:00.048  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270654
+2023-01-26 22:40:00.050  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270680
+2023-01-26 22:40:00.052  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270709
+2023-01-26 22:40:00.054  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270735
+2023-01-26 22:40:00.056  WARN 23632 --- [http-nio-49827-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 270775
+2023-01-26 22:40:00.071 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:40:00.164 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:40:00.185 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:40:00.560 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:40:00.561 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:40:00.562 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:40:00.886 DEBUG 23632 --- [http-nio-49827-exec-8] mao.tools_redis_cache.utils.RedisUtils   : pay:List_PlatformChannelDTO:queryAll:-1 获取分布式锁后，缓存未命中，查询数据库
+2023-01-26 22:40:00.890 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectList   : ==>  Preparing: SELECT ID,CHANNEL_NAME,CHANNEL_CODE FROM platform_channel 
+2023-01-26 22:40:00.892 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectList   : ==> Parameters: 
+2023-01-26 22:40:00.901 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectList   : <==      Total: 4
+2023-01-26 22:40:01.187 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:40:01.187 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:40:01.188 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:40:01.531 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:40:01.532 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:40:01.533 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:40:05.077 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:40:05.077 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:40:05.079 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:40:05.146 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:40:05.146 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:40:05.148 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:40:11.933 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 22:40:11.934 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_b2c(String)
+2023-01-26 22:40:11.935 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 22:40:11.939 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:40:11.940 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), aggregate_pay_b2c(String)
+2023-01-26 22:40:11.942 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 22:48:14.783  WARN 23632 --- [http-nio-49827-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 482842
+2023-01-26 22:48:14.813 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:48:14.815 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:48:14.817 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:48:14.938 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:48:14.939 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:48:14.940 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:48:19.378 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 22:48:19.379 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-26 22:48:19.380 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 22:48:19.382 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:48:19.383 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), aggregate_pay_c2b(String)
+2023-01-26 22:48:19.384 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 22:48:21.163 DEBUG 23632 --- [http-nio-49827-exec-4] mao.tools_redis_cache.utils.RedisUtils   : pay:List_PayChannelDTO:queryPayChannelByPlatformChannel:aggregate_pay_c2b 获取分布式锁后，缓存未命中，查询数据库
+2023-01-26 22:48:21.164 DEBUG 23632 --- [http-nio-49827-exec-4] .a.m.P.selectPayChannelByPlatformChannel : ==>  Preparing: SELECT pc.* FROM platform_pay_channel ppc, pay_channel pc, platform_channel pla WHERE ppc.PAY_CHANNEL = pc.CHANNEL_CODE AND ppc.PLATFORM_CHANNEL = pla.CHANNEL_CODE AND pla.CHANNEL_CODE = ? 
+2023-01-26 22:48:21.171 DEBUG 23632 --- [http-nio-49827-exec-4] .a.m.P.selectPayChannelByPlatformChannel : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-26 22:48:21.188 DEBUG 23632 --- [http-nio-49827-exec-4] .a.m.P.selectPayChannelByPlatformChannel : <==      Total: 2
+2023-01-26 22:48:27.808 DEBUG 23632 --- [http-nio-49827-exec-6] mao.tools_redis_cache.utils.RedisUtils   : pay:PayChannelParamDTO:query2:a838b36dcbe940328ef523d7ceaca7c9__aggregate_pay_c2b__ALPAY_WEBP 获取分布式锁后，缓存未命中，查询数据库
+2023-01-26 22:48:27.813 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (PLATFORM_CHANNEL = ? AND APP_ID = ?) 
+2023-01-26 22:48:27.814 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==> Parameters: aggregate_pay_c2b(String), a838b36dcbe940328ef523d7ceaca7c9(String)
+2023-01-26 22:48:27.816 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 22:48:27.819 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.PayChannelParamMapper.selectOne    : ==>  Preparing: SELECT ID,PARAM,MERCHANT_ID,APP_PLATFORM_CHANNEL_ID,PAY_CHANNEL,CHANNEL_NAME FROM pay_channel_param WHERE (APP_PLATFORM_CHANNEL_ID = ? AND PAY_CHANNEL = ?) 
+2023-01-26 22:48:27.822 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.PayChannelParamMapper.selectOne    : ==> Parameters: 130236937926606913(Long), ALPAY_WEBP(String)
+2023-01-26 22:48:27.831 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.PayChannelParamMapper.selectOne    : <==      Total: 0
+2023-01-26 22:48:36.802 DEBUG 23632 --- [http-nio-49827-exec-9] mao.tools_redis_cache.utils.RedisUtils   : pay:PayChannelParamDTO:query2:a838b36dcbe940328ef523d7ceaca7c9__aggregate_pay_c2b__WX_JSAPI 获取分布式锁后，缓存未命中，查询数据库
+2023-01-26 22:48:36.804 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (PLATFORM_CHANNEL = ? AND APP_ID = ?) 
+2023-01-26 22:48:36.804 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==> Parameters: aggregate_pay_c2b(String), a838b36dcbe940328ef523d7ceaca7c9(String)
+2023-01-26 22:48:36.806 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 22:48:36.808 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.PayChannelParamMapper.selectOne    : ==>  Preparing: SELECT ID,PARAM,MERCHANT_ID,APP_PLATFORM_CHANNEL_ID,PAY_CHANNEL,CHANNEL_NAME FROM pay_channel_param WHERE (APP_PLATFORM_CHANNEL_ID = ? AND PAY_CHANNEL = ?) 
+2023-01-26 22:48:36.808 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.PayChannelParamMapper.selectOne    : ==> Parameters: 130236937926606913(Long), WX_JSAPI(String)
+2023-01-26 22:48:36.810 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.PayChannelParamMapper.selectOne    : <==      Total: 0
+2023-01-26 22:51:56.813  WARN 23632 --- [http-nio-49827-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 200003
+2023-01-26 22:51:56.835 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:51:56.835 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:51:56.837 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:51:57.073 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:51:57.073 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:51:57.075 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:52:44.691 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 22:52:44.691 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-26 22:52:44.693 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 22:52:44.694 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:52:44.694 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), aggregate_pay_c2b(String)
+2023-01-26 22:52:44.696 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 22:54:48.797  WARN 23632 --- [http-nio-49827-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 124102
+2023-01-26 22:54:48.818 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (PLATFORM_CHANNEL = ? AND APP_ID = ?) 
+2023-01-26 22:54:48.818 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : ==> Parameters: aggregate_pay_c2b(String), a838b36dcbe940328ef523d7ceaca7c9(String)
+2023-01-26 22:54:48.822 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 22:54:48.825 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.PayChannelParamMapper.selectOne    : ==>  Preparing: SELECT ID,PARAM,MERCHANT_ID,APP_PLATFORM_CHANNEL_ID,PAY_CHANNEL,CHANNEL_NAME FROM pay_channel_param WHERE (APP_PLATFORM_CHANNEL_ID = ? AND PAY_CHANNEL = ?) 
+2023-01-26 22:54:48.825 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.PayChannelParamMapper.selectOne    : ==> Parameters: 130236937926606913(Long), ALPAY_WEBP(String)
+2023-01-26 22:54:48.826 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.PayChannelParamMapper.selectOne    : <==      Total: 0
+2023-01-26 22:54:48.827 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.s.impl.PayChannelParamServiceImpl    : 添加支付聚道参数
+2023-01-26 22:54:49.012 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.mapper.PayChannelParamMapper.insert  : ==>  Preparing: INSERT INTO pay_channel_param ( ID, PARAM, MERCHANT_ID, APP_PLATFORM_CHANNEL_ID, PAY_CHANNEL, CHANNEL_NAME ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2023-01-26 22:54:49.024 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.mapper.PayChannelParamMapper.insert  : ==> Parameters: 130427872396443681(Long), {"appId":"test123456","rsaPrivateKey":"test","notifyUrl":"testurl","returnUrl":"testurl","url":"https://openapi.alipaydev.com/gateway.do","chareset":"UTF-8","format":"json","alipayPublicKey":"test","signtype":"RSA2"}(String), 129606551068475425(Long), 130236937926606913(Long), ALPAY_WEBP(String), 测试配置(String)
+2023-01-26 22:54:49.025 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.mapper.PayChannelParamMapper.insert  : <==    Updates: 1
+2023-01-26 22:55:01.369 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:01.369 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:55:01.371 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:01.628 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:01.629 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:55:01.630 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:04.927 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:04.928 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:55:04.931 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:04.969 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:04.969 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:55:04.972 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:09.131 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:09.131 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:55:09.132 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:09.152 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:09.153 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:55:09.154 DEBUG 23632 --- [http-nio-49827-exec-9] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:12.655 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:12.655 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:55:12.657 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:12.697 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:12.697 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:55:12.699 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:16.945 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:16.946 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:55:16.947 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:17.272 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:17.272 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:55:17.273 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:54.602 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:54.603 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 22:55:54.604 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 22:55:54.937 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 22:55:54.937 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 22:55:54.939 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:01:47.505  WARN 23632 --- [http-nio-49827-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_transaction?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 352566
+2023-01-26 23:01:47.530 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:01:47.531 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 23:01:47.533 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:01:47.770 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:01:47.771 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 23:01:47.773 DEBUG 23632 --- [http-nio-49827-exec-3] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:01:50.131 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 23:01:50.132 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_b2c(String)
+2023-01-26 23:01:50.133 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 23:01:50.134 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:01:50.135 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), aggregate_pay_b2c(String)
+2023-01-26 23:01:50.136 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 23:01:51.295 DEBUG 23632 --- [http-nio-49827-exec-7] mao.tools_redis_cache.utils.RedisUtils   : pay:List_PayChannelDTO:queryPayChannelByPlatformChannel:aggregate_pay_b2c 获取分布式锁后，缓存未命中，查询数据库
+2023-01-26 23:01:51.296 DEBUG 23632 --- [http-nio-49827-exec-7] .a.m.P.selectPayChannelByPlatformChannel : ==>  Preparing: SELECT pc.* FROM platform_pay_channel ppc, pay_channel pc, platform_channel pla WHERE ppc.PAY_CHANNEL = pc.CHANNEL_CODE AND ppc.PLATFORM_CHANNEL = pla.CHANNEL_CODE AND pla.CHANNEL_CODE = ? 
+2023-01-26 23:01:51.297 DEBUG 23632 --- [http-nio-49827-exec-7] .a.m.P.selectPayChannelByPlatformChannel : ==> Parameters: aggregate_pay_b2c(String)
+2023-01-26 23:01:51.298 DEBUG 23632 --- [http-nio-49827-exec-7] .a.m.P.selectPayChannelByPlatformChannel : <==      Total: 0
+2023-01-26 23:02:05.987 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:05.988 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 23:02:05.989 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:02:06.231 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:06.231 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 23:02:06.232 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:02:12.359 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 23:02:12.360 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-26 23:02:12.361 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 23:02:12.362 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:12.363 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), aggregate_pay_c2b(String)
+2023-01-26 23:02:12.364 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 23:02:16.374 DEBUG 23632 --- [http-nio-49827-exec-8] mao.tools_redis_cache.utils.RedisUtils   : pay:PayChannelParamDTO:query2:a838b36dcbe940328ef523d7ceaca7c9__aggregate_pay_c2b__ALPAY_WEBP 获取分布式锁后，缓存未命中，查询数据库
+2023-01-26 23:02:16.376 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (PLATFORM_CHANNEL = ? AND APP_ID = ?) 
+2023-01-26 23:02:16.376 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : ==> Parameters: aggregate_pay_c2b(String), a838b36dcbe940328ef523d7ceaca7c9(String)
+2023-01-26 23:02:16.377 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 23:02:16.379 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PayChannelParamMapper.selectOne    : ==>  Preparing: SELECT ID,PARAM,MERCHANT_ID,APP_PLATFORM_CHANNEL_ID,PAY_CHANNEL,CHANNEL_NAME FROM pay_channel_param WHERE (APP_PLATFORM_CHANNEL_ID = ? AND PAY_CHANNEL = ?) 
+2023-01-26 23:02:16.379 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PayChannelParamMapper.selectOne    : ==> Parameters: 130236937926606913(Long), ALPAY_WEBP(String)
+2023-01-26 23:02:16.385 DEBUG 23632 --- [http-nio-49827-exec-8] m.a.m.PayChannelParamMapper.selectOne    : <==      Total: 1
+2023-01-26 23:02:53.577 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:53.577 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 23:02:53.579 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:02:53.913 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:53.914 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 23:02:53.915 DEBUG 23632 --- [http-nio-49827-exec-5] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:02:55.112 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 23:02:55.112 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_b2c(String)
+2023-01-26 23:02:55.113 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 23:02:55.115 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:55.116 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), aggregate_pay_b2c(String)
+2023-01-26 23:02:55.117 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 23:02:57.586 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:57.586 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 23:02:57.587 DEBUG 23632 --- [http-nio-49827-exec-10] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:02:57.931 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:02:57.931 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 23:02:57.933 DEBUG 23632 --- [http-nio-49827-exec-1] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:03:03.100 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 23:03:03.101 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: wx_native(String)
+2023-01-26 23:03:03.101 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 23:03:03.103 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:03:03.103 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), wx_native(String)
+2023-01-26 23:03:03.104 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.A.selectOne                        : <==      Total: 0
+2023-01-26 23:03:03.106 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.AppPlatformChannelMapper.insert    : ==>  Preparing: INSERT INTO app_platform_channel ( ID, APP_ID, PLATFORM_CHANNEL ) VALUES ( ?, ?, ? ) 
+2023-01-26 23:03:03.107 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.AppPlatformChannelMapper.insert    : ==> Parameters: 130429944772689985(Long), a838b36dcbe940328ef523d7ceaca7c9(String), wx_native(String)
+2023-01-26 23:03:03.110 DEBUG 23632 --- [http-nio-49827-exec-4] m.a.m.AppPlatformChannelMapper.insert    : <==    Updates: 1
+2023-01-26 23:03:03.870 DEBUG 23632 --- [http-nio-49827-exec-5] mao.tools_redis_cache.utils.RedisUtils   : pay:List_PayChannelDTO:queryPayChannelByPlatformChannel:wx_native 获取分布式锁后，缓存未命中，查询数据库
+2023-01-26 23:03:03.871 DEBUG 23632 --- [http-nio-49827-exec-5] .a.m.P.selectPayChannelByPlatformChannel : ==>  Preparing: SELECT pc.* FROM platform_pay_channel ppc, pay_channel pc, platform_channel pla WHERE ppc.PAY_CHANNEL = pc.CHANNEL_CODE AND ppc.PLATFORM_CHANNEL = pla.CHANNEL_CODE AND pla.CHANNEL_CODE = ? 
+2023-01-26 23:03:03.872 DEBUG 23632 --- [http-nio-49827-exec-5] .a.m.P.selectPayChannelByPlatformChannel : ==> Parameters: wx_native(String)
+2023-01-26 23:03:03.873 DEBUG 23632 --- [http-nio-49827-exec-5] .a.m.P.selectPayChannelByPlatformChannel : <==      Total: 0
+2023-01-26 23:03:05.086 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:03:05.086 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_b2c(String)
+2023-01-26 23:03:05.087 DEBUG 23632 --- [http-nio-49827-exec-6] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:03:05.415 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==>  Preparing: SELECT COUNT( 1 ) FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:03:05.415 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), shanju_c2b(String)
+2023-01-26 23:03:05.416 DEBUG 23632 --- [http-nio-49827-exec-7] m.a.m.A.selectCount                      : <==      Total: 1
+2023-01-26 23:03:20.877 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==>  Preparing: SELECT COUNT( 1 ) FROM platform_channel WHERE (CHANNEL_CODE = ?) 
+2023-01-26 23:03:20.878 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : ==> Parameters: aggregate_pay_c2b(String)
+2023-01-26 23:03:20.879 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.PlatformChannelMapper.selectCount  : <==      Total: 1
+2023-01-26 23:03:20.880 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==>  Preparing: SELECT ID,APP_ID,PLATFORM_CHANNEL FROM app_platform_channel WHERE (APP_ID = ? AND PLATFORM_CHANNEL = ?) 
+2023-01-26 23:03:20.880 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), aggregate_pay_c2b(String)
+2023-01-26 23:03:20.881 DEBUG 23632 --- [http-nio-49827-exec-2] m.a.m.A.selectOne                        : <==      Total: 1
+2023-01-26 23:10:35.132 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException] currentServerAddr: http://127.0.0.1:8848, httpCode: 500
+2023-01-26 23:10:36.931  WARN 23632 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-01-26 23:10:36.932  WARN 23632 --- [Thread-34] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-01-26 23:10:36.932  WARN 23632 --- [Thread-34] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-01-26 23:10:36.932  WARN 23632 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-01-26 23:10:36.954  INFO 23632 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-01-26 23:10:36.977  INFO 23632 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-01-26 23:10:36.978  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-transaction-service:192.168.3.143:49827 from beat map.
+2023-01-26 23:10:36.978  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-transaction-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=49827, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-01-26 23:10:37.171 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:39.039 ERROR 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:39.231 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:41.103 ERROR 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:41.260 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:41.261 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [check-update] get changed dataId exception
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:41.261 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : longPolling error : 
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:42.272 ERROR 23632 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:43.161 ERROR 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) [spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:43.162 ERROR 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-01-26 23:10:43.163 ERROR 23632 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : ERR_NACOS_DEREGISTER, de-register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='127.0.0.1:8848', endpoint='', namespace='51637975-182d-43e2-ab58-d012723411d5', watchDelay=30000, logName='', service='aggregate-pay-transaction-service', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}, registerEnabled=true, ip='192.168.3.143', networkInterface='', port=49827, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null, failFast=true}},
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2023-01-26 23:10:43.163  INFO 23632 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-01-26 23:10:43.165  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-01-26 23:10:43.165  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-01-26 23:10:43.165  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-01-26 23:10:44.331 ERROR 23632 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:45.304 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:46.182  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-01-26 23:10:46.367 ERROR 23632 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:46.368 ERROR 23632 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : request: /nacos/v1/ns/instance/list failed, servers: [127.0.0.1:8848], code: 500, msg: Connection refused: connect
+2023-01-26 23:10:46.368  WARN 23632 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to update serviceName: DEFAULT_GROUP@@aggregate-pay-transaction-service
+
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-01-26 23:10:47.355 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-01-26 23:10:49.210  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-01-26 23:10:49.210  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-01-26 23:10:49.211  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-01-26 23:10:49.211  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-01-26 23:10:49.211  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-01-26 23:10:49.211  WARN 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-01-26 23:10:49.211  WARN 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-01-26 23:10:49.211  INFO 23632 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-01-26 23:10:49.211  INFO 23632 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-01-26 23:10:49.212  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-01-26 23:10:49.214  INFO 23632 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-01-26 23:10:49.220  WARN 23632 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-01-26 23:10:49.273  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-26 23:10:49.277  INFO 23632 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-26 23:10:49.396 ERROR 23632 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
