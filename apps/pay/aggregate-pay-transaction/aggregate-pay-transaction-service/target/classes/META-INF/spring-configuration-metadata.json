@@ -1,12 +1,57 @@
 {
   "groups": [
     {
+      "name": "alipay",
+      "type": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties"
+    },
+    {
       "name": "spring.datasource.druid",
       "type": "javax.sql.DataSource",
       "sourceType": "mao.aggregate_pay_transaction_service.config.DatabaseConfig",
       "sourceMethod": "druidDataSource()"
     }
   ],
-  "properties": [],
+  "properties": [
+    {
+      "name": "alipay.alipay-public-key",
+      "type": "java.lang.String",
+      "description": "支付宝公钥",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties"
+    },
+    {
+      "name": "alipay.app-id",
+      "type": "java.lang.String",
+      "description": "应用程序id",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties"
+    },
+    {
+      "name": "alipay.app-private-key",
+      "type": "java.lang.String",
+      "description": "应用私钥",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties"
+    },
+    {
+      "name": "alipay.char-set",
+      "type": "java.lang.String",
+      "description": "编码",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties",
+      "defaultValue": "UTF-8"
+    },
+    {
+      "name": "alipay.encryption-method",
+      "type": "java.lang.String",
+      "description": "加密方法",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties",
+      "defaultValue": "RSA2"
+    },
+    {
+      "name": "alipay.server-url",
+      "type": "java.lang.String",
+      "description": "服务网关地址",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties",
+      "defaultValue": "https:\/\/openapi.alipaydev.com\/gateway.do"
+    }
+  ],
   "hints": []
 }

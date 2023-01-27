@@ -36,4 +36,12 @@ class QRCodeUtilTest
         QRCodeUtil qrCodeUtil = new QRCodeUtil();
         System.out.println(qrCodeUtil.createQRCode("https://www.bilibili.com/", 200, 200));
     }
+
+    @SneakyThrows
+    @Test
+    void createQRCode3()
+    {
+        QRCodeUtil qrCodeUtil = new QRCodeUtil();
+        System.out.println(qrCodeUtil.createQRCode("http://192.168.3.143:49827/alipay/test2?out_trade_no=188888888", 200, 200));
+    }
 }
