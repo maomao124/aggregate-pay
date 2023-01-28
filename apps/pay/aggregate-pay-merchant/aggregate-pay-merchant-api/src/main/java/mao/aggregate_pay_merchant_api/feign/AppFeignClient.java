@@ -51,4 +51,14 @@ public interface AppFeignClient
      */
     @GetMapping("/getAppById")
     R<AppDTO> getAppById(@RequestParam String id);
+
+    /**
+     * 查询应用是否属于某个商户
+     *
+     * @param appId      应用程序id
+     * @param merchantId 商人id
+     * @return {@link R}<{@link Boolean}>
+     */
+    @GetMapping("/queryAppInMerchant/{appId}/{merchantId}")
+    R<Boolean> queryAppInMerchant(@PathVariable String appId, @PathVariable Long merchantId);
 }
