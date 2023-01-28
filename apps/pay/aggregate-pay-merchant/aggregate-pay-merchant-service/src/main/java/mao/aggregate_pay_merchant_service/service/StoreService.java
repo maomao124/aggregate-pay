@@ -2,6 +2,7 @@ package mao.aggregate_pay_merchant_service.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import mao.aggregate_pay_merchant_service.entity.Store;
+import mao.tools_core.base.R;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -18,5 +19,12 @@ import mao.aggregate_pay_merchant_service.entity.Store;
 
 public interface StoreService extends IService<Store>
 {
-
+    /**
+     * 查询门店是否属于某商户
+     *
+     * @param storeId    门店id
+     * @param merchantId 商户id
+     * @return {@link R}<{@link Boolean}>
+     */
+    R<Boolean> queryStoreInMerchant(Long storeId, Long merchantId);
 }
