@@ -115,4 +115,21 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
         }, 120L, TimeUnit.SECONDS, 30);
         return R.success(appDTO);
     }
+
+
+    @Override
+    public R<Boolean> queryAppInMerchant(String appId, Long merchantId)
+    {
+        int count = this.count(Wraps.<App>lbQ().eq(App::getAppId, appId)
+                .eq(App::getMerchantId, merchantId));
+        if (count > 0)
+        {
+            return R.success(true);
+        }
+        else
+        {
+            //无论查询是否成功，都要返回R.success
+            return R.success(false);
+        }
+    }
 }

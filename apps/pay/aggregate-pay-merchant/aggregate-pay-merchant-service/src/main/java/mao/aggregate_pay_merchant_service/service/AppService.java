@@ -31,6 +31,7 @@ public interface AppService extends IService<App>
      */
     R<AppDTO> createApp(Long merchantId, AppDTO app);
 
+
     /**
      * 查询商户下的应用列表
      *
@@ -39,6 +40,7 @@ public interface AppService extends IService<App>
      */
     List<AppDTO> queryAppByMerchantId(Long merchantId);
 
+
     /**
      * 根据id查询应用
      *
@@ -46,4 +48,14 @@ public interface AppService extends IService<App>
      * @return {@link R}<{@link AppDTO}>
      */
     R<AppDTO> getAppById(String id);
+
+
+    /**
+     * 查询应用是否属于某个商户
+     *
+     * @param appId      应用程序id
+     * @param merchantId 商人id
+     * @return {@link R}<{@link Boolean}>
+     */
+    R<Boolean> queryAppInMerchant(String appId, Long merchantId);
 }
