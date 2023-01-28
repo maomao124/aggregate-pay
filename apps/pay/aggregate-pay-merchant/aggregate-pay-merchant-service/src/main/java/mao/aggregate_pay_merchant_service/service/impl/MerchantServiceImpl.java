@@ -1,7 +1,10 @@
 package mao.aggregate_pay_merchant_service.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
+import mao.aggregate_pay_common.domain.PageVO;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
@@ -28,6 +31,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -374,5 +378,32 @@ public class MerchantServiceImpl extends ServiceImpl<MerchantMapper, Merchant> i
                 }, 180L, TimeUnit.MINUTES, 120);
         //返回
         return merchantDTO;
+    }
+
+
+    @Override
+    public PageVO<StoreDTO> queryStoreByPage(StoreDTO storeDTO, Integer pageNo, Integer pageSize)
+    {
+        IPage<Store> page = new Page<>(pageNo, pageSize);
+        //查询
+        if (storeDTO != null && storeDTO.getMerchantId() != null)
+        {
+            //查询
+            IPage<Store> iPage = storeService.page(page, Wraps.<Store>lbQ()
+                    .eq(Store::getMerchantId, storeDTO.getMerchantId()));
+            //转换
+            List<StoreDTO> storeDTOList = dozerUtils.mapList(iPage.getRecords(), StoreDTO.class);
+            //返回
+            return new PageVO<>(storeDTOList, iPage.getTotal(), pageNo, pageSize);
+        }
+        else
+        {
+            //查询
+            IPage<Store> iPage = storeService.page(page);
+            //转换
+            List<StoreDTO> storeDTOList = dozerUtils.mapList(iPage.getRecords(), StoreDTO.class);
+            //返回
+            return new PageVO<>(storeDTOList, iPage.getTotal(), pageNo, pageSize);
+        }
     }
 }

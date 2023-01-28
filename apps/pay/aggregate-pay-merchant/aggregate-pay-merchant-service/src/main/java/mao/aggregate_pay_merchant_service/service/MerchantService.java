@@ -1,6 +1,8 @@
 package mao.aggregate_pay_merchant_service.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import mao.aggregate_pay_common.domain.PageVO;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
@@ -81,5 +83,16 @@ public interface MerchantService extends IService<Merchant>
      * @return {@link MerchantDTO}
      */
     MerchantDTO getMerchantByTenantId(Long tenantId);
+
+
+    /**
+     * 分页条件查询商户下门店
+     *
+     * @param storeDTO 商店dto
+     * @param pageNo   页号
+     * @param pageSize 页面大小
+     * @return {@link PageVO}<{@link StoreDTO}>
+     */
+    PageVO<StoreDTO> queryStoreByPage(StoreDTO storeDTO, Integer pageNo, Integer pageSize);
 
 }
