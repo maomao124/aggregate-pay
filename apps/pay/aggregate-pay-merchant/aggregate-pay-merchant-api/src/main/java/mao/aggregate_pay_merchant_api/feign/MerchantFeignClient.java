@@ -1,6 +1,7 @@
 package mao.aggregate_pay_merchant_api.feign;
 
 import io.swagger.annotations.ApiOperation;
+import mao.aggregate_pay_common.domain.PageVO;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
@@ -90,4 +91,18 @@ public interface MerchantFeignClient
      */
     @GetMapping("/tenantId/{tenantId}")
     R<MerchantDTO> getMerchantByTenantId(@PathVariable Long tenantId);
+
+
+    /**
+     * 分页条件查询商户下门店
+     *
+     * @param storeDTO 商店dto
+     * @param pageNo   页号
+     * @param pageSize 页面大小
+     * @return {@link R}<{@link PageVO}<{@link StoreDTO}>>
+     */
+    @PostMapping("/queryStoreByPage/{pageNo}/{pageSize}")
+    R<PageVO<StoreDTO>> queryStoreByPage(@RequestBody StoreDTO storeDTO,
+                                         @PathVariable Integer pageNo,
+                                         @PathVariable Integer pageSize);
 }

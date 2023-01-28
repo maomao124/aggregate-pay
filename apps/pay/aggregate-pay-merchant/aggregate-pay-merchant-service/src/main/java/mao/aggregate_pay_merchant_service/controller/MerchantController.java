@@ -2,6 +2,7 @@ package mao.aggregate_pay_merchant_service.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import mao.aggregate_pay_common.domain.PageVO;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
@@ -134,5 +135,22 @@ public class MerchantController extends BaseController
     {
         MerchantDTO merchantDTO = merchantService.getMerchantByTenantId(tenantId);
         return success(merchantDTO);
+    }
+
+    /**
+     * 分页条件查询商户下门店
+     *
+     * @param storeDTO 商店dto
+     * @param pageNo   页号
+     * @param pageSize 页面大小
+     * @return {@link R}<{@link PageVO}<{@link StoreDTO}>>
+     */
+    @ApiOperation("分页条件查询商户下门店")
+    @PostMapping("/queryStoreByPage/{pageNo}/{pageSize}")
+    public R<PageVO<StoreDTO>> queryStoreByPage(@RequestBody StoreDTO storeDTO,
+                                                @PathVariable Integer pageNo,
+                                                @PathVariable Integer pageSize)
+    {
+        return success(merchantService.queryStoreByPage(storeDTO, pageNo, pageSize));
     }
 }
