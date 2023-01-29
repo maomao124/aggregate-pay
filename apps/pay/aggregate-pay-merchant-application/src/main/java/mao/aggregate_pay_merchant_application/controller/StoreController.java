@@ -4,18 +4,23 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.PageVO;
+import mao.aggregate_pay_common.utils.QRCodeUtil;
+import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
 import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
+import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
+import mao.aggregate_pay_transaction_api.feign.TransactionFeignClient;
 import mao.tools_core.base.R;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -38,6 +43,21 @@ public class StoreController
 
     @Resource
     private MerchantFeignClient merchantFeignClient;
+
+    @Resource
+    private TransactionFeignClient transactionFeignClient;
+
+    /**
+     * 主题:"%s商品"
+     */
+    @Value("${pay.c2b.subject}")
+    String subject;
+
+    /**
+     * 内容："向%s付款"
+     */
+    @Value("${pay.c2b.body}")
+    String body;
 
 
     /**
@@ -82,6 +102,56 @@ public class StoreController
         AssertResult.handler(r);
         //返回
         return r.getData();
+    }
+
+
+    /**
+     * 生成商户应用门店的二维码
+     *
+     * @param storeId 商户门店id
+     * @param appId   商户应用id
+     * @return {@link String}
+     */
+    @SneakyThrows
+    @ApiOperation("生成商户应用门店的二维码")
+    @ApiImplicitParams
+            ({
+                    @ApiImplicitParam(name = "appId", value = "商户应用id", required = true, dataType = "String", paramType = "path"),
+                    @ApiImplicitParam(name = "storeId", value = "商户门店id", required = true, dataType = "String", paramType = "path"),
+            })
+    @GetMapping(value = "/my/apps/{appId}/stores/{storeId}/app-store-qrcode")
+    public String createCScanBStoreQRCode(@PathVariable("storeId") Long storeId, @PathVariable("appId") String appId)
+    {
+
+        //获取商户信息
+        MerchantDTO merchantDTO = SecurityUtil.getMerchantThrowsException();
+
+        QRCodeDto qrCodeDto = new QRCodeDto();
+        //设置商户id
+        qrCodeDto.setMerchantId(merchantDTO.getId());
+        //门店id
+        qrCodeDto.setStoreId(storeId);
+        //应用id
+        qrCodeDto.setAppId(appId);
+        //标题.用商户名称替换 %s
+        String subjectFormat = String.format(subject, merchantDTO.getMerchantName());
+        //主题
+        qrCodeDto.setSubject(subjectFormat);
+        //内容
+        String bodyFormat = String.format(body, merchantDTO.getMerchantName());
+        qrCodeDto.setBody(bodyFormat);
+
+        //远程调用
+        R<String> r = transactionFeignClient.createStoreQRCode(qrCodeDto);
+        //断言结果
+        AssertResult.handler(r);
+        //获取二维码的URL
+        String storeQRCodeURL = r.getData();
+
+        //调用工具类生成二维码图片
+        QRCodeUtil qrCodeUtil = new QRCodeUtil();
+        //二维码图片base64编码
+        return qrCodeUtil.createQRCode(storeQRCodeURL, 200, 200);
     }
 
 }
