@@ -10,6 +10,11 @@
       "type": "javax.sql.DataSource",
       "sourceType": "mao.aggregate_pay_transaction_service.config.DatabaseConfig",
       "sourceMethod": "druidDataSource()"
+    },
+    {
+      "name": "wxpay",
+      "type": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties"
     }
   ],
   "properties": [
@@ -51,6 +56,43 @@
       "description": "服务网关地址",
       "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties",
       "defaultValue": "https:\/\/openapi.alipaydev.com\/gateway.do"
+    },
+    {
+      "name": "wxpay.app-i-d",
+      "type": "java.lang.String",
+      "description": "应用程序id",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties"
+    },
+    {
+      "name": "wxpay.app-secret",
+      "type": "java.lang.String",
+      "description": "应用程序秘钥",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties"
+    },
+    {
+      "name": "wxpay.key",
+      "type": "java.lang.String",
+      "description": "key",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties"
+    },
+    {
+      "name": "wxpay.mch-i-d",
+      "type": "java.lang.String",
+      "description": "商户id",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties"
+    },
+    {
+      "name": "wxpay.wx-o-auth2-code-return-url",
+      "type": "java.lang.String",
+      "description": "授权回调地址",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties"
+    },
+    {
+      "name": "wxpay.wx-o-auth2-request-url",
+      "type": "java.lang.String",
+      "description": "申请授权码地址",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties",
+      "defaultValue": "https:\/\/open.weixin.qq.com\/connect\/oauth2\/authorize"
     }
   ],
   "hints": []
