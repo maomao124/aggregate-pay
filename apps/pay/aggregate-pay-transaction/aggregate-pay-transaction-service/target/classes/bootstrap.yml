@@ -19,7 +19,7 @@ spring:
         server-addr: ${def.nacos.ip}:${def.nacos.port}
         file-extension: yml
         namespace: ${def.nacos.namespace}
-        shared-dataids: common.yml,redis.yml,mysql.yml
+        shared-dataids: common.yml,redis.yml,mysql.yml,freemarker.yml
         refreshable-dataids: common.yml
         enabled: true
       discovery: #服务注册中心相关

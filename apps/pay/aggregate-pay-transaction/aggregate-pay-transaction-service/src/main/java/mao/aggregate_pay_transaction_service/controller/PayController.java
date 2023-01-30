@@ -32,7 +32,7 @@ public class PayController
     /**
      * 解析ticket并获取支付页面
      *
-     * @param ticket  票
+     * @param ticket  ticket
      * @param request 请求
      * @return {@link String}
      */
@@ -40,7 +40,7 @@ public class PayController
     @RequestMapping(value = "/pay-entry/{ticket}", method = RequestMethod.GET)
     public String payEntry(@PathVariable("ticket") String ticket, HttpServletRequest request)
     {
-        return "forward:/pay‐page";
+        return "forward:/pay-page";
     }
 
 
