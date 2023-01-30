@@ -29,6 +29,7 @@
         <module name="tools-common" />
         <module name="aggregate-pay-entity" />
         <module name="auth-server" />
+        <module name="aggregate-pay-payment-agent-service" />
         <module name="tools-j2cache" />
         <module name="aggregate-pay-merchant-service" />
         <module name="aggregate-pay-transaction-api" />
@@ -36,6 +37,7 @@
         <module name="aggregate-pay-gateway" />
         <module name="sms-server" />
         <module name="tools-validator" />
+        <module name="aggregate-pay-payment-agent" />
         <module name="tools-jwt" />
         <module name="aggregate-pay-uaa-api" />
         <module name="tools-log" />
@@ -43,6 +45,7 @@
         <module name="tools-swagger2" />
         <module name="tools-redis-cache" />
         <module name="aggregate-pay-merchant-application" />
+        <module name="aggregate-pay-payment-agent-api" />
       </profile>
     </annotationProcessing>
   </component>
@@ -56,6 +59,9 @@
       <module name="aggregate-pay-merchant-api" options="-parameters" />
       <module name="aggregate-pay-merchant-application" options="-parameters" />
       <module name="aggregate-pay-merchant-service" options="-parameters" />
+      <module name="aggregate-pay-payment-agent" options="-parameters" />
+      <module name="aggregate-pay-payment-agent-api" options="-parameters" />
+      <module name="aggregate-pay-payment-agent-service" options="-parameters" />
       <module name="aggregate-pay-sms" options="-parameters" />
       <module name="aggregate-pay-transaction" options="-parameters" />
       <module name="aggregate-pay-transaction-api" options="-parameters" />

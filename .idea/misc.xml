@@ -42,6 +42,9 @@
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-user/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-user/aggregate-pay-user-api/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-user/aggregate-pay-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-payment-agent/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-api/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/pom.xml" />
       </list>
     </option>
   </component>

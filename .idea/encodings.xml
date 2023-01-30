@@ -21,6 +21,8 @@
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-sms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-sms/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apps/pay/aggregate-pay-transaction/aggregate-pay-transaction-api/src/main/java" charset="UTF-8" />
