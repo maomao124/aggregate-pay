@@ -35,7 +35,7 @@ public class PageController
      * @param map 数据
      * @return {@link String}
      */
-    @RequestMapping("/pay-page", method = RequestMethod.GET)
+    @RequestMapping(value = "/pay-page", method = RequestMethod.GET)
     @ApiOperation("支付页面")
     public String payPage(Map<String, Object> map, HttpServletRequest httpServletRequest)
     {

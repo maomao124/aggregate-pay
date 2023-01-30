@@ -16,32 +16,31 @@
 
 <div class="content">
     <!--	<img src="./logo.png" alt="">-->
-    <p class="name">${RequestParameters['subject']!}</p>
+    <p id="subject" class="name">测试主题</p>
 </div>
 <div class="form-container">
     <form id="form" action="" method="post">
 
-        <input type="hidden" id="appId" name="appId" value="${RequestParameters['appId']!}"/>
-        <input type="hidden" id="openId" name="openId" value="${RequestParameters['openId']!}"/>
-        <input type="hidden" id="channel" name="channel" value="${RequestParameters['channel']!}"/>
-        <#if RequestParameters['outTradeNo']?? >
-            <p><span>订单号 :</span><input type="text" name="outTradeNo" value="${RequestParameters['outTradeNo']!}"
-                                        readonly="readonly" maxlength="5" size="25"/></p>
-        </#if>
-        <p><span>商品名称 :</span><input type="text" name="subject" value="${RequestParameters['subject']!}"
+        <input type="hidden" id="appId" name="appId" value="123456"/>
+        <input type="hidden" id="openId" name="openId" value="123456"/>
+        <input type="hidden" id="channel" name="channel" value="123456"/>
+
+        <p><span>订单号 :</span><input type="text" name="outTradeNo" value="111111111111111111111111111111"
+                                    readonly="readonly" maxlength="5" size="25"/></p>
+        <p><span>商品名称 :</span><input type="text" name="subject" value="测试商品"
                                      readonly="readonly"
                                      maxlength="5" size="25"/></p>
-        <p><span>订单描述 :</span><input type="text" name="body" value="${RequestParameters['body']!}" readonly="readonly"
+        <p><span>订单描述 :</span><input type="text" name="body" value="测试" readonly="readonly"
                                      maxlength="5" size="25"/></p>
-        <#if RequestParameters['totalAmount']?? >
-            <p><span>付款金额(元) :</span><input type="text" name="totalAmount"
-                                            value="${(RequestParameters['totalAmount']!0 ? number/100) ? string('0.00')}"
-                                            readonly="readonly" maxlength="5" size="25"/></p>
-        <#else>
-            <p id="text" style="width: auto"><span>付款金额(元) :</span><input id="inp" type="text" name="totalAmount"
-                                                                          maxlength="5"
-                                                                          size="20"/></p>
-        </#if>
+
+        <p><span>付款金额(元) :</span><input type="text" name="totalAmount"
+                                        value="100.22"
+                                        readonly="readonly" maxlength="5" size="25"/></p>
+
+        <p id="text" style="width: auto"><span>付款金额(元) :</span><input id="inp" type="text" name="totalAmount"
+                                                                      maxlength="6"
+                                                                      size="20"/></p>
+
         <input type="hidden" name="storeId" value="${RequestParameters['storeId']!}" readonly="readonly" maxlength="5"
                size="25"/>
         <input type="hidden" name="tradeNo" value="${RequestParameters['tradeNo']!}" readonly="readonly" maxlength="5"
@@ -54,32 +53,8 @@
 </body>
 
 <script type="text/javascript" src="./keybord.js"></script>
-<script type="text/javascript">
 
-    // 需要判断UA，传入appId到不同的controller
-    function IsWeixinOrAlipay()
-    {
-        var totalAmount = document.getElementsByName("totalAmount")[0];
-        if (!totalAmount.value)
-        {
-            alert("付款金额不能为空");
-            return;
-        }
-        var action;
-        <#if RequestParameters['openId'] ?? >
-        action = "${rc.contextPath}/wxjspay"
-        {
-            ;
-        }
-        <#else>
-        action = "${rc.contextPath}/createAliPayOrder";
-        </#if>
 
-        document.getElementById("form").action = action;
-        document.getElementById("form").submit();
-        return "false";
-    }
-</script>
 <script type="text/javascript">
     (function ()
     {
@@ -92,6 +67,11 @@
     })();
 </script>
 <style>
+
+    #subject {
+
+    }
+
     .form-container {
         padding: 0 10px;;
     }
@@ -109,6 +89,7 @@
 
     .content .name {
         margin-top: 30px;
+
     }
 
     .pay {
