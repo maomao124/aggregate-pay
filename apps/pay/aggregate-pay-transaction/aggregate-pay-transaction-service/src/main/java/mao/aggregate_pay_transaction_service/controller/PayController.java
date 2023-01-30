@@ -1,8 +1,12 @@
 package mao.aggregate_pay_transaction_service.controller;
 
+import com.alibaba.fastjson.JSON;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_common.utils.EncryptUtil;
+import mao.aggregate_pay_common.utils.ParseURLPairUtil;
+import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,9 +42,17 @@ public class PayController
      */
     @ApiOperation("解析ticket并获取支付页面")
     @RequestMapping(value = "/pay-entry/{ticket}", method = RequestMethod.GET)
-    public String payEntry(@PathVariable("ticket") String ticket, HttpServletRequest request)
+    public String payEntry(@PathVariable("ticket") String ticket, HttpServletRequest request) throws Exception
     {
-        return "forward:/pay-page";
+        //解析
+        String ticketJson = EncryptUtil.decodeUTF8StringBase64(ticket);
+        log.debug("ticketJson:" + ticketJson);
+        //json转对象
+        PayOrderDTO order = JSON.parseObject(ticketJson, PayOrderDTO.class);
+        //将对象转成url格式，调用根据类
+        String params = ParseURLPairUtil.parseURLPair(order);
+        log.debug("url参数：" + params);
+        return "forward:/pay-page?" + params;
     }
 
 

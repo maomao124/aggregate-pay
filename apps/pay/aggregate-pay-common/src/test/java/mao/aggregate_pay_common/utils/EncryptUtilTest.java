@@ -37,5 +37,23 @@ class EncryptUtilTest
     {
         assertEquals("Str", EncryptUtil.decodeUTF8StringBase64(EncryptUtil.encodeUTF8StringBase64("Str")));
     }
+
+    @Test
+    void test1()
+    {
+
+        String PayOrderDTOJson = "{" +
+                "\"subject\":\"测试\"," +
+                "\"body\":\"测试商品\"" +
+                "}";
+        System.out.println(EncryptUtil.encodeUTF8StringBase64(PayOrderDTOJson));
+    }
+
+    @Test
+    void test2()
+    {
+        String s = "JTdCJTIyc3ViamVjdCUyMiUzQSUyMiVFNiVCNSU4QiVFOCVBRiU5NSUyMiUyQyUyMmJvZHklMjIlM0ElMjIlRTYlQjUlOEIlRTglQUYlOTUlRTUlOTUlODYlRTUlOTMlODElMjIlN0Q=";
+        System.out.println(EncryptUtil.decodeUTF8StringBase64(s));
+    }
 }
 
