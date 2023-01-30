@@ -30,6 +30,7 @@
         <module>aggregate-pay-gateway</module>
         <module>aggregate-pay-uaa</module>
         <module>aggregate-pay-user</module>
+        <module>aggregate-pay-payment-agent</module>
     </modules>
 
     <dependencyManagement>
@@ -103,6 +104,16 @@
             <dependency>
                 <groupId>mao</groupId>
                 <artifactId>aggregate-pay-user-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-payment-agent-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mao</groupId>
+                <artifactId>aggregate-pay-payment-agent-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

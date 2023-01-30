@@ -37,7 +37,6 @@
         <module name="aggregate-pay-gateway" />
         <module name="sms-server" />
         <module name="tools-validator" />
-        <module name="aggregate-pay-payment-agent" />
         <module name="tools-jwt" />
         <module name="aggregate-pay-uaa-api" />
         <module name="tools-log" />
