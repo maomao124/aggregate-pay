@@ -42,4 +42,17 @@ public class PageController
         log.debug("ip:" + httpServletRequest.getRemoteAddr() + " 访问支付页面");
         return "pay";
     }
+
+    /**
+     * 错误页面
+     *
+     * @param map 数据
+     * @return {@link String}
+     */
+    @RequestMapping(value = "/pay-error-page", method = RequestMethod.GET)
+    @ApiOperation("错误页面")
+    public String payErrorPage(Map<String, Object> map, HttpServletRequest httpServletRequest)
+    {
+        return "pay_error";
+    }
 }

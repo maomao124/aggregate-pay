@@ -15,7 +15,7 @@
 <body>
 
 <div class="content">
-    订单错误！<br/>
+    支付错误！<br/>
     请使用微信或支付宝重新扫码。
 </div>
 
@@ -56,7 +56,9 @@
     .content {
         width: 100%;
         height: 150px;
-        background: rgb(26, 132, 231);
+        font-size: 1.3em;
+        color: red;
+        background: skyblue;
         text-align: center;
         overflow: hidden;
     }
