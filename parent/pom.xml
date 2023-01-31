@@ -117,6 +117,7 @@
         <rocketmq-spring-boot-starter.version>2.2.2</rocketmq-spring-boot-starter.version>
         <!--<mybatis-plus-extension.version>3.1.0</mybatis-plus-extension.version>-->
         <spring-security-jwt.version>1.0.9.RELEASE</spring-security-jwt.version>
+        <springboot.freemarker.version>3.0.2</springboot.freemarker.version>
 
         <hutool.version>5.1.0</hutool.version>
         <antisamy.version>1.5.7</antisamy.version>
@@ -467,6 +468,13 @@
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-jwt</artifactId>
                 <version>${spring-security-jwt.version}</version>
+            </dependency>
+
+            <!--freemarker 模板引擎-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-freemarker</artifactId>
+                <version>${springboot.freemarker.version}</version>
             </dependency>
 
         </dependencies>
