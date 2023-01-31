@@ -1,24 +1,25 @@
+
 # @xxx@ 从pom.xml中取值, 所以 @xx@ 标注的值，都不能从nacos中获取
 def:
   nacos:
-    ip: ${NACOS_IP:127.0.0.1}
-    port: ${NACOS_PORT:8848}
-    namespace: ${NACOS_ID:51637975-182d-43e2-ab58-d012723411d5}
+    ip: ${NACOS_IP:@pom.nacos.ip@}
+    port: ${NACOS_PORT:@pom.nacos.port@}
+    namespace: ${NACOS_ID:@pom.nacos.namespace@}
 
 spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: aggregate-pay-uaa-service
+    name: @project.artifactId@
   profiles:
-    active: dev
+    active: @pom.profile.name@
   cloud:
     nacos:
       config: #配置中心相关
         server-addr: ${def.nacos.ip}:${def.nacos.port}
         file-extension: yml
         namespace: ${def.nacos.namespace}
-        shared-dataids: common.yml,redis.yml,mysql.yml,jwt.yml,freemarker.yml
+        shared-dataids: common.yml,freemarker.yml
         refreshable-dataids: common.yml
         enabled: true
       discovery: #服务注册中心相关
@@ -43,8 +44,8 @@ logging:
 
 # 用于/actuator/info
 info:
-  name: 'aggregate-pay-uaa-service'
-  description: '聚合支付项目多租户系统日志和授权服务'
-  version: '1.0-SNAPSHOT'
-  spring-boot-version: '2.3.9.RELEASE'
-  spring-cloud-version: 'Hoxton.SR10'
+  name: '@project.name@'
+  description: '@project.description@'
+  version: '@project.version@'
+  spring-boot-version: '@spring.boot.version@'
+  spring-cloud-version: '@spring.cloud.version@'
