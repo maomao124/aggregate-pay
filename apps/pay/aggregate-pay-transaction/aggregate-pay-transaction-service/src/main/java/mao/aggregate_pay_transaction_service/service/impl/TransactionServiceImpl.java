@@ -2,15 +2,23 @@ package mao.aggregate_pay_transaction_service.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_common.domain.CommonErrorCode;
+import mao.aggregate_pay_common.utils.AmountUtil;
 import mao.aggregate_pay_common.utils.EncryptUtil;
 import mao.aggregate_pay_merchant_api.feign.AppFeignClient;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_api.feign.StoreFeignClient;
+import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
 import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
+import mao.aggregate_pay_payment_agent_api.dto.PayOrderByAliWAPBody;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.feign.PayChannelAgentFeignClient;
+import mao.aggregate_pay_transaction_api.dto.PayChannelParamDTO;
 import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 import mao.aggregate_pay_transaction_service.handler.AssertResult;
+import mao.aggregate_pay_transaction_service.service.PayChannelParamService;
+import mao.aggregate_pay_transaction_service.service.PayChannelService;
 import mao.aggregate_pay_transaction_service.service.PayOrderService;
 import mao.aggregate_pay_transaction_service.service.TransactionService;
 import mao.tools_core.base.R;
@@ -51,6 +59,12 @@ public class TransactionServiceImpl implements TransactionService
 
     @Resource
     private PayOrderService payOrderService;
+
+    @Resource
+    private PayChannelParamService payChannelParamService;
+
+    @Resource
+    private PayChannelAgentFeignClient payChannelAgentFeignClient;
 
 
     @Override
@@ -116,7 +130,11 @@ public class TransactionServiceImpl implements TransactionService
     @Override
     public PaymentResponseDTO<String> submitOrderByAli(PayOrderDTO payOrderDTO)
     {
-        return null;
+        payOrderDTO.setPayChannel("ALIPAY_WAP");
+        //保存订单
+        payOrderService.save(payOrderDTO);
+        //请求代理服务调用支付宝下单
+        return createPayOrderByAliWAP(payOrderDTO.getTradeNo());
     }
 
 
@@ -132,6 +150,68 @@ public class TransactionServiceImpl implements TransactionService
         AlipayBean alipayBean = new AlipayBean();
         //根据订单号查询订单详情
         PayOrderDTO payOrderDTO = payOrderService.queryPayOrderByTradeNo(tradeNo);
+        //判断
+        if (payOrderDTO == null)
+        {
+            throw BizException.wrap("查询的订单不存在");
+        }
+        //设置平台订单号
+        alipayBean.setOutTradeNo(tradeNo);
+        //设置商品标题
+        alipayBean.setSubject(payOrderDTO.getSubject());
+        //支付宝那边入参是元
+        String totalAmount = null;
+        try
+        {
+            //将分转成元
+            totalAmount = AmountUtil.changeF2Y(payOrderDTO.getTotalAmount().toString());
+        }
+        catch (Exception e)
+        {
+            log.error("金额转换失败：", e);
+            throw BizException.wrap("订单金额转换异常");
+        }
+        //设置总金额
+        alipayBean.setTotalAmount(totalAmount);
+        //设置订单描述
+        alipayBean.setBody(payOrderDTO.getBody());
+        //商户下门店，如果未指定，默认是根门店
+        alipayBean.setStoreId(payOrderDTO.getStoreId());
+        //过期时间，30分钟
+        alipayBean.setExpireTime("30m");
+
+        //根据应用、服务类型、支付渠道查询支付渠道参数
+        PayChannelParamDTO payChannelParamDTO =
+                payChannelParamService.queryParamByAppPlatformAndPayChannel(payOrderDTO.getAppId(),
+                        payOrderDTO.getChannel(), "ALIPAY_WAP").getData();
+        //判断
+        if (payChannelParamDTO == null)
+        {
+            throw BizException.wrap("原始支付渠道为空");
+        }
+        //得到支付宝渠道参数，json转换为对象
+        AliConfigParam aliConfigParam = JSON.parseObject(payChannelParamDTO.getParam(), AliConfigParam.class);
+        //设置字符编码
+        aliConfigParam.setCharset("utf‐8");
+        //构建请求体
+        PayOrderByAliWAPBody payOrderByAliWAPBody = new PayOrderByAliWAPBody();
+        payOrderByAliWAPBody.setAliConfigParam(aliConfigParam);
+        payOrderByAliWAPBody.setAlipayBean(alipayBean);
+        //远程调用
+        R<PaymentResponseDTO<String>> r = payChannelAgentFeignClient.createPayOrderByAliWAP(payOrderByAliWAPBody);
+        //判断是否错误
+        if (r.getIsError())
+        {
+            //错误
+            log.warn("远程调用错误：" + r.getMsg());
+            throw BizException.wrap("支付宝确认支付失败");
+        }
+        //成功，取数据
+        PaymentResponseDTO<String> paymentResponseDTO = r.getData();
+        //打印
+        log.debug("支付宝响应内容：" + paymentResponseDTO.getContent());
+        //返回
+        return paymentResponseDTO;
     }
 
 }
