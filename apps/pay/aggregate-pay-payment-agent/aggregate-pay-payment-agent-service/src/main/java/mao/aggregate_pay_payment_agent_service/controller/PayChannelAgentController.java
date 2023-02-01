@@ -47,7 +47,7 @@ public class PayChannelAgentController extends BaseController
      * @return {@link R}<{@link PaymentResponseDTO}<{@link String}>>
      */
     @PostMapping("/createPayOrderByAliWAP")
-    @ApiOperation(value = "调用支付宝手机WAP下单接口", tags = "调用支付宝手机WAP下单接口")
+    @ApiOperation(value = "调用支付宝手机WAP下单接口", notes = "调用支付宝手机WAP下单接口")
     public R<PaymentResponseDTO<String>> createPayOrderByAliWAP(@RequestBody PayOrderByAliWAPBody payOrderByAliWAPBody)
     {
         PaymentResponseDTO<String> payOrderByAliWAP =

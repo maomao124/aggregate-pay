@@ -95,6 +95,7 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
         }
         catch (Exception e)
         {
+            log.error("支付宝确认支付失败", e);
             //支付宝确认支付失败
             throw BizException.wrap("支付宝确认支付失败");
         }

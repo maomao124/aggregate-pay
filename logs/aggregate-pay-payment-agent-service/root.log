@@ -1,330 +1,42 @@
-2023-01-31 14:21:57.283  WARN 20760 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
-2023-01-31 14:21:57.294  INFO 20760 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-31 14:21:57.332  INFO 20760 --- [main] gregatePayPaymentAgentServiceApplication : The following profiles are active: dev
-2023-01-31 14:21:58.245  WARN 20760 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2023-01-31 14:21:58.364  INFO 20760 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c6483dcd-1e44-3698-b7ec-fbe6f53c632e
-2023-01-31 14:21:58.641  INFO 20760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23983 (http)
-2023-01-31 14:21:58.650  INFO 20760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-31 14:21:58.650  INFO 20760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2023-01-31 14:21:58.793  INFO 20760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-31 14:21:58.794  INFO 20760 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1450 ms
-2023-01-31 14:21:59.505  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:21:59.505  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-01-31 14:21:59.506  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:21:59.621  INFO 20760 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
-2023-01-31 14:21:59.680  WARN 20760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:21:59.681  INFO 20760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:21:59.684  WARN 20760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:21:59.684  INFO 20760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:21:59.773  INFO 20760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:21:59.864  INFO 20760 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-31 14:21:59.879  WARN 20760 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dozerMapper' defined in class path resource [com/github/dozermapper/springboot/autoconfigure/DozerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.github.dozermapper.spring.DozerBeanMapperFactoryBean]: Factory method 'dozerMapper' threw exception; nested exception is java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-2023-01-31 14:21:59.880  INFO 20760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:21:59.881  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-01-31 14:21:59.881  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-01-31 14:21:59.881  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-01-31 14:21:59.882  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-01-31 14:22:02.921  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-01-31 14:22:02.921  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-01-31 14:22:05.925  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-01-31 14:22:05.925  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-01-31 14:22:05.925  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-01-31 14:22:05.926  WARN 20760 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-01-31 14:22:05.926  WARN 20760 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-01-31 14:22:05.926  INFO 20760 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-01-31 14:22:05.926  INFO 20760 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-01-31 14:22:05.926  INFO 20760 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-01-31 14:22:05.930  INFO 20760 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-01-31 14:22:05.944  INFO 20760 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-01-31 14:22:05.953 ERROR 20760 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dozerMapper' defined in class path resource [com/github/dozermapper/springboot/autoconfigure/DozerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.github.dozermapper.spring.DozerBeanMapperFactoryBean]: Factory method 'dozerMapper' threw exception; nested exception is java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:860) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at mao.aggregate_pay_payment_agent_service.AggregatePayPaymentAgentServiceApplication.main(AggregatePayPaymentAgentServiceApplication.java:12) [classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.github.dozermapper.spring.DozerBeanMapperFactoryBean]: Factory method 'dozerMapper' threw exception; nested exception is java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 19 common frames omitted
-Caused by: java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:195) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.github.dozermapper.spring.DozerBeanMapperFactoryBean.setMappingFiles(DozerBeanMapperFactoryBean.java:82) ~[dozer-spring4-6.5.0.jar:6.5.0]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration.dozerMapper(DozerAutoConfiguration.java:58) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration$$EnhancerBySpringCGLIB$$aeff3d42.CGLIB$dozerMapper$0(<generated>) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration$$EnhancerBySpringCGLIB$$aeff3d42$$FastClassBySpringCGLIB$$b41e1b0a.invoke(<generated>) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration$$EnhancerBySpringCGLIB$$aeff3d42.dozerMapper(<generated>) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 20 common frames omitted
-
-2023-01-31 14:22:05.954  WARN 20760 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-31 14:22:05.954  WARN 20760 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-01-31 14:22:05.955  WARN 20760 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-01-31 14:22:05.955  WARN 20760 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-01-31 14:22:40.765  WARN 19892 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
-2023-01-31 14:22:40.776  INFO 19892 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-31 14:22:40.814  INFO 19892 --- [main] gregatePayPaymentAgentServiceApplication : The following profiles are active: dev
-2023-01-31 14:22:41.739  WARN 19892 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2023-01-31 14:22:41.859  INFO 19892 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c6483dcd-1e44-3698-b7ec-fbe6f53c632e
-2023-01-31 14:22:42.145  INFO 19892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23983 (http)
-2023-01-31 14:22:42.154  INFO 19892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-31 14:22:42.154  INFO 19892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2023-01-31 14:22:42.290  INFO 19892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-31 14:22:42.290  INFO 19892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1462 ms
-2023-01-31 14:22:43.012  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:22:43.013  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-01-31 14:22:43.013  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:22:43.131  INFO 19892 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
-2023-01-31 14:22:43.193  WARN 19892 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:22:43.193  INFO 19892 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:22:43.197  WARN 19892 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:22:43.197  INFO 19892 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:22:43.292  INFO 19892 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:22:43.387  INFO 19892 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-31 14:22:43.403  WARN 19892 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dozerMapper' defined in class path resource [com/github/dozermapper/springboot/autoconfigure/DozerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.github.dozermapper.spring.DozerBeanMapperFactoryBean]: Factory method 'dozerMapper' threw exception; nested exception is java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-2023-01-31 14:22:43.404  INFO 19892 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:22:43.405  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-01-31 14:22:43.406  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-01-31 14:22:43.406  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-01-31 14:22:43.406  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-01-31 14:22:46.428  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-01-31 14:22:46.428  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-01-31 14:22:49.444  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-01-31 14:22:49.444  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-01-31 14:22:49.444  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-01-31 14:22:49.444  WARN 19892 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-01-31 14:22:49.444  WARN 19892 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-01-31 14:22:49.444  INFO 19892 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-01-31 14:22:49.445  INFO 19892 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-01-31 14:22:49.445  INFO 19892 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-01-31 14:22:49.448  INFO 19892 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-01-31 14:22:49.466  INFO 19892 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-01-31 14:22:49.475 ERROR 19892 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dozerMapper' defined in class path resource [com/github/dozermapper/springboot/autoconfigure/DozerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.github.dozermapper.spring.DozerBeanMapperFactoryBean]: Factory method 'dozerMapper' threw exception; nested exception is java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:860) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at mao.aggregate_pay_payment_agent_service.AggregatePayPaymentAgentServiceApplication.main(AggregatePayPaymentAgentServiceApplication.java:12) [classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.github.dozermapper.spring.DozerBeanMapperFactoryBean]: Factory method 'dozerMapper' threw exception; nested exception is java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 19 common frames omitted
-Caused by: java.io.FileNotFoundException: class path resource [dozer/global.dozer.xml] cannot be resolved to URL because it does not exist
-	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:195) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.github.dozermapper.spring.DozerBeanMapperFactoryBean.setMappingFiles(DozerBeanMapperFactoryBean.java:82) ~[dozer-spring4-6.5.0.jar:6.5.0]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration.dozerMapper(DozerAutoConfiguration.java:58) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration$$EnhancerBySpringCGLIB$$d01349dd.CGLIB$dozerMapper$0(<generated>) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration$$EnhancerBySpringCGLIB$$d01349dd$$FastClassBySpringCGLIB$$9ad7ae8a.invoke(<generated>) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.github.dozermapper.springboot.autoconfigure.DozerAutoConfiguration$$EnhancerBySpringCGLIB$$d01349dd.dozerMapper(<generated>) ~[dozer-spring-boot-autoconfigure-6.5.0.jar:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 20 common frames omitted
-
-2023-01-31 14:22:49.477  WARN 19892 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-01-31 14:22:49.477  WARN 19892 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-31 14:22:49.477  WARN 19892 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-01-31 14:22:49.477  WARN 19892 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-01-31 14:25:34.731  WARN 17172 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
-2023-01-31 14:25:34.742  INFO 17172 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-31 14:25:34.779  INFO 17172 --- [main] gregatePayPaymentAgentServiceApplication : The following profiles are active: dev
-2023-01-31 14:25:35.721  WARN 17172 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2023-01-31 14:25:35.841  INFO 17172 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c6483dcd-1e44-3698-b7ec-fbe6f53c632e
-2023-01-31 14:25:36.140  INFO 17172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23983 (http)
-2023-01-31 14:25:36.148  INFO 17172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-31 14:25:36.149  INFO 17172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2023-01-31 14:25:36.280  INFO 17172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-31 14:25:36.280  INFO 17172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1489 ms
-2023-01-31 14:25:36.970  INFO 17172 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:25:36.970  INFO 17172 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-01-31 14:25:36.971  INFO 17172 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:25:37.089  INFO 17172 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
-2023-01-31 14:25:37.146  WARN 17172 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:25:37.147  INFO 17172 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:25:37.150  WARN 17172 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:25:37.150  INFO 17172 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:25:37.244  INFO 17172 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:25:37.335  INFO 17172 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-31 14:25:37.357  INFO 17172 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
-2023-01-31 14:25:37.358  INFO 17172 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
-2023-01-31 14:25:37.363  INFO 17172 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
-2023-01-31 14:25:37.367  INFO 17172 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
-2023-01-31 14:25:37.373  INFO 17172 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
-2023-01-31 14:25:37.394  INFO 17172 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
-2023-01-31 14:25:37.626  INFO 17172 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:25:37.628  INFO 17172 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:25:37.649  INFO 17172 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-31 14:25:37.651  INFO 17172 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
-2023-01-31 14:25:37.653  INFO 17172 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:25:37.654  INFO 17172 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:25:37.660  INFO 17172 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-31 14:25:37.671  INFO 17172 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
-2023-01-31 14:25:37.687  INFO 17172 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2023-01-31 14:25:37.692  INFO 17172 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-01-31 14:25:37.693  INFO 17172 --- [main] m.t.config.SwaggerAutoConfiguration      : 
-title：在线文档
-group：
-description：在线文档
-version：1.0
-contact：Contact{name='', url='', email=''}
-basePackage：
-basePath：[]
-excludePath：[]
-docket：{aggregate_pay=DocketInfo{title='支付渠道代理服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_payment_agent_service', basePath=[], excludePath=[]}}
-
-2023-01-31 14:25:37.771  WARN 17172 --- [main] o.a.r.s.a.RocketMQAutoConfiguration      : The necessary spring property 'rocketmq.name-server' is not defined, all rockertmq beans creation are skipped!
-2023-01-31 14:25:37.929  WARN 17172 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
-2023-01-31 14:25:38.404  INFO 17172 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2023-01-31 14:25:38.426  INFO 17172 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2023-01-31 14:25:38.472  INFO 17172 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2023-01-31 14:25:38.522  INFO 17172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23983 (http) with context path ''
-2023-01-31 14:25:38.527  INFO 17172 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
-2023-01-31 14:25:38.663  INFO 17172 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-payment-agent-service 192.168.3.143:23983 register finished
-2023-01-31 14:25:38.913  INFO 17172 --- [main] gregatePayPaymentAgentServiceApplication : Started AggregatePayPaymentAgentServiceApplication in 5.586 seconds (JVM running for 6.636)
-2023-01-31 14:25:38.929  INFO 17172 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:25:38.930  INFO 17172 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:25:38.930  INFO 17172 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:25:38.930  INFO 17172 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:25:38.936  INFO 17172 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:25:38.936  INFO 17172 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service-dev.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:25:38.941  INFO 17172 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:25:38.942  INFO 17172 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:25:38.942  INFO 17172 --- [main] gregatePayPaymentAgentServiceApplication : 应用aggregate-pay-payment-agent-service启动成功!swagger地址：http://172.21.160.1:23983/doc.html  或者：http://127.0.0.1:23983/doc.html
-2023-01-31 14:25:38.942  INFO 17172 --- [main] gregatePayPaymentAgentServiceApplication : 启动耗时：5705ms
-2023-01-31 14:25:39.417  INFO 17172 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
-2023-01-31 14:25:39.423  INFO 17172 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
-2023-01-31 14:25:39.680  INFO 17172 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675146339671,\"checksum\":\"c1b5bc5a7d2b01d66e592a3146bd4696\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":240350570751200} from /172.21.160.1
-2023-01-31 14:25:39.792  INFO 17172 --- [RMI TCP Connection(2)-172.21.160.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-31 14:25:39.792  INFO 17172 --- [RMI TCP Connection(2)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-31 14:25:39.800  INFO 17172 --- [RMI TCP Connection(2)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2023-01-31 14:25:46.060  INFO 17172 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675146346059,\"checksum\":\"c1b5bc5a7d2b01d66e592a3146bd4696\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":240356958888000} from /172.21.160.1
-2023-01-31 14:27:32.374  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [polling-resp] config changed. dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, tenant=51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:27:32.374  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : get changedGroupKeys:[aggregate-pay-payment-agent-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5]
-2023-01-31 14:27:32.383  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [data-received] dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, tenant=51637975-182d-43e2-ab58-d012723411d5, md5=87181bf09dcf894bdda0c9cb9b8f902d, content=
-swagger:
-  enabled: true
-  contact:
-    name: mao
-    url: https://github.com/maomao124/
-    email:..., type=yaml
-2023-01-31 14:27:32.383  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [notify-context] dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, md5=87181bf09dcf894bdda0c9cb9b8f902d
-2023-01-31 14:27:33.015  WARN 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
-2023-01-31 14:27:33.022  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-31 14:27:33.032  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] o.s.boot.SpringApplication               : The following profiles are active: dev
-2023-01-31 14:27:33.044  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] o.s.boot.SpringApplication               : Started application in 0.657 seconds (JVM running for 120.767)
-2023-01-31 14:27:33.144  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [swagger.contact.email, swagger.contact.name, swagger.contact.url]
-2023-01-31 14:27:33.144  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [notify-ok] dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, md5=87181bf09dcf894bdda0c9cb9b8f902d, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@2a71e8ca 
-2023-01-31 14:27:33.144  INFO 17172 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [notify-listener] time cost=761ms in ClientWorker, dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, md5=87181bf09dcf894bdda0c9cb9b8f902d, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@2a71e8ca 
-2023-01-31 14:27:37.411  WARN 17172 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-01-31 14:27:37.410  WARN 17172 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-31 14:27:37.412  WARN 17172 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-01-31 14:27:37.412  WARN 17172 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-01-31 14:27:37.413  INFO 17172 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-31 14:27:37.415  INFO 17172 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2023-01-31 14:27:37.415  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-payment-agent-service:192.168.3.143:23983 from beat map.
-2023-01-31 14:27:37.416  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
-2023-01-31 14:27:37.419  INFO 17172 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2023-01-31 14:27:37.419  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-01-31 14:27:37.419  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-01-31 14:27:37.419  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-01-31 14:27:38.427  INFO 17172 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675146458426,\"checksum\":\"c1b5bc5a7d2b01d66e592a3146bd4696\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":240469325858900} from /172.21.160.1
-2023-01-31 14:27:39.531  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-01-31 14:27:42.556  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-01-31 14:27:42.556  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-01-31 14:27:42.556  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-01-31 14:27:42.556  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-01-31 14:27:42.556  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-01-31 14:27:42.557  WARN 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-01-31 14:27:42.557  WARN 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-01-31 14:27:42.557  INFO 17172 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-01-31 14:27:42.557  INFO 17172 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-01-31 14:27:42.557  INFO 17172 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-01-31 14:27:42.558  INFO 17172 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:27:42.560  WARN 17172 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2023-01-31 14:27:48.880  WARN 13540 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
-2023-01-31 14:27:48.891  INFO 13540 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-31 14:27:48.927  INFO 13540 --- [main] gregatePayPaymentAgentServiceApplication : The following profiles are active: dev
-2023-01-31 14:27:49.836  WARN 13540 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2023-01-31 14:27:49.959  INFO 13540 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c6483dcd-1e44-3698-b7ec-fbe6f53c632e
-2023-01-31 14:27:50.254  INFO 13540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23983 (http)
-2023-01-31 14:27:50.263  INFO 13540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-31 14:27:50.263  INFO 13540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2023-01-31 14:27:50.392  INFO 13540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-31 14:27:50.392  INFO 13540 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
-2023-01-31 14:27:51.097  INFO 13540 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:27:51.098  INFO 13540 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-01-31 14:27:51.098  INFO 13540 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-31 14:27:51.212  INFO 13540 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
-2023-01-31 14:27:51.269  WARN 13540 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:27:51.269  INFO 13540 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:27:51.273  WARN 13540 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-31 14:27:51.273  INFO 13540 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-31 14:27:51.359  INFO 13540 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:27:51.451  INFO 13540 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-31 14:27:51.471  INFO 13540 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
-2023-01-31 14:27:51.472  INFO 13540 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
-2023-01-31 14:27:51.478  INFO 13540 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
-2023-01-31 14:27:51.482  INFO 13540 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
-2023-01-31 14:27:51.487  INFO 13540 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
-2023-01-31 14:27:51.509  INFO 13540 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
-2023-01-31 14:27:51.737  INFO 13540 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:27:51.739  INFO 13540 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:27:51.760  INFO 13540 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-31 14:27:51.761  INFO 13540 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
-2023-01-31 14:27:51.763  INFO 13540 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:27:51.763  INFO 13540 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-31 14:27:51.769  INFO 13540 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-31 14:27:51.781  INFO 13540 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
-2023-01-31 14:27:51.796  INFO 13540 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2023-01-31 14:27:51.803  INFO 13540 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-01-31 14:27:51.804  INFO 13540 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+2023-02-01 20:47:07.357  WARN 21816 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
+2023-02-01 20:47:07.385  INFO 21816 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-01 20:47:07.446  INFO 21816 --- [main] gregatePayPaymentAgentServiceApplication : The following profiles are active: dev
+2023-02-01 20:47:08.621  WARN 21816 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-01 20:47:08.764  INFO 21816 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f86e4ac6-9ec6-3d04-90f9-bc31c4d556e1
+2023-02-01 20:47:08.894  INFO 21816 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-02-01 20:47:09.118  INFO 21816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23983 (http)
+2023-02-01 20:47:09.129  INFO 21816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 20:47:09.129  INFO 21816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-01 20:47:09.342  INFO 21816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 20:47:09.342  INFO 21816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1871 ms
+2023-02-01 20:47:09.491  INFO 21816 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-02-01 20:47:10.065  INFO 21816 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-01 20:47:10.065  INFO 21816 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-01 20:47:10.066  INFO 21816 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-01 20:47:10.188  INFO 21816 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2023-02-01 20:47:10.282  WARN 21816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-01 20:47:10.282  INFO 21816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-01 20:47:10.287  WARN 21816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-01 20:47:10.287  INFO 21816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-01 20:47:10.353  INFO 21816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-01 20:47:10.460  INFO 21816 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-01 20:47:10.480  INFO 21816 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-02-01 20:47:10.481  INFO 21816 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-02-01 20:47:10.487  INFO 21816 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-02-01 20:47:10.491  INFO 21816 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-02-01 20:47:10.497  INFO 21816 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-02-01 20:47:10.520  INFO 21816 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-02-01 20:47:10.758  INFO 21816 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:47:10.760  INFO 21816 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:47:10.782  INFO 21816 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-01 20:47:10.784  INFO 21816 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-02-01 20:47:10.787  INFO 21816 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:47:10.787  INFO 21816 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:47:10.793  INFO 21816 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-01 20:47:10.807  INFO 21816 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-02-01 20:47:10.823  INFO 21816 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-02-01 20:47:10.829  INFO 21816 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-02-01 20:47:10.830  INFO 21816 --- [main] m.t.config.SwaggerAutoConfiguration      : 
 title：在线文档
 group：
 description：在线文档
@@ -335,55 +47,432 @@ basePath：[]
 excludePath：[]
 docket：{aggregate_pay=DocketInfo{title='支付渠道代理服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_payment_agent_service', basePath=[], excludePath=[]}}
 
-2023-01-31 14:27:51.885  WARN 13540 --- [main] o.a.r.s.a.RocketMQAutoConfiguration      : The necessary spring property 'rocketmq.name-server' is not defined, all rockertmq beans creation are skipped!
-2023-01-31 14:27:52.041  WARN 13540 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
-2023-01-31 14:27:52.503  INFO 13540 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
-2023-01-31 14:27:52.512  INFO 13540 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
-2023-01-31 14:27:52.514  INFO 13540 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2023-01-31 14:27:52.536  INFO 13540 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2023-01-31 14:27:52.582  INFO 13540 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2023-01-31 14:27:52.637  INFO 13540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23983 (http) with context path ''
-2023-01-31 14:27:52.641  INFO 13540 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
-2023-01-31 14:27:52.646  INFO 13540 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-payment-agent-service 192.168.3.143:23983 register finished
-2023-01-31 14:27:52.884  INFO 13540 --- [main] gregatePayPaymentAgentServiceApplication : Started AggregatePayPaymentAgentServiceApplication in 5.504 seconds (JVM running for 6.544)
-2023-01-31 14:27:52.906  INFO 13540 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:27:52.907  INFO 13540 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:27:52.907  INFO 13540 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:27:52.907  INFO 13540 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:27:52.913  INFO 13540 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:27:52.914  INFO 13540 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service-dev.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:27:52.915  INFO 13540 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
-2023-01-31 14:27:52.915  INFO 13540 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-31 14:27:52.916  INFO 13540 --- [main] gregatePayPaymentAgentServiceApplication : 应用aggregate-pay-payment-agent-service启动成功!swagger地址：http://172.21.160.1:23983/doc.html  或者：http://127.0.0.1:23983/doc.html
-2023-01-31 14:27:52.916  INFO 13540 --- [main] gregatePayPaymentAgentServiceApplication : 启动耗时：5630ms
-2023-01-31 14:27:53.449  INFO 13540 --- [RMI TCP Connection(1)-172.21.160.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-31 14:27:53.449  INFO 13540 --- [RMI TCP Connection(1)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-31 14:27:53.457  INFO 13540 --- [RMI TCP Connection(1)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2023-01-31 14:27:53.651  INFO 13540 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675146473650,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":240484549895700} from /172.21.160.1
-2023-01-31 14:28:02.482  INFO 13540 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675146482481,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":240493380799400} from /172.21.160.1
-2023-01-31 14:35:14.622  WARN 13540 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-31 14:35:14.622  WARN 13540 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-01-31 14:35:14.623  WARN 13540 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-01-31 14:35:14.623  WARN 13540 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-01-31 14:35:14.624  INFO 13540 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-31 14:35:14.626  INFO 13540 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2023-01-31 14:35:14.626  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-payment-agent-service:192.168.3.143:23983 from beat map.
-2023-01-31 14:35:14.627  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
-2023-01-31 14:35:14.629  INFO 13540 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2023-01-31 14:35:14.630  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-01-31 14:35:14.630  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-01-31 14:35:14.630  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-01-31 14:35:15.643  INFO 13540 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675146915642,\"checksum\":\"c1b5bc5a7d2b01d66e592a3146bd4696\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":240926541749400} from /172.21.160.1
-2023-01-31 14:35:17.669  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-01-31 14:35:20.693  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-01-31 14:35:20.693  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-01-31 14:35:20.694  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-01-31 14:35:20.694  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-01-31 14:35:20.694  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-01-31 14:35:20.695  WARN 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-01-31 14:35:20.695  WARN 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-01-31 14:35:20.695  INFO 13540 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-01-31 14:35:20.695  INFO 13540 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-01-31 14:35:20.695  INFO 13540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-01-31 14:35:20.697  INFO 13540 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-01-31 14:35:20.701  WARN 13540 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-01 20:47:10.917  WARN 21816 --- [main] o.a.r.s.a.RocketMQAutoConfiguration      : The necessary spring property 'rocketmq.name-server' is not defined, all rockertmq beans creation are skipped!
+2023-02-01 20:47:11.096  WARN 21816 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-02-01 20:47:11.614  INFO 21816 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-02-01 20:47:11.623  INFO 21816 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2023-02-01 20:47:11.626  INFO 21816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-02-01 20:47:11.650  INFO 21816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-02-01 20:47:11.702  INFO 21816 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-02-01 20:47:11.872  INFO 21816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23983 (http) with context path ''
+2023-02-01 20:47:11.876  INFO 21816 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-02-01 20:47:12.018  INFO 21816 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-payment-agent-service 192.168.3.143:23983 register finished
+2023-02-01 20:47:12.281  INFO 21816 --- [main] gregatePayPaymentAgentServiceApplication : Started AggregatePayPaymentAgentServiceApplication in 6.813 seconds (JVM running for 8.933)
+2023-02-01 20:47:12.293  INFO 21816 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:47:12.294  INFO 21816 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:47:12.294  INFO 21816 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:47:12.294  INFO 21816 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:47:12.299  INFO 21816 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:47:12.299  INFO 21816 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:47:12.304  INFO 21816 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:47:12.304  INFO 21816 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:47:12.305  INFO 21816 --- [main] gregatePayPaymentAgentServiceApplication : 应用aggregate-pay-payment-agent-service启动成功!swagger地址：http://172.21.160.1:23983/doc.html  或者：http://127.0.0.1:23983/doc.html
+2023-02-01 20:47:12.305  INFO 21816 --- [main] gregatePayPaymentAgentServiceApplication : 启动耗时：6955ms
+2023-02-01 20:47:12.529  INFO 21816 --- [RMI TCP Connection(3)-172.21.160.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 20:47:12.530  INFO 21816 --- [RMI TCP Connection(3)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 20:47:12.538  INFO 21816 --- [RMI TCP Connection(3)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-02-01 20:47:13.030  INFO 21816 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255633021,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349646231036800} from /172.21.160.1
+2023-02-01 20:47:24.334  INFO 21816 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255644333,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349657542998900} from /172.21.160.1
+2023-02-01 20:48:52.190  WARN 21816 --- [Thread-22] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-01 20:48:52.190  WARN 21816 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-01 20:48:52.190  WARN 21816 --- [Thread-22] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-01 20:48:52.190  WARN 21816 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-01 20:48:52.192  INFO 21816 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-01 20:48:52.194  INFO 21816 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-01 20:48:52.194  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-payment-agent-service:192.168.3.143:23983 from beat map.
+2023-02-01 20:48:52.195  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-01 20:48:52.198  INFO 21816 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-01 20:48:52.199  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-01 20:48:52.199  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-01 20:48:52.199  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-01 20:48:52.772  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-01 20:48:53.209  INFO 21816 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255733208,\"checksum\":\"c1b5bc5a7d2b01d66e592a3146bd4696\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349746418097900} from /172.21.160.1
+2023-02-01 20:48:55.791  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-01 20:48:55.791  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-01 20:48:55.792  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-01 20:48:55.792  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-01 20:48:55.792  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-01 20:48:55.792  WARN 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-01 20:48:55.792  WARN 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-01 20:48:55.793  INFO 21816 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-01 20:48:55.793  INFO 21816 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-01 20:48:55.793  INFO 21816 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-01 20:48:55.795  INFO 21816 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-01 20:48:55.799  WARN 21816 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-01 20:49:06.801  WARN 6164 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
+2023-02-01 20:49:06.812  INFO 6164 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-01 20:49:06.850  INFO 6164 --- [main] gregatePayPaymentAgentServiceApplication : The following profiles are active: dev
+2023-02-01 20:49:07.847  WARN 6164 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-01 20:49:07.985  INFO 6164 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f86e4ac6-9ec6-3d04-90f9-bc31c4d556e1
+2023-02-01 20:49:08.105  INFO 6164 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-02-01 20:49:08.296  INFO 6164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23983 (http)
+2023-02-01 20:49:08.306  INFO 6164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 20:49:08.306  INFO 6164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-01 20:49:08.491  INFO 6164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 20:49:08.491  INFO 6164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1628 ms
+2023-02-01 20:49:08.622  INFO 6164 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-02-01 20:49:09.176  INFO 6164 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-01 20:49:09.176  INFO 6164 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-01 20:49:09.177  INFO 6164 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-01 20:49:09.294  INFO 6164 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2023-02-01 20:49:09.383  WARN 6164 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-01 20:49:09.383  INFO 6164 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-01 20:49:09.387  WARN 6164 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-01 20:49:09.387  INFO 6164 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-01 20:49:09.446  INFO 6164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-01 20:49:09.547  INFO 6164 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-01 20:49:09.568  INFO 6164 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-02-01 20:49:09.569  INFO 6164 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-02-01 20:49:09.576  INFO 6164 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-02-01 20:49:09.580  INFO 6164 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-02-01 20:49:09.585  INFO 6164 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-02-01 20:49:09.610  INFO 6164 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-02-01 20:49:09.846  INFO 6164 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:49:09.848  INFO 6164 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:49:09.870  INFO 6164 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-01 20:49:09.871  INFO 6164 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-02-01 20:49:09.874  INFO 6164 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:49:09.874  INFO 6164 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:49:09.880  INFO 6164 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-01 20:49:09.893  INFO 6164 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-02-01 20:49:09.910  INFO 6164 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-02-01 20:49:09.916  INFO 6164 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-02-01 20:49:09.917  INFO 6164 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='支付渠道代理服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_payment_agent_service', basePath=[], excludePath=[]}}
+
+2023-02-01 20:49:10.009  WARN 6164 --- [main] o.a.r.s.a.RocketMQAutoConfiguration      : The necessary spring property 'rocketmq.name-server' is not defined, all rockertmq beans creation are skipped!
+2023-02-01 20:49:10.186  WARN 6164 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-02-01 20:49:10.661  INFO 6164 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-02-01 20:49:10.669  INFO 6164 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-02-01 20:49:10.671  INFO 6164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-02-01 20:49:10.693  INFO 6164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-02-01 20:49:10.742  INFO 6164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-02-01 20:49:10.912  INFO 6164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23983 (http) with context path ''
+2023-02-01 20:49:10.915  INFO 6164 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-02-01 20:49:10.920  INFO 6164 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-payment-agent-service 192.168.3.143:23983 register finished
+2023-02-01 20:49:11.168  INFO 6164 --- [main] gregatePayPaymentAgentServiceApplication : Started AggregatePayPaymentAgentServiceApplication in 5.812 seconds (JVM running for 6.79)
+2023-02-01 20:49:11.178  INFO 6164 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:49:11.179  INFO 6164 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:49:11.180  INFO 6164 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:49:11.180  INFO 6164 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:49:11.181  INFO 6164 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:49:11.181  INFO 6164 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:49:11.182  INFO 6164 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:49:11.182  INFO 6164 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:49:11.182  INFO 6164 --- [main] gregatePayPaymentAgentServiceApplication : 应用aggregate-pay-payment-agent-service启动成功!swagger地址：http://172.21.160.1:23983/doc.html  或者：http://127.0.0.1:23983/doc.html
+2023-02-01 20:49:11.183  INFO 6164 --- [main] gregatePayPaymentAgentServiceApplication : 启动耗时：5922ms
+2023-02-01 20:49:11.611  INFO 6164 --- [RMI TCP Connection(1)-172.21.160.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 20:49:11.612  INFO 6164 --- [RMI TCP Connection(1)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 20:49:11.617  INFO 6164 --- [RMI TCP Connection(1)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-02-01 20:49:11.928  INFO 6164 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255751928,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349765138404100} from /172.21.160.1
+2023-02-01 20:49:21.227  INFO 6164 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255761227,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349774436967700} from /172.21.160.1
+2023-02-01 20:49:21.328 DEBUG 6164 --- [http-nio-23983-exec-7] m.a.s.impl.PayChannelAgentServiceImpl    : 支付宝请求参数：AlipayBean(outTradeNo=, subject=, totalAmount=, productCode=, body=, expireTime=, timestamp=, storeId=0, attach=)
+2023-02-01 20:49:21.347 DEBUG 6164 --- [http-nio-23983-exec-7] m.a.s.impl.PayChannelAgentServiceImpl    : alipayBean:{"attach":"","body":"","expireTime":"","outTradeNo":"","productCode":"","storeId":0,"subject":"","timestamp":"","totalAmount":""}
+2023-02-01 20:49:21.383  WARN 6164 --- [http-nio-23983-exec-7] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 支付宝确认支付失败
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_payment_agent_service.service.impl.PayChannelAgentServiceImpl.createPayOrderByAliWAP(PayChannelAgentServiceImpl.java:99) ~[classes/:na]
+	at mao.aggregate_pay_payment_agent_service.controller.PayChannelAgentController.createPayOrderByAliWAP(PayChannelAgentController.java:54) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-01 20:49:48.287  WARN 6164 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-01 20:49:48.288  WARN 6164 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-01 20:49:48.288  WARN 6164 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-01 20:49:48.288  WARN 6164 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-01 20:49:48.289  INFO 6164 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-01 20:49:48.291  INFO 6164 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-01 20:49:48.292  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-payment-agent-service:192.168.3.143:23983 from beat map.
+2023-02-01 20:49:48.292  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-01 20:49:48.295  INFO 6164 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-01 20:49:48.296  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-01 20:49:48.296  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-01 20:49:48.296  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-01 20:49:49.309  INFO 6164 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255789309,\"checksum\":\"c1b5bc5a7d2b01d66e592a3146bd4696\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349802518991700} from /172.21.160.1
+2023-02-01 20:49:51.327  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-01 20:49:54.367  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-01 20:49:54.367  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-01 20:49:54.368  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-01 20:49:54.368  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-01 20:49:54.368  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-01 20:49:54.369  WARN 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-01 20:49:54.369  WARN 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-01 20:49:54.369  INFO 6164 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-01 20:49:54.369  INFO 6164 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-01 20:49:54.369  INFO 6164 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-01 20:49:54.371  INFO 6164 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-01 20:49:54.374  WARN 6164 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-01 20:50:25.439  WARN 26188 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-payment-agent-service] & group[DEFAULT_GROUP]
+2023-02-01 20:50:25.450  INFO 26188 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-payment-agent-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-01 20:50:25.490  INFO 26188 --- [main] gregatePayPaymentAgentServiceApplication : The following profiles are active: dev
+2023-02-01 20:50:26.522  WARN 26188 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-01 20:50:26.671  INFO 26188 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f86e4ac6-9ec6-3d04-90f9-bc31c4d556e1
+2023-02-01 20:50:26.807  INFO 26188 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-02-01 20:50:27.003  INFO 26188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 23983 (http)
+2023-02-01 20:50:27.014  INFO 26188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-01 20:50:27.014  INFO 26188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-01 20:50:27.219  INFO 26188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-01 20:50:27.220  INFO 26188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1717 ms
+2023-02-01 20:50:27.347  INFO 26188 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-02-01 20:50:28.004  INFO 26188 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-01 20:50:28.004  INFO 26188 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-01 20:50:28.005  INFO 26188 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-01 20:50:28.128  INFO 26188 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2023-02-01 20:50:28.226  WARN 26188 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-01 20:50:28.226  INFO 26188 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-01 20:50:28.232  WARN 26188 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-01 20:50:28.232  INFO 26188 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-01 20:50:28.297  INFO 26188 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-01 20:50:28.395  INFO 26188 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-01 20:50:28.418  INFO 26188 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-02-01 20:50:28.419  INFO 26188 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-02-01 20:50:28.424  INFO 26188 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-02-01 20:50:28.428  INFO 26188 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-02-01 20:50:28.433  INFO 26188 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-02-01 20:50:28.467  INFO 26188 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-02-01 20:50:28.763  INFO 26188 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:50:28.766  INFO 26188 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:50:28.793  INFO 26188 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-01 20:50:28.794  INFO 26188 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-payment-agent/aggregate-pay-payment-agent-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-02-01 20:50:28.797  INFO 26188 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:50:28.799  INFO 26188 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-01 20:50:28.808  INFO 26188 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-01 20:50:28.829  INFO 26188 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-02-01 20:50:28.863  INFO 26188 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-02-01 20:50:28.873  INFO 26188 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-02-01 20:50:28.873  INFO 26188 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='mao', url='https://github.com/maomao124/', email='1234@qq.com'}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='支付渠道代理服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_payment_agent_service', basePath=[], excludePath=[]}}
+
+2023-02-01 20:50:28.976  WARN 26188 --- [main] o.a.r.s.a.RocketMQAutoConfiguration      : The necessary spring property 'rocketmq.name-server' is not defined, all rockertmq beans creation are skipped!
+2023-02-01 20:50:29.161  WARN 26188 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2023-02-01 20:50:29.632  INFO 26188 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-02-01 20:50:29.641  INFO 26188 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@aggregate-pay-payment-agent-service@@DEFAULT -> [{"instanceId":"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service","ip":"192.168.3.143","port":23983,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-payment-agent-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-02-01 20:50:29.642  INFO 26188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-02-01 20:50:29.665  INFO 26188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-02-01 20:50:29.714  INFO 26188 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-02-01 20:50:29.885  INFO 26188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 23983 (http) with context path ''
+2023-02-01 20:50:29.888  INFO 26188 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-02-01 20:50:29.894  INFO 26188 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-payment-agent-service 192.168.3.143:23983 register finished
+2023-02-01 20:50:30.136  INFO 26188 --- [main] gregatePayPaymentAgentServiceApplication : Started AggregatePayPaymentAgentServiceApplication in 6.265 seconds (JVM running for 7.333)
+2023-02-01 20:50:30.144  INFO 26188 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:50:30.145  INFO 26188 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:50:30.146  INFO 26188 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:50:30.146  INFO 26188 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:50:30.148  INFO 26188 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-payment-agent-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:50:30.148  INFO 26188 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-payment-agent-service-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:50:30.150  INFO 26188 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-01 20:50:30.150  INFO 26188 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-01 20:50:30.150  INFO 26188 --- [main] gregatePayPaymentAgentServiceApplication : 应用aggregate-pay-payment-agent-service启动成功!swagger地址：http://172.21.160.1:23983/doc.html  或者：http://127.0.0.1:23983/doc.html
+2023-02-01 20:50:30.150  INFO 26188 --- [main] gregatePayPaymentAgentServiceApplication : 启动耗时：6384ms
+2023-02-01 20:50:30.794  INFO 26188 --- [RMI TCP Connection(4)-172.21.160.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-01 20:50:30.794  INFO 26188 --- [RMI TCP Connection(4)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-01 20:50:30.800  INFO 26188 --- [RMI TCP Connection(4)-172.21.160.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-02-01 20:50:30.906  INFO 26188 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255830905,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349844115032000} from /172.21.160.1
+2023-02-01 20:50:35.166 DEBUG 26188 --- [http-nio-23983-exec-2] m.a.s.impl.PayChannelAgentServiceImpl    : 支付宝请求参数：AlipayBean(outTradeNo=, subject=, totalAmount=, productCode=, body=, expireTime=, timestamp=, storeId=0, attach=)
+2023-02-01 20:50:35.187 DEBUG 26188 --- [http-nio-23983-exec-2] m.a.s.impl.PayChannelAgentServiceImpl    : alipayBean:{"attach":"","body":"","expireTime":"","outTradeNo":"","productCode":"","storeId":0,"subject":"","timestamp":"","totalAmount":""}
+2023-02-01 20:50:35.222 ERROR 26188 --- [http-nio-23983-exec-2] m.a.s.impl.PayChannelAgentServiceImpl    : 支付宝确认支付失败
+
+java.lang.RuntimeException: com.alipay.api.AlipayApiException: RSA私钥格式不正确，请检查是否正确配置了PKCS8格式的私钥
+	at com.alipay.api.DefaultSigner.sign(DefaultSigner.java:28) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	at com.alipay.api.AbstractAlipayClient.getRequestHolderWithSign(AbstractAlipayClient.java:526) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	at com.alipay.api.AbstractAlipayClient.pageExecute(AbstractAlipayClient.java:344) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	at com.alipay.api.AbstractAlipayClient.pageExecute(AbstractAlipayClient.java:339) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	at mao.aggregate_pay_payment_agent_service.service.impl.PayChannelAgentServiceImpl.createPayOrderByAliWAP(PayChannelAgentServiceImpl.java:89) ~[classes/:na]
+	at mao.aggregate_pay_payment_agent_service.controller.PayChannelAgentController.createPayOrderByAliWAP(PayChannelAgentController.java:54) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+Caused by: com.alipay.api.AlipayApiException: RSA私钥格式不正确，请检查是否正确配置了PKCS8格式的私钥
+	at com.alipay.api.internal.util.AlipaySignature.rsaSign(AlipaySignature.java:205) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	at com.alipay.api.internal.util.AlipaySignature.rsaSign(AlipaySignature.java:128) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	at com.alipay.api.DefaultSigner.sign(DefaultSigner.java:26) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	... 57 common frames omitted
+Caused by: java.security.spec.InvalidKeySpecException: java.security.InvalidKeyException: Missing key encoding
+	at sun.security.rsa.RSAKeyFactory.engineGeneratePrivate(RSAKeyFactory.java:252) ~[na:1.8.0_332]
+	at java.security.KeyFactory.generatePrivate(KeyFactory.java:372) ~[na:1.8.0_332]
+	at com.alipay.api.internal.util.AlipaySignature.getPrivateKeyFromPKCS8(AlipaySignature.java:231) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	at com.alipay.api.internal.util.AlipaySignature.rsaSign(AlipaySignature.java:187) ~[alipay-sdk-java-3.7.73.ALL.jar:na]
+	... 59 common frames omitted
+Caused by: java.security.InvalidKeyException: Missing key encoding
+	at sun.security.rsa.RSAPrivateCrtKeyImpl.<init>(RSAPrivateCrtKeyImpl.java:127) ~[na:1.8.0_332]
+	at sun.security.rsa.RSAPrivateCrtKeyImpl.newKey(RSAPrivateCrtKeyImpl.java:80) ~[na:1.8.0_332]
+	at sun.security.rsa.RSAKeyFactory.generatePrivate(RSAKeyFactory.java:357) ~[na:1.8.0_332]
+	at sun.security.rsa.RSAKeyFactory.engineGeneratePrivate(RSAKeyFactory.java:248) ~[na:1.8.0_332]
+	... 62 common frames omitted
+
+2023-02-01 20:50:35.226  WARN 26188 --- [http-nio-23983-exec-2] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 支付宝确认支付失败
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_payment_agent_service.service.impl.PayChannelAgentServiceImpl.createPayOrderByAliWAP(PayChannelAgentServiceImpl.java:100) ~[classes/:na]
+	at mao.aggregate_pay_payment_agent_service.controller.PayChannelAgentController.createPayOrderByAliWAP(PayChannelAgentController.java:54) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-01 20:50:44.506  INFO 26188 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675255844506,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":349857716535900} from /172.21.160.1
