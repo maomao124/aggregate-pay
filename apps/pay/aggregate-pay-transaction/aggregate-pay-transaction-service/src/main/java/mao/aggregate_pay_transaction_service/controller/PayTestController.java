@@ -42,7 +42,7 @@ public class PayTestController
     private AliPayConfigurationProperties aliPayConfigurationProperties;
 
 
-    @ApiOperation(value = "支付宝下单测试", tags = "支付宝下单测试")
+    @ApiOperation(value = "支付宝下单测试", notes = "支付宝下单测试")
     @ApiImplicitParams(
             {
                     @ApiImplicitParam(name = "out_trade_no", value = "订单号", dataType = "String")
@@ -89,7 +89,7 @@ public class PayTestController
     }
 
 
-    @ApiOperation(value = "支付宝下单测试-支付宝调用", tags = "支付宝下单测试-支付宝调用")
+    @ApiOperation(value = "支付宝下单测试-支付宝调用", notes = "支付宝下单测试-支付宝调用")
     @ApiImplicitParams(
             {
                     @ApiImplicitParam(name = "out_trade_no", value = "订单号", dataType = "String")
