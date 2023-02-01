@@ -26,4 +26,12 @@ public interface PayOrderService extends IService<PayOrder>
      * @return {@link PayOrderDTO}
      */
     PayOrderDTO save(PayOrderDTO payOrderDTO);
+
+    /**
+     * 根据订单号查询订单信息
+     *
+     * @param tradeNo 订单号
+     * @return {@link PayOrderDTO}
+     */
+    PayOrderDTO queryPayOrderByTradeNo(String tradeNo);
 }

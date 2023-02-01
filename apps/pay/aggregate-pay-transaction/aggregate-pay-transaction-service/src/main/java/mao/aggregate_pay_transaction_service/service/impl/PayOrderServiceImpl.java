@@ -8,6 +8,7 @@ import mao.aggregate_pay_transaction_service.entity.PayOrder;
 import mao.aggregate_pay_transaction_service.mapper.PayOrderMapper;
 import mao.aggregate_pay_transaction_service.service.PayOrderService;
 import mao.tools_core.exception.BizException;
+import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
 import org.springframework.stereotype.Service;
 
@@ -62,5 +63,14 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         dozerUtils.map(payOrder, payOrderDTO);
         //返回
         return payOrderDTO;
+    }
+
+    @Override
+    public PayOrderDTO queryPayOrderByTradeNo(String tradeNo)
+    {
+        //查询
+        PayOrder payOrder = this.getOne(Wraps.<PayOrder>lbQ().eq(PayOrder::getTradeNo, tradeNo));
+        //返回
+        return dozerUtils.map(payOrder, PayOrderDTO.class);
     }
 }

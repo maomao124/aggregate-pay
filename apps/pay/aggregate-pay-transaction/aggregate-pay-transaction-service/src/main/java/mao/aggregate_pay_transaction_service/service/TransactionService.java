@@ -31,7 +31,7 @@ public interface TransactionService
      * 保存支付宝订单，并调用支付渠道代理服务调用支付宝的接口
      *
      * @param payOrderDTO 支付订单dto
-     * @return {@link PaymentResponseDTO}
+     * @return {@link PaymentResponseDTO}<{@link String}>
      */
-    PaymentResponseDTO submitOrderByAli(PayOrderDTO payOrderDTO);
+    PaymentResponseDTO<String> submitOrderByAli(PayOrderDTO payOrderDTO);
 }

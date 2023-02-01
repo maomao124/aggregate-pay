@@ -6,10 +6,12 @@ import mao.aggregate_pay_common.utils.EncryptUtil;
 import mao.aggregate_pay_merchant_api.feign.AppFeignClient;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_api.feign.StoreFeignClient;
+import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
 import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 import mao.aggregate_pay_transaction_service.handler.AssertResult;
+import mao.aggregate_pay_transaction_service.service.PayOrderService;
 import mao.aggregate_pay_transaction_service.service.TransactionService;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
@@ -46,6 +48,9 @@ public class TransactionServiceImpl implements TransactionService
 
     @Resource
     private StoreFeignClient storeFeignClient;
+
+    @Resource
+    private PayOrderService payOrderService;
 
 
     @Override
@@ -109,9 +114,24 @@ public class TransactionServiceImpl implements TransactionService
 
 
     @Override
-    public PaymentResponseDTO submitOrderByAli(PayOrderDTO payOrderDTO)
+    public PaymentResponseDTO<String> submitOrderByAli(PayOrderDTO payOrderDTO)
     {
         return null;
+    }
+
+
+    /**
+     * 请求代理服务调用支付宝下单
+     *
+     * @param tradeNo 订单号
+     * @return {@link PaymentResponseDTO}<{@link String}>
+     */
+    private PaymentResponseDTO<String> createPayOrderByAliWAP(String tradeNo)
+    {
+        //构建支付实体
+        AlipayBean alipayBean = new AlipayBean();
+        //根据订单号查询订单详情
+        PayOrderDTO payOrderDTO = payOrderService.queryPayOrderByTradeNo(tradeNo);
     }
 
 }
