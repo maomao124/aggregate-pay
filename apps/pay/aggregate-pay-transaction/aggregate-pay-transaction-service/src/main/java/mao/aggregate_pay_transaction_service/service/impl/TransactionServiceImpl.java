@@ -6,6 +6,7 @@ import mao.aggregate_pay_common.utils.EncryptUtil;
 import mao.aggregate_pay_merchant_api.feign.AppFeignClient;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_api.feign.StoreFeignClient;
+import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
 import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 import mao.aggregate_pay_transaction_service.handler.AssertResult;
@@ -104,6 +105,13 @@ public class TransactionServiceImpl implements TransactionService
         {
             throw BizException.wrap("当前门店不属于当前商户");
         }
+    }
+
+
+    @Override
+    public PaymentResponseDTO submitOrderByAli(PayOrderDTO payOrderDTO)
+    {
+        return null;
     }
 
 }

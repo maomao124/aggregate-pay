@@ -1,5 +1,7 @@
 package mao.aggregate_pay_transaction_service.service;
 
+import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 
 /**
@@ -24,4 +26,12 @@ public interface TransactionService
      * @return {@link String} 支付入口，用base64编码
      */
     String createStoreQRCode(QRCodeDto qrCodeDto);
+
+    /**
+     * 保存支付宝订单，并调用支付渠道代理服务调用支付宝的接口
+     *
+     * @param payOrderDTO 支付订单dto
+     * @return {@link PaymentResponseDTO}
+     */
+    PaymentResponseDTO submitOrderByAli(PayOrderDTO payOrderDTO);
 }
