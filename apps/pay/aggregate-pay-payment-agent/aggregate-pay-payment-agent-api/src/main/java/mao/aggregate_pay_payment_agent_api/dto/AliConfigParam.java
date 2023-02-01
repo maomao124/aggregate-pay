@@ -68,5 +68,5 @@ public class AliConfigParam implements Serializable
     /**
      * RSA2 户生成签名字符串所使用的签名算法类型，目前支持RSA2和RSA，推荐使用RSA2
      */
-    public String signtype;
+    public String signType;
 }
