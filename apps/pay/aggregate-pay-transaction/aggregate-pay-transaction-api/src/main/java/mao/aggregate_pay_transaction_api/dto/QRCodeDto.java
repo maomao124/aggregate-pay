@@ -48,4 +48,9 @@ public class QRCodeDto implements Serializable
      * 订单描述
      */
     private String body;
+
+    /**
+     * 总金额，单位是元
+     */
+    private String totalAmount;
 }

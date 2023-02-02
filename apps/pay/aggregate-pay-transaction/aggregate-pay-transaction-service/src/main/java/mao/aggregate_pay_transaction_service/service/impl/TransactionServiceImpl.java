@@ -78,6 +78,11 @@ public class TransactionServiceImpl implements TransactionService
         payOrderDTO.setMerchantId(qrCodeDto.getMerchantId());
         payOrderDTO.setAppId(qrCodeDto.getAppId());
         payOrderDTO.setStoreId(qrCodeDto.getStoreId());
+        if (qrCodeDto.getTotalAmount()!=null)
+        {
+            //总金额
+            payOrderDTO.setTotalAmount(Integer.valueOf(AmountUtil.changeY2F(qrCodeDto.getTotalAmount())));
+        }
         //显示订单标题
         payOrderDTO.setSubject(qrCodeDto.getSubject());
         //服务类型

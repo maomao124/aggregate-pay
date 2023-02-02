@@ -16,7 +16,10 @@ import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 import mao.aggregate_pay_transaction_api.feign.TransactionFeignClient;
 import mao.tools_core.base.R;
+import mao.tools_log.annotation.SysLog;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -37,6 +40,7 @@ import java.io.IOException;
 
 @Slf4j
 @RestController
+@RefreshScope
 @Api(value = "商户平台‐门店管理", tags = "商户平台‐门店管理")
 public class StoreController
 {
@@ -58,6 +62,12 @@ public class StoreController
      */
     @Value("${pay.c2b.body}")
     String body;
+
+    /**
+     * 二维码大小
+     */
+    @Value("${pay.c2b.QRCode.size:200}")
+    Integer QRCodeSize;
 
 
     /**
@@ -112,15 +122,21 @@ public class StoreController
      * @param appId   商户应用id
      * @return {@link String}
      */
+    @SysLog(value = "生成商户应用门店的二维码", recordResponseParam = false)
     @SneakyThrows
     @ApiOperation("生成商户应用门店的二维码")
     @ApiImplicitParams
             ({
                     @ApiImplicitParam(name = "appId", value = "商户应用id", required = true, dataType = "String", paramType = "path"),
                     @ApiImplicitParam(name = "storeId", value = "商户门店id", required = true, dataType = "String", paramType = "path"),
+                    @ApiImplicitParam(name = "body", value = "商品详情", required = false, dataType = "String", paramType = "query"),
+                    @ApiImplicitParam(name = "totalAmount", value = "金额", required = false, dataType = "String", paramType = "query"),
             })
     @GetMapping(value = "/my/apps/{appId}/stores/{storeId}/app-store-qrcode")
-    public String createCScanBStoreQRCode(@PathVariable("storeId") Long storeId, @PathVariable("appId") String appId)
+    public String createCScanBStoreQRCode(@PathVariable("storeId") Long storeId,
+                                          @PathVariable("appId") String appId,
+                                          @RequestParam(value = "body", required = false) String body,
+                                          @RequestParam(value = "totalAmount", required = false) String totalAmount)
     {
 
         //获取商户信息
@@ -138,8 +154,24 @@ public class StoreController
         //主题
         qrCodeDto.setSubject(subjectFormat);
         //内容
-        String bodyFormat = String.format(body, merchantDTO.getMerchantName());
-        qrCodeDto.setBody(bodyFormat);
+        if (StringUtils.isNotBlank(body))
+        {
+            //内容不为空
+            qrCodeDto.setBody(body);
+            log.debug("商品详情：" + body);
+        }
+        else
+        {
+            //内容为空
+            String bodyFormat = String.format(body, merchantDTO.getMerchantName());
+            qrCodeDto.setBody(bodyFormat);
+        }
+        //金额
+        if (StringUtils.isNotBlank(totalAmount))
+        {
+            qrCodeDto.setTotalAmount(totalAmount);
+            log.debug("金额：" + totalAmount);
+        }
 
         //远程调用
         R<String> r = transactionFeignClient.createStoreQRCode(qrCodeDto);
@@ -151,7 +183,7 @@ public class StoreController
         //调用工具类生成二维码图片
         QRCodeUtil qrCodeUtil = new QRCodeUtil();
         //二维码图片base64编码
-        return qrCodeUtil.createQRCode(storeQRCodeURL, 500, 500);
+        return qrCodeUtil.createQRCode(storeQRCodeURL, QRCodeSize, QRCodeSize);
     }
 
 }

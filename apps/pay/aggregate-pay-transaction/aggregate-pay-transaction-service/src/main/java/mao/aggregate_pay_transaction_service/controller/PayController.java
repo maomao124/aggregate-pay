@@ -79,6 +79,9 @@ public class PayController
             PayOrderDTO order = JSON.parseObject(ticketJson, PayOrderDTO.class);
             //将对象转成url格式，调用根据类
             String params = ParseURLPairUtil.parseURLPair(order);
+            //单位为元的总金额
+            String totalAmountY = AmountUtil.changeF2Y(order.getTotalAmount().toString());
+            params = params + "&totalAmountY=" + totalAmountY;
             log.debug("url参数：" + params);
             String userAgent = request.getHeader("user-agent");
             log.debug("userAgent:" + userAgent);
