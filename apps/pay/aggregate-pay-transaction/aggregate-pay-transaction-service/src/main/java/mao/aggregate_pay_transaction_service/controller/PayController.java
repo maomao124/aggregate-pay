@@ -23,10 +23,7 @@ import mao.tools_core.exception.BizException;
 import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -114,7 +111,7 @@ public class PayController
 
     @SneakyThrows
     @ApiOperation("支付宝门店下单付款")
-    @RequestMapping(value = "/createAliPayOrder", method = RequestMethod.POST)
+    @RequestMapping(value = "/createAliPayOrder", method = {RequestMethod.POST, RequestMethod.GET})
     public void createAlipayOrderForStore(OrderConfirmVO orderConfirmVO, HttpServletRequest request,
                                           HttpServletResponse response)
     {

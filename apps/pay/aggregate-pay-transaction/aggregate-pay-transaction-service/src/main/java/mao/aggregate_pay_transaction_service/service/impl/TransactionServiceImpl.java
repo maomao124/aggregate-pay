@@ -192,7 +192,7 @@ public class TransactionServiceImpl implements TransactionService
         //得到支付宝渠道参数，json转换为对象
         AliConfigParam aliConfigParam = JSON.parseObject(payChannelParamDTO.getParam(), AliConfigParam.class);
         //设置字符编码
-        aliConfigParam.setCharset("utf‐8");
+        aliConfigParam.setCharset("utf-8");
         //构建请求体
         PayOrderByAliWAPBody payOrderByAliWAPBody = new PayOrderByAliWAPBody();
         payOrderByAliWAPBody.setAliConfigParam(aliConfigParam);

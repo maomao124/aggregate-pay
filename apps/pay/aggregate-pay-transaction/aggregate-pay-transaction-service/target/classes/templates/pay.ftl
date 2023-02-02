@@ -19,7 +19,7 @@
     <p class="name">${RequestParameters['subject']!}</p>
 </div>
 <div class="form-container">
-    <form id="form" enctype="application/x-www-form-urlencoded" action="" method="post">
+    <form id="form" action="" method="get">
 
         <input type="hidden" id="appId" name="appId" value="${RequestParameters['appId']!}"/>
         <input type="hidden" id="openId" name="openId" value="${RequestParameters['openId']!}"/>
