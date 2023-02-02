@@ -19,7 +19,7 @@
     <p class="name">${RequestParameters['subject']!}</p>
 </div>
 <div class="form-container">
-    <form id="form" action="" method="post">
+    <form id="form" enctype="application/x-www-form-urlencoded" action="" method="post">
 
         <input type="hidden" id="appId" name="appId" value="${RequestParameters['appId']!}"/>
         <input type="hidden" id="openId" name="openId" value="${RequestParameters['openId']!}"/>
@@ -67,12 +67,12 @@
         }
         var action;
         <#if RequestParameters['openId'] ?? >
-        action = "${rc.contextPath}/wxjspay"
+        action = "${rc.contextPath}/pay/wxjspay"
         {
             ;
         }
         <#else>
-        action = "${rc.contextPath}/createAliPayOrder";
+        action = "${rc.contextPath}/pay/createAliPayOrder";
         </#if>
 
         document.getElementById("form").action = action;

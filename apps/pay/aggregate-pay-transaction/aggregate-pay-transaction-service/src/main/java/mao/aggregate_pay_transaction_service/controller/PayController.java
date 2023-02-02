@@ -93,12 +93,12 @@ public class PayController
                 //直接跳转pay.html
                 case ALIPAY:
                     log.debug("浏览器类型为支付宝");
-                    return "forward:/pay‐page?" + params;
+                    return "forward:/pay-page?" + params;
                 //微信
                 //获取授权码(待实现)
                 case WECHAT:
                     log.debug("浏览器类型为微信");
-                    return "forward:/pay‐page?" + params;
+                    return "forward:/pay-page?" + params;
                 default:
                     log.debug("浏览器不支持");
                     return "forward:/pay-error-page";
@@ -118,6 +118,7 @@ public class PayController
     public void createAlipayOrderForStore(OrderConfirmVO orderConfirmVO, HttpServletRequest request,
                                           HttpServletResponse response)
     {
+        log.debug("前端支付数据:" + orderConfirmVO);
         //判断appId为是否空
         if (StringUtils.isBlank(orderConfirmVO.getAppId()))
         {

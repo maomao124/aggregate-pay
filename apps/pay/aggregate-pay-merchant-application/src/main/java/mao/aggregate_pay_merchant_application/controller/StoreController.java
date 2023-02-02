@@ -151,7 +151,7 @@ public class StoreController
         //调用工具类生成二维码图片
         QRCodeUtil qrCodeUtil = new QRCodeUtil();
         //二维码图片base64编码
-        return qrCodeUtil.createQRCode(storeQRCodeURL, 200, 200);
+        return qrCodeUtil.createQRCode(storeQRCodeURL, 500, 500);
     }
 
 }

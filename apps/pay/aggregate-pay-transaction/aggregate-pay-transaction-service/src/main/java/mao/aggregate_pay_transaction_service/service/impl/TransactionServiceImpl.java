@@ -107,7 +107,7 @@ public class TransactionServiceImpl implements TransactionService
     private void verifyAppAndStore(Long merchantId, String appId, Long storeId)
     {
         //判断应用是否属于当前商户
-        R<Boolean> r = appFeignClient.queryAppInMerchant(appId, storeId);
+        R<Boolean> r = appFeignClient.queryAppInMerchant(appId, merchantId);
         //断言结果
         Boolean result = AssertResult.handler(r);
         //判断是否属于当前商户
@@ -183,7 +183,7 @@ public class TransactionServiceImpl implements TransactionService
         //根据应用、服务类型、支付渠道查询支付渠道参数
         PayChannelParamDTO payChannelParamDTO =
                 payChannelParamService.queryParamByAppPlatformAndPayChannel(payOrderDTO.getAppId(),
-                        payOrderDTO.getChannel(), "ALIPAY_WAP").getData();
+                        payOrderDTO.getChannel(), "ALPAY_WEBP").getData();
         //判断
         if (payChannelParamDTO == null)
         {

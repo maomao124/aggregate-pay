@@ -37,6 +37,7 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
     public PaymentResponseDTO<String> createPayOrderByAliWAP(AliConfigParam aliConfigParam, AlipayBean alipayBean)
     {
         log.debug("支付宝请求参数：" + alipayBean.toString());
+        //log.debug("支付聚道参数：" + aliConfigParam.toString());
         //支付宝渠道参数
         //支付宝下单接口地址(网关)
         String gateway = aliConfigParam.getUrl();
@@ -47,7 +48,8 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
         //数据格式json
         String format = aliConfigParam.getFormat();
         //字符编码
-        String charset = aliConfigParam.getCharset();
+        //String charset = aliConfigParam.getCharset().toUpperCase();
+        String charset = "UTF-8";
         //公钥
         String alipayPublicKey = aliConfigParam.getAlipayPublicKey();
         //签名算法类型
