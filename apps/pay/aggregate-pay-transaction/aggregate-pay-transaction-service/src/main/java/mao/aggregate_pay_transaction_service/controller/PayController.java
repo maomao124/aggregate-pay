@@ -80,8 +80,11 @@ public class PayController
             //将对象转成url格式，调用根据类
             String params = ParseURLPairUtil.parseURLPair(order);
             //单位为元的总金额
-            String totalAmountY = AmountUtil.changeF2Y(order.getTotalAmount().toString());
-            params = params + "&totalAmountY=" + totalAmountY;
+            if (order.getTotalAmount() != null)
+            {
+                String totalAmountY = AmountUtil.changeF2Y(order.getTotalAmount().toString());
+                params = params + "&totalAmountY=" + totalAmountY;
+            }
             log.debug("url参数：" + params);
             String userAgent = request.getHeader("user-agent");
             log.debug("userAgent:" + userAgent);
@@ -124,10 +127,14 @@ public class PayController
         {
             throw BizException.wrap(30003, "appId为空");
         }
+        //获得总金额，单位为元
+        String totalAmountY = orderConfirmVO.getTotalAmount();
+        //清空总金额，否则会抛出异常
+        orderConfirmVO.setTotalAmount(null);
         //转换
         PayOrderDTO payOrderDTO = dozerUtils.map(orderConfirmVO, PayOrderDTO.class);
         //总金额
-        payOrderDTO.setTotalAmount(Integer.valueOf(AmountUtil.changeY2F(orderConfirmVO.getTotalAmount())));
+        payOrderDTO.setTotalAmount(Integer.valueOf(AmountUtil.changeY2F(totalAmountY)));
         //设置请求的IP
         payOrderDTO.setClientIp(IPUtil.getIpAddr(request));
         //远程调用，获取下单应用信息

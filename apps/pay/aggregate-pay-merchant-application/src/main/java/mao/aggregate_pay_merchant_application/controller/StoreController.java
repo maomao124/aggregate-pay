@@ -163,8 +163,9 @@ public class StoreController
         else
         {
             //内容为空
-            String bodyFormat = String.format(body, merchantDTO.getMerchantName());
+            String bodyFormat = String.format(this.body, merchantDTO.getMerchantName());
             qrCodeDto.setBody(bodyFormat);
+            log.debug("默认商品详情：" + bodyFormat);
         }
         //金额
         if (StringUtils.isNotBlank(totalAmount))

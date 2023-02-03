@@ -33,7 +33,7 @@
                                      maxlength="5" size="25"/></p>
         <p><span>订单描述 :</span><input type="text" name="body" value="${RequestParameters['body']!}" readonly="readonly"
                                      maxlength="5" size="25"/></p>
-        <#if RequestParameters['totalAmount']?? >
+        <#if RequestParameters['totalAmountY']?? >
         <#--<p><span>付款金额(元) :</span><input type="text" name="totalAmount"
                                         value="${(RequestParameters['totalAmount']!0 ? number/100) ? string('0.00')}"
                                         readonly="readonly" maxlength="5" size="25"/></p>-->
