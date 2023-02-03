@@ -1,5 +1,6 @@
 package mao.aggregate_pay_uaa_service.filter;
 
+import cn.hutool.extra.servlet.ServletUtil;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_uaa_service.utils.IPUtils;
 import org.springframework.stereotype.Component;
@@ -33,7 +34,7 @@ public class IPFilter extends OncePerRequestFilter
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain)
             throws ServletException, IOException
     {
-        String ip = httpServletRequest.getRemoteAddr();
+        String ip = ServletUtil.getClientIP(httpServletRequest);
         IPUtils.setIP(ip);
         log.debug("ip地址：" + ip + "  访问uaa服务");
         filterChain.doFilter(httpServletRequest, httpServletResponse);

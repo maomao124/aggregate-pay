@@ -1,5 +1,6 @@
 package mao.aggregate_pay_transaction_service.controller;
 
+import cn.hutool.extra.servlet.ServletUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +40,8 @@ public class PageController
     @ApiOperation("支付页面")
     public String payPage(Map<String, Object> map, HttpServletRequest httpServletRequest)
     {
-        log.debug("ip:" + httpServletRequest.getRemoteAddr() + " 访问支付页面");
+
+        log.debug("ip:" + ServletUtil.getClientIP(httpServletRequest) + " 访问支付页面");
         return "pay";
     }
 
