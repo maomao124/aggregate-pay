@@ -951,3 +951,95 @@ com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/i
 2023-02-03 15:22:09.064 DEBUG 20540 --- [http-nio-56040-exec-9] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
 2023-02-03 15:22:09.065 DEBUG 20540 --- [http-nio-56040-exec-9] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
 2023-02-03 15:22:09.066 DEBUG 20540 --- [http-nio-56040-exec-9] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:31:07.356  WARN 20540 --- [http-nio-56040-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 538291
+2023-02-03 15:31:07.378 DEBUG 20540 --- [http-nio-56040-exec-2] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-03 15:31:07.378 DEBUG 20540 --- [http-nio-56040-exec-2] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-03 15:31:07.380 DEBUG 20540 --- [http-nio-56040-exec-2] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-03 15:31:07.406 DEBUG 20540 --- [http-nio-56040-exec-3] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-03 15:31:07.406 DEBUG 20540 --- [http-nio-56040-exec-3] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-03 15:31:07.407 DEBUG 20540 --- [http-nio-56040-exec-3] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:34:44.657  WARN 20540 --- [http-nio-56040-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 217249
+2023-02-03 15:34:44.688 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-03 15:34:44.688 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-03 15:34:44.691 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-03 15:34:44.701 DEBUG 20540 --- [http-nio-56040-exec-8] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-03 15:34:44.702 DEBUG 20540 --- [http-nio-56040-exec-8] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-03 15:34:44.703 DEBUG 20540 --- [http-nio-56040-exec-8] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:34:59.585 DEBUG 20540 --- [http-nio-56040-exec-6] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-03 15:34:59.586 DEBUG 20540 --- [http-nio-56040-exec-6] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-03 15:34:59.588 DEBUG 20540 --- [http-nio-56040-exec-6] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-03 15:34:59.601 DEBUG 20540 --- [http-nio-56040-exec-7] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-03 15:34:59.601 DEBUG 20540 --- [http-nio-56040-exec-7] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-03 15:34:59.604 DEBUG 20540 --- [http-nio-56040-exec-7] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:37:03.232  WARN 20540 --- [http-nio-56040-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 123628
+2023-02-03 15:37:03.259 DEBUG 20540 --- [http-nio-56040-exec-2] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-03 15:37:03.259 DEBUG 20540 --- [http-nio-56040-exec-2] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-03 15:37:03.262 DEBUG 20540 --- [http-nio-56040-exec-2] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-03 15:37:03.275 DEBUG 20540 --- [http-nio-56040-exec-3] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-03 15:37:03.275 DEBUG 20540 --- [http-nio-56040-exec-3] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-03 15:37:03.277 DEBUG 20540 --- [http-nio-56040-exec-3] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:37:26.006 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-03 15:37:26.007 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-03 15:37:26.009 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-03 15:37:26.016 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-03 15:37:26.016 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-03 15:37:26.019 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:37:56.769 DEBUG 20540 --- [http-nio-56040-exec-1] mao.tools_redis_cache.utils.RedisUtils   : pay:AppDTO:getAppById:a838b36dcbe940328ef523d7ceaca7c9 获取分布式锁后，缓存未命中，查询数据库
+2023-02-03 15:37:56.771 DEBUG 20540 --- [http-nio-56040-exec-1] m.a.mapper.AppMapper.selectOne           : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app WHERE (APP_ID = ?) 
+2023-02-03 15:37:56.772 DEBUG 20540 --- [http-nio-56040-exec-1] m.a.mapper.AppMapper.selectOne           : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String)
+2023-02-03 15:37:56.773 DEBUG 20540 --- [http-nio-56040-exec-1] m.a.mapper.AppMapper.selectOne           : <==      Total: 1
+2023-02-03 15:40:08.925  WARN 20540 --- [http-nio-56040-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 132152
+2023-02-03 15:40:08.950 DEBUG 20540 --- [http-nio-56040-exec-7] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-03 15:40:08.951 DEBUG 20540 --- [http-nio-56040-exec-7] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-03 15:40:08.952 DEBUG 20540 --- [http-nio-56040-exec-7] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-03 15:40:08.963 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-03 15:40:08.963 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-03 15:40:08.964 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:45:56.300 DEBUG 20540 --- [http-nio-56040-exec-4] mao.tools_redis_cache.utils.RedisUtils   : pay:AppDTO:getAppById:a838b36dcbe940328ef523d7ceaca7c9 获取分布式锁后，缓存未命中，查询数据库
+2023-02-03 15:45:56.302  WARN 20540 --- [http-nio-56040-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 347338
+2023-02-03 15:45:56.327 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectOne           : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app WHERE (APP_ID = ?) 
+2023-02-03 15:45:56.328 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectOne           : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String)
+2023-02-03 15:45:56.330 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectOne           : <==      Total: 1
+2023-02-03 15:47:14.796  WARN 20540 --- [http-nio-56040-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 78465
+2023-02-03 15:47:14.824 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-03 15:47:14.824 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-03 15:47:14.826 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-03 15:47:14.827 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-03 15:47:14.828 DEBUG 20540 --- [http-nio-56040-exec-10] m.a.mapper.StoreMapper.selectPage        : <==      Total: 1
+2023-02-03 15:47:17.469 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectList          : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app WHERE (MERCHANT_ID = ?) 
+2023-02-03 15:47:17.469 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectList          : ==> Parameters: 129606551068475425(Long)
+2023-02-03 15:47:17.471 DEBUG 20540 --- [http-nio-56040-exec-4] m.a.mapper.AppMapper.selectList          : <==      Total: 1
+2023-02-03 15:47:21.108 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-03 15:47:21.109 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-03 15:47:21.109 DEBUG 20540 --- [http-nio-56040-exec-5] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-03 15:47:21.123 DEBUG 20540 --- [http-nio-56040-exec-8] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-03 15:47:21.123 DEBUG 20540 --- [http-nio-56040-exec-8] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-03 15:47:21.124 DEBUG 20540 --- [http-nio-56040-exec-8] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-03 15:53:39.193  WARN 20540 --- [Thread-52] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-03 15:53:39.193  WARN 20540 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-03 15:53:39.195  WARN 20540 --- [Thread-52] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-03 15:53:39.199  WARN 20540 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-03 15:53:39.281  INFO 20540 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-03 15:53:39.340  INFO 20540 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-03 15:53:39.342  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-merchant-service:192.168.3.143:56040 from beat map.
+2023-02-03 15:53:39.343  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-merchant-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=56040, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-03 15:53:39.347  INFO 20540 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-03 15:53:39.350  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-03 15:53:39.351  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-03 15:53:39.351  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-03 15:53:40.351  INFO 20540 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":56040,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56931,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"cacheMillis\":10000,\"lastRefTime\":1675410820348,\"checksum\":\"6aaf109a1989b972c14383b3ab51bbae\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":6211153901900} from /192.168.202.1
+2023-02-03 15:53:42.369  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-03 15:53:45.394  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-03 15:53:45.394  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-03 15:53:45.394  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-03 15:53:45.395  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-03 15:53:45.395  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-03 15:53:45.395  WARN 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-03 15:53:45.395  WARN 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-03 15:53:45.396  INFO 20540 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-03 15:53:45.396  INFO 20540 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-03 15:53:45.396  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-03 15:53:45.396  INFO 20540 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-03 15:53:45.410  WARN 20540 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-03 15:53:45.490  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-03 15:53:45.495  INFO 20540 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

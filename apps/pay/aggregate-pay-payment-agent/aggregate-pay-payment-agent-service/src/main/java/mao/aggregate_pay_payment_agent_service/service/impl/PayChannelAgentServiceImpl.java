@@ -1,16 +1,22 @@
 package mao.aggregate_pay_payment_agent_service.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
+import com.alipay.api.domain.AlipayTradePayModel;
 import com.alipay.api.domain.AlipayTradeWapPayModel;
+import com.alipay.api.request.AlipayTradeQueryRequest;
 import com.alipay.api.request.AlipayTradeWapPayRequest;
+import com.alipay.api.response.AlipayTradeQueryResponse;
 import com.alipay.api.response.AlipayTradeWapPayResponse;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
 import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
 import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.enums.TradeStatus;
+import mao.aggregate_pay_payment_agent_service.constants.AliCodeConstants;
 import mao.aggregate_pay_payment_agent_service.service.PayChannelAgentService;
 import mao.tools_core.exception.BizException;
 import org.springframework.stereotype.Service;
@@ -100,6 +106,87 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
             log.error("支付宝确认支付失败", e);
             //支付宝确认支付失败
             throw BizException.wrap("支付宝确认支付失败");
+        }
+    }
+
+
+    @Override
+    public PaymentResponseDTO<String> queryPayOrderByAli(AliConfigParam aliConfigParam, String outTradeNo)
+    {
+        log.debug("查询订单：" + outTradeNo);
+        //支付接口网关地址
+        String gateway = aliConfigParam.getUrl();
+        //appid
+        String appId = aliConfigParam.getAppId();
+        //私钥
+        String rsaPrivateKey = aliConfigParam.getRsaPrivateKey();
+        //json格式
+        String format = aliConfigParam.getFormat();
+        //编码
+        String charset = aliConfigParam.getCharset().toUpperCase();
+        //公钥
+        String alipayPublicKey = aliConfigParam.getAlipayPublicKey();
+        //签名算法类型
+        String signType = aliConfigParam.getSignType();
+
+        //构建sdk客户端
+        AlipayClient defaultAlipayClient = new DefaultAlipayClient(gateway, appId, rsaPrivateKey, format, charset, alipayPublicKey, signType);
+        //请求
+        AlipayTradeQueryRequest queryRequest = new AlipayTradeQueryRequest();
+        AlipayTradePayModel alipayTradePayModel = new AlipayTradePayModel();
+        //平台订单号
+        alipayTradePayModel.setOutTradeNo(outTradeNo);
+        //封装请求参数
+        queryRequest.setBizModel(alipayTradePayModel);
+        PaymentResponseDTO<String> stringPaymentResponseDTO;
+        try
+        {
+            //请求支付宝接口
+            AlipayTradeQueryResponse alipayTradeQueryResponse = defaultAlipayClient.execute(queryRequest);
+            //接口调用成功
+            if (AliCodeConstants.SUCCESSCODE.equals(alipayTradeQueryResponse.getCode()))
+            {
+                //将支付宝响应的状态转换为平台的状态
+                TradeStatus tradeStatus = covertAliTradeStatusToCode(alipayTradeQueryResponse.getTradeStatus());
+                //调用success方法
+                stringPaymentResponseDTO = PaymentResponseDTO.success(alipayTradeQueryResponse.getTradeNo(),
+                        alipayTradeQueryResponse.getOutTradeNo(),
+                        tradeStatus,
+                        alipayTradeQueryResponse.getMsg() + " " + alipayTradeQueryResponse.getSubMsg());
+                log.debug("查询支付宝支付结果" + JSON.toJSONString(stringPaymentResponseDTO));
+                return stringPaymentResponseDTO;
+            }
+        }
+        catch (AlipayApiException e)
+        {
+            log.warn(e.getMessage(), e);
+        }
+        stringPaymentResponseDTO = PaymentResponseDTO.fail("查询支付宝支付结果异常", outTradeNo, TradeStatus.UNKNOWN);
+        return stringPaymentResponseDTO;
+    }
+
+
+    /**
+     * 将支付宝查询时订单状态trade_status 转换为 平台订单状态
+     *
+     * @param aliTradeStatus 支付宝交易状态
+     *                       WAIT_BUYER_PAY（交易创建，等待买家付款）
+     *                       TRADE_CLOSED（未付款交易超时关闭，或支付完成后全额退款）
+     *                       TRADE_SUCCESS（交易支付成功）
+     *                       TRADE_FINISHED（交易结束，不可退款）
+     * @return {@link TradeStatus}
+     */
+    private TradeStatus covertAliTradeStatusToCode(String aliTradeStatus)
+    {
+        switch (aliTradeStatus)
+        {
+            case AliCodeConstants.WAIT_BUYER_PAY:
+                return TradeStatus.USERPAYING;
+            case AliCodeConstants.TRADE_SUCCESS:
+            case AliCodeConstants.TRADE_FINISHED:
+                return TradeStatus.SUCCESS;
+            default:
+                return TradeStatus.FAILED;
         }
     }
 }

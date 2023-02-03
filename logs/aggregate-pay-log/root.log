@@ -846,3 +846,187 @@ com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/i
 2023-02-03 15:22:09.172 DEBUG 9856 --- [ConsumeMessageThread_pay_group_5] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
 2023-02-03 15:22:09.173 DEBUG 9856 --- [ConsumeMessageThread_pay_group_5] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133213058595029281(Long), 2023-02-03T15:22:09.128(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, , ](String), GET(String), 129606551068475425(Long), OPT(String), 708(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:22:08.420(LocalDateTime)
 2023-02-03 15:22:09.178 DEBUG 9856 --- [ConsumeMessageThread_pay_group_5] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:31:07.486 DEBUG 9856 --- [ConsumeMessageThread_pay_group_6] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-02-03 15:31:07.490  WARN 9856 --- [ConsumeMessageThread_pay_group_6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 538312
+2023-02-03 15:31:07.513 DEBUG 9856 --- [ConsumeMessageThread_pay_group_6] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-02-03 15:31:07.514 DEBUG 9856 --- [ConsumeMessageThread_pay_group_6] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133215316560838977(Long), 2023-02-03T15:31:07.450(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, , ](String), GET(String), 129606551068475425(Long), OPT(String), 665(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:31:06.785(LocalDateTime)
+2023-02-03 15:31:07.518 DEBUG 9856 --- [ConsumeMessageThread_pay_group_6] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:34:45.619 DEBUG 9856 --- [ConsumeMessageThread_pay_group_7] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-02-03 15:34:45.623  WARN 9856 --- [ConsumeMessageThread_pay_group_7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 218104
+2023-02-03 15:34:45.662 DEBUG 9856 --- [ConsumeMessageThread_pay_group_7] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-02-03 15:34:45.663 DEBUG 9856 --- [ConsumeMessageThread_pay_group_7] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133216231472759137(Long), 2023-02-03T15:34:44.933(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, , ](String), GET(String), 129606551068475425(Long), OPT(String), 1088(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:34:43.845(LocalDateTime)
+2023-02-03 15:34:45.668 DEBUG 9856 --- [ConsumeMessageThread_pay_group_7] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:34:59.696 DEBUG 9856 --- [ConsumeMessageThread_pay_group_8] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-02-03 15:34:59.700 DEBUG 9856 --- [ConsumeMessageThread_pay_group_8] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-02-03 15:34:59.703 DEBUG 9856 --- [ConsumeMessageThread_pay_group_8] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133216290520170881(Long), 2023-02-03T15:34:59.643(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, , ](String), GET(String), 129606551068475425(Long), OPT(String), 93(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:34:59.550(LocalDateTime)
+2023-02-03 15:34:59.708 DEBUG 9856 --- [ConsumeMessageThread_pay_group_8] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:37:04.000 DEBUG 9856 --- [ConsumeMessageThread_pay_group_9] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-02-03 15:37:04.003  WARN 9856 --- [ConsumeMessageThread_pay_group_9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 124294
+2023-02-03 15:37:04.029 DEBUG 9856 --- [ConsumeMessageThread_pay_group_9] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-02-03 15:37:04.032 DEBUG 9856 --- [ConsumeMessageThread_pay_group_9] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133216811880546721(Long), 2023-02-03T15:37:03.443(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, , ](String), GET(String), 129606551068475425(Long), OPT(String), 835(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:37:02.608(LocalDateTime)
+2023-02-03 15:37:04.041 DEBUG 9856 --- [ConsumeMessageThread_pay_group_9] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:37:26.068 DEBUG 9856 --- [ConsumeMessageThread_pay_group_10] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-02-03 15:37:26.070 DEBUG 9856 --- [ConsumeMessageThread_pay_group_10] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-02-03 15:37:26.071 DEBUG 9856 --- [ConsumeMessageThread_pay_group_10] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133216904440447425(Long), 2023-02-03T15:37:26.044(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, , ](String), GET(String), 129606551068475425(Long), OPT(String), 60(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:37:25.984(LocalDateTime)
+2023-02-03 15:37:26.076 DEBUG 9856 --- [ConsumeMessageThread_pay_group_10] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:40:08.990 DEBUG 9856 --- [ConsumeMessageThread_pay_group_11] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-02-03 15:40:08.993  WARN 9856 --- [ConsumeMessageThread_pay_group_11] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 162916
+2023-02-03 15:40:09.018 DEBUG 9856 --- [ConsumeMessageThread_pay_group_11] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-02-03 15:40:09.019 DEBUG 9856 --- [ConsumeMessageThread_pay_group_11] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133217587784843745(Long), 2023-02-03T15:40:08.981(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, hello, 32.68](String), GET(String), 129606551068475425(Long), OPT(String), 93(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:40:08.888(LocalDateTime)
+2023-02-03 15:40:09.023 DEBUG 9856 --- [ConsumeMessageThread_pay_group_11] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:47:21.176 DEBUG 9856 --- [ConsumeMessageThread_pay_group_12] m.a.consumer.RocketMQOptLogCustomer      : 消费者监听到一条消息  消息主题[pay_opt_log_topic]
+2023-02-03 15:47:21.179  WARN 9856 --- [ConsumeMessageThread_pay_group_12] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_log?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 432156
+2023-02-03 15:47:21.205 DEBUG 9856 --- [ConsumeMessageThread_pay_group_12] m.a.mapper.OptLogMapper.insert           : ==>  Preparing: INSERT INTO opt_log ( id, finish_time, action_method, description, request_ip, request_uri, ua, params, http_method, user_name, type, consuming_time, class_path, start_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2023-02-03 15:47:21.207 DEBUG 9856 --- [ConsumeMessageThread_pay_group_12] m.a.mapper.OptLogMapper.insert           : ==> Parameters: 133219400504312321(Long), 2023-02-03T15:47:21.156(LocalDateTime), createCScanBStoreQRCode(String), 商户平台‐门店管理-生成商户应用门店的二维码(String), 127.0.0.1(String), /merchant/my/apps/a838b36dcbe940328ef523d7ceaca7c9/stores/129606551173333057/app-store-qrcode(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70(String), [129606551173333057, a838b36dcbe940328ef523d7ceaca7c9, , ](String), GET(String), 129606551068475425(Long), OPT(String), 108(Long), mao.aggregate_pay_merchant_application.controller.StoreController(String), 2023-02-03T15:47:21.048(LocalDateTime)
+2023-02-03 15:47:21.212 DEBUG 9856 --- [ConsumeMessageThread_pay_group_12] m.a.mapper.OptLogMapper.insert           : <==    Updates: 1
+2023-02-03 15:53:33.720  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10941] result: true
+2023-02-03 15:53:33.739  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10921] result: true
+2023-02-03 15:53:33.743  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10921] result: true
+2023-02-03 15:53:33.743  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10921] result: true
+2023-02-03 15:53:33.779  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10931] result: true
+2023-02-03 15:53:33.808  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-03 15:53:33.809  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-03 15:53:33.809  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-03 15:53:33.852  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10911] result: true
+2023-02-03 15:53:33.852  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10911] result: true
+2023-02-03 15:53:33.852  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.30.240.1:10911] result: true
+2023-02-03 15:53:36.785  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:38.818  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:39.250  WARN 9856 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-03 15:53:39.252  WARN 9856 --- [Thread-41] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-03 15:53:39.252  WARN 9856 --- [Thread-41] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-03 15:53:39.254  WARN 9856 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-03 15:53:40.878  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:41.336  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:42.921  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:44.943  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:46.997  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:49.028  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:49.044  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:51.083  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:53.104  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:53.106  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:53.243 ERROR 9856 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-03 15:53:55.145  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:55.146  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:55.287 ERROR 9856 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-03 15:53:57.173  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:57.173  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:57.345 ERROR 9856 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-03 15:53:59.210  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:53:59.367 ERROR 9856 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-03 15:53:59.368 ERROR 9856 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [check-update] get changed dataId exception
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-03 15:53:59.368 ERROR 9856 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : longPolling error : 
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-03 15:53:59.460  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:54:00.320  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:54:00.668 ERROR 9856 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-03 15:54:01.232  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:54:01.487  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:54:02.335  INFO 9856 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-03 15:54:02.708 ERROR 9856 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : [NA] failed to request
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_332]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_332]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_332]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_332]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_332]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_332]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_332]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1228) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_332]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_332]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-common-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:382) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:464) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+

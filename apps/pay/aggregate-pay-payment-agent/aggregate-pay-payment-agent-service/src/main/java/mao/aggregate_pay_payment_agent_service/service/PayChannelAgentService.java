@@ -27,4 +27,14 @@ public interface PayChannelAgentService
      * @return {@link PaymentResponseDTO}
      */
     PaymentResponseDTO<String> createPayOrderByAliWAP(AliConfigParam aliConfigParam, AlipayBean alipayBean);
+
+
+    /**
+     * 查询支付宝支付订单的状态
+     *
+     * @param aliConfigParam 阿里支付宝配置参数
+     * @param outTradeNo     平台订单号
+     * @return {@link PaymentResponseDTO}
+     */
+    PaymentResponseDTO<String> queryPayOrderByAli(AliConfigParam aliConfigParam, String outTradeNo);
 }
