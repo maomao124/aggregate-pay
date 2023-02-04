@@ -17,9 +17,13 @@ import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
 import mao.aggregate_pay_payment_agent_api.enums.TradeStatus;
 import mao.aggregate_pay_payment_agent_service.constants.AliCodeConstants;
+import mao.aggregate_pay_payment_agent_service.consumer.PayConsumer;
+import mao.aggregate_pay_payment_agent_service.producer.PayProducer;
 import mao.aggregate_pay_payment_agent_service.service.PayChannelAgentService;
 import mao.tools_core.exception.BizException;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -38,6 +42,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class PayChannelAgentServiceImpl implements PayChannelAgentService
 {
+
+    @Resource
+    private PayProducer payProducer;
 
     @Override
     public PaymentResponseDTO<String> createPayOrderByAliWAP(AliConfigParam aliConfigParam, AlipayBean alipayBean)
@@ -99,6 +106,15 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
             PaymentResponseDTO<String> res = new PaymentResponseDTO<>();
             res.setContent(alipayTradeWapPayResponse.getBody());
             log.debug("下单成功");
+
+            //发送支付结果查询延迟消息
+            PaymentResponseDTO<String> notice = new PaymentResponseDTO<>();
+            notice.setOutTradeNo(alipayBean.getOutTradeNo());
+            notice.setContent(JSON.toJSONString(aliConfigParam));
+            notice.setMsg("ALIPAY_WAP");
+            //发送延迟消息
+            payProducer.payOrderNotice(notice);
+
             return res;
         }
         catch (Exception e)
