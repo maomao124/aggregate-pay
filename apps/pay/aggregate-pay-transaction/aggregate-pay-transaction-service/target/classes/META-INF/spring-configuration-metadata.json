@@ -12,6 +12,11 @@
       "sourceMethod": "druidDataSource()"
     },
     {
+      "name": "weixin",
+      "type": "mao.aggregate_pay_transaction_service.properties.WeiXinConfigurationProperties",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WeiXinConfigurationProperties"
+    },
+    {
       "name": "wxpay",
       "type": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties",
       "sourceType": "mao.aggregate_pay_transaction_service.properties.WxPayConfigurationProperties"
@@ -56,6 +61,26 @@
       "description": "服务网关地址",
       "sourceType": "mao.aggregate_pay_transaction_service.properties.AliPayConfigurationProperties",
       "defaultValue": "https:\/\/openapi.alipaydev.com\/gateway.do"
+    },
+    {
+      "name": "weixin.oauth2-code-return-url",
+      "type": "java.lang.String",
+      "description": "oauth2代码返回url",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WeiXinConfigurationProperties"
+    },
+    {
+      "name": "weixin.oauth2-request-url",
+      "type": "java.lang.String",
+      "description": "oauth2请求url",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WeiXinConfigurationProperties",
+      "defaultValue": "https:\/\/open.weixin.qq.com\/connect\/oauth2\/authorize"
+    },
+    {
+      "name": "weixin.oauth2-token",
+      "type": "java.lang.String",
+      "description": "oauth2令牌",
+      "sourceType": "mao.aggregate_pay_transaction_service.properties.WeiXinConfigurationProperties",
+      "defaultValue": "https:\/\/api.weixin.qq.com\/sns\/oauth2\/access_token"
     },
     {
       "name": "wxpay.app-i-d",

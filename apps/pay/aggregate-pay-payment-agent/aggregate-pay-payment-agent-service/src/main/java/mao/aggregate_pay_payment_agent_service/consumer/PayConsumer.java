@@ -62,9 +62,10 @@ public class PayConsumer implements RocketMQListener<MessageExt>
     @Override
     public void onMessage(MessageExt messageExt)
     {
-        log.debug("开始消费支付结果查询消息：" + messageExt);
         //取出消息内容
         String body = new String(messageExt.getBody(), StandardCharsets.UTF_8);
+        //打印
+        log.debug("开始消费支付结果查询消息：" + body);
         PaymentResponseDTO<String> response = JSON.parseObject(body, PaymentResponseDTO.class);
         //平台订单号
         String outTradeNo = response.getOutTradeNo();
@@ -93,7 +94,7 @@ public class PayConsumer implements RocketMQListener<MessageExt>
         if (TradeStatus.UNKNOWN.equals(paymentResponseDTO.getTradeState()) || TradeStatus.USERPAYING
                 .equals(paymentResponseDTO.getTradeState()))
         {
-            //在支付状态未知或支付中，抛出异常会重新消息此消息
+            //在支付状态未知或支付中，抛出异常会重新消费此消息
             log.debug("支付状态未知，等待重试");
             throw new RuntimeException("支付状态未知，等待重试");
         }

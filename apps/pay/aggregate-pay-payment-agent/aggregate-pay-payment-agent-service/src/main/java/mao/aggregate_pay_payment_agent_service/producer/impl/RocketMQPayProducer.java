@@ -43,7 +43,7 @@ public class RocketMQPayProducer implements PayProducer
         //发送延迟消息
         Message<PaymentResponseDTO<String>> message = MessageBuilder.withPayload(paymentResponseDTO).build();
         //延迟第3级发送（延迟10秒）
-        rocketMQTemplate.syncSend(RocketMQConstants.TOPIC_ORDER, message, 1000, 3);
+        rocketMQTemplate.syncSend(RocketMQConstants.TOPIC_ORDER, message, 6000, 3);
         log.info("支付渠道代理服务向mq发送订单查询的消息：{}", JSON.toJSONString(paymentResponseDTO));
     }
 
