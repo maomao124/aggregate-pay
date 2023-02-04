@@ -1,6 +1,7 @@
 package mao.aggregate_pay_transaction_service.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
 import mao.aggregate_pay_common.utils.AmountUtil;
@@ -26,7 +27,10 @@ import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.tools_databases.mybatis.conditions.update.LbuWrapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.io.UnsupportedEncodingException;
@@ -72,6 +76,9 @@ public class TransactionServiceImpl implements TransactionService
 
     @Resource
     private WeiXinConfigurationProperties weiXinConfigurationProperties;
+
+    @Resource
+    private RestTemplate restTemplate;
 
 
     @Override
@@ -285,5 +292,36 @@ public class TransactionServiceImpl implements TransactionService
             //生成获取授权码链接失败
             return "forward:/pay‐page‐error";
         }
+    }
+
+    @Override
+    public String getWXOAuthOpenId(String code, String appId)
+    {
+        //获取微信支付渠道参数，根据应用、服务类型、支付渠道查询支付渠道参数
+        R<PayChannelParamDTO> r = payChannelParamService.queryParamByAppPlatformAndPayChannel(appId,
+                "aggregate_pay_c2b", "WX_JSAPI");
+        PayChannelParamDTO payChannelParamDTO = AssertResult.handler(r);
+        if (payChannelParamDTO == null)
+        {
+            throw BizException.wrap("原始支付渠道为空");
+        }
+        //支付渠道参数
+        String payParam = payChannelParamDTO.getParam();
+        WXConfigParam wxConfigParam = JSON.parseObject(payParam, WXConfigParam.class);
+        //密钥
+        String appSecret = wxConfigParam.getAppSecret();
+        //获取openid地址
+        String url = String.format("%s?appid=%s&secret=%s&code=%s&grant_type=authorization_code",
+                weiXinConfigurationProperties.getOauth2Token(),
+                wxConfigParam.getAppId(),
+                appSecret,
+                code);
+        //发起请求
+        ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, null,
+                String.class);
+        String response = exchange.getBody();
+        //取得openId
+        return JSONObject.parseObject(response).getString("openid");
+
     }
 }

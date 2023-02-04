@@ -59,4 +59,14 @@ public interface TransactionService
      * 例如：redirect:/test?key=value
      */
     String getWXOAuth2Code(PayOrderDTO order);
+
+
+    /**
+     * 获取微信openid
+     *
+     * @param code  授权id
+     * @param appId 应用id，用于获取微信支付的参数
+     * @return openid
+     */
+    String getWXOAuthOpenId(String code, String appId);
 }
