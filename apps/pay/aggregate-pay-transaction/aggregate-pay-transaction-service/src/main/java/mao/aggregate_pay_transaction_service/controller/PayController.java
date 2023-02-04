@@ -29,6 +29,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  * Project name(项目名称)：aggregate-pay
  * Package(包名): mao.aggregate_pay_transaction_service.controller
@@ -98,10 +99,10 @@ public class PayController
                     log.debug("浏览器类型为支付宝");
                     return "forward:/pay-page?" + params;
                 //微信
-                //获取授权码(待实现)
+                //获取授权码
                 case WECHAT:
                     log.debug("浏览器类型为微信");
-                    return "forward:/pay-page?" + params;
+                    return transactionService.getWXOAuth2Code(order);
                 default:
                     log.debug("浏览器不支持");
                     return "forward:/pay-error-page";

@@ -51,4 +51,12 @@ public interface TransactionService
     void updateOrderTradeNoAndTradeState(String tradeNo, String payChannelTradeNo, String state);
 
 
+    /**
+     * 得到微信授权码
+     *
+     * @param order 订单
+     * @return {@link String} 返回一个重定向的url或者转发的页面
+     * 例如：redirect:/test?key=value
+     */
+    String getWXOAuth2Code(PayOrderDTO order);
 }

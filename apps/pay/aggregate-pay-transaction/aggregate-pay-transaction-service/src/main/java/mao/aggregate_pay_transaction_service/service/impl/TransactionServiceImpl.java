@@ -8,16 +8,14 @@ import mao.aggregate_pay_common.utils.EncryptUtil;
 import mao.aggregate_pay_merchant_api.feign.AppFeignClient;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.aggregate_pay_merchant_api.feign.StoreFeignClient;
-import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
-import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
-import mao.aggregate_pay_payment_agent_api.dto.PayOrderByAliWAPBody;
-import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.dto.*;
 import mao.aggregate_pay_payment_agent_api.feign.PayChannelAgentFeignClient;
 import mao.aggregate_pay_transaction_api.dto.PayChannelParamDTO;
 import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 import mao.aggregate_pay_transaction_service.entity.PayOrder;
 import mao.aggregate_pay_transaction_service.handler.AssertResult;
+import mao.aggregate_pay_transaction_service.properties.WeiXinConfigurationProperties;
 import mao.aggregate_pay_transaction_service.service.PayChannelParamService;
 import mao.aggregate_pay_transaction_service.service.PayChannelService;
 import mao.aggregate_pay_transaction_service.service.PayOrderService;
@@ -31,6 +29,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.time.LocalDateTime;
 
 /**
@@ -69,6 +69,9 @@ public class TransactionServiceImpl implements TransactionService
 
     @Resource
     private PayChannelAgentFeignClient payChannelAgentFeignClient;
+
+    @Resource
+    private WeiXinConfigurationProperties weiXinConfigurationProperties;
 
 
     @Override
@@ -242,5 +245,45 @@ public class TransactionServiceImpl implements TransactionService
         }
         //更新
         payOrderService.update(lbuWrapper);
+    }
+
+
+    @Override
+    public String getWXOAuth2Code(PayOrderDTO order)
+    {
+        //将订单信息封装到state参数中
+        String state = EncryptUtil.encodeUTF8StringBase64(JSON.toJSONString(order));
+        //应用id
+        String appId = order.getAppId();
+        //服务类型
+        String channel = order.getChannel();
+        //获取微信支付渠道参数，根据应用、服务类型、支付渠道查询支付渠道参数
+        R<PayChannelParamDTO> r = payChannelParamService.queryParamByAppPlatformAndPayChannel(appId, channel, "WX_JSAPI");
+        PayChannelParamDTO channelParamDTO = AssertResult.handler(r);
+        if (channelParamDTO == null)
+        {
+            throw BizException.wrap("原始支付渠道为空");
+        }
+        //支付渠道参数
+        String payParam = channelParamDTO.getParam();
+        //转换
+        WXConfigParam wxConfigParam = JSON.parseObject(payParam, WXConfigParam.class);
+        try
+        {
+            String url = String.format("%s?appid=%s&scope=snsapi_base&state=%s&redirect_uri=%s",
+                    weiXinConfigurationProperties.getOauth2RequestUrl(),
+                    wxConfigParam.getAppId(),
+                    state,
+                    URLEncoder.encode(weiXinConfigurationProperties.getOauth2CodeReturnUrl(),
+                            "utf-8"));
+            log.info("微信生成授权码url:{}", url);
+            return "redirect:" + url;
+        }
+        catch (UnsupportedEncodingException e)
+        {
+            log.error("生成获取授权码链接失败：", e);
+            //生成获取授权码链接失败
+            return "forward:/pay‐page‐error";
+        }
     }
 }
