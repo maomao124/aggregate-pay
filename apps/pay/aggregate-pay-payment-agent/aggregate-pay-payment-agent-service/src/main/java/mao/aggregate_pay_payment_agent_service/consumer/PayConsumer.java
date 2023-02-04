@@ -6,6 +6,7 @@ import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
 import mao.aggregate_pay_payment_agent_api.enums.TradeStatus;
 import mao.aggregate_pay_payment_agent_service.constants.RocketMQConstants;
+import mao.aggregate_pay_payment_agent_service.producer.PayProducer;
 import mao.aggregate_pay_payment_agent_service.service.PayChannelAgentService;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
@@ -55,6 +56,9 @@ public class PayConsumer implements RocketMQListener<MessageExt>
     @Resource
     private PayChannelAgentService payChannelAgentService;
 
+    @Resource
+    private PayProducer payProducer;
+
     @Override
     public void onMessage(MessageExt messageExt)
     {
@@ -82,6 +86,9 @@ public class PayConsumer implements RocketMQListener<MessageExt>
             //todo
             //查询微信支付结果
         }
+
+        //这里可以获取消息的重试次数，如果超过了16次，就保存到数据库里人工处理
+
         //返回查询获得的支付状态
         if (TradeStatus.UNKNOWN.equals(paymentResponseDTO.getTradeState()) || TradeStatus.USERPAYING
                 .equals(paymentResponseDTO.getTradeState()))
@@ -91,5 +98,8 @@ public class PayConsumer implements RocketMQListener<MessageExt>
             throw new RuntimeException("支付状态未知，等待重试");
         }
 
+
+        //发送支付结果消息
+        payProducer.payResultNotice(paymentResponseDTO);
     }
 }
