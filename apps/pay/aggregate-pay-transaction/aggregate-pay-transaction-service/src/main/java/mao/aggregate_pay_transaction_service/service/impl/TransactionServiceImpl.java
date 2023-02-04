@@ -16,6 +16,7 @@ import mao.aggregate_pay_payment_agent_api.feign.PayChannelAgentFeignClient;
 import mao.aggregate_pay_transaction_api.dto.PayChannelParamDTO;
 import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
+import mao.aggregate_pay_transaction_service.entity.PayOrder;
 import mao.aggregate_pay_transaction_service.handler.AssertResult;
 import mao.aggregate_pay_transaction_service.service.PayChannelParamService;
 import mao.aggregate_pay_transaction_service.service.PayChannelService;
@@ -23,11 +24,14 @@ import mao.aggregate_pay_transaction_service.service.PayOrderService;
 import mao.aggregate_pay_transaction_service.service.TransactionService;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import mao.tools_databases.mybatis.conditions.Wraps;
+import mao.tools_databases.mybatis.conditions.update.LbuWrapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.time.LocalDateTime;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -78,7 +82,7 @@ public class TransactionServiceImpl implements TransactionService
         payOrderDTO.setMerchantId(qrCodeDto.getMerchantId());
         payOrderDTO.setAppId(qrCodeDto.getAppId());
         payOrderDTO.setStoreId(qrCodeDto.getStoreId());
-        if (qrCodeDto.getTotalAmount()!=null)
+        if (qrCodeDto.getTotalAmount() != null)
         {
             //总金额
             payOrderDTO.setTotalAmount(Integer.valueOf(AmountUtil.changeY2F(qrCodeDto.getTotalAmount())));
@@ -219,4 +223,24 @@ public class TransactionServiceImpl implements TransactionService
         return paymentResponseDTO;
     }
 
+
+    @Override
+    public void updateOrderTradeNoAndTradeState(String tradeNo, String payChannelTradeNo, String state)
+    {
+        //更新订单状态
+        LbuWrapper<PayOrder> lbuWrapper = Wraps.<PayOrder>lbU().eq(PayOrder::getTradeNo, tradeNo)
+                //第三方外部订单号
+                .set(PayOrder::getPayChannelTradeNo, payChannelTradeNo)
+                //状态
+                .set(PayOrder::getTradeState, state);
+
+        //判断是否为成功状态
+        if ("2".equals(state))
+        {
+            //设置支付成功的时间
+            lbuWrapper.set(PayOrder::getPaySuccessTime, LocalDateTime.now());
+        }
+        //更新
+        payOrderService.update(lbuWrapper);
+    }
 }
