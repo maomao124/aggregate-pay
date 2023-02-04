@@ -158,4 +158,37 @@ public class PayController
         response.getWriter().close();
     }
 
+
+    /**
+     * 微信授权码回调接口，供微信调用
+     *
+     * @param code  微信授权码
+     * @param state 状态，微信会原封不动的返回
+     * @return {@link String}
+     */
+    @ApiOperation("微信授权码回调")
+    @RequestMapping(value = "/wx-oauth-code-return", method = RequestMethod.GET)
+    public String wxOAuth2CodeReturn(@RequestParam String code, @RequestParam String state)
+    {
+        //将之前state中保存的订单信息读取出来
+        PayOrderDTO payOrderDTO = JSON.parseObject(EncryptUtil.decodeUTF8StringBase64(state), PayOrderDTO.class);
+        //应用id
+        String appId = payOrderDTO.getAppId();
+        //获取openid
+        String openId = transactionService.getWXOAuthOpenId(code, appId);
+        try
+        {
+            //将订单信息转成query参数的形式拼接起来
+            String orderInfo = ParseURLPairUtil.parseURLPair(payOrderDTO);
+            //返回所有的query参数到支付确认页面
+            return String.format("forward:/pay-page?openId=%s&%s", openId, orderInfo);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return "forward:/pay-error-page";
+        }
+
+    }
+
 }
