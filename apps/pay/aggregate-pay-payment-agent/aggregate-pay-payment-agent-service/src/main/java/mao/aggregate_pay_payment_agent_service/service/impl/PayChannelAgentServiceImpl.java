@@ -252,6 +252,15 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
             jsapiPayParam.put("signType", "HMAC‐SHA256");
             jsapiPayParam.put("paySign", WXPayUtil.generateSignature(jsapiPayParam, key, WXPayConstants.SignType.HMACSHA256));
             log.info("微信JSAPI支付响应内容：" + jsapiPayParam);
+
+            //向消息队列发送支付结果查询消息
+            PaymentResponseDTO<String> notice = new PaymentResponseDTO<>();
+            notice.setOutTradeNo(weChatBean.getOutTradeNo());
+            notice.setContent(JSON.toJSONString(wxConfigParam));
+            notice.setMsg("WX_JSAPI");
+            //发送
+            payProducer.payOrderNotice(notice);
+
             return jsapiPayParam;
         }
         catch (Exception e)

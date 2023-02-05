@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.dto.WXConfigParam;
 import mao.aggregate_pay_payment_agent_api.enums.TradeStatus;
 import mao.aggregate_pay_payment_agent_service.constants.RocketMQConstants;
 import mao.aggregate_pay_payment_agent_service.producer.PayProducer;
@@ -72,20 +73,24 @@ public class PayConsumer implements RocketMQListener<MessageExt>
         //消息
         String msg = response.getMsg();
         //内容
-        String aliConfigParamJson = response.getContent();
-        //json转对象
-        AliConfigParam aliConfigParam = JSON.parseObject(aliConfigParamJson, AliConfigParam.class);
+        String configParamJson = response.getContent();
         //判断是支付宝还是微信
         PaymentResponseDTO<String> paymentResponseDTO = new PaymentResponseDTO<>();
         if ("ALIPAY_WAP".equals(msg))
         {
             //主动查询支付宝支付结果
+            //json转对象
+            AliConfigParam aliConfigParam = JSON.parseObject(configParamJson, AliConfigParam.class);
+            //查询
             paymentResponseDTO = payChannelAgentService.queryPayOrderByAli(aliConfigParam, outTradeNo);
         }
         else if ("WX_JSAPI".equals(msg))
         {
-            //todo
             //查询微信支付结果
+            //json转对象
+            WXConfigParam wxConfigParam = JSON.parseObject(configParamJson, WXConfigParam.class);
+            //查询
+            paymentResponseDTO = payChannelAgentService.queryPayOrderByWeChat(wxConfigParam, outTradeNo);
         }
 
         //这里可以获取消息的重试次数，如果超过了16次，就保存到数据库里人工处理
