@@ -3,10 +3,7 @@ package mao.aggregate_pay_payment_agent_service.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
-import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
-import mao.aggregate_pay_payment_agent_api.dto.PayOrderByAliWAPBody;
-import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.dto.*;
 import mao.aggregate_pay_payment_agent_service.service.PayChannelAgentService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
@@ -16,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -55,5 +53,22 @@ public class PayChannelAgentController extends BaseController
                         payOrderByAliWAPBody.getAliConfigParam(),
                         payOrderByAliWAPBody.getAlipayBean());
         return success(payOrderByAliWAP);
+    }
+
+
+    /**
+     * 微信jsapi下单接口请求
+     *
+     * @param payOrderWeiXinJSAPIBody 请求体
+     * @return {@link R}<{@link Map}<{@link String}, {@link String}>>
+     */
+    @PostMapping("/createPayOrderByWeChatJSAPI")
+    @ApiOperation(value = "微信jsapi下单接口请求", notes = "微信jsapi下单接口请求")
+    public R<Map<String, String>> createPayOrderByWeChatJSAPI(@RequestBody PayOrderWeiXinJSAPIBody payOrderWeiXinJSAPIBody)
+    {
+        Map<String, String> payOrderByWeChatJSAPI =
+                payChannelAgentService.createPayOrderByWeChatJSAPI(payOrderWeiXinJSAPIBody.getWxConfigParam(),
+                        payOrderWeiXinJSAPIBody.getWeChatBean());
+        return success(payOrderByWeChatJSAPI);
     }
 }

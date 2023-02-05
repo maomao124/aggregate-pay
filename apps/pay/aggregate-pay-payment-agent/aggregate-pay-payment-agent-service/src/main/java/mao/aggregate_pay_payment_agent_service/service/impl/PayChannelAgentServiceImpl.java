@@ -10,12 +10,14 @@ import com.alipay.api.request.AlipayTradeQueryRequest;
 import com.alipay.api.request.AlipayTradeWapPayRequest;
 import com.alipay.api.response.AlipayTradeQueryResponse;
 import com.alipay.api.response.AlipayTradeWapPayResponse;
+import com.github.wxpay.sdk.WXPay;
+import com.github.wxpay.sdk.WXPayConstants;
+import com.github.wxpay.sdk.WXPayUtil;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
-import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
-import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
-import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.dto.*;
 import mao.aggregate_pay_payment_agent_api.enums.TradeStatus;
+import mao.aggregate_pay_payment_agent_service.config.WXSDKConfig;
 import mao.aggregate_pay_payment_agent_service.constants.AliCodeConstants;
 import mao.aggregate_pay_payment_agent_service.consumer.PayConsumer;
 import mao.aggregate_pay_payment_agent_service.producer.PayProducer;
@@ -24,6 +26,9 @@ import mao.tools_core.exception.BizException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -203,6 +208,56 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
                 return TradeStatus.SUCCESS;
             default:
                 return TradeStatus.FAILED;
+        }
+    }
+
+
+    @Override
+    public Map<String, String> createPayOrderByWeChatJSAPI(WXConfigParam wxConfigParam, WeChatBean weChatBean)
+    {
+        //微信支付参数
+        WXSDKConfig config = new WXSDKConfig(wxConfigParam);
+        try
+        {
+            //微信支付
+            WXPay wxpay = new WXPay(config);
+            //按照微信统一下单接口要求构造请求参数
+            Map<String, String> requestParam = new HashMap<>();
+            //商品描述
+            requestParam.put("body", weChatBean.getBody());
+            //商户订单号
+            requestParam.put("out_trade_no", weChatBean.getOutTradeNo());
+            //人民币
+            requestParam.put("fee_type", "CNY");
+            //标价金额
+            requestParam.put("total_fee", String.valueOf(weChatBean.getTotalFee()));
+            //终端IP
+            requestParam.put("spbill_create_ip", weChatBean.getSpbillCreateIp());
+            //通知地址
+            requestParam.put("notify_url", weChatBean.getNotifyUrl());
+            //JSAPI
+            requestParam.put("trade_type", "JSAPI");
+            //openId
+            requestParam.put("openid", weChatBean.getOpenId());
+            //调用微信统一下单API
+            Map<String, String> resp = wxpay.unifiedOrder(requestParam);
+            //返回h5网页需要的数据
+            String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
+            String key = wxConfigParam.getKey();
+            Map<String, String> jsapiPayParam = new HashMap<>();
+            jsapiPayParam.put("appId", resp.get("appid"));
+            jsapiPayParam.put("package", "prepay_id=" + resp.get("prepay_id"));
+            jsapiPayParam.put("timeStamp", timestamp);
+            jsapiPayParam.put("nonceStr", UUID.randomUUID().toString());
+            jsapiPayParam.put("signType", "HMAC‐SHA256");
+            jsapiPayParam.put("paySign", WXPayUtil.generateSignature(jsapiPayParam, key, WXPayConstants.SignType.HMACSHA256));
+            log.info("微信JSAPI支付响应内容：" + jsapiPayParam);
+            return jsapiPayParam;
+        }
+        catch (Exception e)
+        {
+            log.error(e.getMessage(), e);
+            throw BizException.wrap("微信下单失败");
         }
     }
 }

@@ -1,8 +1,8 @@
 package mao.aggregate_pay_payment_agent_service.service;
 
-import mao.aggregate_pay_payment_agent_api.dto.AliConfigParam;
-import mao.aggregate_pay_payment_agent_api.dto.AlipayBean;
-import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.dto.*;
+
+import java.util.Map;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -37,4 +37,14 @@ public interface PayChannelAgentService
      * @return {@link PaymentResponseDTO}
      */
     PaymentResponseDTO<String> queryPayOrderByAli(AliConfigParam aliConfigParam, String outTradeNo);
+
+
+    /**
+     * 微信jsapi下单接口请求
+     *
+     * @param wxConfigParam 微信配置参数
+     * @param weChatBean    weChatBean
+     * @return {@link Map}<{@link String}, {@link String}> h5页面所需要的数据
+     */
+    Map<String, String> createPayOrderByWeChatJSAPI(WXConfigParam wxConfigParam, WeChatBean weChatBean);
 }
