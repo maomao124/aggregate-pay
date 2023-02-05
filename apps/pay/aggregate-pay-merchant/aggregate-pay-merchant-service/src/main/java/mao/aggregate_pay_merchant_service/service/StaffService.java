@@ -1,6 +1,9 @@
 package mao.aggregate_pay_merchant_service.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import mao.aggregate_pay_common.domain.PageVO;
+import mao.aggregate_pay_merchant_api.dto.StaffDTO;
+import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.entity.Staff;
 
 /**
@@ -18,5 +21,13 @@ import mao.aggregate_pay_merchant_service.entity.Staff;
 
 public interface StaffService extends IService<Staff>
 {
-
+    /**
+     * 分页条件查询商户下员工
+     *
+     * @param staffDTO 员工dto
+     * @param pageNo   页号
+     * @param pageSize 页面大小
+     * @return {@link PageVO}<{@link StaffDTO}>
+     */
+    PageVO<StaffDTO> queryStaffByPage(StaffDTO staffDTO, Integer pageNo, Integer pageSize);
 }
