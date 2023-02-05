@@ -24,10 +24,12 @@ import mao.toolsdozer.utils.DozerUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 
 /**
@@ -191,4 +193,44 @@ public class PayController
 
     }
 
+
+    /**
+     * 微信门店下单付款
+     *
+     * @param orderConfirmVO OrderConfirmVO
+     * @param request        HttpServletRequest
+     * @return {@link ModelAndView}
+     */
+    @ApiOperation("微信门店下单付款")
+    @PostMapping("/wxjspay")
+    public ModelAndView createWXOrderForStore(OrderConfirmVO orderConfirmVO, HttpServletRequest request)
+    {
+        //微信下单需要openID
+        if (StringUtils.isBlank(orderConfirmVO.getOpenId()))
+        {
+            throw BizException.wrap("openId为空");
+        }
+        //应用id
+        String appId = orderConfirmVO.getAppId();
+        //远程调用查询
+        R<AppDTO> r = appFeignClient.getAppById(appId);
+        //断言结果
+        AppDTO appDTO = AssertResult.handler(r);
+        //获得总金额，单位为元
+        String totalAmountY = orderConfirmVO.getTotalAmount();
+        //不然会抛出异常
+        orderConfirmVO.setTotalAmount(null);
+        //转换成payOrderDTO
+        PayOrderDTO payOrderDTO = dozerUtils.map(orderConfirmVO, PayOrderDTO.class);
+        //商户id
+        payOrderDTO.setMerchantId(appDTO.getMerchantId());
+        //客户端ip
+        payOrderDTO.setClientIp(IPUtil.getIpAddr(request));
+        //将前端输入的元转成分
+        payOrderDTO.setTotalAmount(Integer.parseInt(AmountUtil.changeY2F(totalAmountY)));
+        //调用微信下单接口
+        Map<String, String> jsapiResponse = transactionService.submitOrderByWechat(payOrderDTO);
+        log.info("微信下单接口响应：" + jsapiResponse);
+        return new ModelAndView("/wxpay", jsapiResponse);
+    }
 }
