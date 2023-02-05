@@ -211,4 +211,43 @@ public class MerchantController
         return SecurityUtil.getMerchant();
     }
 
+    /**
+     * 查询交易总览
+     *
+     * @param startTime 开始时间
+     * @param endTime   结束时间
+     * @return {@link R}<{@link String}>
+     */
+    @ApiOperation("查询交易总览")
+    @PostMapping("/my/merchants/transactions")
+    public R<String> transactions(@RequestParam String startTime, @RequestParam String endTime)
+    {
+        return R.fail("功能未实现");
+    }
+
+
+    /**
+     * 查询各个app下的交易总览
+     *
+     * @return {@link R}<{@link String}>
+     */
+    @ApiOperation("查询各个app下的交易总览")
+    @PostMapping("/my/merchants/transactions/apps")
+    public R<String> transactionsApp()
+    {
+        return R.fail("功能未实现");
+    }
+
+    /**
+     * 查询各个支付聚道下的交易总览
+     *
+     * @return {@link R}<{@link String}>
+     */
+    @ApiOperation("查询各个支付聚道下的交易总览")
+    @PostMapping("/my/merchants/transactions/channels")
+    public R<String> transactionsChannels()
+    {
+        return R.fail("功能未实现");
+    }
+
 }
