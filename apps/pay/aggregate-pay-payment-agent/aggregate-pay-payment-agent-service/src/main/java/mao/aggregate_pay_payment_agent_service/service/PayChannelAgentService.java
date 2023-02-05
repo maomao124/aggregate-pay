@@ -47,4 +47,14 @@ public interface PayChannelAgentService
      * @return {@link Map}<{@link String}, {@link String}> h5页面所需要的数据
      */
     Map<String, String> createPayOrderByWeChatJSAPI(WXConfigParam wxConfigParam, WeChatBean weChatBean);
+
+
+    /**
+     * 查询微信的支付订单
+     *
+     * @param wxConfigParam 微信配置参数
+     * @param outTradeNo    平台订单号
+     * @return {@link PaymentResponseDTO}<{@link String}>
+     */
+    public PaymentResponseDTO<String> queryPayOrderByWeChat(WXConfigParam wxConfigParam, String outTradeNo);
 }

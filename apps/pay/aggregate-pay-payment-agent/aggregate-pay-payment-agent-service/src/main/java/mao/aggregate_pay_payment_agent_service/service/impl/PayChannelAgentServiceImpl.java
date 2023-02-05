@@ -260,4 +260,58 @@ public class PayChannelAgentServiceImpl implements PayChannelAgentService
             throw BizException.wrap("微信下单失败");
         }
     }
+
+    @Override
+    public PaymentResponseDTO<String> queryPayOrderByWeChat(WXConfigParam wxConfigParam, String outTradeNo)
+    {
+
+        WXSDKConfig wxsdkConfig = new WXSDKConfig(wxConfigParam);
+        Map<String, String> resp = null;
+        try
+        {
+            WXPay wxpay = new WXPay(wxsdkConfig);
+            Map<String, String> data = new HashMap<>();
+            data.put("out_trade_no", outTradeNo);
+            //发起请求，查询订单
+            resp = wxpay.orderQuery(data);
+        }
+        catch (Exception e)
+        {
+            log.warn(e.getMessage(), e);
+            return PaymentResponseDTO.fail("调用微信查询订单异常", outTradeNo, TradeStatus.UNKNOWN);
+        }
+        String returnCode = resp.get("return_code");
+        String resultCode = resp.get("result_code");
+        String tradeState = resp.get("trade_state");
+        String transactionId = resp.get("transaction_id");
+        String tradeType = resp.get("trade_type");
+        String returnMsg = resp.get("return_msg");
+
+        if ("SUCCESS".equals(returnCode) && "SUCCESS".equals(resultCode))
+        {
+            // 接口调用成功
+            if ("SUCCESS".equals(tradeState))
+            {
+                //交易成功
+                return PaymentResponseDTO.success(transactionId, outTradeNo, TradeStatus.SUCCESS, "交易成功");
+            }
+            else if ("USERPAYING".equals(tradeState))
+            {
+                //等待用户支付
+                return PaymentResponseDTO.success(transactionId, outTradeNo, TradeStatus.USERPAYING, "等待支付");
+            }
+            else if ("PAYERROR".equals(tradeState))
+            {
+                //交易失败
+                return PaymentResponseDTO.success(transactionId, outTradeNo, TradeStatus.FAILED, returnMsg);
+            }
+            else if ("CLOSED".equals(tradeState))
+            {
+                //交易关闭
+                return PaymentResponseDTO.success(transactionId, outTradeNo, TradeStatus.REVOKED, returnMsg);
+            }
+        }
+        //暂不支持其他状态
+        return PaymentResponseDTO.success("暂不支持其他状态", transactionId, outTradeNo, TradeStatus.UNKNOWN);
+    }
 }
