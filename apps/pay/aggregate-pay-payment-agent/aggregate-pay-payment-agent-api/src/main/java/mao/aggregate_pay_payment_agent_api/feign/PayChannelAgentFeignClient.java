@@ -2,11 +2,14 @@ package mao.aggregate_pay_payment_agent_api.feign;
 
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_payment_agent_api.dto.PayOrderByAliWAPBody;
+import mao.aggregate_pay_payment_agent_api.dto.PayOrderWeiXinJSAPIBody;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.Map;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -33,4 +36,15 @@ public interface PayChannelAgentFeignClient
     @PostMapping("/createPayOrderByAliWAP")
     @ApiOperation(value = "调用支付宝手机WAP下单接口", tags = "调用支付宝手机WAP下单接口")
     R<PaymentResponseDTO<String>> createPayOrderByAliWAP(@RequestBody PayOrderByAliWAPBody payOrderByAliWAPBody);
+
+
+    /**
+     * 微信jsapi下单接口请求
+     *
+     * @param payOrderWeiXinJSAPIBody 请求体
+     * @return {@link R}<{@link Map}<{@link String}, {@link String}>>
+     */
+    @PostMapping("/createPayOrderByWeChatJSAPI")
+    @ApiOperation(value = "微信jsapi下单接口请求", notes = "微信jsapi下单接口请求")
+    R<Map<String, String>> createPayOrderByWeChatJSAPI(@RequestBody PayOrderWeiXinJSAPIBody payOrderWeiXinJSAPIBody);
 }
