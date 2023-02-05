@@ -57,7 +57,7 @@ public class StaffController
                                     "int", paramType = "query")
                     }
             )
-    @PostMapping("/my/staffs/merchants/page")
+    @PostMapping("/my/staffs/page")
     public PageVO<StaffDTO> queryStaffByPage(@RequestParam Integer pageNo, @RequestParam Integer pageSize)
     {
         //检查页面大小
@@ -77,7 +77,6 @@ public class StaffController
         StaffDTO staffDTO = new StaffDTO();
         staffDTO.setMerchantId(merchantId);
         //远程调用
-        //R<PageVO<StoreDTO>> r = merchantFeignClient.queryStoreByPage(storeDTO, pageNo, pageSize);
         R<PageVO<StaffDTO>> r = staffFeignClient.queryStaffByPage(staffDTO, pageNo, pageSize);
         //断言结果
         AssertResult.handler(r);
