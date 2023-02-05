@@ -3,6 +3,7 @@ package mao.aggregate_pay_transaction_service.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import mao.aggregate_pay_common.domain.BusinessException;
 import mao.aggregate_pay_common.domain.CommonErrorCode;
 import mao.aggregate_pay_common.utils.AmountUtil;
 import mao.aggregate_pay_common.utils.EncryptUtil;
@@ -36,6 +37,7 @@ import javax.annotation.Resource;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.time.LocalDateTime;
+import java.util.Map;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -324,4 +326,72 @@ public class TransactionServiceImpl implements TransactionService
         return JSONObject.parseObject(response).getString("openid");
 
     }
+
+
+    @Override
+    public Map<String, String> submitOrderByWechat(PayOrderDTO payOrderDTO)
+    {
+        //配置支付聚道
+        payOrderDTO.setPayChannel("WX_JSAPI");
+        //保存订单
+        payOrderDTO = payOrderService.save(payOrderDTO);
+        //取得订单号
+        String tradeNo = payOrderDTO.getTradeNo();
+        //微信openid
+        String openId = payOrderDTO.getOpenId();
+        //微信下单
+        return weChatJsapi(openId, tradeNo);
+    }
+
+
+    /**
+     * 微信下单，使用微信的JSAPI接口
+     *
+     * @param openId  openId
+     * @param tradeNo 聚合支付平台订单号
+     * @return {@link Map}<{@link String}, {@link String}>
+     */
+    private Map<String, String> weChatJsapi(String openId, String tradeNo)
+    {
+        //根据订单号查询订单详情
+        PayOrderDTO payOrderDTO = payOrderService.queryPayOrderByTradeNo(tradeNo);
+        if (payOrderDTO == null)
+        {
+            throw BizException.wrap("微信确认支付失败");
+        }
+        //构造微信订单参数实体
+        WeChatBean weChatBean = new WeChatBean();
+        //openid
+        weChatBean.setOpenId(openId);
+        //客户ip
+        weChatBean.setSpbillCreateIp(payOrderDTO.getClientIp());
+        //金额，单位为分
+        weChatBean.setTotalFee(payOrderDTO.getTotalAmount());
+        //订单描述
+        weChatBean.setBody(payOrderDTO.getBody());
+        //平台的订单号
+        weChatBean.setOutTradeNo(payOrderDTO.getTradeNo());
+        //异步接收微信通知支付结果的地址(暂时不用)
+        weChatBean.setNotifyUrl("none");
+        //根据应用、服务类型、支付渠道查询支付渠道参数
+        R<PayChannelParamDTO> r = payChannelParamService.queryParamByAppPlatformAndPayChannel(payOrderDTO.getAppId(),
+                "aggregate_pay_c2b", "WX_JSAPI");
+        //断言结果
+        PayChannelParamDTO payChannelParamDTO = AssertResult.handler(r);
+        if (payChannelParamDTO == null)
+        {
+            throw BizException.wrap("原始支付渠道为空");
+        }
+        //支付宝渠道参数
+        WXConfigParam wxConfigParam = JSON.parseObject(payChannelParamDTO.getParam(), WXConfigParam.class);
+        //构建请求体
+        PayOrderWeiXinJSAPIBody payOrderWeiXinJSAPIBody = new PayOrderWeiXinJSAPIBody();
+        payOrderWeiXinJSAPIBody.setWxConfigParam(wxConfigParam);
+        payOrderWeiXinJSAPIBody.setWeChatBean(weChatBean);
+        //远程调用
+        R<Map<String, String>> r1 = payChannelAgentFeignClient.createPayOrderByWeChatJSAPI(payOrderWeiXinJSAPIBody);
+        //断言并返回
+        return AssertResult.handler(r1);
+    }
+
 }

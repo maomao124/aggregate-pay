@@ -4,6 +4,8 @@ import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
 import mao.aggregate_pay_transaction_api.dto.PayOrderDTO;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 
+import java.util.Map;
+
 /**
  * Project name(项目名称)：aggregate-pay
  * Package(包名): mao.aggregate_pay_transaction_service.service
@@ -69,4 +71,14 @@ public interface TransactionService
      * @return openid
      */
     String getWXOAuthOpenId(String code, String appId);
+
+
+    /**
+     * 提交订单通过微信支付
+     * 保存微信订单，并调用支付渠道代理服务调用微信的接口
+     *
+     * @param payOrderDTO 支付订单dto
+     * @return {@link Map}<{@link String}, {@link String}>
+     */
+    Map<String, String> submitOrderByWechat(PayOrderDTO payOrderDTO);
 }
