@@ -72,7 +72,7 @@ public class StoreController extends BaseController
     @PostMapping("my/stores")
     public R<StoreDTO> save(@RequestBody StoreDTO storeDTO, @RequestParam String staffIds)
     {
-        return null;
+        return success(storeService.save(storeDTO, staffIds));
     }
 
 }

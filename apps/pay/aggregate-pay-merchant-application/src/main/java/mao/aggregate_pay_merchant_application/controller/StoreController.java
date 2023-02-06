@@ -203,6 +203,10 @@ public class StoreController
     @PutMapping("my/stores")
     public StoreDTO update(@RequestBody StoreDTO storeDTO)
     {
+        //得到当前登录的商户id
+        Long id = SecurityUtil.getMerchantIdThrowsException();
+        //设置商户id
+        storeDTO.setMerchantId(id);
         //远程调用
         R<StoreDTO> r = storeFeignClient.update(storeDTO);
         //断言结果

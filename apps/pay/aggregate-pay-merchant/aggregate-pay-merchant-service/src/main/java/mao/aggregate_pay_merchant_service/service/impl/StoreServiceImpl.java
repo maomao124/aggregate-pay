@@ -104,6 +104,8 @@ public class StoreServiceImpl extends ServiceImpl<StoreMapper, Store> implements
     {
         //转换
         Store store = dozerUtils.map(storeDTO, Store.class);
+        //检查门店编号是否唯一
+        checkStoreNumber(store);
         //保存
         boolean save = super.save(store);
         if (!save)
