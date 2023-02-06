@@ -75,4 +75,18 @@ public class StoreController extends BaseController
         return success(storeService.save(storeDTO, staffIds));
     }
 
+
+    /**
+     * 删除商户下的门店信息
+     *
+     * @param storeDTO 门店dto
+     * @return {@link Boolean}
+     */
+    @ApiOperation("删除商户下的门店信息")
+    @DeleteMapping("my/stores")
+    public R<Boolean> delete(@RequestBody StoreDTO storeDTO)
+    {
+        return success(storeService.delete(storeDTO));
+    }
+
 }

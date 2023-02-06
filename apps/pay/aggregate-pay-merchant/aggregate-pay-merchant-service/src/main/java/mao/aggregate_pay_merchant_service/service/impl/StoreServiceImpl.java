@@ -142,4 +142,26 @@ public class StoreServiceImpl extends ServiceImpl<StoreMapper, Store> implements
         }
         return dozerUtils.map(store, StoreDTO.class);
     }
+
+
+    @Override
+    public Boolean delete(StoreDTO storeDTO)
+    {
+        //查询当前门店是否属于当前商户
+        Store store = this.getById(storeDTO.getId());
+        if (store == null)
+        {
+            //如果查询不到，就不需要删除
+            return true;
+        }
+        //查询到了
+        if (!storeDTO.getMerchantId().equals(store.getMerchantId()))
+        {
+            //当前登录的商户不是查询到的商户，证明当前门店不是属于当前商户
+            throw BizException.wrap("当前门店不是属于当前登录的商户，无法删除");
+        }
+        //删除
+        this.removeById(store.getId());
+        return true;
+    }
 }

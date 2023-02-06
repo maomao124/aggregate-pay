@@ -40,6 +40,7 @@ public interface StoreService extends IService<Store>
      */
     StoreDTO update(@RequestBody StoreDTO storeDTO);
 
+
     /**
      * 新增商户下的门店信息
      *
@@ -47,4 +48,13 @@ public interface StoreService extends IService<Store>
      * @return {@link StoreDTO}
      */
     StoreDTO save(@RequestBody StoreDTO storeDTO, @RequestParam String staffIds);
+
+
+    /**
+     * 删除商户下的门店信息
+     *
+     * @param storeDTO 门店dto
+     * @return {@link Boolean}
+     */
+    Boolean delete(@RequestBody StoreDTO storeDTO);
 }

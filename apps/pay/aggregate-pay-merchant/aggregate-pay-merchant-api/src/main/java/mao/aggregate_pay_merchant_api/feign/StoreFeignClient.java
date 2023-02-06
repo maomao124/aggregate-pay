@@ -53,4 +53,15 @@ public interface StoreFeignClient
     @ApiOperation("新增商户下的门店信息")
     @PostMapping("my/stores")
     R<StoreDTO> save(@RequestBody StoreDTO storeDTO, @RequestParam String staffIds);
+
+
+    /**
+     * 删除商户下的门店信息
+     *
+     * @param storeDTO 门店dto
+     * @return {@link Boolean}
+     */
+    @ApiOperation("删除商户下的门店信息")
+    @DeleteMapping("my/stores")
+    R<Boolean> delete(@RequestBody StoreDTO storeDTO);
 }
