@@ -2,6 +2,7 @@ package mao.aggregate_pay_merchant_api.feign;
 
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_merchant_api.dto.AppDTO;
+import mao.aggregate_pay_merchant_api.fallback.AppFeignClientFallbackFactory;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ import java.util.List;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-merchant-service", path = "/app")
+@FeignClient(value = "aggregate-pay-merchant-service", path = "/app",fallbackFactory = AppFeignClientFallbackFactory.class)
 public interface AppFeignClient
 {
     /**
