@@ -227,6 +227,15 @@ public class StoreController
     @PostMapping("my/stores")
     public StoreDTO save(@RequestBody StoreDTO storeDTO, @RequestParam String staffIds)
     {
-        return null;
+        //得到当前登录的商户id
+        Long id = SecurityUtil.getMerchantIdThrowsException();
+        //设置商户id
+        storeDTO.setMerchantId(id);
+        //远程调用
+        R<StoreDTO> r = storeFeignClient.save(storeDTO, staffIds);
+        //断言结果
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
     }
 }
