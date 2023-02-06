@@ -93,7 +93,7 @@ public class StaffController
      * @param staffDTO 员工dto
      * @return 员工dto
      */
-    @SysLog(value = "保存员工信息",recordResponseParam = false)
+    @SysLog(value = "保存员工信息", recordResponseParam = false)
     @ApiOperation("保存员工信息")
     @PostMapping("/my/staffs")
     public StaffDTO saveStaff(@RequestBody StaffDTO staffDTO)
@@ -147,4 +147,28 @@ public class StaffController
     }
 
 
+    /**
+     * 删除员工信息
+     *
+     * @return 员工dto
+     */
+    @SysLog(value = "删除员工信息")
+    @ApiOperation("删除员工信息")
+    @DeleteMapping("/my/staffs/{staffId}")
+    public Boolean deleteStaff(@PathVariable Long staffId)
+    {
+        StaffDTO staffDTO = new StaffDTO();
+        //得到当前登录的商户id
+        Long id = SecurityUtil.getMerchantIdThrowsException();
+        //设置商户id
+        staffDTO.setMerchantId(id);
+        //设置id
+        staffDTO.setId(staffId);
+        //远程调用
+        R<Boolean> r = staffFeignClient.deleteStaff(staffDTO);
+        //断言结果
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
+    }
 }
