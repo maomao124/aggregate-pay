@@ -238,4 +238,32 @@ public class StoreController
         //返回
         return r.getData();
     }
+
+
+    /**
+     * 删除商户下的门店信息
+     *
+     * @param storeId 门店id
+     * @return {@link Boolean}
+     */
+    @SysLog(value = "删除商户下的门店信息", recordResponseParam = false)
+    @ApiOperation("删除商户下的门店信息")
+    @DeleteMapping("my/stores/{storeId}")
+    Boolean delete(@PathVariable Long storeId)
+    {
+        //构建StoreDTO
+        StoreDTO storeDTO = new StoreDTO();
+        //得到当前登录的商户id
+        Long id = SecurityUtil.getMerchantIdThrowsException();
+        //设置商户id
+        storeDTO.setMerchantId(id);
+        //设置门店id
+        storeDTO.setId(storeId);
+        //远程调用
+        R<Boolean> r = storeFeignClient.delete(storeDTO);
+        //断言结果
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
+    }
 }

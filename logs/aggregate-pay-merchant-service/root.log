@@ -1579,3 +1579,673 @@ docket：{aggregate_pay=DocketInfo{title='商户服务', group='', description='
 2023-02-06 19:36:46.741 DEBUG 4888 --- [http-nio-56931-exec-4] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
 2023-02-06 19:36:46.741 DEBUG 4888 --- [http-nio-56931-exec-4] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
 2023-02-06 19:36:46.742 DEBUG 4888 --- [http-nio-56931-exec-4] m.a.mapper.StaffMapper.selectPage        : <==      Total: 1
+2023-02-06 20:02:10.021  WARN 4888 --- [http-nio-56931-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 1523279
+2023-02-06 20:02:10.044 DEBUG 4888 --- [http-nio-56931-exec-3] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-06 20:02:10.044 DEBUG 4888 --- [http-nio-56931-exec-3] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-06 20:02:10.045 DEBUG 4888 --- [http-nio-56931-exec-3] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-06 20:02:10.054 DEBUG 4888 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-06 20:02:10.054 DEBUG 4888 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-06 20:02:10.055 DEBUG 4888 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:02:12.449 DEBUG 4888 --- [http-nio-56931-exec-6] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-06 20:02:12.449 DEBUG 4888 --- [http-nio-56931-exec-6] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-06 20:02:12.451 DEBUG 4888 --- [http-nio-56931-exec-6] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-06 20:02:12.459 DEBUG 4888 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-06 20:02:12.459 DEBUG 4888 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 129606551173333057(Long)
+2023-02-06 20:02:12.460 DEBUG 4888 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:24:56.670  WARN 4888 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-06 20:24:56.670  WARN 4888 --- [Thread-33] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-06 20:24:56.670  WARN 4888 --- [Thread-33] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-06 20:24:56.672  WARN 4888 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-06 20:24:56.687  INFO 4888 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-06 20:24:56.754  INFO 4888 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-06 20:24:56.755  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-merchant-service:192.168.3.143:56931 from beat map.
+2023-02-06 20:24:56.756  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-merchant-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=56931, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-06 20:24:56.758  INFO 4888 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-06 20:24:56.760  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-06 20:24:56.760  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-06 20:24:56.760  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-06 20:24:57.772  INFO 4888 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":56040,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56040,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56931,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"cacheMillis\":10000,\"lastRefTime\":1675686297769,\"checksum\":\"f2cef6b5c8b509a32b935cd0ac8b5519\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":4306574977100} from /192.168.202.1
+2023-02-06 20:24:59.781  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-06 20:25:02.808  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-06 20:25:02.808  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-06 20:25:02.808  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-06 20:25:02.809  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-06 20:25:02.809  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-06 20:25:02.809  WARN 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-06 20:25:02.809  WARN 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-06 20:25:02.810  INFO 4888 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-06 20:25:02.810  INFO 4888 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-06 20:25:02.810  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-06 20:25:02.810  INFO 4888 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-06 20:25:02.820  WARN 4888 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-06 20:25:02.879  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-06 20:25:02.883  INFO 4888 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-06 20:25:14.535  WARN 27792 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-merchant-service] & group[DEFAULT_GROUP]
+2023-02-06 20:25:14.544  INFO 27792 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-merchant-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-06 20:25:14.586  INFO 27792 --- [main] a.AggregatePayMerchantServiceApplication : The following profiles are active: dev
+2023-02-06 20:25:16.340  INFO 27792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-06 20:25:16.345  INFO 27792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 20:25:16.390  INFO 27792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2023-02-06 20:25:16.502  WARN 27792 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-06 20:25:16.794  INFO 27792 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5369b2ea-4fe1-34af-9b68-6f5c1ae5bd51
+2023-02-06 20:25:17.008  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.270  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.279  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.287  INFO 27792 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-02-06 20:25:17.287  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [mao.aggregate_pay_merchant_service.config.MybatisConfig$$EnhancerBySpringCGLIB$$21ec0e9f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.293  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.301  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.306  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.308  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.318  INFO 27792 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-02-06 20:25:17.318  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [mao.aggregate_pay_merchant_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$d6edbc13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.435  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.445  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.461  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.504  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.616  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.646  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.664  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.674  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.684  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.686  INFO 27792 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-06 20:25:17.758  INFO 27792 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-02-06 20:25:18.051  INFO 27792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 56931 (http)
+2023-02-06 20:25:18.063  INFO 27792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-06 20:25:18.064  INFO 27792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-06 20:25:18.255  INFO 27792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-06 20:25:18.255  INFO 27792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3652 ms
+2023-02-06 20:25:18.599  INFO 27792 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-02-06 20:25:18.652  INFO 27792 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-02-06 20:25:18.654  INFO 27792 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-02-06 20:25:18.665  INFO 27792 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-02-06 20:25:18.672  INFO 27792 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-02-06 20:25:18.681  INFO 27792 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-02-06 20:25:18.725  INFO 27792 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-02-06 20:25:19.099  INFO 27792 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-06 20:25:19.102  INFO 27792 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-06 20:25:19.141  INFO 27792 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-06 20:25:19.144  INFO 27792 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-merchant/aggregate-pay-merchant-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-02-06 20:25:19.149  INFO 27792 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-06 20:25:19.150  INFO 27792 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-06 20:25:19.161  INFO 27792 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-06 20:25:19.189  INFO 27792 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-02-06 20:25:19.615  INFO 27792 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@388f1258]
+2023-02-06 20:25:19.615  INFO 27792 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@62058742]
+2023-02-06 20:25:20.192  INFO 27792 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
+2023-02-06 20:25:20.195  INFO 27792 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
+2023-02-06 20:25:20.603  INFO 27792 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2023-02-06 20:25:21.578  INFO 27792 --- [redisson-netty-2-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-02-06 20:25:21.594  INFO 27792 --- [redisson-netty-2-14] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-02-06 20:25:21.941 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.AppController
+2023-02-06 20:25:21.942 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.AppController
+2023-02-06 20:25:21.942 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.AppController
+2023-02-06 20:25:21.943 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.AppController
+2023-02-06 20:25:21.943 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.AppController
+2023-02-06 20:25:21.943 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.AppController
+2023-02-06 20:25:21.943 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.AppController
+2023-02-06 20:25:21.955 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.957 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.958 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.MerchantController
+2023-02-06 20:25:21.963 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.964 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.964 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.964 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.964 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.964 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.964 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.965 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StaffController
+2023-02-06 20:25:21.970 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.971 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.971 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.971 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.971 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.971 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.971 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.972 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.973 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.StoreController
+2023-02-06 20:25:21.977 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.TestController
+2023-02-06 20:25:21.978 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.TestController
+2023-02-06 20:25:21.978 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.TestController
+2023-02-06 20:25:21.978 DEBUG 27792 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_merchant_service.controller.TestController
+2023-02-06 20:25:22.586  INFO 27792 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-06 20:25:22.587  INFO 27792 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-06 20:25:22.587  INFO 27792 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-06 20:25:22.755  INFO 27792 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-02-06 20:25:22.915  WARN 27792 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-06 20:25:22.915  INFO 27792 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-06 20:25:22.920  WARN 27792 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-06 20:25:22.920  INFO 27792 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-06 20:25:23.021  INFO 27792 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-06 20:25:23.147  INFO 27792 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-06 20:25:23.163  INFO 27792 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2023-02-06 20:25:23.165  INFO 27792 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
+2023-02-06 20:25:23.169  INFO 27792 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
+2023-02-06 20:25:23.189  INFO 27792 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-02-06 20:25:23.200  INFO 27792 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-02-06 20:25:23.201  INFO 27792 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='商户服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_merchant_service', basePath=[], excludePath=[]}}
+
+2023-02-06 20:25:24.115  INFO 27792 --- [main] com.alibaba.nacos.client.naming          : new ips(3) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56931,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-02-06 20:25:24.126  INFO 27792 --- [main] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56931,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-02-06 20:25:24.129  INFO 27792 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-02-06 20:25:24.165  INFO 27792 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-02-06 20:25:24.224  INFO 27792 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-02-06 20:25:24.519  INFO 27792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56931 (http) with context path ''
+2023-02-06 20:25:24.523  INFO 27792 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 registering service DEFAULT_GROUP@@aggregate-pay-merchant-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=56931, weight=1.0, healthy=true, enabled=true, ephemeral=false, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD, management.endpoints.web.base-path=/actuator, management.context-path=//actuator}}
+2023-02-06 20:25:24.531  INFO 27792 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP aggregate-pay-merchant-service 192.168.3.143:56931 register finished
+2023-02-06 20:25:24.833  INFO 27792 --- [main] a.AggregatePayMerchantServiceApplication : Started AggregatePayMerchantServiceApplication in 12.135 seconds (JVM running for 13.242)
+2023-02-06 20:25:24.841  INFO 27792 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-06 20:25:24.842  INFO 27792 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-06 20:25:24.844  INFO 27792 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-06 20:25:24.844  INFO 27792 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-06 20:25:24.845  INFO 27792 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-06 20:25:24.845  INFO 27792 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service, group=DEFAULT_GROUP, cnt=1
+2023-02-06 20:25:24.846  INFO 27792 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-merchant-service-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-06 20:25:24.846  INFO 27792 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-merchant-service-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-06 20:25:24.847  INFO 27792 --- [main] a.AggregatePayMerchantServiceApplication : 应用aggregate-pay-merchant-service启动成功!swagger地址：http://192.168.202.1:56931/doc.html  或者：http://127.0.0.1:56931/doc.html
+2023-02-06 20:25:24.847  INFO 27792 --- [main] a.AggregatePayMerchantServiceApplication : 数据库监控地址：http://192.168.202.1:56931/druid  或者：http://127.0.0.1:56931/druid
+2023-02-06 20:25:24.847  INFO 27792 --- [main] a.AggregatePayMerchantServiceApplication : 启动耗时：12289ms
+2023-02-06 20:25:25.549  INFO 27792 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":56040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56931,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56040,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"cacheMillis\":10000,\"lastRefTime\":1675686325547,\"checksum\":\"c88ef1f0571e8951df0e9d07fe81ec96\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":4334353022999} from /192.168.202.1
+2023-02-06 20:25:25.778  INFO 27792 --- [RMI TCP Connection(2)-192.168.202.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06 20:25:25.778  INFO 27792 --- [RMI TCP Connection(2)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-06 20:25:25.796  INFO 27792 --- [RMI TCP Connection(2)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2023-02-06 20:25:26.646  INFO 27792 --- [RMI TCP Connection(3)-192.168.202.1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-02-06 20:25:36.368  INFO 27792 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"172.23.128.1\",\"port\":56040,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56040,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":56931,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-service\",\"cacheMillis\":10000,\"lastRefTime\":1675686336367,\"checksum\":\"f2cef6b5c8b509a32b935cd0ac8b5519\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":4345172976300} from /192.168.202.1
+2023-02-06 20:25:36.369  INFO 27792 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : modified ips(2) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-02-06 20:25:36.375  INFO 27792 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@aggregate-pay-merchant-service@@DEFAULT -> [{"instanceId":"172.23.128.1#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"172.23.128.1","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56040#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56040,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56931#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-service","ip":"192.168.3.143","port":56931,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-merchant-service","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"//actuator"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2023-02-06 20:26:22.195 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:26:22.286 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:26:22.300 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:26:22.302 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:26:22.311 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : <==      Total: 1
+2023-02-06 20:26:38.816 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (STORE_NUMBER = ?) 
+2023-02-06 20:26:38.817 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 1(Long)
+2023-02-06 20:26:38.823 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:26:39.018 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.insert            : ==>  Preparing: INSERT INTO store ( ID, STORE_NUMBER, STORE_ADDRESS, MERCHANT_ID, STORE_NAME, PARENT_ID ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2023-02-06 20:26:39.034 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.insert            : ==> Parameters: 134376851580649505(Long), 1(Long), 中国(String), 129606551068475425(Long), 测试门店2(String), 0(Long)
+2023-02-06 20:26:39.038 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.insert            : <==    Updates: 1
+2023-02-06 20:26:39.040 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StaffMapper.selectById        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE ID=? 
+2023-02-06 20:26:39.041 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StaffMapper.selectById        : ==> Parameters: 129606551362076770(String)
+2023-02-06 20:26:39.043 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StaffMapper.selectById        : <==      Total: 0
+2023-02-06 20:26:39.055  WARN 27792 --- [http-nio-56931-exec-6] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 员工不存在
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl.save(StoreServiceImpl.java:124) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl$$FastClassBySpringCGLIB$$d18e9283.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl$$EnhancerBySpringCGLIB$$9341d45b.save(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.controller.StoreController.save(StoreController.java:75) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.controller.StoreController$$FastClassBySpringCGLIB$$eb91cb31.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_merchant_service.controller.StoreController$$EnhancerBySpringCGLIB$$14c55b25.save(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 20:26:49.798 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:26:49.799 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:26:49.803 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:26:49.804 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:26:49.806 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectPage        : <==      Total: 1
+2023-02-06 20:28:13.255  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 83437
+2023-02-06 20:28:13.257  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166637
+2023-02-06 20:28:13.260  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166660
+2023-02-06 20:28:13.262  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166685
+2023-02-06 20:28:13.264  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166709
+2023-02-06 20:28:13.266  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166735
+2023-02-06 20:28:13.268  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166760
+2023-02-06 20:28:13.269  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166787
+2023-02-06 20:28:13.271  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166810
+2023-02-06 20:28:13.272  WARN 27792 --- [http-nio-56931-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 166843
+2023-02-06 20:28:13.283 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:28:13.284 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:28:13.288 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:28:13.289 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:28:13.290 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : <==      Total: 1
+2023-02-06 20:28:32.473 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:28:32.473 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:28:32.475 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:28:32.475 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:28:32.477 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StaffMapper.selectPage        : <==      Total: 1
+2023-02-06 20:28:59.091 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (STORE_NUMBER = ?) 
+2023-02-06 20:28:59.114 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 1(Long)
+2023-02-06 20:28:59.116 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:28:59.117 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.insert            : ==>  Preparing: INSERT INTO store ( ID, STORE_NUMBER, STORE_ADDRESS, MERCHANT_ID, STORE_NAME, PARENT_ID ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2023-02-06 20:28:59.118 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.insert            : ==> Parameters: 134377439198445633(Long), 1(Long), 中国(String), 129606551068475425(Long), 测试门店2(String), 0(Long)
+2023-02-06 20:28:59.120 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StoreMapper.insert            : <==    Updates: 1
+2023-02-06 20:28:59.121 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectById        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE ID=? 
+2023-02-06 20:28:59.121 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectById        : ==> Parameters: (String)
+2023-02-06 20:28:59.122 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectById        : <==      Total: 0
+2023-02-06 20:28:59.125  WARN 27792 --- [http-nio-56931-exec-9] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 员工不存在
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl.save(StoreServiceImpl.java:124) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl$$FastClassBySpringCGLIB$$d18e9283.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl$$EnhancerBySpringCGLIB$$9341d45b.save(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.controller.StoreController.save(StoreController.java:75) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.controller.StoreController$$FastClassBySpringCGLIB$$eb91cb31.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_merchant_service.controller.StoreController$$EnhancerBySpringCGLIB$$14c55b25.save(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 20:31:23.596  WARN 27792 --- [http-nio-56931-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 144470
+2023-02-06 20:31:23.628 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:31:23.629 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:31:23.633 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:31:23.635 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:31:23.639 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : <==      Total: 1
+2023-02-06 20:31:24.480 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:31:24.481 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:31:24.483 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:31:24.484 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:31:24.487 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : <==      Total: 2
+2023-02-06 20:32:04.905 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (STORE_NUMBER = ?) 
+2023-02-06 20:32:04.905 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 1(Long)
+2023-02-06 20:32:04.907 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:32:04.908 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.insert            : ==>  Preparing: INSERT INTO store ( ID, STORE_NUMBER, STORE_ADDRESS, MERCHANT_ID, STORE_NAME, PARENT_ID ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2023-02-06 20:32:04.909 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.insert            : ==> Parameters: 134378218458185825(Long), 1(Long), 1314(String), 129606551068475425(Long), 13(String), 0(Long)
+2023-02-06 20:32:04.910 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.insert            : <==    Updates: 1
+2023-02-06 20:32:04.911 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StaffMapper.selectById        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE ID=? 
+2023-02-06 20:32:04.911 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StaffMapper.selectById        : ==> Parameters: 129606551362076770(String)
+2023-02-06 20:32:04.912 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StaffMapper.selectById        : <==      Total: 1
+2023-02-06 20:32:04.918 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreStaffMapper.insert       : ==>  Preparing: INSERT INTO store_staff ( ID, STORE_ID, STAFF_ID ) VALUES ( ?, ?, ? ) 
+2023-02-06 20:32:04.919 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreStaffMapper.insert       : ==> Parameters: 134378218500128897(Long), 134378218458185825(Long), 129606551362076770(Long)
+2023-02-06 20:32:04.937 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreStaffMapper.insert       : <==    Updates: 1
+2023-02-06 20:32:44.443 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:32:44.443 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:32:44.446 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:32:44.446 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:32:44.449 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectPage        : <==      Total: 2
+2023-02-06 20:33:01.049 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.AppMapper.selectList          : ==>  Preparing: SELECT ID,MERCHANT_ID,APP_NAME,APP_ID,NOTIFY_URL,PUBLIC_KEY FROM app WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:33:01.050 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.AppMapper.selectList          : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:33:01.052 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.AppMapper.selectList          : <==      Total: 1
+2023-02-06 20:33:03.759 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.AppMapper.selectCount         : ==>  Preparing: SELECT COUNT( 1 ) FROM app WHERE (APP_ID = ? AND MERCHANT_ID = ?) 
+2023-02-06 20:33:03.760 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.AppMapper.selectCount         : ==> Parameters: a838b36dcbe940328ef523d7ceaca7c9(String), 129606551068475425(Long)
+2023-02-06 20:33:03.761 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.AppMapper.selectCount         : <==      Total: 1
+2023-02-06 20:33:03.772 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (MERCHANT_ID = ? AND ID = ?) 
+2023-02-06 20:33:03.773 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 129606551068475425(Long), 134378218458185825(Long)
+2023-02-06 20:33:03.774 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:33:06.666 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:33:06.666 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:33:06.667 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:33:06.667 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:33:06.669 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StoreMapper.selectPage        : <==      Total: 2
+2023-02-06 20:33:11.442 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (STORE_NUMBER = ?) 
+2023-02-06 20:33:11.442 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 1(Long)
+2023-02-06 20:33:11.444 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:33:11.446  WARN 27792 --- [http-nio-56931-exec-10] m.a.config.ExceptionConfig               : BizException:
+
+mao.tools_core.exception.BizException: 门店编号不唯一
+	at mao.tools_core.exception.BizException.wrap(BizException.java:42) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl.checkStoreNumber(StoreServiceImpl.java:96) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl.update(StoreServiceImpl.java:74) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl$$FastClassBySpringCGLIB$$d18e9283.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_merchant_service.service.impl.StoreServiceImpl$$EnhancerBySpringCGLIB$$9341d45b.update(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.controller.StoreController.update(StoreController.java:61) ~[classes/:na]
+	at mao.aggregate_pay_merchant_service.controller.StoreController$$FastClassBySpringCGLIB$$eb91cb31.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_merchant_service.controller.StoreController$$EnhancerBySpringCGLIB$$14c55b25.update(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.2.8.jar:1.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109) [spring-boot-actuator-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 20:34:47.876  WARN 27792 --- [http-nio-56931-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 96430
+2023-02-06 20:34:47.897 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StoreMapper.selectById        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE ID=? 
+2023-02-06 20:34:47.898 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StoreMapper.selectById        : ==> Parameters: 134378218458185825(Long)
+2023-02-06 20:34:47.899 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StoreMapper.selectById        : <==      Total: 1
+2023-02-06 20:34:47.900 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StoreMapper.deleteById        : ==>  Preparing: DELETE FROM store WHERE ID=? 
+2023-02-06 20:34:47.903 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StoreMapper.deleteById        : ==> Parameters: 134378218458185825(Long)
+2023-02-06 20:34:47.904 DEBUG 27792 --- [http-nio-56931-exec-3] m.a.mapper.StoreMapper.deleteById        : <==    Updates: 1
+2023-02-06 20:34:48.143 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:34:48.144 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:34:48.145 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:34:48.145 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:34:48.146 DEBUG 27792 --- [http-nio-56931-exec-4] m.a.mapper.StoreMapper.selectPage        : <==      Total: 1
+2023-02-06 20:35:02.309 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:35:02.310 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:35:02.311 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:35:02.311 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:35:02.314 DEBUG 27792 --- [http-nio-56931-exec-8] m.a.mapper.StaffMapper.selectPage        : <==      Total: 2
+2023-02-06 20:35:14.145 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (STORE_NUMBER = ?) 
+2023-02-06 20:35:14.146 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 2(Long)
+2023-02-06 20:35:14.147 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:35:14.148 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.insert            : ==>  Preparing: INSERT INTO store ( ID, STORE_NUMBER, STORE_ADDRESS, MERCHANT_ID, STORE_NAME, PARENT_ID ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2023-02-06 20:35:14.148 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.insert            : ==> Parameters: 134379012188274849(Long), 2(Long), 2424(String), 129606551068475425(Long), 24(String), 0(Long)
+2023-02-06 20:35:14.150 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.insert            : <==    Updates: 1
+2023-02-06 20:35:14.150 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StaffMapper.selectById        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE ID=? 
+2023-02-06 20:35:14.151 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StaffMapper.selectById        : ==> Parameters: 129606551362076770(String)
+2023-02-06 20:35:14.152 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StaffMapper.selectById        : <==      Total: 1
+2023-02-06 20:35:14.153 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreStaffMapper.insert       : ==>  Preparing: INSERT INTO store_staff ( ID, STORE_ID, STAFF_ID ) VALUES ( ?, ?, ? ) 
+2023-02-06 20:35:14.153 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreStaffMapper.insert       : ==> Parameters: 134379012209246401(Long), 134379012188274849(Long), 129606551362076770(Long)
+2023-02-06 20:35:14.155 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreStaffMapper.insert       : <==    Updates: 1
+2023-02-06 20:35:29.892 DEBUG 27792 --- [http-nio-56931-exec-5] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:35:29.893 DEBUG 27792 --- [http-nio-56931-exec-5] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:35:29.896 DEBUG 27792 --- [http-nio-56931-exec-5] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:35:29.896 DEBUG 27792 --- [http-nio-56931-exec-5] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:35:29.900 DEBUG 27792 --- [http-nio-56931-exec-5] m.a.mapper.StoreMapper.selectPage        : <==      Total: 2
+2023-02-06 20:35:33.828 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:35:33.829 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:35:33.830 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:35:33.830 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:35:33.832 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : <==      Total: 2
+2023-02-06 20:35:48.437 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : ==>  Preparing: SELECT COUNT( 1 ) FROM store WHERE (STORE_NUMBER = ?) 
+2023-02-06 20:35:48.437 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : ==> Parameters: 3(Long)
+2023-02-06 20:35:48.438 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectCount       : <==      Total: 1
+2023-02-06 20:35:48.441 DEBUG 27792 --- [http-nio-56931-exec-1] m.t.datasource.MyMetaObjectHandler       : start update fill ....
+2023-02-06 20:35:48.442 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.updateById        : ==>  Preparing: UPDATE store SET STORE_NUMBER=?, STORE_ADDRESS=?, MERCHANT_ID=?, STORE_NAME=?, PARENT_ID=? WHERE ID=? 
+2023-02-06 20:35:48.447 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.updateById        : ==> Parameters: 3(Long), 2424(String), 129606551068475425(Long), 24(String), 0(Long), null
+2023-02-06 20:35:48.449 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.updateById        : <==    Updates: 0
+2023-02-06 20:36:06.328 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:36:06.329 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:36:06.332 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:36:06.332 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:36:06.335 DEBUG 27792 --- [http-nio-56931-exec-6] m.a.mapper.StoreMapper.selectPage        : <==      Total: 2
+2023-02-06 20:36:08.631 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:36:08.632 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:36:08.634 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:36:08.634 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:36:08.638 DEBUG 27792 --- [http-nio-56931-exec-7] m.a.mapper.StoreMapper.selectPage        : <==      Total: 2
+2023-02-06 20:36:16.691 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectById        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE ID=? 
+2023-02-06 20:36:16.692 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectById        : ==> Parameters: 134379012188274849(Long)
+2023-02-06 20:36:16.693 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.selectById        : <==      Total: 1
+2023-02-06 20:36:16.693 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.deleteById        : ==>  Preparing: DELETE FROM store WHERE ID=? 
+2023-02-06 20:36:16.694 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.deleteById        : ==> Parameters: 134379012188274849(Long)
+2023-02-06 20:36:16.695 DEBUG 27792 --- [http-nio-56931-exec-10] m.a.mapper.StoreMapper.deleteById        : <==    Updates: 1
+2023-02-06 20:36:17.071 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:36:17.071 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:36:17.072 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:36:17.073 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:36:17.073 DEBUG 27792 --- [http-nio-56931-exec-1] m.a.mapper.StoreMapper.selectPage        : <==      Total: 1
+2023-02-06 20:36:19.555 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM store WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:36:19.555 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:36:19.558 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StoreMapper.selectPage        : ==>  Preparing: SELECT ID,STORE_NUMBER,STORE_ADDRESS,MERCHANT_ID,STORE_NAME,STORE_STATUS,PARENT_ID FROM store WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:36:19.558 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StoreMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:36:19.561 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StoreMapper.selectPage        : <==      Total: 1
+2023-02-06 20:36:45.737 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:36:45.738 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:36:45.739 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:36:45.739 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:36:45.741 DEBUG 27792 --- [http-nio-56931-exec-9] m.a.mapper.StaffMapper.selectPage        : <==      Total: 2
+2023-02-06 20:36:57.852 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:36:57.852 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:36:57.853 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:36:57.854 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:36:57.855 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : <==      Total: 2
+2023-02-06 20:38:28.640  WARN 27792 --- [http-nio-56931-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/aggregate_pay_merchant_service?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 90785
+2023-02-06 20:38:28.665 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT COUNT(1) FROM staff WHERE (MERCHANT_ID = ?) 
+2023-02-06 20:38:28.666 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long)
+2023-02-06 20:38:28.668 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==>  Preparing: SELECT ID,LAST_LOGIN_TIME,STAFF_STATUS,MERCHANT_ID,MOBILE,FULL_NAME,POSITION,STORE_ID,USERNAME FROM staff WHERE (MERCHANT_ID = ?) LIMIT ?,? 
+2023-02-06 20:38:28.669 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : ==> Parameters: 129606551068475425(Long), 0(Long), 10(Long)
+2023-02-06 20:38:28.670 DEBUG 27792 --- [http-nio-56931-exec-2] m.a.mapper.StaffMapper.selectPage        : <==      Total: 2
