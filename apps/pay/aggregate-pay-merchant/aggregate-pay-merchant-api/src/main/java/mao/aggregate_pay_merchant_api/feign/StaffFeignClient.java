@@ -5,6 +5,7 @@ import mao.aggregate_pay_common.domain.PageVO;
 import mao.aggregate_pay_merchant_api.dto.StaffDTO;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -49,4 +50,15 @@ public interface StaffFeignClient
     @ApiOperation("保存员工信息")
     @PostMapping("/my/staffs")
     R<StaffDTO> saveStaff(@RequestBody StaffDTO staffDTO);
+
+
+    /**
+     * 删除员工信息
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    @ApiOperation("删除员工信息")
+    @DeleteMapping("/my/staffs")
+    R<Boolean> deleteStaff(@RequestBody StaffDTO staffDTO);
 }

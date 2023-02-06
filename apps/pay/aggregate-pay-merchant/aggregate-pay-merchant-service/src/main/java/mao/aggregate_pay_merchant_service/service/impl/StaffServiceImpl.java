@@ -69,6 +69,18 @@ public class StaffServiceImpl extends ServiceImpl<StaffMapper, Staff> implements
     @Override
     public StaffDTO saveStaff(StaffDTO staffDTO)
     {
+        //根据手机号和商户id判断员工是否已在指定商户存在
+        if (isExistStaffByMobile(staffDTO.getMobile(), staffDTO.getMerchantId()))
+        {
+            //已经存在
+            throw BizException.wrap("手机号已经存在");
+        }
+        //根据账号判断员工是否已在指定商户存在
+        if (isExistStaffByUserName(staffDTO.getUsername(), staffDTO.getMerchantId()))
+        {
+            //存在
+            throw BizException.wrap("用户名已经存在");
+        }
         //转换
         Staff staff = dozerUtils.map(staffDTO, Staff.class);
         //保存
@@ -81,5 +93,68 @@ public class StaffServiceImpl extends ServiceImpl<StaffMapper, Staff> implements
         dozerUtils.map(staff, staffDTO);
         //返回
         return staffDTO;
+    }
+
+
+    /**
+     * 根据手机号和商户id判断员工是否已在指定商户存在
+     *
+     * @param mobile     手机号
+     * @param merchantId 商人id
+     * @return boolean
+     */
+    private boolean isExistStaffByMobile(String mobile, Long merchantId)
+    {
+        int count = this.count(Wraps.<Staff>lbQ()
+                .eq(Staff::getMobile, mobile)
+                .eq(Staff::getMerchantId, merchantId));
+        return count > 0;
+    }
+
+    /**
+     * 根据账号判断员工是否已在指定商户存在
+     *
+     * @param userName   用户名
+     * @param merchantId 商人id
+     * @return boolean
+     */
+    private boolean isExistStaffByUserName(String userName, Long merchantId)
+    {
+        int count = this.count(Wraps.<Staff>lbQ()
+                .eq(Staff::getUsername, userName)
+                .eq(Staff::getMerchantId, merchantId));
+        return count > 0;
+    }
+
+
+    @Override
+    public StaffDTO updateStaff(StaffDTO staffDTO)
+    {
+        throw BizException.wrap("功能未实现");
+    }
+
+    @Override
+    public Boolean deleteStaff(StaffDTO staffDTO)
+    {
+        //得到id
+        Long id = staffDTO.getId();
+        //当前登录的商户id
+        Long merchantId = staffDTO.getMerchantId();
+        //查询员工信息
+        Staff staff = this.getById(id);
+        if (staff == null)
+        {
+            //查询结果为空，不需要删除
+            return false;
+        }
+        //查询结果不为空
+        //判断是否属于当前商户下的员工
+        if (!merchantId.equals(staff.getMerchantId()))
+        {
+            throw BizException.wrap("当前员工不属于当前商户");
+        }
+        //删除
+        this.removeById(id);
+        return true;
     }
 }

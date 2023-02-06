@@ -39,4 +39,22 @@ public interface StaffService extends IService<Staff>
      * @return 员工dto
      */
     StaffDTO saveStaff(StaffDTO staffDTO);
+
+
+    /**
+     * 修改员工信息
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    StaffDTO updateStaff(StaffDTO staffDTO);
+
+
+    /**
+     * 删除员工信息
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    Boolean deleteStaff(StaffDTO staffDTO);
 }

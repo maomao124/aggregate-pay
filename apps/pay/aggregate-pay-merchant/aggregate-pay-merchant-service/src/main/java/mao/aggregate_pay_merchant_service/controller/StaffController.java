@@ -65,4 +65,18 @@ public class StaffController extends BaseController
     {
         return success(staffService.saveStaff(staffDTO));
     }
+
+
+    /**
+     * 删除员工信息
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    @ApiOperation("删除员工信息")
+    @DeleteMapping("/my/staffs")
+    public R<Boolean> deleteStaff(@RequestBody StaffDTO staffDTO)
+    {
+        return success(staffService.deleteStaff(staffDTO));
+    }
 }

@@ -93,7 +93,7 @@ public class StaffController
      * @param staffDTO 员工dto
      * @return 员工dto
      */
-    @SysLog(value = "保存员工信息")
+    @SysLog(value = "保存员工信息",recordResponseParam = false)
     @ApiOperation("保存员工信息")
     @PostMapping("/my/staffs")
     public StaffDTO saveStaff(@RequestBody StaffDTO staffDTO)
@@ -130,4 +130,21 @@ public class StaffController
         //返回
         return r.getData();
     }
+
+
+    /**
+     * 更新员工信息，前端并没有传递id过来，功能暂时未实现
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    @SysLog(value = "更新员工信息")
+    @ApiOperation("更新员工信息")
+    @PutMapping("/my/staffs")
+    public StaffDTO updateStaff(@RequestBody StaffDTO staffDTO)
+    {
+        throw BizException.wrap("功能未实现");
+    }
+
+
 }
