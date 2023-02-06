@@ -11,6 +11,7 @@ import mao.aggregate_pay_common.utils.QRCodeUtil;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
+import mao.aggregate_pay_merchant_api.feign.StoreFeignClient;
 import mao.aggregate_pay_merchant_application.handler.AssertResult;
 import mao.aggregate_pay_merchant_application.utils.SecurityUtil;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
@@ -50,6 +51,9 @@ public class StoreController
 
     @Resource
     private TransactionFeignClient transactionFeignClient;
+
+    @Resource
+    private StoreFeignClient storeFeignClient;
 
     /**
      * 主题:"%s商品"
@@ -187,4 +191,38 @@ public class StoreController
         return qrCodeUtil.createQRCode(storeQRCodeURL, QRCodeSize, QRCodeSize);
     }
 
+
+    /**
+     * 更新商户下的门店信息
+     *
+     * @param storeDTO 门店dto
+     * @return {@link StoreDTO}
+     */
+    @SysLog(value = "更新商户下的门店信息", recordResponseParam = false)
+    @ApiOperation("更新商户下的门店信息")
+    @PutMapping("my/stores")
+    public StoreDTO update(@RequestBody StoreDTO storeDTO)
+    {
+        //远程调用
+        R<StoreDTO> r = storeFeignClient.update(storeDTO);
+        //断言结果
+        AssertResult.handler(r);
+        //返回
+        return r.getData();
+    }
+
+
+    /**
+     * 新增商户下的门店信息
+     *
+     * @param storeDTO 门店dto
+     * @return {@link StoreDTO}
+     */
+    @SysLog(value = "新增商户下的门店信息", recordResponseParam = false)
+    @ApiOperation("新增商户下的门店信息")
+    @PostMapping("my/stores")
+    public StoreDTO save(@RequestBody StoreDTO storeDTO, @RequestParam String staffIds)
+    {
+        return null;
+    }
 }

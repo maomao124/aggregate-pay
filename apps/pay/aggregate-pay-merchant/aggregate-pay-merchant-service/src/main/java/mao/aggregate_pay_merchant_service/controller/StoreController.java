@@ -2,13 +2,12 @@ package mao.aggregate_pay_merchant_service.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import mao.aggregate_pay_merchant_api.dto.StoreDTO;
 import mao.aggregate_pay_merchant_service.service.StoreService;
 import mao.tools_core.base.BaseController;
 import mao.tools_core.base.R;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import mao.tools_log.annotation.SysLog;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -46,6 +45,34 @@ public class StoreController extends BaseController
     public R<Boolean> queryStoreInMerchant(@PathVariable Long storeId, @PathVariable Long merchantId)
     {
         return storeService.queryStoreInMerchant(storeId, merchantId);
+    }
+
+
+    /**
+     * 更新商户下的门店信息
+     *
+     * @param storeDTO 门店dto
+     * @return {@link StoreDTO}
+     */
+    @ApiOperation("更新商户下的门店信息")
+    @PutMapping("my/stores")
+    public R<StoreDTO> update(@RequestBody StoreDTO storeDTO)
+    {
+        return success(storeService.update(storeDTO));
+    }
+
+
+    /**
+     * 新增商户下的门店信息
+     *
+     * @param storeDTO 门店dto
+     * @return {@link StoreDTO}
+     */
+    @ApiOperation("新增商户下的门店信息")
+    @PostMapping("my/stores")
+    public R<StoreDTO> save(@RequestBody StoreDTO storeDTO, @RequestParam String staffIds)
+    {
+        return null;
     }
 
 }
