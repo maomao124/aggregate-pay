@@ -30,4 +30,13 @@ public interface StaffService extends IService<Staff>
      * @return {@link PageVO}<{@link StaffDTO}>
      */
     PageVO<StaffDTO> queryStaffByPage(StaffDTO staffDTO, Integer pageNo, Integer pageSize);
+
+
+    /**
+     * 保存员工信息
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    StaffDTO saveStaff(StaffDTO staffDTO);
 }

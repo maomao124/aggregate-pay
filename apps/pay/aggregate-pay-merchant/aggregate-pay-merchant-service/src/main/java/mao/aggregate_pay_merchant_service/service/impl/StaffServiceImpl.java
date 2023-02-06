@@ -11,6 +11,7 @@ import mao.aggregate_pay_merchant_service.entity.Staff;
 import mao.aggregate_pay_merchant_service.entity.Store;
 import mao.aggregate_pay_merchant_service.mapper.StaffMapper;
 import mao.aggregate_pay_merchant_service.service.StaffService;
+import mao.tools_core.exception.BizException;
 import mao.tools_databases.mybatis.conditions.Wraps;
 import mao.toolsdozer.utils.DozerUtils;
 import org.springframework.stereotype.Service;
@@ -63,5 +64,22 @@ public class StaffServiceImpl extends ServiceImpl<StaffMapper, Staff> implements
             //返回
             return new PageVO<>(storeDTOList, iPage.getTotal(), pageNo, pageSize);
         }
+    }
+
+    @Override
+    public StaffDTO saveStaff(StaffDTO staffDTO)
+    {
+        //转换
+        Staff staff = dozerUtils.map(staffDTO, Staff.class);
+        //保存
+        boolean save = this.save(staff);
+        if (!save)
+        {
+            throw BizException.wrap("员工信息保存失败");
+        }
+        //转换
+        dozerUtils.map(staff, staffDTO);
+        //返回
+        return staffDTO;
     }
 }

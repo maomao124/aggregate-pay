@@ -51,4 +51,18 @@ public class StaffController extends BaseController
         PageVO<StaffDTO> staffDTOPageVO = staffService.queryStaffByPage(staffDTO, pageNo, pageSize);
         return success(staffDTOPageVO);
     }
+
+
+    /**
+     * 保存员工信息
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    @ApiOperation("保存员工信息")
+    @PostMapping("/my/staffs")
+    public R<StaffDTO> saveStaff(@RequestBody StaffDTO staffDTO)
+    {
+        return success(staffService.saveStaff(staffDTO));
+    }
 }

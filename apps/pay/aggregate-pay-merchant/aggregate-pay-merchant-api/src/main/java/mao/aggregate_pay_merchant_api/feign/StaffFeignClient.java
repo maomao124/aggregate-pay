@@ -38,4 +38,15 @@ public interface StaffFeignClient
     R<PageVO<StaffDTO>> queryStaffByPage(@RequestBody StaffDTO staffDTO,
                                          @PathVariable Integer pageNo,
                                          @PathVariable Integer pageSize);
+
+
+    /**
+     * 保存员工信息
+     *
+     * @param staffDTO 员工dto
+     * @return 员工dto
+     */
+    @ApiOperation("保存员工信息")
+    @PostMapping("/my/staffs")
+    R<StaffDTO> saveStaff(@RequestBody StaffDTO staffDTO);
 }
