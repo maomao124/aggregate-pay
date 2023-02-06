@@ -48,6 +48,12 @@ public class StaffDTO  implements Serializable
     private String fullName;
 
     /**
+     * 姓名
+     */
+    @ApiModelProperty(value = "姓名")
+    private String fullname;
+
+    /**
      * 职位
      */
     @ApiModelProperty(value = "职位")
@@ -82,4 +88,25 @@ public class StaffDTO  implements Serializable
      */
     @ApiModelProperty(value = "0表示禁用，1表示启用")
     private Boolean staffStatus;
+
+
+    public String getFullname()
+    {
+        return fullname;
+    }
+
+    public void setFullname(String fullname)
+    {
+        this.fullname = fullname;
+    }
+
+    public String getFullName()
+    {
+        return fullName;
+    }
+
+    public void setFullName(String fullName)
+    {
+        this.fullName = fullName;
+    }
 }

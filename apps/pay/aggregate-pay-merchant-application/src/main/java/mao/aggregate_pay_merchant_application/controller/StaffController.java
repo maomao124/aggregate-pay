@@ -103,6 +103,11 @@ public class StaffController
         //设置商户id
         staffDTO.setMerchantId(id);
 
+        //前端使用的是字段fullname，后端使用的是fullName
+        staffDTO.setFullName(staffDTO.getFullname());
+
+        log.debug(staffDTO.toString());
+
         if (StringUtils.isBlank(staffDTO.getUsername()))
         {
             throw BizException.wrap("用户名不能为空");
