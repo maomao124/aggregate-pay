@@ -1,0 +1,37 @@
+
+swagger:
+  enabled: true
+  contact:
+    name: mao
+    url: https://github.com/maomao124/
+    email: 1234@qq.com
+  docket:
+    aggregate_pay:
+      title: 支付渠道代理服务
+      base-package: mao.aggregate_pay_payment_agent_service
+
+
+
+
+#HTTP格式配置
+spring:
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+    messages:
+      encoding: UTF‐8
+
+
+      
+      
+#tomcat头信息(用户ip和访问协议)及访问路径配置
+server:
+  tomcat:
+    remote_ip_header: x‐forwarded‐for
+    protocol_header: x‐forwarded‐proto
+  servlet:
+    context‐path: /
+  use‐forward‐headers: true
+

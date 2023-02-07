@@ -1,0 +1,49 @@
+# 在这里配置 权限服务 所有环境都能使用的配置
+
+mysql:
+  database: aggregate_pay_user
+
+
+
+swagger:
+  enabled: true
+  docket:
+    aggregate_pay:
+      title: 用户服务
+      base-package: mao.aggregate_pay_user_service
+
+
+authentication:
+  user:
+    header-name: token
+    expire: 43200               # 外部token有效期为12小时
+    pri-key: client/pri.key    # 加密
+    pub-key: client/pub.key    # 解密
+
+
+#HTTP格式配置
+spring:
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+    messages:
+      encoding: UTF‐8
+
+
+#tomcat头信息(用户ip和访问协议)及访问路径配置
+server:
+  tomcat:
+    remote_ip_header: x‐forwarded‐for
+    protocol_header: x‐forwarded‐proto
+  servlet:
+    context‐path: /user
+  use‐forward‐headers: true
+
+#服务监控与管理配置，运维相关
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,env

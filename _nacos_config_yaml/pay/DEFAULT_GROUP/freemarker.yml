@@ -1,0 +1,26 @@
+spring:
+  freemarker:
+    # 后缀名
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    # 缓存配置
+    cache: true
+    # 模板加载路径 按需配置（这里就是我们上面的忽略配置）
+    template-loader-path: classpath:/templates/
+    # 编码格式
+    charset: UTF-8
+    #把Spring的RequestContext对象暴露为变量rc
+    request‐context‐attribute: rc
+    # request
+    expose‐request‐attributes: true
+    # session
+    expose‐session‐attributes: true
+    # 设置允许request被重写
+    allow-request-override: true
+    # 设置允许session被重写
+    allow-session-override: true
+    # 设置
+    settings:
+      # 数字格式化，无小数点
+      number_format: '0.##'

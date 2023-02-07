@@ -1,0 +1,16 @@
+# p6spy是一个开源项目，通常使用它来跟踪数据库操作，查看程序运行过程中执行的sql语句
+# 开发环境需要使用p6spy进行sql语句输出
+# 但p6spy会有性能损耗，不适合在生产线使用，故其他环境无需配置
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://${mysql.ip}:${mysql.port}/${mysql.database}?serverTimezone=CTT&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    db-type: mysql
+
+
+# 设置日志级别，root表示根节点，即整体应用日志级别
+logging:
+  level:
+    root: info
+    # 为对应组设置日志级别
+    mao: debug

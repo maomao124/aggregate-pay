@@ -1,0 +1,35 @@
+
+mysql:
+  database: aggregate_pay_log
+
+
+
+swagger:
+  enabled: true
+  docket:
+    aggregate_pay:
+      title: 日志服务
+      base-package: mao.aggregate_pay_log
+
+
+
+#HTTP格式配置
+spring:
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+    messages:
+      encoding: UTF‐8
+
+
+    
+#tomcat头信息(用户ip和访问协议)及访问路径配置
+server:
+  tomcat:
+    remote_ip_header: x‐forwarded‐for
+    protocol_header: x‐forwarded‐proto
+  servlet:
+    context‐path: /
+  use‐forward‐headers: true

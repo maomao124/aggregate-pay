@@ -1,0 +1,29 @@
+# 在这里配置 权限服务 所有环境都能使用的配置
+
+mysql:
+  database: sms
+  
+  sms: 
+    messageErrorNum: 3
+    configLevelFailNum: 10
+    configBuildScale: 0.75
+
+
+swagger:
+  enabled: true
+  docket:
+    sms:
+      title: 短信发送服务
+      base-package: mao.sms_server.controller
+
+
+authentication:
+  user:
+    header-name: token
+    expire: 43200               # 外部token有效期为12小时
+    pri-key: client/pri.key    # 加密
+    pub-key: client/pub.key    # 解密
+
+
+
+

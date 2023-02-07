@@ -1,0 +1,13 @@
+
+swagger:
+  enabled: true
+  docket:
+    aggregate_pay:
+      title: 验证码服务
+      base-package: mao.aggregate_pay_sms
+
+sms:
+  auth: false
+  domain: http://localhost:8771
+  accessKeyId: 424b97df0839412f9783304c9c46a01a
+  accessKeySecret: 7b2fb98ca7d74360a05c53442fe56c58

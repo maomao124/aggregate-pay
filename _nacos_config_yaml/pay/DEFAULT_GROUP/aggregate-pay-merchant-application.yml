@@ -1,0 +1,93 @@
+swagger:
+  enabled: true
+  docket:
+    aggregate_pay:
+      title: 商户平台应用
+      base-package: mao.aggregate_pay_merchant_application
+
+
+authentication:
+  user:
+    header-name: token
+    expire: 43200               # 外部token有效期为12小时
+    pri-key: client/pri.key    # 加密
+    pub-key: client/pub.key    # 解密
+
+
+
+#HTTP格式配置
+spring:
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+    messages:
+      encoding: UTF‐8
+      
+
+#tomcat头信息(用户ip和访问协议)及访问路径配置
+server:
+  tomcat:
+    remote_ip_header: x‐forwarded‐for
+    protocol_header: x‐forwarded‐proto
+  servlet:
+    context‐path: /merchant
+  use‐forward‐headers: true
+
+#服务监控与管理配置，运维相关
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,env
+
+
+feign:
+  # 配置连接池
+  httpclient:
+    # 开启feign对HttpClient的支持
+    enabled: true
+    # 最大的连接数
+    max-connections: 200
+    # 每个路径的最大连接数
+    max-connections-per-route: 50
+
+  client:
+    config:
+      # default是全局配置，如果是写服务名称，则是针对某个微服务的配置
+      default:
+         #日志级别，包含四种不同的级别：NONE、BASIC、HEADERS、FULL
+        loggerLevel: BASIC
+        # 连接超时时间
+        #connectTimeout:
+        # 响应结果的解析器，http远程调用的结果做解析，例如解析json字符串为java对象
+        #decoder:
+        # 请求参数编码，将请求参数编码，便于通过http请求发送
+        #encoder:
+        # 支持的注解格式，默认是SpringMVC的注解
+        #contract:
+        # 失败重试机制，请求失败的重试机制，默认是没有，不过会使用Ribbon的重试
+        #retryer:
+
+  # 开启Feign的Sentinel功能
+  sentinel:
+    enabled: true
+
+
+
+#七牛云配置
+qn:
+  url: "xxxxxx"
+  accessKey: "xxxxxx"
+  secretKey: "xxxxxx"
+  bucket: "mao123456"
+
+
+
+pay:
+  c2b:
+   subject: "%s商品"
+   body: "向%s付款"
+   QRCode:
+     size: 200
