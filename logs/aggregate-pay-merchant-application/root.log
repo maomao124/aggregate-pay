@@ -2320,3 +2320,124 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 2023-02-07 21:06:15.165  INFO 23836 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [feign.circuitbreaker.enabled]
 2023-02-07 21:06:15.165  INFO 23836 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [notify-ok] dataId=common.yml, group=DEFAULT_GROUP, md5=64220c20dbdfb544f8c36345649f9455, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@5e4456af 
 2023-02-07 21:06:15.165  INFO 23836 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [notify-listener] time cost=2597ms in ClientWorker, dataId=common.yml, group=DEFAULT_GROUP, md5=64220c20dbdfb544f8c36345649f9455, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@5e4456af 
+2023-02-07 21:58:39.614 DEBUG 23836 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.617 DEBUG 23836 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/doc.html] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.656 DEBUG 23836 --- [http-nio-57010-exec-10] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/doc.html
+2023-02-07 21:58:39.663 DEBUG 23836 --- [http-nio-57010-exec-10] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/doc.html
+2023-02-07 21:58:39.748 DEBUG 23836 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.803 DEBUG 23836 --- [http-nio-57010-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.803 DEBUG 23836 --- [http-nio-57010-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/css/app.ed578354.css] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.803 DEBUG 23836 --- [http-nio-57010-exec-9] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/css/app.ed578354.css
+2023-02-07 21:58:39.804 DEBUG 23836 --- [http-nio-57010-exec-9] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/css/app.ed578354.css
+2023-02-07 21:58:39.805 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.805 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/css/chunk-vendors.ec7eee79.css] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.806 DEBUG 23836 --- [http-nio-57010-exec-1] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/css/chunk-vendors.ec7eee79.css
+2023-02-07 21:58:39.806 DEBUG 23836 --- [http-nio-57010-exec-1] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/css/chunk-vendors.ec7eee79.css
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-vendors.2f54c298.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/app.f645a8de.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-3] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-vendors.2f54c298.js
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-3] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-vendors.2f54c298.js
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-2] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/app.f645a8de.js
+2023-02-07 21:58:39.808 DEBUG 23836 --- [http-nio-57010-exec-2] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/app.f645a8de.js
+2023-02-07 21:58:39.812 DEBUG 23836 --- [http-nio-57010-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.812 DEBUG 23836 --- [http-nio-57010-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/css/chunk-bd55de96.5df67c87.css] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.812 DEBUG 23836 --- [http-nio-57010-exec-4] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/css/chunk-bd55de96.5df67c87.css
+2023-02-07 21:58:39.812 DEBUG 23836 --- [http-nio-57010-exec-4] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/css/chunk-bd55de96.5df67c87.css
+2023-02-07 21:58:39.812 DEBUG 23836 --- [http-nio-57010-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.812 DEBUG 23836 --- [http-nio-57010-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-0c58d94d.6ea40c6a.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.813 DEBUG 23836 --- [http-nio-57010-exec-6] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-0c58d94d.6ea40c6a.js
+2023-02-07 21:58:39.813 DEBUG 23836 --- [http-nio-57010-exec-6] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-0c58d94d.6ea40c6a.js
+2023-02-07 21:58:39.822 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.825 DEBUG 23836 --- [http-nio-57010-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.825 DEBUG 23836 --- [http-nio-57010-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.825 DEBUG 23836 --- [http-nio-57010-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.829 DEBUG 23836 --- [http-nio-57010-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.837 DEBUG 23836 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.837 DEBUG 23836 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-2d0af44e.47ba6a97.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.837 DEBUG 23836 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-2d0af44e.47ba6a97.js
+2023-02-07 21:58:39.837 DEBUG 23836 --- [http-nio-57010-exec-5] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-2d0af44e.47ba6a97.js
+2023-02-07 21:58:39.841 DEBUG 23836 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.842 DEBUG 23836 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-2d0bd799.d162a2d5.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.842 DEBUG 23836 --- [http-nio-57010-exec-8] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-2d0bd799.d162a2d5.js
+2023-02-07 21:58:39.842 DEBUG 23836 --- [http-nio-57010-exec-8] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-2d0bd799.d162a2d5.js
+2023-02-07 21:58:39.845 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.845 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-589faee0.eec6273b.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.845 DEBUG 23836 --- [http-nio-57010-exec-7] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-589faee0.eec6273b.js
+2023-02-07 21:58:39.845 DEBUG 23836 --- [http-nio-57010-exec-7] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-589faee0.eec6273b.js
+2023-02-07 21:58:39.847 DEBUG 23836 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.847 DEBUG 23836 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-bd55de96.b3226bb4.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.847 DEBUG 23836 --- [http-nio-57010-exec-10] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-bd55de96.b3226bb4.js
+2023-02-07 21:58:39.847 DEBUG 23836 --- [http-nio-57010-exec-10] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-bd55de96.b3226bb4.js
+2023-02-07 21:58:39.849 DEBUG 23836 --- [http-nio-57010-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.853 DEBUG 23836 --- [http-nio-57010-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.854 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.854 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-ca8049da.1d418e7b.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.854 DEBUG 23836 --- [http-nio-57010-exec-1] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-ca8049da.1d418e7b.js
+2023-02-07 21:58:39.854 DEBUG 23836 --- [http-nio-57010-exec-1] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-ca8049da.1d418e7b.js
+2023-02-07 21:58:39.855 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.858 DEBUG 23836 --- [http-nio-57010-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.867 DEBUG 23836 --- [http-nio-57010-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.901 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:39.903 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:39.903 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/webjars/js/chunk-e30866b8.2813e4e2.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:39.903 DEBUG 23836 --- [http-nio-57010-exec-1] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/webjars/js/chunk-e30866b8.2813e4e2.js
+2023-02-07 21:58:39.903 DEBUG 23836 --- [http-nio-57010-exec-1] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/webjars/js/chunk-e30866b8.2813e4e2.js
+2023-02-07 21:58:39.913 DEBUG 23836 --- [http-nio-57010-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/swagger-resources] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-6] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/swagger-resources
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-9] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/swagger-resources/configuration/ui
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-9] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/swagger-resources/configuration/ui
+2023-02-07 21:58:40.287 DEBUG 23836 --- [http-nio-57010-exec-6] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/swagger-resources
+2023-02-07 21:58:40.354 DEBUG 23836 --- [http-nio-57010-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:40.354 DEBUG 23836 --- [http-nio-57010-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:58:40.378 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 21:58:40.379 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/merchant/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2023-02-07 21:58:40.379 DEBUG 23836 --- [http-nio-57010-exec-7] m.a.filter.TokenAuthenticationFilter     : 请求的URL:http://172.26.48.1:57010/merchant/v2/api-docs
+2023-02-07 21:58:40.379 DEBUG 23836 --- [http-nio-57010-exec-7] m.a.filter.TokenAuthenticationFilter     : 资源放行：http://172.26.48.1:57010/merchant/v2/api-docs
+2023-02-07 21:58:40.392 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             :  start read XSS configfile [antisamy-slashdot-1.4.4.xml]
+2023-02-07 21:58:40.431 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             : read XSS configfile [antisamy-slashdot-1.4.4.xml] success
+2023-02-07 21:58:40.434 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 商户平台应用
+2023-02-07 21:58:40.536 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 商户平台应用
+2023-02-07 21:58:40.722 DEBUG 23836 --- [http-nio-57010-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 21:59:04.723  WARN 23836 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-07 21:59:04.723  WARN 23836 --- [Thread-42] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-07 21:59:04.723  WARN 23836 --- [Thread-42] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-07 21:59:04.724  WARN 23836 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-07 21:59:04.726  INFO 23836 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 21:59:04.738  INFO 23836 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-07 21:59:04.739  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-merchant-application:192.168.3.143:57010 from beat map.
+2023-02-07 21:59:04.739  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-merchant-application with instance: Instance{instanceId='null', ip='192.168.3.143', port=57010, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-07 21:59:04.744  INFO 23836 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-07 21:59:04.746  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-07 21:59:04.748  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-07 21:59:04.749  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-07 21:59:05.756  INFO 23836 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":57098,\"valid\":false,\"healthy\":false,\"marked\":false,\"instanceId\":\"192.168.3.143#57098#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/merchant/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false},{\"ip\":\"172.23.128.1\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"172.23.128.1#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false},{\"ip\":\"192.168.3.143\",\"port\":57010,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#57010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/merchant/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-merchant-application\",\"cacheMillis\":10000,\"lastRefTime\":1675778345755,\"checksum\":\"7c346ad39d69e121d3c32f384a6b5f20\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":29673708623900} from /172.26.48.1
+2023-02-07 21:59:07.230  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-07 21:59:10.265  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-07 21:59:10.265  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-07 21:59:10.265  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-07 21:59:10.265  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-07 21:59:10.265  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-07 21:59:10.266  WARN 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-07 21:59:10.266  WARN 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-07 21:59:10.266  INFO 23836 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-07 21:59:10.266  INFO 23836 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-07 21:59:10.266  INFO 23836 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-07 21:59:10.267  INFO 23836 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-07 21:59:10.283  WARN 23836 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-07 21:59:10.449  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-07 21:59:10.450  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10941] result: true
+2023-02-07 21:59:10.450  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10921] result: true
+2023-02-07 21:59:10.451  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10911] result: true
+2023-02-07 21:59:10.452  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10931] result: true
+2023-02-07 21:59:10.472  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10911] result: true
+2023-02-07 21:59:10.472  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-07 21:59:10.472  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10941] result: true
+2023-02-07 21:59:10.472  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10921] result: true
+2023-02-07 21:59:10.472  INFO 23836 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[172.26.48.1:10931] result: true
+2023-02-07 21:59:10.659 DEBUG 23836 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy

@@ -384,3 +384,87 @@ docket：{sms=DocketInfo{title='短信平台管理服务', group='', description
 2023-02-07 21:06:14.935  INFO 21332 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [feign.circuitbreaker.enabled]
 2023-02-07 21:06:14.936  INFO 21332 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [notify-ok] dataId=common.yml, group=DEFAULT_GROUP, md5=64220c20dbdfb544f8c36345649f9455, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@364887d3 
 2023-02-07 21:06:14.936  INFO 21332 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [notify-listener] time cost=2369ms in ClientWorker, dataId=common.yml, group=DEFAULT_GROUP, md5=64220c20dbdfb544f8c36345649f9455, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@364887d3 
+2023-02-07 22:03:31.002 DEBUG 21332 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.006 DEBUG 21332 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/doc.html] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.108 DEBUG 21332 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.133 DEBUG 21332 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.134 DEBUG 21332 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/css/app.ed578354.css] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.139 DEBUG 21332 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.139 DEBUG 21332 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/css/chunk-vendors.ec7eee79.css] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.141 DEBUG 21332 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.141 DEBUG 21332 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/app.f645a8de.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.141 DEBUG 21332 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.141 DEBUG 21332 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-vendors.2f54c298.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.153 DEBUG 21332 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.157 DEBUG 21332 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.157 DEBUG 21332 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.160 DEBUG 21332 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.161 DEBUG 21332 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/css/chunk-bd55de96.5df67c87.css] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.171 DEBUG 21332 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.171 DEBUG 21332 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-0c58d94d.6ea40c6a.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.183 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.184 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-2d0af44e.47ba6a97.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.184 DEBUG 21332 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.184 DEBUG 21332 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.185 DEBUG 21332 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.185 DEBUG 21332 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-2d0bd799.d162a2d5.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.186 DEBUG 21332 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-589faee0.eec6273b.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.186 DEBUG 21332 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.193 DEBUG 21332 --- [http-nio-8770-exec-1] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.193 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.194 DEBUG 21332 --- [http-nio-8770-exec-9] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.195 DEBUG 21332 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.195 DEBUG 21332 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-bd55de96.b3226bb4.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.195 DEBUG 21332 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.195 DEBUG 21332 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-ca8049da.1d418e7b.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.200 DEBUG 21332 --- [http-nio-8770-exec-10] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.204 DEBUG 21332 --- [http-nio-8770-exec-5] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.207 DEBUG 21332 --- [http-nio-8770-exec-3] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.210 DEBUG 21332 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.210 DEBUG 21332 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : has xssfiter path[/webjars/js/chunk-e30866b8.2813e4e2.js] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.217 DEBUG 21332 --- [http-nio-8770-exec-4] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.580 DEBUG 21332 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.580 DEBUG 21332 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : has xssfiter path[/favicon.ico] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.583  INFO 21332 --- [http-nio-8770-exec-2] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://172.26.48.1:8770/favicon.ico
+2023-02-07 22:03:31.583  INFO 21332 --- [http-nio-8770-exec-2] m.t.i.ContextHandlerInterceptor          : not exec!!! url=http://172.26.48.1:8770/favicon.ico
+2023-02-07 22:03:31.588 DEBUG 21332 --- [http-nio-8770-exec-2] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.591 DEBUG 21332 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.591 DEBUG 21332 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources/configuration/ui] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.591 DEBUG 21332 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.592 DEBUG 21332 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : has xssfiter path[/swagger-resources] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.655 DEBUG 21332 --- [http-nio-8770-exec-6] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.655 DEBUG 21332 --- [http-nio-8770-exec-7] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:03:31.670 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] starting
+2023-02-07 22:03:31.671 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : has xssfiter path[/v2/api-docs] need XssFilter, go to XssRequestWrapper
+2023-02-07 22:03:31.677 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.utils.XssUtils             : raw value before xssClean: 短信平台管理服务
+2023-02-07 22:03:31.740 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.utils.XssUtils             : xssfilter value after xssClean: 短信平台管理服务
+2023-02-07 22:03:31.964 DEBUG 21332 --- [http-nio-8770-exec-8] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] stop
+2023-02-07 22:04:01.499  WARN 21332 --- [Thread-35] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-07 22:04:01.499  WARN 21332 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-07 22:04:01.500  WARN 21332 --- [Thread-35] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-07 22:04:01.501  WARN 21332 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-07 22:04:01.537  INFO 21332 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 22:04:01.546  INFO 21332 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-07 22:04:01.547  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@sms-manage:192.168.3.143:8770 from beat map.
+2023-02-07 22:04:01.547  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@sms-manage with instance: Instance{instanceId='null', ip='192.168.3.143', port=8770, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-07 22:04:01.548  INFO 21332 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-07 22:04:01.550  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-07 22:04:01.550  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-07 22:04:01.550  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-07 22:04:02.564  INFO 21332 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":8770,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#8770#DEFAULT#DEFAULT_GROUP@@sms-manage\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-manage\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@sms-manage\",\"name\":\"DEFAULT_GROUP@@sms-manage\",\"cacheMillis\":10000,\"lastRefTime\":1675778642563,\"checksum\":\"d45d36fc65ff2eced324763ff36065a2\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":29970516601600} from /172.26.48.1
+2023-02-07 22:04:04.593  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-07 22:04:07.624  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-07 22:04:07.624  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-07 22:04:07.624  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-07 22:04:07.625  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-07 22:04:07.625  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-07 22:04:07.625  WARN 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-07 22:04:07.625  WARN 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-07 22:04:07.625  INFO 21332 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-07 22:04:07.625  INFO 21332 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-07 22:04:07.625  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-07 22:04:07.628  INFO 21332 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-07 22:04:07.648  WARN 21332 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-07 22:04:07.798  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-07 22:04:07.842  INFO 21332 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-07 22:04:08.031 DEBUG 21332 --- [SpringContextShutdownHook] mao.tools_xss.filter.XssFilter           : XSS fiter [XSSFilter] destroy

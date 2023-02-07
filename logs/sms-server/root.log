@@ -413,3 +413,265 @@ docket：{sms=DocketInfo{title='短信发送服务', group='', description='在�
 2023-02-07 21:20:10.009 DEBUG 25204 --- [task-46] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:20(String)
 2023-02-07 21:20:10.010 DEBUG 25204 --- [task-46] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
 2023-02-07 21:20:30.006  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 进行服务实例的检查，执行当前任务的服务为：7a49cd3f-0737-4dca-be23-ff695071af39
+2023-02-07 21:21:01.009  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675776061009
+2023-02-07 21:21:10.002  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:21:10.006 DEBUG 25204 --- [task-47] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:21:10.006 DEBUG 25204 --- [task-47] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:21(String)
+2023-02-07 21:21:10.007 DEBUG 25204 --- [task-47] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:22:10.011  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:22:10.014  WARN 25204 --- [task-48] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60007
+2023-02-07 21:22:10.042 DEBUG 25204 --- [task-48] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:22:10.042 DEBUG 25204 --- [task-48] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:22(String)
+2023-02-07 21:22:10.044 DEBUG 25204 --- [task-48] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:23:10.010  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:23:10.013 DEBUG 25204 --- [task-49] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:23:10.013 DEBUG 25204 --- [task-49] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:23(String)
+2023-02-07 21:23:10.014 DEBUG 25204 --- [task-49] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:24:01.008  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675776241008
+2023-02-07 21:24:10.002  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:24:10.006 DEBUG 25204 --- [task-50] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:24:10.006 DEBUG 25204 --- [task-50] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:24(String)
+2023-02-07 21:24:10.007 DEBUG 25204 --- [task-50] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:25:10.015  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:25:10.019  WARN 25204 --- [task-51] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60012
+2023-02-07 21:25:10.054 DEBUG 25204 --- [task-51] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:25:10.054 DEBUG 25204 --- [task-51] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:25(String)
+2023-02-07 21:25:10.056 DEBUG 25204 --- [task-51] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:26:10.016  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:26:10.019 DEBUG 25204 --- [task-52] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:26:10.020 DEBUG 25204 --- [task-52] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:26(String)
+2023-02-07 21:26:10.022 DEBUG 25204 --- [task-52] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:27:01.012  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675776421012
+2023-02-07 21:27:10.010  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:27:10.013 DEBUG 25204 --- [task-53] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:27:10.013 DEBUG 25204 --- [task-53] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:27(String)
+2023-02-07 21:27:10.014 DEBUG 25204 --- [task-53] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:28:10.003  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:28:10.006 DEBUG 25204 --- [task-54] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:28:10.007 DEBUG 25204 --- [task-54] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:28(String)
+2023-02-07 21:28:10.008 DEBUG 25204 --- [task-54] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:29:10.009  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:29:10.011  WARN 25204 --- [task-55] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60003
+2023-02-07 21:29:10.042 DEBUG 25204 --- [task-55] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:29:10.043 DEBUG 25204 --- [task-55] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:29(String)
+2023-02-07 21:29:10.045 DEBUG 25204 --- [task-55] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:30:01.010  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675776601010
+2023-02-07 21:30:10.007  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:30:10.011 DEBUG 25204 --- [task-56] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:30:10.011 DEBUG 25204 --- [task-56] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:30(String)
+2023-02-07 21:30:10.013 DEBUG 25204 --- [task-56] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:30:30.004  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 进行服务实例的检查，执行当前任务的服务为：7a49cd3f-0737-4dca-be23-ff695071af39
+2023-02-07 21:31:10.013  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:31:10.017  WARN 25204 --- [task-57] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60003
+2023-02-07 21:31:10.049 DEBUG 25204 --- [task-57] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:31:10.049 DEBUG 25204 --- [task-57] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:31(String)
+2023-02-07 21:31:10.051 DEBUG 25204 --- [task-57] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:32:10.003  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:32:10.007 DEBUG 25204 --- [task-58] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:32:10.009 DEBUG 25204 --- [task-58] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:32(String)
+2023-02-07 21:32:10.011 DEBUG 25204 --- [task-58] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:33:01.014  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675776781014
+2023-02-07 21:33:10.016  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:33:10.020  WARN 25204 --- [task-59] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60008
+2023-02-07 21:33:10.050 DEBUG 25204 --- [task-59] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:33:10.051 DEBUG 25204 --- [task-59] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:33(String)
+2023-02-07 21:33:10.052 DEBUG 25204 --- [task-59] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:34:10.004  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:34:10.007 DEBUG 25204 --- [task-60] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:34:10.007 DEBUG 25204 --- [task-60] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:34(String)
+2023-02-07 21:34:10.009 DEBUG 25204 --- [task-60] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:35:10.013  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:35:10.017  WARN 25204 --- [task-61] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60007
+2023-02-07 21:35:10.047 DEBUG 25204 --- [task-61] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:35:10.047 DEBUG 25204 --- [task-61] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:35(String)
+2023-02-07 21:35:10.048 DEBUG 25204 --- [task-61] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:36:01.001  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675776961001
+2023-02-07 21:36:10.009  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:36:10.012 DEBUG 25204 --- [task-62] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:36:10.012 DEBUG 25204 --- [task-62] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:36(String)
+2023-02-07 21:36:10.014 DEBUG 25204 --- [task-62] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:37:10.004  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:37:10.008 DEBUG 25204 --- [task-63] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:37:10.008 DEBUG 25204 --- [task-63] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:37(String)
+2023-02-07 21:37:10.010 DEBUG 25204 --- [task-63] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:38:10.002  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:38:10.004 DEBUG 25204 --- [task-64] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:38:10.004 DEBUG 25204 --- [task-64] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:38(String)
+2023-02-07 21:38:10.006 DEBUG 25204 --- [task-64] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:39:01.006  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675777141006
+2023-02-07 21:39:10.013  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:39:10.016  WARN 25204 --- [task-65] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60011
+2023-02-07 21:39:10.042 DEBUG 25204 --- [task-65] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:39:10.043 DEBUG 25204 --- [task-65] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:39(String)
+2023-02-07 21:39:10.045 DEBUG 25204 --- [task-65] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:40:10.005  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:40:10.009 DEBUG 25204 --- [task-66] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:40:10.009 DEBUG 25204 --- [task-66] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:40(String)
+2023-02-07 21:40:10.011 DEBUG 25204 --- [task-66] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:40:30.008  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 进行服务实例的检查，执行当前任务的服务为：7a49cd3f-0737-4dca-be23-ff695071af39
+2023-02-07 21:41:10.015  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:41:10.031  WARN 25204 --- [task-67] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60020
+2023-02-07 21:41:10.058 DEBUG 25204 --- [task-67] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:41:10.058 DEBUG 25204 --- [task-67] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:41(String)
+2023-02-07 21:41:10.059 DEBUG 25204 --- [task-67] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:42:01.010  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675777321010
+2023-02-07 21:42:10.015  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:42:10.017 DEBUG 25204 --- [task-68] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:42:10.018 DEBUG 25204 --- [task-68] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:42(String)
+2023-02-07 21:42:10.019 DEBUG 25204 --- [task-68] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:43:10.014  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:43:10.017 DEBUG 25204 --- [task-69] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:43:10.018 DEBUG 25204 --- [task-69] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:43(String)
+2023-02-07 21:43:10.019 DEBUG 25204 --- [task-69] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:44:10.009  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:44:10.012 DEBUG 25204 --- [task-70] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:44:10.012 DEBUG 25204 --- [task-70] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:44(String)
+2023-02-07 21:44:10.013 DEBUG 25204 --- [task-70] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:45:01.011  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675777501011
+2023-02-07 21:45:10.006  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:45:10.009 DEBUG 25204 --- [task-71] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:45:10.010 DEBUG 25204 --- [task-71] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:45(String)
+2023-02-07 21:45:10.011 DEBUG 25204 --- [task-71] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:46:10.007  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:46:10.010 DEBUG 25204 --- [task-72] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:46:10.010 DEBUG 25204 --- [task-72] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:46(String)
+2023-02-07 21:46:10.011 DEBUG 25204 --- [task-72] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:47:10.001  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:47:10.006 DEBUG 25204 --- [task-73] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:47:10.007 DEBUG 25204 --- [task-73] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:47(String)
+2023-02-07 21:47:10.009 DEBUG 25204 --- [task-73] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:48:01.016  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675777681016
+2023-02-07 21:48:10.002  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:48:10.005 DEBUG 25204 --- [task-74] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:48:10.005 DEBUG 25204 --- [task-74] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:48(String)
+2023-02-07 21:48:10.006 DEBUG 25204 --- [task-74] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:49:10.008  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:49:10.011  WARN 25204 --- [task-75] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60005
+2023-02-07 21:49:10.045 DEBUG 25204 --- [task-75] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:49:10.045 DEBUG 25204 --- [task-75] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:49(String)
+2023-02-07 21:49:10.047 DEBUG 25204 --- [task-75] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:50:10.010  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:50:10.012 DEBUG 25204 --- [task-76] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:50:10.013 DEBUG 25204 --- [task-76] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:50(String)
+2023-02-07 21:50:10.014 DEBUG 25204 --- [task-76] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:50:30.000  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 进行服务实例的检查，执行当前任务的服务为：7a49cd3f-0737-4dca-be23-ff695071af39
+2023-02-07 21:51:01.001  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675777861001
+2023-02-07 21:51:10.016  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:51:10.020  WARN 25204 --- [task-77] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60005
+2023-02-07 21:51:10.044 DEBUG 25204 --- [task-77] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:51:10.045 DEBUG 25204 --- [task-77] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:51(String)
+2023-02-07 21:51:10.047 DEBUG 25204 --- [task-77] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:52:10.006  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:52:10.009 DEBUG 25204 --- [task-78] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:52:10.009 DEBUG 25204 --- [task-78] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:52(String)
+2023-02-07 21:52:10.011 DEBUG 25204 --- [task-78] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:53:10.013  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:53:10.016  WARN 25204 --- [task-79] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60005
+2023-02-07 21:53:10.039 DEBUG 25204 --- [task-79] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:53:10.040 DEBUG 25204 --- [task-79] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:53(String)
+2023-02-07 21:53:10.042 DEBUG 25204 --- [task-79] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:54:01.013  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675778041013
+2023-02-07 21:54:10.014  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:54:10.017 DEBUG 25204 --- [task-80] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:54:10.017 DEBUG 25204 --- [task-80] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:54(String)
+2023-02-07 21:54:10.018 DEBUG 25204 --- [task-80] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:55:10.013  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:55:10.015 DEBUG 25204 --- [task-81] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:55:10.015 DEBUG 25204 --- [task-81] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:55(String)
+2023-02-07 21:55:10.016 DEBUG 25204 --- [task-81] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:56:10.010  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:56:10.012 DEBUG 25204 --- [task-82] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:56:10.012 DEBUG 25204 --- [task-82] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:56(String)
+2023-02-07 21:56:10.014 DEBUG 25204 --- [task-82] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:57:01.002  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675778221002
+2023-02-07 21:57:10.012  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:57:10.015  WARN 25204 --- [task-83] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60001
+2023-02-07 21:57:10.042 DEBUG 25204 --- [task-83] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:57:10.043 DEBUG 25204 --- [task-83] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:57(String)
+2023-02-07 21:57:10.046 DEBUG 25204 --- [task-83] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:58:10.006  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:58:10.009 DEBUG 25204 --- [task-84] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:58:10.010 DEBUG 25204 --- [task-84] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:58(String)
+2023-02-07 21:58:10.012 DEBUG 25204 --- [task-84] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 21:59:10.015  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 21:59:10.019  WARN 25204 --- [task-85] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60008
+2023-02-07 21:59:10.044 DEBUG 25204 --- [task-85] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 21:59:10.046 DEBUG 25204 --- [task-85] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 21:59(String)
+2023-02-07 21:59:10.047 DEBUG 25204 --- [task-85] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:00:01.001  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675778401001
+2023-02-07 22:00:10.004  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:00:10.009 DEBUG 25204 --- [task-86] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:00:10.010 DEBUG 25204 --- [task-86] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:00(String)
+2023-02-07 22:00:10.013 DEBUG 25204 --- [task-86] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:00:30.011  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 进行服务实例的检查，执行当前任务的服务为：7a49cd3f-0737-4dca-be23-ff695071af39
+2023-02-07 22:01:10.002  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:01:10.006 DEBUG 25204 --- [task-87] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:01:10.006 DEBUG 25204 --- [task-87] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:01(String)
+2023-02-07 22:01:10.008 DEBUG 25204 --- [task-87] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:02:10.003  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:02:10.005 DEBUG 25204 --- [task-88] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:02:10.005 DEBUG 25204 --- [task-88] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:02(String)
+2023-02-07 22:02:10.007 DEBUG 25204 --- [task-88] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:03:01.006  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675778581006
+2023-02-07 22:03:10.013  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:03:10.016  WARN 25204 --- [task-89] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60009
+2023-02-07 22:03:10.039 DEBUG 25204 --- [task-89] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:03:10.039 DEBUG 25204 --- [task-89] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:03(String)
+2023-02-07 22:03:10.042 DEBUG 25204 --- [task-89] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:04:10.011  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:04:10.013 DEBUG 25204 --- [task-90] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:04:10.014 DEBUG 25204 --- [task-90] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:04(String)
+2023-02-07 22:04:10.016 DEBUG 25204 --- [task-90] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:04:22.172  INFO 25204 --- [http-nio-8772-exec-8] m.t.p.TenantContextHandlerInterceptor    : not exec!!! url=http://172.26.48.1:8772/favicon.ico
+2023-02-07 22:05:10.004  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:05:10.006 DEBUG 25204 --- [task-91] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:05:10.006 DEBUG 25204 --- [task-91] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:05(String)
+2023-02-07 22:05:10.007 DEBUG 25204 --- [task-91] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:06:01.009  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675778761009
+2023-02-07 22:06:10.003  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:06:10.006 DEBUG 25204 --- [task-92] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:06:10.006 DEBUG 25204 --- [task-92] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:06(String)
+2023-02-07 22:06:10.007 DEBUG 25204 --- [task-92] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:07:10.001  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:07:10.003 DEBUG 25204 --- [task-93] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:07:10.004 DEBUG 25204 --- [task-93] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:07(String)
+2023-02-07 22:07:10.005 DEBUG 25204 --- [task-93] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:08:10.015  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:08:10.018  WARN 25204 --- [task-94] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://127.0.0.1:3306/sms?serverTimezone=GMT&characterEncoding=utf8, version : 1.2.8, lastPacketReceivedIdleMillis : 60013
+2023-02-07 22:08:10.040 DEBUG 25204 --- [task-94] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:08:10.041 DEBUG 25204 --- [task-94] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:08(String)
+2023-02-07 22:08:10.043 DEBUG 25204 --- [task-94] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:09:01.014  INFO 25204 --- [scheduling-1] mao.sms_server.factory.ServerRegister    : 定时上报，服务id：7a49cd3f-0737-4dca-be23-ff695071af39，时间戳：1675778941014
+2023-02-07 22:09:10.003  INFO 25204 --- [scheduling-1] mao.sms_server.job.SendSmsJob            : 准备执行定时发送短信任务
+2023-02-07 22:09:10.005 DEBUG 25204 --- [task-95] m.s.mapper.TimingPushMapper.selectList   : ==>  Preparing: SELECT id,template,request,signature,timing,is_delete,mobile,update_user,remark,update_time,create_time,create_user,status FROM timing_push WHERE (status = ? AND timing = ?) ORDER BY create_time ASC 
+2023-02-07 22:09:10.006 DEBUG 25204 --- [task-95] m.s.mapper.TimingPushMapper.selectList   : ==> Parameters: 0(Integer), 2023-02-07 22:09(String)
+2023-02-07 22:09:10.007 DEBUG 25204 --- [task-95] m.s.mapper.TimingPushMapper.selectList   : <==      Total: 0
+2023-02-07 22:09:23.453  WARN 25204 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-07 22:09:23.453  WARN 25204 --- [Thread-36] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-07 22:09:23.453  WARN 25204 --- [Thread-36] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-07 22:09:23.454  WARN 25204 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-07 22:09:23.463  INFO 25204 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 22:09:23.467  INFO 25204 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-07 22:09:23.490  INFO 25204 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-07 22:09:23.492  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@sms-server:192.168.3.143:8772 from beat map.
+2023-02-07 22:09:23.492  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@sms-server with instance: Instance{instanceId='null', ip='192.168.3.143', port=8772, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-07 22:09:23.493  INFO 25204 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-07 22:09:23.495  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-07 22:09:23.495  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-07 22:09:23.495  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-07 22:09:24.495  INFO 25204 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":8772,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@sms-server\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@sms-server\",\"name\":\"DEFAULT_GROUP@@sms-server\",\"cacheMillis\":10000,\"lastRefTime\":1675778964494,\"checksum\":\"284f80c12176d1a5c4b87f8ff4e1b0a2\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":30292447875100} from /172.26.48.1
+2023-02-07 22:09:26.290  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-07 22:09:29.325  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-07 22:09:29.325  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-07 22:09:29.326  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-07 22:09:29.326  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-07 22:09:29.326  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-07 22:09:29.326  WARN 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-07 22:09:29.326  WARN 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-07 22:09:29.326  INFO 25204 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-07 22:09:29.327  INFO 25204 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-07 22:09:29.327  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-07 22:09:29.329  INFO 25204 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-07 22:09:29.350  WARN 25204 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-07 22:09:29.405  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-07 22:09:29.409  INFO 25204 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

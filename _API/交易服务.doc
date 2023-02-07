@@ -1,0 +1,4283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+  <html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <title>导出Swagger文档到Word</title>
+      <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+      <style type="text/css">
+          .knife4j-word-body{
+              width: 90%;
+              margin: 20px auto;
+              font-family:"宋体";
+              font-size: 16px;
+          }
+          .knife4j-word-row{
+              position: relative;
+              height: auto;
+              margin-right: 0;
+              margin-left: 0;
+              zoom: 1;
+              display: block;
+              box-sizing: border-box;
+          }
+          .knife4j-word-line{
+              height: 35px;
+              line-height:35px;
+          }
+          .knife4j-word-divider{
+              height: 1px;
+              background: #e8e8e8;
+              border-bottom: 1px solid #e8e8e8;
+          }
+          .knife4j-word-title{
+              font-weight: 600;
+              font-size: 18px;
+              margin-top: 15px;
+              border-left: 3px solid #00ab6d;
+          }
+          .knife4j-word-api{
+              margin-top: 10px;
+          }
+          .knife4j-word-content{
+              margin-top: 10px;
+          }
+          .knife4j-word-code-editor{
+              border: #ccc 1px solid;
+              border-left-width: 4px;
+              background-color: #fefefe;
+              box-shadow: 0 0 4px #eee;
+              word-break: break-all;
+              word-wrap: break-word;
+              color: #444;
+          }
+          .knife4j-word-code-editor .string { color: green; }        /*字符串的样式*/
+          .knife4j-word-code-editor .number { color: darkorange; }    /*数字的样式*/
+          .knife4j-word-code-editor .boolean { color: blue; }        /*布尔型数据的样式*/
+          .knife4j-word-code-editor .null { color: magenta; }        /*null值的样式*/
+          .knife4j-word-code-editor .key { color: red; }            /*key值的样式*/
+          .knife4j-word-method{
+              font-size: 14px;
+              font-weight: 600;
+              margin-right: 10px;
+              text-align: center;
+              border-radius: 3px;
+              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+          }
+          .knife4j-word-table{
+              width: 120%;
+              border: 1px solid #c7c4c4;
+              border-collapse: collapse;
+          }
+          .knife4j-word-table tr{
+              border: 1px solid #c7c4c4;
+              height: 40px;
+          }
+          .knife4j-word-table th{
+              border: 1px solid #c7c4c4;
+              background-color: #dfdada;
+          }
+          .knife4j-word-table td{
+              border: 1px solid #c7c4c4;
+          }
+      </style>
+  </head>
+  <body>
+  <div class="knife4j-word-body">
+<h1>1.项目说明</h1>
+<div class="knife4j-word-row">
+<div class="knife4j-word-line"><strong>标题</strong>:交易服务</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>简介</strong>:交易服务</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>作者</strong>:<code></code></div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>HOST</strong>:127.0.0.1:49827</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>basePath</strong>:/</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>termsOfService</strong>:</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>联系人</strong>:</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>Version</strong>:1.0</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>GroupName</strong>:交易服务</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>分组Url</strong>:/v2/api-docs?group=交易服务</div>
+<div class="knife4j-word-divider"></div>
+<div class="knife4j-word-line"><strong>分组Location</strong>:/v2/api-docs?group=交易服务</div>
+<div class="knife4j-word-divider"></div>
+</div>
+
+
+<h1>2.接口列表</h1>
+<h2>2.1交易相关</h2>
+
+
+
+
+<h3>2.1.1生成门店二维码的url</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">POST</span>&nbsp;&nbsp;<code>/transaction/createStoreQRCode</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+<div class="knife4j-word-title">请求示例</div>
+<div class="knife4j-word-content">
+<pre class="knife4j-word-code-editor">
+{
+	<span class="key">"appId":</span> <span class="string">""</span>,
+	<span class="key">"body":</span> <span class="string">""</span>,
+	<span class="key">"merchantId":</span> <span class="number">0</span>,
+	<span class="key">"storeId":</span> <span class="number">0</span>,
+	<span class="key">"subject":</span> <span class="string">""</span>,
+	<span class="key">"totalAmount":</span> <span class="string">""</span>
+}
+</pre>
+</div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>qrCodeDto</td>
+<td>qrCodeDto</td>
+<td>body</td>
+<td>true</td>
+<td>QRCodeDto</td>
+<td>QRCodeDto</td>
+</tr>
+<tr>
+<td>&nbsp;appId</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;body</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;merchantId</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;storeId</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;subject</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;totalAmount</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+<h2>2.2微信支付测试</h2>
+
+
+
+
+<h3>2.2.1申请授权码</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/wxpay/getWXOAuth2Code</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="6">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.2.2微信jsapi下单接口</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/wxpay/wxjspay</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="6">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>ModelAndView</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>empty</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>model</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>modelMap</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>reference</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>可用值:100 CONTINUE,101 SWITCHING_PROTOCOLS,102 PROCESSING,103 CHECKPOINT,200 OK,201 CREATED,202 ACCEPTED,203 NON_AUTHORITATIVE_INFORMATION,204 NO_CONTENT,205 RESET_CONTENT,206 PARTIAL_CONTENT,207 MULTI_STATUS,208 ALREADY_REPORTED,226 IM_USED,300 MULTIPLE_CHOICES,301 MOVED_PERMANENTLY,302 FOUND,302 MOVED_TEMPORARILY,303 SEE_OTHER,304 NOT_MODIFIED,305 USE_PROXY,307 TEMPORARY_REDIRECT,308 PERMANENT_REDIRECT,400 BAD_REQUEST,401 UNAUTHORIZED,402 PAYMENT_REQUIRED,403 FORBIDDEN,404 NOT_FOUND,405 METHOD_NOT_ALLOWED,406 NOT_ACCEPTABLE,407 PROXY_AUTHENTICATION_REQUIRED,408 REQUEST_TIMEOUT,409 CONFLICT,410 GONE,411 LENGTH_REQUIRED,412 PRECONDITION_FAILED,413 PAYLOAD_TOO_LARGE,413 REQUEST_ENTITY_TOO_LARGE,414 URI_TOO_LONG,414 REQUEST_URI_TOO_LONG,415 UNSUPPORTED_MEDIA_TYPE,416 REQUESTED_RANGE_NOT_SATISFIABLE,417 EXPECTATION_FAILED,418 I_AM_A_TEAPOT,419 INSUFFICIENT_SPACE_ON_RESOURCE,420 METHOD_FAILURE,421 DESTINATION_LOCKED,422 UNPROCESSABLE_ENTITY,423 LOCKED,424 FAILED_DEPENDENCY,425 TOO_EARLY,426 UPGRADE_REQUIRED,428 PRECONDITION_REQUIRED,429 TOO_MANY_REQUESTS,431 REQUEST_HEADER_FIELDS_TOO_LARGE,451 UNAVAILABLE_FOR_LEGAL_REASONS,500 INTERNAL_SERVER_ERROR,501 NOT_IMPLEMENTED,502 BAD_GATEWAY,503 SERVICE_UNAVAILABLE,504 GATEWAY_TIMEOUT,505 HTTP_VERSION_NOT_SUPPORTED,506 VARIANT_ALSO_NEGOTIATES,507 INSUFFICIENT_STORAGE,508 LOOP_DETECTED,509 BANDWIDTH_LIMIT_EXCEEDED,510 NOT_EXTENDED,511 NETWORK_AUTHENTICATION_REQUIRED</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>view</td>
+<td></td>
+<td>View</td>
+<td>View</td>
+</tr>
+<tr>
+<td>&nbsp;contentType</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>viewName</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"empty":</span> <span class="boolean">true</span>,
+	<span class="key">"model":</span> {},
+	<span class="key">"modelMap":</span> {},
+	<span class="key">"reference":</span> <span class="boolean">true</span>,
+	<span class="key">"status":</span> <span class="string">""</span>,
+	<span class="key">"view":</span> {
+		<span class="key">"contentType":</span> <span class="string">""</span>
+	},
+	<span class="key">"viewName":</span> <span class="string">""</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.2.3获取openid</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/wxpay/wx‐oauth‐code‐return‐test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>code</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>state</td>
+<td>state</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+<h2>2.3支付宝支付测试</h2>
+
+
+
+
+<h3>2.3.1支付宝下单测试</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/alipay/test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.3.2支付宝下单测试</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">POST</span>&nbsp;&nbsp;<code>/alipay/test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.3.3支付宝下单测试</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">PUT</span>&nbsp;&nbsp;<code>/alipay/test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.3.4支付宝下单测试</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">DELETE</span>&nbsp;&nbsp;<code>/alipay/test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.3.5支付宝下单测试</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">PATCH</span>&nbsp;&nbsp;<code>/alipay/test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.3.6支付宝下单测试</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">OPTIONS</span>&nbsp;&nbsp;<code>/alipay/test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.3.7支付宝下单测试</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">HEAD</span>&nbsp;&nbsp;<code>/alipay/test</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«string»</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="string">""</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.3.8支付宝下单测试-支付宝调用</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/alipay/test2</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试-支付宝调用</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.3.9支付宝下单测试-支付宝调用</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">POST</span>&nbsp;&nbsp;<code>/alipay/test2</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试-支付宝调用</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.3.10支付宝下单测试-支付宝调用</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">PUT</span>&nbsp;&nbsp;<code>/alipay/test2</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试-支付宝调用</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.3.11支付宝下单测试-支付宝调用</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">DELETE</span>&nbsp;&nbsp;<code>/alipay/test2</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试-支付宝调用</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.3.12支付宝下单测试-支付宝调用</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">PATCH</span>&nbsp;&nbsp;<code>/alipay/test2</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试-支付宝调用</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.3.13支付宝下单测试-支付宝调用</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">OPTIONS</span>&nbsp;&nbsp;<code>/alipay/test2</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试-支付宝调用</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.3.14支付宝下单测试-支付宝调用</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">HEAD</span>&nbsp;&nbsp;<code>/alipay/test2</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"><p>支付宝下单测试-支付宝调用</p>
+</div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>out_trade_no</td>
+<td>订单号</td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+<h2>2.4支付相关</h2>
+
+
+
+
+<h3>2.4.1支付宝门店下单付款</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/pay/createAliPayOrder</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>body</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>channel</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>openId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>storeId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>subject</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>tradeNo</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.4.2支付宝门店下单付款</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">POST</span>&nbsp;&nbsp;<code>/pay/createAliPayOrder</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>body</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>channel</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>openId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>storeId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>subject</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>tradeNo</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.4.3解析ticket并获取支付页面</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/pay/pay-entry/{ticket}</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>ticket</td>
+<td>ticket</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.4.4微信授权码回调</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/pay/wx-oauth-code-return</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>code</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>state</td>
+<td>state</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.4.5微信门店下单付款</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">POST</span>&nbsp;&nbsp;<code>/pay/wxjspay</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>body</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>channel</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>openId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>storeId</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>subject</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>tradeNo</td>
+<td></td>
+<td>query</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>ModelAndView</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>empty</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>model</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>modelMap</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>reference</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>可用值:100 CONTINUE,101 SWITCHING_PROTOCOLS,102 PROCESSING,103 CHECKPOINT,200 OK,201 CREATED,202 ACCEPTED,203 NON_AUTHORITATIVE_INFORMATION,204 NO_CONTENT,205 RESET_CONTENT,206 PARTIAL_CONTENT,207 MULTI_STATUS,208 ALREADY_REPORTED,226 IM_USED,300 MULTIPLE_CHOICES,301 MOVED_PERMANENTLY,302 FOUND,302 MOVED_TEMPORARILY,303 SEE_OTHER,304 NOT_MODIFIED,305 USE_PROXY,307 TEMPORARY_REDIRECT,308 PERMANENT_REDIRECT,400 BAD_REQUEST,401 UNAUTHORIZED,402 PAYMENT_REQUIRED,403 FORBIDDEN,404 NOT_FOUND,405 METHOD_NOT_ALLOWED,406 NOT_ACCEPTABLE,407 PROXY_AUTHENTICATION_REQUIRED,408 REQUEST_TIMEOUT,409 CONFLICT,410 GONE,411 LENGTH_REQUIRED,412 PRECONDITION_FAILED,413 PAYLOAD_TOO_LARGE,413 REQUEST_ENTITY_TOO_LARGE,414 URI_TOO_LONG,414 REQUEST_URI_TOO_LONG,415 UNSUPPORTED_MEDIA_TYPE,416 REQUESTED_RANGE_NOT_SATISFIABLE,417 EXPECTATION_FAILED,418 I_AM_A_TEAPOT,419 INSUFFICIENT_SPACE_ON_RESOURCE,420 METHOD_FAILURE,421 DESTINATION_LOCKED,422 UNPROCESSABLE_ENTITY,423 LOCKED,424 FAILED_DEPENDENCY,425 TOO_EARLY,426 UPGRADE_REQUIRED,428 PRECONDITION_REQUIRED,429 TOO_MANY_REQUESTS,431 REQUEST_HEADER_FIELDS_TOO_LARGE,451 UNAVAILABLE_FOR_LEGAL_REASONS,500 INTERNAL_SERVER_ERROR,501 NOT_IMPLEMENTED,502 BAD_GATEWAY,503 SERVICE_UNAVAILABLE,504 GATEWAY_TIMEOUT,505 HTTP_VERSION_NOT_SUPPORTED,506 VARIANT_ALSO_NEGOTIATES,507 INSUFFICIENT_STORAGE,508 LOOP_DETECTED,509 BANDWIDTH_LIMIT_EXCEEDED,510 NOT_EXTENDED,511 NETWORK_AUTHENTICATION_REQUIRED</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>view</td>
+<td></td>
+<td>View</td>
+<td>View</td>
+</tr>
+<tr>
+<td>&nbsp;contentType</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>viewName</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"empty":</span> <span class="boolean">true</span>,
+	<span class="key">"model":</span> {},
+	<span class="key">"modelMap":</span> {},
+	<span class="key">"reference":</span> <span class="boolean">true</span>,
+	<span class="key">"status":</span> <span class="string">""</span>,
+	<span class="key">"view":</span> {
+		<span class="key">"contentType":</span> <span class="string">""</span>
+	},
+	<span class="key">"viewName":</span> <span class="string">""</span>
+}
+</pre></div>
+</div>
+<h2>2.5支付聚道</h2>
+
+
+
+
+<h3>2.5.1根据平台服务类型获取支付渠道列表</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/PayChannel/platformChannelCode/{platformChannelCode}</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>platformChannelCode</td>
+<td>platformChannelCode</td>
+<td>path</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«List«PayChannelDTO»»</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>array</td>
+<td>PayChannelDTO</td>
+</tr>
+<tr>
+<td>&nbsp;channelCode</td>
+<td>支付渠道编码</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;channelName</td>
+<td>支付渠道名称</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;id</td>
+<td></td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> [
+		{
+			<span class="key">"channelCode":</span> <span class="string">""</span>,
+			<span class="key">"channelName":</span> <span class="string">""</span>,
+			<span class="key">"id":</span> <span class="number">0</span>
+		}
+	],
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+<h2>2.6支付聚道参数</h2>
+
+
+
+
+<h3>2.6.1保存支付通道参数</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">POST</span>&nbsp;&nbsp;<code>/PayChannelParam</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+<div class="knife4j-word-title">请求示例</div>
+<div class="knife4j-word-content">
+<pre class="knife4j-word-code-editor">
+{
+	<span class="key">"appId":</span> <span class="string">""</span>,
+	<span class="key">"appPlatformChannelId":</span> <span class="number">0</span>,
+	<span class="key">"channelName":</span> <span class="string">""</span>,
+	<span class="key">"id":</span> <span class="number">0</span>,
+	<span class="key">"merchantId":</span> <span class="number">0</span>,
+	<span class="key">"param":</span> <span class="string">""</span>,
+	<span class="key">"payChannel":</span> <span class="string">""</span>,
+	<span class="key">"platformChannelCode":</span> <span class="string">""</span>
+}
+</pre>
+</div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>payChannelParam</td>
+<td>商户原始支付渠道参数配置</td>
+<td>body</td>
+<td>true</td>
+<td>PayChannelParamDTO</td>
+<td>PayChannelParamDTO</td>
+</tr>
+<tr>
+<td>&nbsp;appId</td>
+<td>应用的appId,是业务id</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;appPlatformChannelId</td>
+<td>应用绑定的服务类型Id</td>
+<td></td>
+<td>false</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;channelName</td>
+<td>参数配置名称</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;id</td>
+<td>参数配置id,新增时无需</td>
+<td></td>
+<td>false</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;merchantId</td>
+<td>商户id</td>
+<td></td>
+<td>false</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;param</td>
+<td>原始支付渠道参数配置内容，json格式</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;payChannel</td>
+<td>原始支付渠道编码</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;platformChannelCode</td>
+<td>应用绑定的服务类型对应的code</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«boolean»</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="boolean">true</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.6.2获取指定应用指定服务类型下所包含的某个原始支付参数</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/PayChannelParam/queryParamByAppPlatformAndPayChannel</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td>appId</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>payChannel</td>
+<td>payChannel</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>platformChannel</td>
+<td>platformChannel</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«PayChannelParamDTO»</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>PayChannelParamDTO</td>
+<td>PayChannelParamDTO</td>
+</tr>
+<tr>
+<td>&nbsp;appId</td>
+<td>应用的appId,是业务id</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;appPlatformChannelId</td>
+<td>应用绑定的服务类型Id</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;channelName</td>
+<td>参数配置名称</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;id</td>
+<td>参数配置id,新增时无需</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;merchantId</td>
+<td>商户id</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;param</td>
+<td>原始支付渠道参数配置内容，json格式</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;payChannel</td>
+<td>原始支付渠道编码</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;platformChannelCode</td>
+<td>应用绑定的服务类型对应的code</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> {
+		<span class="key">"appId":</span> <span class="string">""</span>,
+		<span class="key">"appPlatformChannelId":</span> <span class="number">0</span>,
+		<span class="key">"channelName":</span> <span class="string">""</span>,
+		<span class="key">"id":</span> <span class="number">0</span>,
+		<span class="key">"merchantId":</span> <span class="number">0</span>,
+		<span class="key">"param":</span> <span class="string">""</span>,
+		<span class="key">"payChannel":</span> <span class="string">""</span>,
+		<span class="key">"platformChannelCode":</span> <span class="string">""</span>
+	},
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.6.3获取指定应用指定服务类型下所包含的原始支付渠道参数列表</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/PayChannelParam/queryPayChannelParamByAppAndPlatform</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td>appId</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>platformChannel</td>
+<td>platformChannel</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«List«PayChannelParamDTO»»</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>array</td>
+<td>PayChannelParamDTO</td>
+</tr>
+<tr>
+<td>&nbsp;appId</td>
+<td>应用的appId,是业务id</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;appPlatformChannelId</td>
+<td>应用绑定的服务类型Id</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;channelName</td>
+<td>参数配置名称</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;id</td>
+<td>参数配置id,新增时无需</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;merchantId</td>
+<td>商户id</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;param</td>
+<td>原始支付渠道参数配置内容，json格式</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;payChannel</td>
+<td>原始支付渠道编码</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;platformChannelCode</td>
+<td>应用绑定的服务类型对应的code</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> [
+		{
+			<span class="key">"appId":</span> <span class="string">""</span>,
+			<span class="key">"appPlatformChannelId":</span> <span class="number">0</span>,
+			<span class="key">"channelName":</span> <span class="string">""</span>,
+			<span class="key">"id":</span> <span class="number">0</span>,
+			<span class="key">"merchantId":</span> <span class="number">0</span>,
+			<span class="key">"param":</span> <span class="string">""</span>,
+			<span class="key">"payChannel":</span> <span class="string">""</span>,
+			<span class="key">"platformChannelCode":</span> <span class="string">""</span>
+		}
+	],
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+<h2>2.7服务类型</h2>
+
+
+
+
+<h3>2.7.1获取平台所有服务类型</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/PlatformChannel</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="6">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«List«PlatformChannelDTO»»</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>array</td>
+<td>PlatformChannelDTO</td>
+</tr>
+<tr>
+<td>&nbsp;channelCode</td>
+<td>支付渠道编码</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;channelName</td>
+<td>支付渠道名称</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;id</td>
+<td>支付渠道ID</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> [
+		{
+			<span class="key">"channelCode":</span> <span class="string">""</span>,
+			<span class="key">"channelName":</span> <span class="string">""</span>,
+			<span class="key">"id":</span> <span class="number">0</span>
+		}
+	],
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.7.2查询应用是否已经绑定了某个服务类型</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/PlatformChannel/bind</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td>appId</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>platformChannel</td>
+<td>platformChannel</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«boolean»</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="boolean">true</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+
+
+<h3>2.7.3为app绑定平台服务类型</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">PUT</span>&nbsp;&nbsp;<code>/PlatformChannel/bind</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>application/json</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td>appId</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>platformChannelCodes</td>
+<td>platformChannelCodes</td>
+<td>query</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>R«boolean»</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>响应编码:0/200-请求处理成功</td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>响应数据</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>附加数据</td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>isError</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>isSuccess</td>
+<td></td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>msg</td>
+<td>提示消息</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>请求路径</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>响应时间戳</td>
+<td>integer(int64)</td>
+<td>integer(int64)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+{
+	<span class="key">"code":</span> <span class="number">0</span>,
+	<span class="key">"data":</span> <span class="boolean">true</span>,
+	<span class="key">"extra":</span> {},
+	<span class="key">"isError":</span> <span class="boolean">true</span>,
+	<span class="key">"isSuccess":</span> <span class="boolean">true</span>,
+	<span class="key">"msg":</span> <span class="string">""</span>,
+	<span class="key">"path":</span> <span class="string">""</span>,
+	<span class="key">"timestamp":</span> <span class="number">0</span>
+}
+</pre></div>
+</div>
+<h2>2.8静态页面</h2>
+
+
+
+
+<h3>2.8.1错误页面</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/pay-error-page</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>map</td>
+<td>map</td>
+<td>query</td>
+<td>false</td>
+<td>object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+
+
+<h3>2.8.2支付页面</h3>
+<div class="knife4j-word-api">
+<div class="knife4j-word-title">接口地址</div>
+<div class="knife4j-word-content"><span class="knife4j-word-method">GET</span>&nbsp;&nbsp;<code>/pay-page</code></div>
+<div class="knife4j-word-title">接口描述</div>
+<div class="knife4j-word-content"></div>
+<div class="knife4j-word-title">请求数据类型</div>
+<div class="knife4j-word-content"><code>*</code></div>
+<div class="knife4j-word-title">响应数据类型</div>
+<div class="knife4j-word-content"><code>*/*</code></div>
+
+
+<div class="knife4j-word-title">请求参数</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>请求类型</th><th>必须</th><th>数据类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr>
+<td>map</td>
+<td>map</td>
+<td>query</td>
+<td>false</td>
+<td>object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应状态</div><br/>
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>状态码</th><th>说明</th><th>schema</th></tr></thead>
+<tbody>
+
+
+<tr>
+<td>200</td>
+<td>OK</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table><br/>
+</div>
+
+
+<div class="knife4j-word-title">响应参数</div>
+
+
+<div class="knife4j-word-content">
+<table class="knife4j-word-table">
+<thead><tr><th>参数名称</th><th>参数说明</th><th>类型</th><th>schema</th></tr></thead>
+<tbody>
+<tr><td colspan="4">暂无</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="knife4j-word-title">响应示例</div>
+<div class="knife4j-word-content"><pre class="knife4j-word-code-editor">
+
+</pre></div>
+</div>
+</div></body></html>
