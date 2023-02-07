@@ -224,3 +224,13 @@ docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', descrip
 2023-02-07 14:01:03.458  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
 2023-02-07 14:01:33.089  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
 2023-02-07 14:01:33.468  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:02:03.080  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:02:03.460  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:02:33.096  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:02:33.460  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:03:03.084  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:03:03.452  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:03:33.092  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:03:33.456  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:04:03.080  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:04:03.456  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true

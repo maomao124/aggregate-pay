@@ -2,6 +2,8 @@ package mao.aggregate_pay_transaction_api.feign;
 
 import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_transaction_api.dto.PayChannelParamDTO;
+import mao.aggregate_pay_transaction_api.fallback.PayChannelFeignClientFallbackFactory;
+import mao.aggregate_pay_transaction_api.fallback.PayChannelParamFeignClientFallbackFactory;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +26,7 @@ import java.util.List;
  * Description(描述)： 原始的支付聚道参数feign接口
  */
 
-@FeignClient(value = "aggregate-pay-transaction-service", path = "/PayChannelParam")
+@FeignClient(value = "aggregate-pay-transaction-service", path = "/PayChannelParam",fallbackFactory = PayChannelParamFeignClientFallbackFactory.class)
 public interface PayChannelParamFeignClient
 {
     /**
