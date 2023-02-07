@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  mao.aggregate_pay_uaa_api.config.FeignConfig
