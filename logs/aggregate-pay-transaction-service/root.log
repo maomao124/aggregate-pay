@@ -131,7 +131,7 @@
 2023-02-06 19:10:27.537  INFO 16344 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
 2023-02-06 19:10:27.573  INFO 16344 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
 2023-02-06 19:10:27.594  INFO 16344 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-02-06 19:10:27.594  INFO 16344 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+2023-02-06 19:10:27.594  INFO 16344 --- [main] m.t.config.SwaggerAutoConfiguration      :
 title：在线文档
 group：
 description：在线文档
@@ -350,7 +350,7 @@ docket：{aggregate_pay=DocketInfo{title='交易服务', group='', description='
 2023-02-06 19:16:59.888  INFO 2304 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
 2023-02-06 19:16:59.911  INFO 2304 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
 2023-02-06 19:16:59.921  INFO 2304 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-02-06 19:16:59.921  INFO 2304 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+2023-02-06 19:16:59.921  INFO 2304 --- [main] m.t.config.SwaggerAutoConfiguration      :
 title：在线文档
 group：
 description：在线文档
@@ -622,7 +622,7 @@ docket：{aggregate_pay=DocketInfo{title='交易服务', group='', description='
 2023-02-06 22:18:00.065  INFO 3696 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
 2023-02-06 22:18:00.093  INFO 3696 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
 2023-02-06 22:18:00.105  INFO 3696 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-02-06 22:18:00.105  INFO 3696 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+2023-02-06 22:18:00.105  INFO 3696 --- [main] m.t.config.SwaggerAutoConfiguration      :
 title：在线文档
 group：
 description：在线文档
@@ -731,3 +731,606 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 
 2023-02-06 22:53:06.662  INFO 3696 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2023-02-06 22:53:06.711  INFO 3696 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-07 14:44:44.965  WARN 22616 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-transaction-service] & group[DEFAULT_GROUP]
+2023-02-07 14:44:44.977  INFO 22616 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-transaction-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-transaction-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-transaction-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-rocketMQ.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-07 14:44:45.020  INFO 22616 --- [main] ggregatePayTransactionServiceApplication : The following profiles are active: dev
+2023-02-07 14:44:46.391  INFO 22616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-07 14:44:46.395  INFO 22616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-07 14:44:46.433  INFO 22616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2023-02-07 14:44:46.522  WARN 22616 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-07 14:44:46.540  WARN 22616 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2023-02-07 14:44:46.743  INFO 22616 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cb087fdc-c3d6-3865-8d8f-b2886bd7d87b
+2023-02-07 14:44:46.911  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.094  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.101  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.109  INFO 22616 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-02-07 14:44:47.110  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [mao.aggregate_pay_transaction_service.config.MybatisConfig$$EnhancerBySpringCGLIB$$1e5d3a82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.120  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.125  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.128  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.129  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.136  INFO 22616 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-02-07 14:44:47.136  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [mao.aggregate_pay_transaction_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$ad72eba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.205  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.208  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.222  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.254  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.306  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.325  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.331  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.336  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.342  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.343  INFO 22616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:44:47.398  INFO 22616 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-02-07 14:44:47.631  INFO 22616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 49827 (http)
+2023-02-07 14:44:47.642  INFO 22616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07 14:44:47.643  INFO 22616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-07 14:44:47.805  INFO 22616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07 14:44:47.805  INFO 22616 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2764 ms
+2023-02-07 14:44:47.914  WARN 22616 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-07 14:44:47.914  INFO 22616 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-07 14:44:47.927  INFO 22616 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@103c97ff
+2023-02-07 14:44:48.062  INFO 22616 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2023-02-07 14:44:48.088  INFO 22616 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-02-07 14:44:48.091  INFO 22616 --- [main] m.a.config.RestTemplateConfig            : 初始化 RestTemplateConfig
+2023-02-07 14:44:48.128 DEBUG 22616 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:44:48.131 DEBUG 22616 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:44:48.131 DEBUG 22616 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:44:48.131 DEBUG 22616 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:44:48.131 DEBUG 22616 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:44:48.330  WARN 22616 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'payChannelController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'payChannelServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'platformChannelMapper' defined in file [H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-service\target\classes\mao\aggregate_pay_transaction_service\mapper\PlatformChannelMapper.class]: Cannot resolve reference to bean 'masterSqlSessionFactory' while setting bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'masterSqlSessionFactory' defined in class path resource [mao/aggregate_pay_transaction_service/config/DatabaseConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'getSqlSessionFactory' threw exception; nested exception is org.apache.ibatis.type.TypeException: The alias 'FeignConfig' is already mapped to the value 'mao.aggregate_pay_transaction_api.config.TransactionFeignConfig'.
+2023-02-07 14:44:48.332  INFO 22616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-02-07 14:44:48.332  INFO 22616 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07 14:44:48.349  WARN 22616 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-02-07 14:44:48.363  INFO 22616 --- [main] ConditionEvaluationReportLoggingListener :
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-07 14:44:48.376 ERROR 22616 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'payChannelController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'payChannelServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'platformChannelMapper' defined in file [H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-service\target\classes\mao\aggregate_pay_transaction_service\mapper\PlatformChannelMapper.class]: Cannot resolve reference to bean 'masterSqlSessionFactory' while setting bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'masterSqlSessionFactory' defined in class path resource [mao/aggregate_pay_transaction_service/config/DatabaseConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'getSqlSessionFactory' threw exception; nested exception is org.apache.ibatis.type.TypeException: The alias 'FeignConfig' is already mapped to the value 'mao.aggregate_pay_transaction_api.config.TransactionFeignConfig'.
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:337) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_transaction_service.AggregatePayTransactionServiceApplication.main(AggregatePayTransactionServiceApplication.java:35) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'payChannelServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'platformChannelMapper' defined in file [H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-service\target\classes\mao\aggregate_pay_transaction_service\mapper\PlatformChannelMapper.class]: Cannot resolve reference to bean 'masterSqlSessionFactory' while setting bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'masterSqlSessionFactory' defined in class path resource [mao/aggregate_pay_transaction_service/config/DatabaseConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'getSqlSessionFactory' threw exception; nested exception is org.apache.ibatis.type.TypeException: The alias 'FeignConfig' is already mapped to the value 'mao.aggregate_pay_transaction_api.config.TransactionFeignConfig'.
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:337) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:537) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:513) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:653) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:224) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:334) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'platformChannelMapper' defined in file [H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-transaction\aggregate-pay-transaction-service\target\classes\mao\aggregate_pay_transaction_service\mapper\PlatformChannelMapper.class]: Cannot resolve reference to bean 'masterSqlSessionFactory' while setting bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'masterSqlSessionFactory' defined in class path resource [mao/aggregate_pay_transaction_service/config/DatabaseConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'getSqlSessionFactory' threw exception; nested exception is org.apache.ibatis.type.TypeException: The alias 'FeignConfig' is already mapped to the value 'mao.aggregate_pay_transaction_api.config.TransactionFeignConfig'.
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1699) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1444) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:454) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:543) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:513) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:653) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:224) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:334) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'masterSqlSessionFactory' defined in class path resource [mao/aggregate_pay_transaction_service/config/DatabaseConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'getSqlSessionFactory' threw exception; nested exception is org.apache.ibatis.type.TypeException: The alias 'FeignConfig' is already mapped to the value 'mao.aggregate_pay_transaction_api.config.TransactionFeignConfig'.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'getSqlSessionFactory' threw exception; nested exception is org.apache.ibatis.type.TypeException: The alias 'FeignConfig' is already mapped to the value 'mao.aggregate_pay_transaction_api.config.TransactionFeignConfig'.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 59 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: The alias 'FeignConfig' is already mapped to the value 'mao.aggregate_pay_transaction_api.config.TransactionFeignConfig'.
+	at org.apache.ibatis.type.TypeAliasRegistry.registerAlias(TypeAliasRegistry.java:157) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.type.TypeAliasRegistry.registerAlias(TypeAliasRegistry.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
+	at java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1580) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:1.8.0_332]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:1.8.0_332]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:1.8.0_332]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485) ~[na:1.8.0_332]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:513) ~[mybatis-plus-extension-3.2.0.jar:3.2.0]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:426) ~[mybatis-plus-extension-3.2.0.jar:3.2.0]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:624) ~[mybatis-plus-extension-3.2.0.jar:3.2.0]
+	at mao.tools_databases.datasource.BaseDatabaseConfiguration.sqlSessionFactory(BaseDatabaseConfiguration.java:263) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.config.DatabaseConfig.getSqlSessionFactory(DatabaseConfig.java:150) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$ad72eba.CGLIB$getSqlSessionFactory$0(<generated>) ~[classes/:na]
+	at mao.aggregate_pay_transaction_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$ad72eba$$FastClassBySpringCGLIB$$77fcf8f2.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at mao.aggregate_pay_transaction_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$ad72eba.getSqlSessionFactory(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 60 common frames omitted
+
+2023-02-07 14:44:48.378  WARN 22616 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-07 14:44:48.379  WARN 22616 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-07 14:48:27.670  WARN 24332 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-transaction-service] & group[DEFAULT_GROUP]
+2023-02-07 14:48:27.681  INFO 24332 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-transaction-service-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-transaction-service.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-transaction-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-rocketMQ.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-freemarker.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-07 14:48:27.723  INFO 24332 --- [main] ggregatePayTransactionServiceApplication : The following profiles are active: dev
+2023-02-07 14:48:29.095  INFO 24332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-07 14:48:29.099  INFO 24332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-07 14:48:29.139  INFO 24332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2023-02-07 14:48:29.228  WARN 24332 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-07 14:48:29.243  WARN 24332 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2023-02-07 14:48:29.446  INFO 24332 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ab984ce2-2741-3c6c-8b78-2e6cf3fa6f16
+2023-02-07 14:48:29.621  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.804  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.810  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.817  INFO 24332 --- [main] m.a.config.MybatisConfig                 : 初始化 MybatisConfig
+2023-02-07 14:48:29.817  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [mao.aggregate_pay_transaction_service.config.MybatisConfig$$EnhancerBySpringCGLIB$$42cc67e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.827  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.833  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.836  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.837  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.844  INFO 24332 --- [main] m.a.config.DatabaseConfig                : 初始化 DatabaseConfig 数据库配置
+2023-02-07 14:48:29.844  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'databaseConfig' of type [mao.aggregate_pay_transaction_service.config.DatabaseConfig$$EnhancerBySpringCGLIB$$2f465c1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.916  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.920  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.935  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:29.972  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:30.026  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:30.045  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:30.050  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:30.055  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:30.061  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:30.063  INFO 24332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-07 14:48:30.117  INFO 24332 --- [main] m.a.config.WebConfig                     : 初始化 WebConfig
+2023-02-07 14:48:30.356  INFO 24332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 49827 (http)
+2023-02-07 14:48:30.368  INFO 24332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07 14:48:30.368  INFO 24332 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-07 14:48:30.531  INFO 24332 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07 14:48:30.531  INFO 24332 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2787 ms
+2023-02-07 14:48:30.643  WARN 24332 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-07 14:48:30.644  INFO 24332 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-07 14:48:30.654  INFO 24332 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@38cfecf3
+2023-02-07 14:48:30.788  INFO 24332 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2023-02-07 14:48:30.813  INFO 24332 --- [main] m.a.config.ExceptionConfig               : 初始化 ExceptionConfig 全局异常配置
+2023-02-07 14:48:30.815  INFO 24332 --- [main] m.a.config.RestTemplateConfig            : 初始化 RestTemplateConfig
+2023-02-07 14:48:30.855 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:48:30.858 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:48:30.859 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:48:30.859 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:48:30.859 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PageController
+2023-02-07 14:48:31.207  INFO 24332 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
+2023-02-07 14:48:31.210  INFO 24332 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
+2023-02-07 14:48:31.606  INFO 24332 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2023-02-07 14:48:32.371  INFO 24332 --- [redisson-netty-2-15] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-02-07 14:48:32.386  INFO 24332 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-02-07 14:48:32.651 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelController
+2023-02-07 14:48:32.652 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelController
+2023-02-07 14:48:32.652 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelController
+2023-02-07 14:48:32.652 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelController
+2023-02-07 14:48:32.713  INFO 24332 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-02-07 14:48:32.714  INFO 24332 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-02-07 14:48:32.720  INFO 24332 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-02-07 14:48:32.724  INFO 24332 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-02-07 14:48:32.731  INFO 24332 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-02-07 14:48:32.757  INFO 24332 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-transaction/aggregate-pay-transaction-service/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-02-07 14:48:33.118  INFO 24332 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-07 14:48:33.119  INFO 24332 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-07 14:48:33.141  INFO 24332 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-07 14:48:33.142  INFO 24332 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e5%af%92%e5%81%87/aggregate-pay/apps/pay/aggregate-pay-transaction/aggregate-pay-transaction-service/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-02-07 14:48:33.144  INFO 24332 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-07 14:48:33.145  INFO 24332 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-07 14:48:33.150  INFO 24332 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-07 14:48:33.165  INFO 24332 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-02-07 14:48:33.209 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelParamController
+2023-02-07 14:48:33.210 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelParamController
+2023-02-07 14:48:33.210 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelParamController
+2023-02-07 14:48:33.210 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelParamController
+2023-02-07 14:48:33.210 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelParamController
+2023-02-07 14:48:33.210 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayChannelParamController
+2023-02-07 14:48:33.411  INFO 24332 --- [main] m.a.config.MerchantFeignConfig           : 初始化 MerchantFeignConfig
+2023-02-07 14:48:33.413 DEBUG 24332 --- [main] m.a.config.MerchantFeignConfig           : feign AppFeignClientFallbackFactory
+2023-02-07 14:48:33.447 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayController
+2023-02-07 14:48:33.447 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayController
+2023-02-07 14:48:33.447 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayController
+2023-02-07 14:48:33.447 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayController
+2023-02-07 14:48:33.447 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayController
+2023-02-07 14:48:33.447 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayController
+2023-02-07 14:48:33.448 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayController
+2023-02-07 14:48:33.452 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayTestController
+2023-02-07 14:48:33.453 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayTestController
+2023-02-07 14:48:33.453 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayTestController
+2023-02-07 14:48:33.453 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayTestController
+2023-02-07 14:48:33.453 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PayTestController
+2023-02-07 14:48:33.465 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PlatformChannelController
+2023-02-07 14:48:33.466 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PlatformChannelController
+2023-02-07 14:48:33.466 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PlatformChannelController
+2023-02-07 14:48:33.466 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PlatformChannelController
+2023-02-07 14:48:33.466 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PlatformChannelController
+2023-02-07 14:48:33.466 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.PlatformChannelController
+2023-02-07 14:48:33.478 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.479 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.480 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.TransactionController
+2023-02-07 14:48:33.484 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.WxPayController
+2023-02-07 14:48:33.485 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.WxPayController
+2023-02-07 14:48:33.485 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.WxPayController
+2023-02-07 14:48:33.485 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.WxPayController
+2023-02-07 14:48:33.485 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.WxPayController
+2023-02-07 14:48:33.485 DEBUG 24332 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.aggregate_pay_transaction_service.controller.WxPayController
+2023-02-07 14:48:34.099  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-07 14:48:34.100  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-07 14:48:34.100  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-07 14:48:34.253  INFO 24332 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2023-02-07 14:48:34.544  WARN 24332 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-07 14:48:34.544  INFO 24332 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-07 14:48:34.642  INFO 24332 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-07 14:48:34.773  INFO 24332 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 14:48:34.784 DEBUG 24332 --- [main] m.a.config.MerchantFeignConfig           : feign MerchantFeignClientFallbackFactory
+2023-02-07 14:48:34.785 DEBUG 24332 --- [main] m.a.config.MerchantFeignConfig           : feign StaffFeignClientFallbackFactory
+2023-02-07 14:48:34.785 DEBUG 24332 --- [main] m.a.config.MerchantFeignConfig           : feign StoreFeignClientFallbackFactory
+2023-02-07 14:48:34.785  INFO 24332 --- [main] m.a.c.PayPaymentAgentMerchantFeignConfig : 初始化 PayPaymentAgentMerchantFeignConfig
+2023-02-07 14:48:34.787 DEBUG 24332 --- [main] m.a.c.PayPaymentAgentMerchantFeignConfig : feign PayChannelAgentFeignClientFallbackFactory
+2023-02-07 14:48:34.787  INFO 24332 --- [main] m.a.config.TransactionFeignConfig        : 初始化 TransactionFeignConfig
+2023-02-07 14:48:34.788 DEBUG 24332 --- [main] m.a.config.TransactionFeignConfig        : feign PayChannelFeignClientFallbackFactory
+2023-02-07 14:48:34.789 DEBUG 24332 --- [main] m.a.config.TransactionFeignConfig        : feign PayChannelParamFeignClientFallbackFactory
+2023-02-07 14:48:34.789 DEBUG 24332 --- [main] m.a.config.TransactionFeignConfig        : feign PlatformChannelFeignClientFallbackFactory
+2023-02-07 14:48:34.789 DEBUG 24332 --- [main] m.a.config.TransactionFeignConfig        : feign TransactionFeignClientFallbackFactory
+2023-02-07 14:48:34.790  INFO 24332 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
+2023-02-07 14:48:34.791  INFO 24332 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
+2023-02-07 14:48:34.806  INFO 24332 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-02-07 14:48:34.813  INFO 24332 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-02-07 14:48:34.813  INFO 24332 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='交易服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_transaction_service', basePath=[], excludePath=[]}}
+
+2023-02-07 14:48:37.893  INFO 24332 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:48:38.188  INFO 24332 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:48:39.532  INFO 24332 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:48:39.540 ERROR 24332 --- [main] o.a.r.s.a.ListenerContainerConfiguration : Started container failed. DefaultRocketMQListenerContainer{consumerGroup='pay_group', namespace='', nameServer='127.0.0.1:9876', topic='PAY_PAYMENT_RESULT', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false}
+
+java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [127.0.0.1:9876] failed
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:680) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.consumer.DefaultMQPushConsumerImpl.updateTopicSubscribeInfoWhenSubscriptionChanged(DefaultMQPushConsumerImpl.java:871) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.consumer.DefaultMQPushConsumerImpl.start(DefaultMQPushConsumerImpl.java:654) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.consumer.DefaultMQPushConsumer.start(DefaultMQPushConsumer.java:707) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.start(DefaultRocketMQListenerContainer.java:332) ~[rocketmq-spring-boot-2.2.2.jar:2.2.2]
+	at org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration.registerContainer(ListenerContainerConfiguration.java:120) ~[rocketmq-spring-boot-2.2.2.jar:2.2.2]
+	at java.util.HashMap.forEach(HashMap.java:1290) ~[na:1.8.0_332]
+	at org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration.afterSingletonsInstantiated(ListenerContainerConfiguration.java:79) ~[rocketmq-spring-boot-2.2.2.jar:2.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:896) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_transaction_service.AggregatePayTransactionServiceApplication.main(AggregatePayTransactionServiceApplication.java:35) ~[classes/:na]
+Caused by: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [127.0.0.1:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458) ~[rocketmq-remoting-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413) ~[rocketmq-remoting-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382) ~[rocketmq-remoting-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	... 18 common frames omitted
+
+2023-02-07 14:48:39.541  INFO 24332 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07 14:48:39.561  WARN 24332 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-02-07 14:48:39.577  INFO 24332 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-07 14:48:39.586 ERROR 24332 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.RuntimeException: java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [127.0.0.1:9876] failed
+	at org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration.registerContainer(ListenerContainerConfiguration.java:123) ~[rocketmq-spring-boot-2.2.2.jar:2.2.2]
+	at java.util.HashMap.forEach(HashMap.java:1290) ~[na:1.8.0_332]
+	at org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration.afterSingletonsInstantiated(ListenerContainerConfiguration.java:79) ~[rocketmq-spring-boot-2.2.2.jar:2.2.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:896) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
+	at mao.aggregate_pay_transaction_service.AggregatePayTransactionServiceApplication.main(AggregatePayTransactionServiceApplication.java:35) [classes/:na]
+Caused by: java.lang.IllegalStateException: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [127.0.0.1:9876] failed
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:680) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:510) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.consumer.DefaultMQPushConsumerImpl.updateTopicSubscribeInfoWhenSubscriptionChanged(DefaultMQPushConsumerImpl.java:871) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.consumer.DefaultMQPushConsumerImpl.start(DefaultMQPushConsumerImpl.java:654) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.consumer.DefaultMQPushConsumer.start(DefaultMQPushConsumer.java:707) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.start(DefaultRocketMQListenerContainer.java:332) ~[rocketmq-spring-boot-2.2.2.jar:2.2.2]
+	at org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration.registerContainer(ListenerContainerConfiguration.java:120) ~[rocketmq-spring-boot-2.2.2.jar:2.2.2]
+	... 12 common frames omitted
+Caused by: org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to [127.0.0.1:9876] failed
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateNameserverChannel(NettyRemotingClient.java:458) ~[rocketmq-remoting-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.getAndCreateChannel(NettyRemotingClient.java:413) ~[rocketmq-remoting-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.remoting.netty.NettyRemotingClient.invokeSync(NettyRemotingClient.java:382) ~[rocketmq-remoting-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1379) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1369) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	at org.apache.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:623) ~[rocketmq-client-4.9.3.jar:4.9.3]
+	... 18 common frames omitted
+
+2023-02-07 14:48:39.590  INFO 24332 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 14:48:39.591  INFO 24332 --- [main] a.r.s.s.DefaultRocketMQListenerContainer : container destroyed, DefaultRocketMQListenerContainer{consumerGroup='pay_group', namespace='', nameServer='127.0.0.1:9876', topic='PAY_PAYMENT_RESULT', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false}
+2023-02-07 14:48:39.612  INFO 24332 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-07 14:48:39.623  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-07 14:48:39.623  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-07 14:48:39.623  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-07 14:48:39.623  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-07 14:48:42.631  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-07 14:48:42.631  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-07 14:48:44.118  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-07 14:48:44.119  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-07 14:48:44.119  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-07 14:48:44.119  WARN 24332 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-07 14:48:44.119  WARN 24332 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-07 14:48:44.119  INFO 24332 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-07 14:48:44.120  INFO 24332 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-07 14:48:44.120  INFO 24332 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-24] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x1366acb0, L:/127.0.0.1:60149 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-26] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x2acc3e75, L:/127.0.0.1:60157 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-6] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xf2caf195, L:/127.0.0.1:60144 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-29] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0xf4c68ccd, L:/127.0.0.1:60152 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-4] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x71c0fef5, L:/127.0.0.1:60140 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-9] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x521223fd, L:/127.0.0.1:60162 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-11] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x4a5836b6, L:/127.0.0.1:60146 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.157 ERROR 24332 --- [redisson-netty-2-27] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x5add5062, L:/127.0.0.1:60155 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-07 14:48:44.165  INFO 24332 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-02-07 14:48:45.163  WARN 24332 --- [Thread-29] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-07 14:48:45.163  WARN 24332 --- [Thread-29] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-07 14:48:45.163  WARN 24332 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-07 14:48:45.164  WARN 24332 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end

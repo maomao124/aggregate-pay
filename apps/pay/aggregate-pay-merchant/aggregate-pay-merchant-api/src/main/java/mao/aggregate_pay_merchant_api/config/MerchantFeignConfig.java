@@ -26,7 +26,7 @@ import javax.annotation.PostConstruct;
 
 @Slf4j
 @Configuration
-public class FeignConfig
+public class MerchantFeignConfig
 {
 
     /**
@@ -87,7 +87,7 @@ public class FeignConfig
     @PostConstruct
     public void init()
     {
-        log.info("初始化 FeignConfig");
+        log.info("初始化 MerchantFeignConfig");
     }
 
 }
