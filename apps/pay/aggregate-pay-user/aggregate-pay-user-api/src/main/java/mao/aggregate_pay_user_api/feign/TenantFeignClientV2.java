@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_common.domain.PageVO;
 import mao.aggregate_pay_user_api.dto.resource.ApplicationDTO;
 import mao.aggregate_pay_user_api.dto.tenant.*;
+import mao.aggregate_pay_user_api.fallback.TenantFeignClientV2FallbackFactory;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,7 @@ import java.util.List;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-user-service", path = "/user/v2")
+@FeignClient(value = "aggregate-pay-user-service", path = "/user/v2", fallbackFactory = TenantFeignClientV2FallbackFactory.class)
 public interface TenantFeignClientV2
 {
 
