@@ -10,6 +10,8 @@ import mao.aggregate_pay_user_api.dto.menu.MenuQueryDTO;
 import mao.aggregate_pay_user_api.dto.resource.ApplicationDTO;
 import mao.aggregate_pay_user_api.dto.resource.ApplicationQueryParams;
 import mao.aggregate_pay_user_api.dto.resource.ResourceDTO;
+import mao.aggregate_pay_user_api.fallback.AuthorizationFeignClientV2FallbackFactory;
+import mao.aggregate_pay_user_api.fallback.ResourceFeignClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,10 +31,9 @@ import java.util.Map;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-user-service", path = "/user")
+@FeignClient(value = "aggregate-pay-user-service", path = "/user", fallbackFactory = ResourceFeignClientFallbackFactory.class)
 public interface ResourceFeignClient
 {
-
     /**
      * 创建应用
      * 会关联创建uaa服务中的接入客户端，其中code为clientId
