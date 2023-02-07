@@ -1,10 +1,11 @@
 package mao.aggregate_pay_transaction_api.fallback;
 
-import feign.hystrix.FallbackFactory;
+import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_transaction_api.dto.PayChannelParamDTO;
 import mao.aggregate_pay_transaction_api.feign.PayChannelParamFeignClient;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 import java.util.List;
 
@@ -21,6 +22,7 @@ import java.util.List;
  * Description(描述)： 无
  */
 
+@Slf4j
 public class PayChannelParamFeignClientFallbackFactory implements FallbackFactory<PayChannelParamFeignClient>
 {
 
@@ -32,18 +34,21 @@ public class PayChannelParamFeignClientFallbackFactory implements FallbackFactor
             @Override
             public R<Boolean> savePayChannelParam(PayChannelParamDTO payChannelParam)
             {
+                log.error("交易服务不可用或者服务异常", throwable);
                 throw BizException.wrap("交易服务不可用或者服务异常");
             }
 
             @Override
             public R<List<PayChannelParamDTO>> queryPayChannelParamByAppAndPlatform(String appId, String platformChannel)
             {
+                log.error("交易服务不可用或者服务异常", throwable);
                 throw BizException.wrap("交易服务不可用或者服务异常");
             }
 
             @Override
             public R<PayChannelParamDTO> queryParamByAppPlatformAndPayChannel(String appId, String platformChannel, String payChannel)
             {
+                log.error("交易服务不可用或者服务异常", throwable);
                 throw BizException.wrap("交易服务不可用或者服务异常");
             }
         };

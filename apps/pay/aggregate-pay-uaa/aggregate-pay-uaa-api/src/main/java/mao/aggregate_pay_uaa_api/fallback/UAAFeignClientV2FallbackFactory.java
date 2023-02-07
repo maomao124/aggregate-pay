@@ -1,9 +1,11 @@
 package mao.aggregate_pay_uaa_api.fallback;
 
-import feign.hystrix.FallbackFactory;
+
+import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_uaa_api.feign.UAAFeignClientV2;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 import java.util.Map;
 
@@ -20,6 +22,7 @@ import java.util.Map;
  * Description(描述)： 无
  */
 
+@Slf4j
 public class UAAFeignClientV2FallbackFactory implements FallbackFactory<UAAFeignClientV2>
 {
 
@@ -31,18 +34,21 @@ public class UAAFeignClientV2FallbackFactory implements FallbackFactory<UAAFeign
             @Override
             public R<Map<String, ?>> checkToken(String value)
             {
+                log.error("认证和授权服务不可用或者服务异常", throwable);
                 throw BizException.wrap("认证和授权服务不可用或者服务异常");
             }
 
             @Override
             public R<Boolean> createClientDetails(Map<String, String> map)
             {
+                log.error("认证和授权服务不可用或者服务异常", throwable);
                 throw BizException.wrap("认证和授权服务不可用或者服务异常");
             }
 
             @Override
             public R<Map<String, String>> getClientDetailsByClientId(String appId)
             {
+                log.error("认证和授权服务不可用或者服务异常", throwable);
                 throw BizException.wrap("认证和授权服务不可用或者服务异常");
             }
         };

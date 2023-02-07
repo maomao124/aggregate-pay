@@ -586,3 +586,197 @@ Using generated security password: 7a649a9a-1c49-40c2-ad7d-d1514d7f35b0
 2023-02-06 22:53:06.066  INFO 8400 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
 2023-02-06 22:53:06.067  WARN 8400 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
 2023-02-06 22:53:06.067  INFO 8400 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-07 20:17:47.614  WARN 5556 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-gateway] & group[DEFAULT_GROUP]
+2023-02-07 20:17:47.649  WARN 5556 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-gateway-dev.yml] & group[DEFAULT_GROUP]
+2023-02-07 20:17:47.651  INFO 5556 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-gateway,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-jwt.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-07 20:17:47.718  INFO 5556 --- [main] m.a.AggregatePayGatewayApplication       : The following profiles are active: dev
+2023-02-07 20:17:48.796  WARN 5556 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-07 20:17:48.813  WARN 5556 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2023-02-07 20:17:48.983  INFO 5556 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3f69908-6727-3fe5-b41b-0bef88959980
+2023-02-07 20:17:49.609  INFO 5556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 56010 (http)
+2023-02-07 20:17:49.629  INFO 5556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07 20:17:49.629  INFO 5556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-07 20:17:50.448  INFO 5556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07 20:17:50.448  INFO 5556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2702 ms
+2023-02-07 20:17:50.452  INFO 5556 --- [main] m.a.config.FilterConfig                  : 初始化 FilterConfig
+2023-02-07 20:17:50.589  WARN 5556 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-07 20:17:50.589  INFO 5556 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-07 20:17:50.603  INFO 5556 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@663f237a
+2023-02-07 20:17:51.699  INFO 5556 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2023-02-07 20:17:51.735  INFO 5556 --- [main] m.a.config.JWTConfig                     : 初始化 JWTConfig
+2023-02-07 20:17:51.888  INFO 5556 --- [main] m.a.config.ResourceServerConfig          : 初始化 ResourceServerConfig
+2023-02-07 20:17:52.005  INFO 5556 --- [main] m.a.config.SecurityConfig                : 初始化 SecurityConfig
+2023-02-07 20:17:52.027  WARN 5556 --- [main] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2023-02-07 20:17:52.097  WARN 5556 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-07 20:17:52.097  INFO 5556 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-07 20:17:52.288  INFO 5556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-07 20:17:52.524  INFO 5556 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 20:17:52.542  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-07 20:17:52.543  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-07 20:17:52.544  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-07 20:17:53.088  INFO 5556 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 156f4a0e-f5b8-4f26-baf2-7f05ebaa45e4
+
+2023-02-07 20:17:53.230  INFO 5556 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5aea8994, org.springframework.security.web.context.SecurityContextPersistenceFilter@31881aa2, org.springframework.security.web.header.HeaderWriterFilter@35f7969d, org.springframework.security.web.authentication.logout.LogoutFilter@4d69d288, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@5c1b89ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c71c889, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c47a053, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20a3e10c, org.springframework.security.web.session.SessionManagementFilter@736b21ee, org.springframework.security.web.access.ExceptionTranslationFilter@50cbcca7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e92c3b6]
+2023-02-07 20:17:53.237  INFO 5556 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59328218, org.springframework.security.web.context.SecurityContextPersistenceFilter@f559c74, org.springframework.security.web.header.HeaderWriterFilter@5e99e2cb, org.springframework.security.web.authentication.logout.LogoutFilter@4466cf5d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63917fe1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@720f56e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5345dfe8, org.springframework.security.web.session.SessionManagementFilter@76ac68b0, org.springframework.security.web.access.ExceptionTranslationFilter@73d62b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49b89425]
+2023-02-07 20:17:53.657  INFO 5556 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2023-02-07 20:17:53.697  WARN 5556 --- [main] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-02-07 20:17:53.705  INFO 5556 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 23 endpoint(s) beneath base path '/actuator'
+2023-02-07 20:17:54.015  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-gateway@@DEFAULT -> [{"instanceId":"192.168.3.143#51243#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":51243,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":56010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2023-02-07 20:17:54.028  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-gateway@@DEFAULT -> [{"instanceId":"192.168.3.143#51243#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":51243,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":56010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2023-02-07 20:17:54.089  INFO 5556 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07 20:17:54.096  WARN 5556 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-02-07 20:17:54.097  WARN 5556 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-02-07 20:17:54.104  INFO 5556 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-07 20:17:54.107  INFO 5556 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 20:17:54.109  INFO 5556 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2023-02-07 20:17:54.117  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-07 20:17:54.117  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-07 20:17:54.117  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-07 20:17:55.093  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-07 20:17:58.153  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-07 20:17:58.153  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-07 20:18:01.182  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-07 20:18:01.182  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-07 20:18:01.182  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-07 20:18:01.182  WARN 5556 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-07 20:18:01.183  WARN 5556 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-07 20:18:01.183  INFO 5556 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-07 20:18:01.183  INFO 5556 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-07 20:18:01.183  INFO 5556 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-07 20:18:01.184  INFO 5556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-07 20:18:01.203 ERROR 5556 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 56010 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 56010 or configure this application to listen on another port.
+
+2023-02-07 20:18:01.204  WARN 5556 --- [Thread-25] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-07 20:18:01.204  WARN 5556 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-07 20:18:01.205  WARN 5556 --- [Thread-25] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-07 20:18:01.205  WARN 5556 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-07 20:20:15.787  WARN 21276 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-gateway] & group[DEFAULT_GROUP]
+2023-02-07 20:20:15.807  WARN 21276 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-gateway-dev.yml] & group[DEFAULT_GROUP]
+2023-02-07 20:20:15.808  INFO 21276 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-gateway-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-gateway.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-gateway,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-jwt.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-07 20:20:15.863  INFO 21276 --- [main] m.a.AggregatePayGatewayApplication       : The following profiles are active: dev
+2023-02-07 20:20:16.779  WARN 21276 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-07 20:20:16.795  WARN 21276 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2023-02-07 20:20:16.944  INFO 21276 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3f69908-6727-3fe5-b41b-0bef88959980
+2023-02-07 20:20:17.445  INFO 21276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 56010 (http)
+2023-02-07 20:20:17.452  INFO 21276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-07 20:20:17.452  INFO 21276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2023-02-07 20:20:17.579  INFO 21276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-07 20:20:17.579  INFO 21276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1696 ms
+2023-02-07 20:20:17.582  INFO 21276 --- [main] m.a.config.FilterConfig                  : 初始化 FilterConfig
+2023-02-07 20:20:17.665  WARN 21276 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-07 20:20:17.665  INFO 21276 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-07 20:20:17.673  INFO 21276 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6f1b8544
+2023-02-07 20:20:18.414  INFO 21276 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2023-02-07 20:20:18.439  INFO 21276 --- [main] m.a.config.JWTConfig                     : 初始化 JWTConfig
+2023-02-07 20:20:18.540  INFO 21276 --- [main] m.a.config.ResourceServerConfig          : 初始化 ResourceServerConfig
+2023-02-07 20:20:18.580  INFO 21276 --- [main] m.a.config.SecurityConfig                : 初始化 SecurityConfig
+2023-02-07 20:20:18.594  WARN 21276 --- [main] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2023-02-07 20:20:18.634  WARN 21276 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-07 20:20:18.634  INFO 21276 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-07 20:20:18.763  INFO 21276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-07 20:20:18.886  INFO 21276 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 20:20:18.893  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-07 20:20:18.894  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-07 20:20:18.894  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-07 20:20:19.276  INFO 21276 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 05144e42-6654-41a5-97c5-a565033c4831
+
+2023-02-07 20:20:19.383  INFO 21276 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@783b3aa0, org.springframework.security.web.context.SecurityContextPersistenceFilter@632cf7d3, org.springframework.security.web.header.HeaderWriterFilter@489110c2, org.springframework.security.web.authentication.logout.LogoutFilter@787d1f9c, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@d36c1c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53a301f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35f7969d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ec85a25, org.springframework.security.web.session.SessionManagementFilter@1be52861, org.springframework.security.web.access.ExceptionTranslationFilter@45bbc52f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3dfd7eaa]
+2023-02-07 20:20:19.388  INFO 21276 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@207dd1b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@e0d1dc4, org.springframework.security.web.header.HeaderWriterFilter@54247647, org.springframework.security.web.authentication.logout.LogoutFilter@22f8adc2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5463f035, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@230232b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2baac4a7, org.springframework.security.web.session.SessionManagementFilter@4975dda1, org.springframework.security.web.access.ExceptionTranslationFilter@427308f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ef4cbe1]
+2023-02-07 20:20:19.645  INFO 21276 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2023-02-07 20:20:19.665  WARN 21276 --- [main] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2023-02-07 20:20:19.670  INFO 21276 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 23 endpoint(s) beneath base path '/actuator'
+2023-02-07 20:20:19.834  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-gateway@@DEFAULT -> [{"instanceId":"192.168.3.143#51243#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":51243,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":56010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2023-02-07 20:20:19.847  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-gateway@@DEFAULT -> [{"instanceId":"192.168.3.143#51243#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":51243,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000},{"instanceId":"192.168.3.143#56010#DEFAULT#DEFAULT_GROUP@@aggregate-pay-gateway","ip":"192.168.3.143","port":56010,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2023-02-07 20:20:19.888  INFO 21276 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-07 20:20:19.892  WARN 21276 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-02-07 20:20:19.893  WARN 21276 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2023-02-07 20:20:19.897  INFO 21276 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-07 20:20:19.899  INFO 21276 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-07 20:20:19.900  INFO 21276 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2023-02-07 20:20:19.904  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-07 20:20:19.904  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-07 20:20:19.904  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-07 20:20:20.868  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-07 20:20:23.903  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-07 20:20:23.903  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-07 20:20:26.938  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-07 20:20:26.938  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-07 20:20:26.938  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-07 20:20:26.938  WARN 21276 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-07 20:20:26.939  WARN 21276 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-07 20:20:26.939  INFO 21276 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-07 20:20:26.939  INFO 21276 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-07 20:20:26.939  INFO 21276 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-07 20:20:26.939  INFO 21276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-07 20:20:26.952 ERROR 21276 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 56010 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 56010 or configure this application to listen on another port.
+
+2023-02-07 20:20:26.953  WARN 21276 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-07 20:20:26.953  WARN 21276 --- [Thread-21] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-07 20:20:26.953  WARN 21276 --- [Thread-21] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-07 20:20:26.953  WARN 21276 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end

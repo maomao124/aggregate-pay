@@ -1,6 +1,5 @@
 package mao.aggregate_pay_user_api.fallback;
 
-import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_user_api.dto.auth.AuthorizationInfoDTO;
 import mao.aggregate_pay_user_api.dto.auth.PrivilegeDTO;
@@ -8,6 +7,7 @@ import mao.aggregate_pay_user_api.dto.auth.PrivilegeTreeDTO;
 import mao.aggregate_pay_user_api.dto.auth.RoleDTO;
 import mao.aggregate_pay_user_api.feign.AuthorizationFeignClient;
 import mao.tools_core.exception.BizException;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 import java.util.List;
 import java.util.Map;

@@ -22,7 +22,7 @@ import java.util.List;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-merchant-service", path = "/app",fallbackFactory = AppFeignClientFallbackFactory.class)
+@FeignClient(value = "aggregate-pay-merchant-service", path = "/app", fallbackFactory = AppFeignClientFallbackFactory.class)
 public interface AppFeignClient
 {
     /**

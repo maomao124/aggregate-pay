@@ -26,7 +26,7 @@ import java.util.List;
  * Description(描述)： 原始的支付聚道参数feign接口
  */
 
-@FeignClient(value = "aggregate-pay-transaction-service", path = "/PayChannelParam",fallbackFactory = PayChannelParamFeignClientFallbackFactory.class)
+@FeignClient(value = "aggregate-pay-transaction-service", path = "/PayChannelParam", fallbackFactory = PayChannelParamFeignClientFallbackFactory.class)
 public interface PayChannelParamFeignClient
 {
     /**

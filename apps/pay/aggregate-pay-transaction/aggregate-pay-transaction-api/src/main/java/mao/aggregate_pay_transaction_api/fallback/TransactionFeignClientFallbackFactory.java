@@ -1,10 +1,12 @@
 package mao.aggregate_pay_transaction_api.fallback;
 
-import feign.hystrix.FallbackFactory;
+
+import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_transaction_api.dto.QRCodeDto;
 import mao.aggregate_pay_transaction_api.feign.TransactionFeignClient;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -19,6 +21,7 @@ import mao.tools_core.exception.BizException;
  * Description(描述)： 无
  */
 
+@Slf4j
 public class TransactionFeignClientFallbackFactory implements FallbackFactory<TransactionFeignClient>
 {
 
@@ -30,6 +33,7 @@ public class TransactionFeignClientFallbackFactory implements FallbackFactory<Tr
             @Override
             public R<String> createStoreQRCode(QRCodeDto qrCodeDto)
             {
+                log.error("交易服务不可用或者服务异常", throwable);
                 throw BizException.wrap("交易服务不可用或者服务异常");
             }
         };

@@ -1,8 +1,10 @@
 package mao.aggregate_pay_merchant_api.fallback;
 
-import feign.hystrix.FallbackFactory;
+
+import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_merchant_api.feign.StoreFeignClient;
 import mao.tools_core.exception.BizException;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -17,12 +19,14 @@ import mao.tools_core.exception.BizException;
  * Description(描述)： 无
  */
 
+@Slf4j
 public class StoreFeignClientFallbackFactory implements FallbackFactory<StoreFeignClient>
 {
 
     @Override
     public StoreFeignClient create(Throwable throwable)
     {
+        log.error("商户服务不可用或者服务异常", throwable);
         throw BizException.wrap("商户服务不可用或者服务异常");
     }
 }

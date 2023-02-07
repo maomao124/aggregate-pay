@@ -1,6 +1,6 @@
 package mao.aggregate_pay_user_api.fallback;
 
-import feign.hystrix.FallbackFactory;
+import org.springframework.cloud.openfeign.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_user_api.dto.auth.AuthorizationInfoDTO;
 import mao.aggregate_pay_user_api.dto.auth.PrivilegeDTO;

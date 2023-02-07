@@ -1,6 +1,6 @@
 package mao.aggregate_pay_merchant_api.fallback;
 
-import feign.hystrix.FallbackFactory;
+import lombok.extern.slf4j.Slf4j;
 import mao.aggregate_pay_common.domain.PageVO;
 import mao.aggregate_pay_merchant_api.dto.MerchantDTO;
 import mao.aggregate_pay_merchant_api.dto.StaffDTO;
@@ -9,6 +9,7 @@ import mao.aggregate_pay_merchant_api.feign.AppFeignClient;
 import mao.aggregate_pay_merchant_api.feign.MerchantFeignClient;
 import mao.tools_core.base.R;
 import mao.tools_core.exception.BizException;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 /**
  * Project name(项目名称)：aggregate-pay
@@ -23,6 +24,7 @@ import mao.tools_core.exception.BizException;
  * Description(描述)： 无
  */
 
+@Slf4j
 public class MerchantFeignClientFallbackFactory implements FallbackFactory<MerchantFeignClient>
 {
 
@@ -34,48 +36,56 @@ public class MerchantFeignClientFallbackFactory implements FallbackFactory<Merch
             @Override
             public R<MerchantDTO> getById(Long merchantId)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
 
             @Override
             public R<MerchantDTO> createMerchant(MerchantDTO merchantDTO)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
 
             @Override
             public R<Boolean> applyMerchant(Long merchantId, MerchantDTO merchantDTO)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
 
             @Override
             public R<StoreDTO> createStore(StoreDTO storeDTO)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
 
             @Override
             public R<StaffDTO> createStaff(StaffDTO staffDTO)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
 
             @Override
             public R<Boolean> bindStaffToStore(Long storeId, Long staffId)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
 
             @Override
             public R<MerchantDTO> getMerchantByTenantId(Long tenantId)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
 
             @Override
             public R<PageVO<StoreDTO>> queryStoreByPage(StoreDTO storeDTO, Integer pageNo, Integer pageSize)
             {
+                log.error("商户服务不可用或者服务异常", throwable);
                 throw BizException.wrap("商户服务不可用或者服务异常");
             }
         };

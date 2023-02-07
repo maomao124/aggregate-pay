@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
  * Description(描述)： 商户服务feign接口
  */
 
-@FeignClient(value = "aggregate-pay-merchant-service", path = "/merchant",fallbackFactory = MerchantFeignClientFallbackFactory.class)
+@FeignClient(value = "aggregate-pay-merchant-service", path = "/merchant", fallbackFactory = MerchantFeignClientFallbackFactory.class)
 public interface MerchantFeignClient
 {
     /**

@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-merchant-service", path = "/staff",fallbackFactory = StaffFeignClientFallbackFactory.class)
+@FeignClient(value = "aggregate-pay-merchant-service", path = "/staff", fallbackFactory = StaffFeignClientFallbackFactory.class)
 public interface StaffFeignClient
 {
     /**

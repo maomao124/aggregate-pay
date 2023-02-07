@@ -25,7 +25,7 @@ import java.util.List;
  * Description(描述)： 服务类型 FeignClient
  */
 
-@FeignClient(value = "aggregate-pay-transaction-service", path = "/PlatformChannel",fallbackFactory = PlatformChannelFeignClientFallbackFactory.class)
+@FeignClient(value = "aggregate-pay-transaction-service", path = "/PlatformChannel", fallbackFactory = PlatformChannelFeignClientFallbackFactory.class)
 public interface PlatformChannelFeignClient
 {
     /**
