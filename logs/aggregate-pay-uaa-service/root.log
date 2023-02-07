@@ -656,3 +656,53 @@ docket：{aggregate_pay=DocketInfo{title='认证和授权服务', group='', desc
 2023-02-06 22:18:29.369  INFO 23604 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":43573,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#43573#DEFAULT#DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/uaa/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"cacheMillis\":10000,\"lastRefTime\":1675693109368,\"checksum\":\"425ba38c773efcab259c66e3a30da962\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":11118174267800} from /192.168.202.1
 2023-02-06 22:18:30.700  INFO 23604 --- [RMI TCP Connection(8)-192.168.202.1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2023-02-06 22:18:42.077  INFO 23604 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":43573,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#43573#DEFAULT#DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/uaa/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"cacheMillis\":10000,\"lastRefTime\":1675693122076,\"checksum\":\"425ba38c773efcab259c66e3a30da962\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":11130882202300} from /192.168.202.1
+2023-02-06 22:53:00.006  WARN 23604 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-06 22:53:00.006  WARN 23604 --- [Thread-27] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-06 22:53:00.009  WARN 23604 --- [Thread-27] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-06 22:53:00.011  WARN 23604 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-06 22:53:00.073  INFO 23604 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-06 22:53:00.116  INFO 23604 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-06 22:53:00.118  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-uaa-service:192.168.3.143:43573 from beat map.
+2023-02-06 22:53:00.118  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-uaa-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=43573, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-06 22:53:00.122  INFO 23604 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-06 22:53:00.124  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-06 22:53:00.125  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-06 22:53:00.125  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-06 22:53:00.899  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-06 22:53:01.131  INFO 23604 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":43573,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#43573#DEFAULT#DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"/uaa/actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-uaa-service\",\"cacheMillis\":10000,\"lastRefTime\":1675695181130,\"checksum\":\"a779c1349417e298759f0fe40e1355b0\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":13189935618400} from /192.168.202.1
+2023-02-06 22:53:03.177 ERROR 23604 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS SocketTimeoutException httpPost] currentServerAddr: http://127.0.0.1:8848， err : connect timed out
+2023-02-06 22:53:03.927  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-06 22:53:03.928  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-06 22:53:03.928  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-06 22:53:03.928  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-06 22:53:03.928  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-06 22:53:03.928  WARN 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-06 22:53:03.929  WARN 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-06 22:53:03.929  INFO 23604 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-06 22:53:03.929  INFO 23604 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-06 22:53:03.929  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-06 22:53:03.930  INFO 23604 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-06 22:53:03.961  WARN 23604 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-06 22:53:04.017 ERROR 23604 --- [redisson-netty-2-5] o.r.client.handler.ErrorsLoggingHandler  : Exception occured. Channel: [id: 0x44d38fa4, L:/127.0.0.1:60055 - R:127.0.0.1/127.0.0.1:6379]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_332]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_332]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379) ~[na:1.8.0_332]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.51.Final.jar:4.1.51.Final]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:04.056  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-06 22:53:04.091  INFO 23604 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

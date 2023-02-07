@@ -614,3 +614,201 @@ docket：{aggregate_pay=DocketInfo{title='支付渠道代理服务', group='', d
 2023-02-06 22:18:07.824  INFO 29884 --- [RMI TCP Connection(9)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-02-06 22:18:07.834  INFO 29884 --- [RMI TCP Connection(9)-192.168.202.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
 2023-02-06 22:18:18.742  INFO 29884 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.3.143\",\"port\":23983,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.3.143#23983#DEFAULT#DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\",\"management.endpoints.web.base-path\":\"/actuator\",\"management.context-path\":\"//actuator\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"ephemeral\":false}],\"dom\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"name\":\"DEFAULT_GROUP@@aggregate-pay-payment-agent-service\",\"cacheMillis\":10000,\"lastRefTime\":1675693098742,\"checksum\":\"adef502142981fd13d927feb9f83d6fd\",\"useSpecifiedURL\":false,\"clusters\":\"DEFAULT\",\"env\":\"\",\"metadata\":{}}","lastRefTime":11107547792300} from /192.168.202.1
+2023-02-06 22:53:00.159  WARN 29884 --- [Thread-32] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-06 22:53:00.159  WARN 29884 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-06 22:53:00.162  WARN 29884 --- [Thread-32] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-06 22:53:00.164  WARN 29884 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-06 22:53:01.153  INFO 29884 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-06 22:53:01.153  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-06 22:53:01.154  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10921] result: true
+2023-02-06 22:53:01.155  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10911] result: true
+2023-02-06 22:53:01.155  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10931] result: true
+2023-02-06 22:53:01.155  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10941] result: true
+2023-02-06 22:53:01.160  INFO 29884 --- [SpringContextShutdownHook] a.r.s.s.DefaultRocketMQListenerContainer : container destroyed, DefaultRocketMQListenerContainer{consumerGroup='pay_group', namespace='', nameServer='127.0.0.1:9876', topic='PAY_PAYMENT_ORDER', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false}
+2023-02-06 22:53:01.168  INFO 29884 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2023-02-06 22:53:01.169  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@aggregate-pay-payment-agent-service:192.168.3.143:23983 from beat map.
+2023-02-06 22:53:01.169  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] 51637975-182d-43e2-ab58-d012723411d5 deregistering service DEFAULT_GROUP@@aggregate-pay-payment-agent-service with instance: Instance{instanceId='null', ip='192.168.3.143', port=23983, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2023-02-06 22:53:01.172  INFO 29884 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2023-02-06 22:53:01.174  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-06 22:53:01.174  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-06 22:53:01.174  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-06 22:53:03.178 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS SocketTimeoutException httpPost] currentServerAddr: http://127.0.0.1:8848， err : connect timed out
+2023-02-06 22:53:04.057  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10911] result: true
+2023-02-06 22:53:04.056  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10911] result: true
+2023-02-06 22:53:04.106  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10921] result: true
+2023-02-06 22:53:04.111  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[192.168.202.1:10921] result: true
+2023-02-06 22:53:04.156  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-06 22:53:04.156  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2023-02-06 22:53:04.206  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-06 22:53:05.214 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:07.234  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-06 22:53:07.235  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-06 22:53:07.235  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-06 22:53:07.235  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-06 22:53:07.235  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-06 22:53:07.236  WARN 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-06 22:53:07.236  WARN 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-06 22:53:07.236  INFO 29884 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-06 22:53:07.236  INFO 29884 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-06 22:53:07.236  INFO 29884 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-06 22:53:07.239  INFO 29884 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-06 22:53:07.247  WARN 29884 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2023-02-06 22:53:07.260 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:09.286  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:09.299 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:09.307 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [check-update] get changed dataId exception
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:09.308 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : longPolling error : 
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:11.328  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:13.350 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:13.351  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:15.392  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:15.408 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:17.439 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:17.440  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:19.462  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:19.462 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:19.463 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [check-update] get changed dataId exception
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:19.464 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : longPolling error : 
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:21.484  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:23.489 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:23.509  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:25.512 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:25.544  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:27.543 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:27.559  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:29.573 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:29.573 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [check-update] get changed dataId exception
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:29.573 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : longPolling error : 
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:29.606  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:31.655  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:33.122  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:33.610 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:33.673  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:35.633 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:35.696  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:37.676 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:37.722  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-06 22:53:39.687 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.c.config.http.ServerHttpAgent      : [NACOS ConnectException httpPost] currentServerAddr: http://127.0.0.1:8848, err : Connection refused: connect
+2023-02-06 22:53:39.687 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [check-update] get changed dataId exception
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) [nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) [nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:39.687 ERROR 29884 --- [com.alibaba.nacos.client.Worker.longPolling.fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] c.a.n.client.config.impl.ClientWorker    : longPolling error : 
+
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:181) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:67) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:380) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:347) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:535) ~[nacos-client-1.4.2.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_332]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_332]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_332]
+
+2023-02-06 22:53:39.734  INFO 29884 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
