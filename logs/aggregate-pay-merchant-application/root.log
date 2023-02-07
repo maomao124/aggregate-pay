@@ -206,3 +206,5 @@ docket：{aggregate_pay=DocketInfo{title='商户平台应用', group='', descrip
 2023-02-07 13:56:33.461  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
 2023-02-07 13:57:03.098  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
 2023-02-07 13:57:03.460  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 13:57:33.080  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true
+2023-02-07 13:57:33.456  INFO 4532 --- [NettyClientSelector_1] RocketmqRemoting                         : closeChannel: close the connection to remote address[] result: true

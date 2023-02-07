@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiOperation;
 import mao.aggregate_pay_payment_agent_api.dto.PayOrderByAliWAPBody;
 import mao.aggregate_pay_payment_agent_api.dto.PayOrderWeiXinJSAPIBody;
 import mao.aggregate_pay_payment_agent_api.dto.PaymentResponseDTO;
+import mao.aggregate_pay_payment_agent_api.fallback.PayChannelAgentFeignClientFallbackFactory;
 import mao.tools_core.base.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ import java.util.Map;
  * Description(描述)： 支付代理服务feign接口
  */
 
-@FeignClient(value = "aggregate-pay-payment-agent-service", path = "/pay/agent")
+@FeignClient(value = "aggregate-pay-payment-agent-service", path = "/pay/agent", fallbackFactory = PayChannelAgentFeignClientFallbackFactory.class)
 public interface PayChannelAgentFeignClient
 {
     /**
