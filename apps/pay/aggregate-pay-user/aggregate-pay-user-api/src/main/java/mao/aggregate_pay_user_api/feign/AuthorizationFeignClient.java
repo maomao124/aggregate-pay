@@ -7,6 +7,7 @@ import mao.aggregate_pay_user_api.dto.auth.AuthorizationInfoDTO;
 import mao.aggregate_pay_user_api.dto.auth.PrivilegeDTO;
 import mao.aggregate_pay_user_api.dto.auth.PrivilegeTreeDTO;
 import mao.aggregate_pay_user_api.dto.auth.RoleDTO;
+import mao.aggregate_pay_user_api.fallback.AuthorizationFeignClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +27,7 @@ import java.util.Map;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-user-service", path = "/user")
+@FeignClient(value = "aggregate-pay-user-service", path = "/user", fallbackFactory = AuthorizationFeignClientFallbackFactory.class)
 public interface AuthorizationFeignClient
 {
     /**
