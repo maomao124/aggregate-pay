@@ -1,6 +1,7 @@
 package mao.aggregate_pay_uaa_api.feign;
 
 import io.swagger.annotations.ApiOperation;
+import mao.aggregate_pay_uaa_api.fallback.UAAFeignClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +23,7 @@ import java.util.Map;
  * Description(描述)： feign接口
  */
 
-@FeignClient(value = "aggregate-pay-uaa-service", path = "/uaa")
+@FeignClient(value = "aggregate-pay-uaa-service", path = "/uaa", fallbackFactory = UAAFeignClientFallbackFactory.class)
 public interface UAAFeignClient
 {
     /**
