@@ -1,73 +1,100 @@
-2023-01-03 20:25:32.538  WARN 11644 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[sms-server] & group[DEFAULT_GROUP]
-2023-01-03 20:25:32.553  INFO 11644 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-sms-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-03 20:25:32.816  INFO 11644 --- [main] m.s.service.impl.SendLogServiceImplTest  : The following profiles are active: dev
-2023-01-03 20:25:34.162  INFO 11644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-01-03 20:25:34.165  INFO 11644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-03 20:25:34.203  INFO 11644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
-2023-01-03 20:25:34.270  WARN 11644 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2023-01-03 20:25:34.284  WARN 11644 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
-2023-01-03 20:25:34.505  INFO 11644 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d261a23-5200-39ab-ac85-1ddf3a02da01
-2023-01-03 20:25:34.887  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.416  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.430  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.445  INFO 11644 --- [main] m.s.c.SmsServerMybatisAutoConfiguration  : 初始化 SmsServerMybatisAutoConfiguration mybatis 配置
-2023-01-03 20:25:35.445  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerMybatisAutoConfiguration' of type [mao.sms_server.config.SmsServerMybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f0fd6d4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.465  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.481  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.495  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.503  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.521  INFO 11644 --- [main] m.s.c.SmsServerDatabaseAutoConfiguration : 初始化 SmsServerDatabaseAutoConfiguration 数据库配置
-2023-01-03 20:25:35.521  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerDatabaseAutoConfiguration' of type [mao.sms_server.config.SmsServerDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$5e04021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.617  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.625  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.650  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.737  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.869  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.928  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:35.968  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:36.007  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:36.023  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:36.039  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:36.125  INFO 11644 --- [main] m.s.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration 全局异常处理配置
-2023-01-03 20:25:36.140  INFO 11644 --- [main] m.s.config.SmsServerWebConfiguration     : 初始化 SmsServerWebConfiguration
-2023-01-03 20:25:36.196  INFO 11644 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
-2023-01-03 20:25:36.202  INFO 11644 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
-2023-01-03 20:25:36.584  INFO 11644 --- [main] org.redisson.Version                     : Redisson 3.17.0
-2023-01-03 20:25:37.403  INFO 11644 --- [redisson-netty-2-18] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-2023-01-03 20:25:37.422  INFO 11644 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
-2023-01-03 20:25:38.063  INFO 11644 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@44a14de0]
-2023-01-03 20:25:38.064  INFO 11644 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@50fd739d]
-2023-01-03 20:25:39.094  INFO 11644 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
-2023-01-03 20:25:39.095  INFO 11644 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
-2023-01-03 20:25:39.108  INFO 11644 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
-2023-01-03 20:25:39.115  INFO 11644 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
-2023-01-03 20:25:39.122  INFO 11644 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
-2023-01-03 20:25:39.152  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
-2023-01-03 20:25:39.442  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:39.443  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:39.467  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-03 20:25:39.468  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
-2023-01-03 20:25:39.471  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:39.473  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:39.479  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-03 20:25:39.499  INFO 11644 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
-2023-01-03 20:25:39.555  INFO 11644 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
-2023-01-03 20:25:40.510  WARN 11644 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-03 20:25:40.510  INFO 11644 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-03 20:25:40.526  INFO 11644 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6ba355e4
-2023-01-03 20:25:41.208  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-03 20:25:41.209  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-01-03 20:25:41.209  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-03 20:25:41.657  INFO 11644 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
-2023-01-03 20:25:42.332  WARN 11644 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-03 20:25:42.332  INFO 11644 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-03 20:25:42.618  INFO 11644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-01-03 20:25:43.031  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-03 20:25:43.179  INFO 11644 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
-2023-01-03 20:25:43.190  INFO 11644 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
-2023-01-03 20:25:43.265  INFO 11644 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2023-01-03 20:25:43.291  INFO 11644 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-01-03 20:25:43.292  INFO 11644 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+2023-02-08 20:15:08.754  WARN 28952 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[sms-server] & group[DEFAULT_GROUP]
+2023-02-08 20:15:08.766  INFO 28952 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-sms-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-08 20:15:08.816  INFO 28952 --- [main] m.s.s.i.ConfigTemplateServiceImplTest    : The following profiles are active: dev
+2023-02-08 20:15:10.141  INFO 28952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-08 20:15:10.145  INFO 28952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-08 20:15:10.189  INFO 28952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2023-02-08 20:15:10.259  WARN 28952 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-08 20:15:10.273  WARN 28952 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2023-02-08 20:15:10.471  INFO 28952 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=40d19846-27b8-3cb9-b05e-297572b663c2
+2023-02-08 20:15:10.815  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.338  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.350  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.365  INFO 28952 --- [main] m.s.c.SmsServerMybatisAutoConfiguration  : 初始化 SmsServerMybatisAutoConfiguration mybatis 配置
+2023-02-08 20:15:11.365  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerMybatisAutoConfiguration' of type [mao.sms_server.config.SmsServerMybatisAutoConfiguration$$EnhancerBySpringCGLIB$$74264d8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.381  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.397  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.407  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.416  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.434  INFO 28952 --- [main] m.s.c.SmsServerDatabaseAutoConfiguration : 初始化 SmsServerDatabaseAutoConfiguration 数据库配置
+2023-02-08 20:15:11.435  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerDatabaseAutoConfiguration' of type [mao.sms_server.config.SmsServerDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$8909205f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.546  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.556  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.585  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.671  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.806  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.862  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.909  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.934  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.947  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:11.958  INFO 28952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-08 20:15:12.034  INFO 28952 --- [main] m.s.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration 全局异常处理配置
+2023-02-08 20:15:12.055  INFO 28952 --- [main] m.s.config.SmsServerWebConfiguration     : 初始化 SmsServerWebConfiguration
+2023-02-08 20:15:12.138  INFO 28952 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
+2023-02-08 20:15:12.144  INFO 28952 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
+2023-02-08 20:15:12.527  INFO 28952 --- [main] org.redisson.Version                     : Redisson 3.17.0
+2023-02-08 20:15:13.354  INFO 28952 --- [redisson-netty-2-23] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-02-08 20:15:13.369  INFO 28952 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-02-08 20:15:13.797  INFO 28952 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@30bd39d5]
+2023-02-08 20:15:13.797  INFO 28952 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@3c87e851]
+2023-02-08 20:15:14.906  INFO 28952 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2023-02-08 20:15:14.908  INFO 28952 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2023-02-08 20:15:14.917  INFO 28952 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2023-02-08 20:15:14.924  INFO 28952 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2023-02-08 20:15:14.934  INFO 28952 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2023-02-08 20:15:14.965  INFO 28952 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/程序/大四寒假/aggregate-pay/apps/sms/sms-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
+2023-02-08 20:15:15.275  INFO 28952 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-08 20:15:15.276  INFO 28952 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-08 20:15:15.305  INFO 28952 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-08 20:15:15.306  INFO 28952 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/程序/大四寒假/aggregate-pay/apps/sms/sms-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
+2023-02-08 20:15:15.309  INFO 28952 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-08 20:15:15.310  INFO 28952 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
+2023-02-08 20:15:15.316  INFO 28952 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
+2023-02-08 20:15:15.333  INFO 28952 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
+2023-02-08 20:15:15.385  INFO 28952 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
+2023-02-08 20:15:15.393  INFO 28952 --- [main] mao.sms_server.config.SubscriberConfig   : 初始化 SubscriberConfig
+2023-02-08 20:15:15.580 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.583 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.584 DEBUG 28952 --- [main] m.t.d.BaseDatabaseConfiguration          : 允许带事务的类为：class mao.sms_server.controller.SmsSendController
+2023-02-08 20:15:15.659  INFO 28952 --- [Thread-8] m.sms_server.redismq.GeneralSmsListener  : 监听队列：TOPIC_GENERAL_SMS中的短信消息
+2023-02-08 20:15:15.666  INFO 28952 --- [Thread-9] mao.sms_server.redismq.HighSmsListener   : 监听队列：TOPIC_HIGH_SMS中的短信消息
+2023-02-08 20:15:16.399  WARN 28952 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-08 20:15:16.399  INFO 28952 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-08 20:15:16.416  INFO 28952 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@34e68840
+2023-02-08 20:15:17.146  INFO 28952 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-08 20:15:17.146  INFO 28952 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-08 20:15:17.147  INFO 28952 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-08 20:15:17.630  INFO 28952 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2023-02-08 20:15:18.387  WARN 28952 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-08 20:15:18.387  INFO 28952 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-08 20:15:18.613  INFO 28952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-08 20:15:18.998  INFO 28952 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-08 20:15:19.149  INFO 28952 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
+2023-02-08 20:15:19.167  INFO 28952 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
+2023-02-08 20:15:19.258  INFO 28952 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-02-08 20:15:19.278  INFO 28952 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-02-08 20:15:19.279  INFO 28952 --- [main] m.t.config.SwaggerAutoConfiguration      : 
 title：在线文档
 group：
 description：在线文档
@@ -78,601 +105,140 @@ basePath：[]
 excludePath：[]
 docket：{sms=DocketInfo{title='短信发送服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.sms_server.controller', basePath=[], excludePath=[]}}
 
-2023-01-03 20:25:43.819  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2023-01-03 20:25:44.431  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : new ips(3) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8973#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8973,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8972#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8972,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
-2023-01-03 20:25:44.440  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8972#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8972,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8973#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8973,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
-2023-01-03 20:25:44.443  INFO 11644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2023-01-03 20:25:44.478  INFO 11644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2023-01-03 20:25:44.534  INFO 11644 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2023-01-03 20:25:44.570  INFO 11644 --- [main] m.s.service.impl.SendLogServiceImplTest  : Started SendLogServiceImplTest in 13.709 seconds (JVM running for 15.95)
-2023-01-03 20:25:44.604  INFO 11644 --- [main] mao.sms_server.factory.ServerRegister    : 生成当前服务实例id:03414e5e-17e2-42a6-a7eb-14eccc5c54ad
-2023-01-03 20:25:44.783 DEBUG 11644 --- [main] mao.tools_redis_cache.utils.RedisUtils   : sms:List_ConfigEntity:listForConnect:-1 获取分布式锁后，缓存未命中，查询数据库
-2023-01-03 20:25:45.561  INFO 11644 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-01-03 20:25:45.579 DEBUG 11644 --- [main] m.s.mapper.ConfigMapper.selectList       : ==>  Preparing: SELECT id,access_key_id,other,level,is_delete,update_user,channel_type,remark,update_time,is_active,platform,is_enable,access_key_secret,create_time,domain,name,create_user FROM config WHERE (channel_type = ? AND is_active = ? AND is_enable = ?) ORDER BY level ASC 
-2023-01-03 20:25:45.914 DEBUG 11644 --- [main] m.s.mapper.ConfigMapper.selectList       : ==> Parameters: 1(Integer), 1(Integer), 1(Integer)
-2023-01-03 20:25:45.970 DEBUG 11644 --- [main] m.s.mapper.ConfigMapper.selectList       : <==      Total: 0
-2023-01-03 20:25:45.991  INFO 11644 --- [main] mao.sms_server.factory.SmsConnectLoader  : 查询到可用通道：[]
-2023-01-03 20:25:45.992  INFO 11644 --- [main] mao.sms_server.factory.SmsConnectLoader  : 将初始化的通道加载到集合中：[]
-2023-01-03 20:25:45.993  INFO 11644 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-01-03 20:25:45.995  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-03 20:25:45.997  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2023-01-03 20:25:46.008  INFO 11644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-01-03 20:25:46.026  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-01-03 20:25:46.026  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-01-03 20:25:46.026  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-01-03 20:25:49.049  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-01-03 20:25:52.078  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-01-03 20:25:52.078  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-01-03 20:25:52.079  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-01-03 20:25:52.079  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-01-03 20:25:52.079  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-01-03 20:25:52.079  WARN 11644 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-01-03 20:25:52.080  WARN 11644 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-01-03 20:25:52.080  INFO 11644 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-01-03 20:25:52.080  INFO 11644 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-01-03 20:25:52.080  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-01-03 20:25:52.124  INFO 11644 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-01-03 20:25:52.130  INFO 11644 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2023-01-03 20:25:52.137 ERROR 11644 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
-Caused by: java.lang.NullPointerException: null
-	at mao.tools_redis_cache.service.impl.RedisLockServiceImpl.unlock(RedisLockServiceImpl.java:127) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.initConnect(SmsConnectLoader.java:155) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.run(SmsConnectLoader.java:78) ~[classes/:na]
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	... 68 common frames omitted
-
-2023-01-03 20:25:52.140 ERROR 11644 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3b6d844d] to prepare test instance [mao.sms_server.service.impl.SendLogServiceImplTest@37289e90]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
-Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) ~[spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 63 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at mao.tools_redis_cache.service.impl.RedisLockServiceImpl.unlock(RedisLockServiceImpl.java:127) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.initConnect(SmsConnectLoader.java:155) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.run(SmsConnectLoader.java:78) ~[classes/:na]
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	... 68 common frames omitted
-
-2023-01-03 20:25:52.897  WARN 11644 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[sms-server] & group[DEFAULT_GROUP]
-2023-01-03 20:25:52.912  INFO 11644 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-sms-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-03 20:25:52.925  INFO 11644 --- [main] m.s.service.impl.SendLogServiceImplTest  : The following profiles are active: dev
-2023-01-03 20:25:53.679  INFO 11644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-01-03 20:25:53.679  INFO 11644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-03 20:25:53.695  INFO 11644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
-2023-01-03 20:25:53.784  INFO 11644 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d261a23-5200-39ab-ac85-1ddf3a02da01
-2023-01-03 20:25:53.924  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:53.975  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:53.982  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:53.995  INFO 11644 --- [main] m.s.c.SmsServerMybatisAutoConfiguration  : 初始化 SmsServerMybatisAutoConfiguration mybatis 配置
-2023-01-03 20:25:53.995  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerMybatisAutoConfiguration' of type [mao.sms_server.config.SmsServerMybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f0fd6d4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:53.998  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.007  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.013  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.018  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.030  INFO 11644 --- [main] m.s.c.SmsServerDatabaseAutoConfiguration : 初始化 SmsServerDatabaseAutoConfiguration 数据库配置
-2023-01-03 20:25:54.031  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerDatabaseAutoConfiguration' of type [mao.sms_server.config.SmsServerDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$5e04021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.072  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.077  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.091  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.115  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.167  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.191  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.205  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.215  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.219  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.226  INFO 11644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:25:54.272  INFO 11644 --- [main] m.s.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration 全局异常处理配置
-2023-01-03 20:25:54.280  INFO 11644 --- [main] m.s.config.SmsServerWebConfiguration     : 初始化 SmsServerWebConfiguration
-2023-01-03 20:25:54.313  INFO 11644 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
-2023-01-03 20:25:54.315  INFO 11644 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
-2023-01-03 20:25:54.389  INFO 11644 --- [main] org.redisson.Version                     : Redisson 3.17.0
-2023-01-03 20:25:54.599  INFO 11644 --- [redisson-netty-7-22] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-2023-01-03 20:25:54.623  INFO 11644 --- [redisson-netty-7-18] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
-2023-01-03 20:25:55.415  INFO 11644 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
-2023-01-03 20:25:55.415  INFO 11644 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
-2023-01-03 20:25:55.417  INFO 11644 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
-2023-01-03 20:25:55.419  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
-2023-01-03 20:25:55.465  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:55.465  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:55.470  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-03 20:25:55.471  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
-2023-01-03 20:25:55.474  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:55.475  INFO 11644 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:25:55.481  INFO 11644 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-03 20:25:55.482  INFO 11644 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
-2023-01-03 20:25:55.497  INFO 11644 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
-2023-01-03 20:25:56.017  WARN 11644 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-03 20:25:56.017  INFO 11644 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-03 20:25:56.018  INFO 11644 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@563bf9d2
-2023-01-03 20:25:56.526  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-03 20:25:56.526  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-01-03 20:25:56.526  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-03 20:25:56.795  INFO 11644 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
-2023-01-03 20:25:57.153  WARN 11644 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-03 20:25:57.153  INFO 11644 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-03 20:25:57.289  INFO 11644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-01-03 20:25:57.519  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-03 20:25:57.584  INFO 11644 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
-2023-01-03 20:25:57.591  INFO 11644 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
-2023-01-03 20:25:57.623  INFO 11644 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2023-01-03 20:25:57.636  INFO 11644 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-01-03 20:25:57.636  INFO 11644 --- [main] m.t.config.SwaggerAutoConfiguration      : 
-title：在线文档
-group：
-description：在线文档
-version：1.0
-contact：Contact{name='', url='', email=''}
-basePackage：
-basePath：[]
-excludePath：[]
-docket：{sms=DocketInfo{title='短信发送服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.sms_server.controller', basePath=[], excludePath=[]}}
-
-2023-01-03 20:25:57.901  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2023-01-03 20:25:58.309  INFO 11644 --- [main] c.a.n.client.identify.CredentialWatcher  : null No credential found
-2023-01-03 20:25:58.314  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : new ips(3) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8973#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8973,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8972#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8972,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
-2023-01-03 20:25:58.319  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8972#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8972,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"192.168.3.143#8973#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8973,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
-2023-01-03 20:25:58.320  INFO 11644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2023-01-03 20:25:58.321  INFO 11644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2023-01-03 20:25:58.332  INFO 11644 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2023-01-03 20:25:58.344  INFO 11644 --- [main] m.s.service.impl.SendLogServiceImplTest  : Started SendLogServiceImplTest in 6.189 seconds (JVM running for 29.724)
-2023-01-03 20:25:58.345  INFO 11644 --- [main] mao.sms_server.factory.ServerRegister    : 生成当前服务实例id:b70f6f3c-3b07-47dc-89d0-13e645d8b691
-2023-01-03 20:25:58.353  INFO 11644 --- [main] mao.sms_server.factory.SmsConnectLoader  : 查询到可用通道：[]
-2023-01-03 20:25:58.353  INFO 11644 --- [main] mao.sms_server.factory.SmsConnectLoader  : 将初始化的通道加载到集合中：[]
-2023-01-03 20:25:58.354  INFO 11644 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-01-03 20:25:58.354  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-03 20:25:58.355  INFO 11644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2023-01-03 20:25:58.361  INFO 11644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-01-03 20:25:58.361  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-01-03 20:25:58.361  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-01-03 20:25:58.361  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-01-03 20:25:59.337  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-01-03 20:26:02.372  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-01-03 20:26:02.373  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-01-03 20:26:05.394  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-01-03 20:26:05.394  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-01-03 20:26:05.394  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-01-03 20:26:05.395  WARN 11644 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-01-03 20:26:05.395  WARN 11644 --- [main] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-01-03 20:26:05.395  INFO 11644 --- [main] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-01-03 20:26:05.395  INFO 11644 --- [main] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-01-03 20:26:05.395  INFO 11644 --- [main] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-01-03 20:26:05.408  INFO 11644 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
-2023-01-03 20:26:05.409 ERROR 11644 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) [spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
-Caused by: java.lang.NullPointerException: null
-	at mao.tools_redis_cache.service.impl.RedisLockServiceImpl.unlock(RedisLockServiceImpl.java:127) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.initConnect(SmsConnectLoader.java:155) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.run(SmsConnectLoader.java:78) ~[classes/:na]
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	... 68 common frames omitted
-
-2023-01-03 20:26:05.411 ERROR 11644 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3b6d844d] to prepare test instance [mao.sms_server.service.impl.SendLogServiceImplTest@608c03e3]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[na:1.8.0_332]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[na:1.8.0_332]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472) ~[na:1.8.0_332]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[na:1.8.0_332]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[na:1.8.0_332]
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_332]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.5.2.jar:1.5.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
-Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124) ~[spring-boot-test-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 63 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at mao.tools_redis_cache.service.impl.RedisLockServiceImpl.unlock(RedisLockServiceImpl.java:127) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.initConnect(SmsConnectLoader.java:155) ~[classes/:na]
-	at mao.sms_server.factory.SmsConnectLoader.run(SmsConnectLoader.java:78) ~[classes/:na]
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784) ~[spring-boot-2.2.9.RELEASE.jar:2.2.9.RELEASE]
-	... 68 common frames omitted
-
-2023-01-03 20:26:05.417  WARN 11644 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-03 20:26:05.417  WARN 11644 --- [Thread-14] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-01-03 20:26:05.417  WARN 11644 --- [Thread-14] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-01-03 20:26:05.418  WARN 11644 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-01-03 20:27:37.843  WARN 8136 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[sms-server] & group[DEFAULT_GROUP]
-2023-01-03 20:27:37.855  INFO 8136 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-sms-server-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sms-server,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-mysql.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
-2023-01-03 20:27:37.914  INFO 8136 --- [main] m.s.service.impl.SendLogServiceImplTest  : The following profiles are active: dev
-2023-01-03 20:27:39.227  INFO 8136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-01-03 20:27:39.231  INFO 8136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-03 20:27:39.269  INFO 8136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
-2023-01-03 20:27:39.335  WARN 8136 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2023-01-03 20:27:39.349  WARN 8136 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
-2023-01-03 20:27:39.554  INFO 8136 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d261a23-5200-39ab-ac85-1ddf3a02da01
-2023-01-03 20:27:39.947  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.548  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.559  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'database-mao.tools_databases.properties.DatabaseProperties' of type [mao.tools_databases.properties.DatabaseProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.574  INFO 8136 --- [main] m.s.c.SmsServerMybatisAutoConfiguration  : 初始化 SmsServerMybatisAutoConfiguration mybatis 配置
-2023-01-03 20:27:40.574  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerMybatisAutoConfiguration' of type [mao.sms_server.config.SmsServerMybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9aa89c7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.592  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.607  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getLeftLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.LeftLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.619  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getRightLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.RightLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.627  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'getFullLikeTypeHandler' of type [mao.tools_databases.mybatis.typehandler.FullLikeTypeHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.644  INFO 8136 --- [main] m.s.c.SmsServerDatabaseAutoConfiguration : 初始化 SmsServerDatabaseAutoConfiguration 数据库配置
-2023-01-03 20:27:40.644  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'smsServerDatabaseAutoConfiguration' of type [mao.sms_server.config.SmsServerDatabaseAutoConfiguration$$EnhancerBySpringCGLIB$$af8b6f50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.733  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.739  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.757  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.821  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.933  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDruidDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:40.973  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:41.009  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterDataSource' of type [com.p6spy.engine.spy.P6DataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:41.034  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:41.048  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterTransactionInterceptor' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:41.064  INFO 8136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'masterAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-01-03 20:27:41.157  INFO 8136 --- [main] m.s.config.ExceptionConfiguration        : 初始化 ExceptionConfiguration 全局异常处理配置
-2023-01-03 20:27:41.178  INFO 8136 --- [main] m.s.config.SmsServerWebConfiguration     : 初始化 SmsServerWebConfiguration
-2023-01-03 20:27:41.228  INFO 8136 --- [main] m.t.config.RedissonConfig                : 初始化 RedissonConfig
-2023-01-03 20:27:41.233  INFO 8136 --- [main] m.t.config.RedissonConfig                : 单机模式redis:127.0.0.1:6379
-2023-01-03 20:27:41.619  INFO 8136 --- [main] org.redisson.Version                     : Redisson 3.17.0
-2023-01-03 20:27:42.482  INFO 8136 --- [redisson-netty-2-13] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-2023-01-03 20:27:42.516  INFO 8136 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
-2023-01-03 20:27:43.099  INFO 8136 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbConfig@1a67f8b4]
-2023-01-03 20:27:43.099  INFO 8136 --- [main] mao.tools_log.utils.AddressUtil          : bean [org.lionsoul.ip2region.DbSearcher@5f1f0ee6]
-2023-01-03 20:27:44.074  INFO 8136 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
-2023-01-03 20:27:44.075  INFO 8136 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
-2023-01-03 20:27:44.081  INFO 8136 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
-2023-01-03 20:27:44.087  INFO 8136 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
-2023-01-03 20:27:44.094  INFO 8136 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
-2023-01-03 20:27:44.123  INFO 8136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-server/target/classes/dozer/global.dozer.xml] to load custom xml mappings
-2023-01-03 20:27:44.393  INFO 8136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:27:44.395  INFO 8136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:27:44.420  INFO 8136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-03 20:27:44.421  INFO 8136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Using URL [file:/H:/%e7%a8%8b%e5%ba%8f/%e5%a4%a7%e5%9b%9b%e4%b8%8a%e6%9c%9f/sms-backend/apps/sms/sms-server/target/classes/dozer/biz.dozer.xml] to load custom xml mappings
-2023-01-03 20:27:44.424  INFO 8136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Trying to resolve XML entity with public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:27:44.424  INFO 8136 --- [main] c.g.d.c.b.xml.SchemaLSResourceResolver   : Resolved public ID [null] and system ID [http://dozermapper.github.io/schema/bean-mapping.xsd]
-2023-01-03 20:27:44.430  INFO 8136 --- [main] c.g.d.c.b.xml.BeanMappingXMLBuilder      : Successfully loaded custom xml mapping.
-2023-01-03 20:27:44.445  INFO 8136 --- [main] m.t.config.DozerAutoConfiguration        : 初始化 DozerAutoConfiguration
-2023-01-03 20:27:44.500  INFO 8136 --- [main] m.t.config.RedisLockServiceConfig        : 初始化 RedisLockServiceConfig
-2023-01-03 20:27:45.413  WARN 8136 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-03 20:27:45.413  INFO 8136 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-03 20:27:45.431  INFO 8136 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@a80a896
-2023-01-03 20:27:46.110  INFO 8136 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-03 20:27:46.111  INFO 8136 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
-2023-01-03 20:27:46.112  INFO 8136 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
-2023-01-03 20:27:46.548  INFO 8136 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
-2023-01-03 20:27:47.147  WARN 8136 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2023-01-03 20:27:47.148  INFO 8136 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2023-01-03 20:27:47.379  INFO 8136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-01-03 20:27:47.715  INFO 8136 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-03 20:27:47.878  INFO 8136 --- [main] m.tools_log.config.LogAutoConfiguration  : 初始化 LogAutoConfiguration
-2023-01-03 20:27:47.890  INFO 8136 --- [main] m.t.config.RedisUtilsConfig              : 初始化 RedisUtilsConfig
-2023-01-03 20:27:47.954  INFO 8136 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2023-01-03 20:27:47.972  INFO 8136 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
-2023-01-03 20:27:47.973  INFO 8136 --- [main] m.t.config.SwaggerAutoConfiguration      : 
-title：在线文档
-group：
-description：在线文档
-version：1.0
-contact：Contact{name='', url='', email=''}
-basePackage：
-basePath：[]
-excludePath：[]
-docket：{sms=DocketInfo{title='短信发送服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.sms_server.controller', basePath=[], excludePath=[]}}
-
-2023-01-03 20:27:48.461  INFO 8136 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2023-01-03 20:27:49.048  INFO 8136 --- [main] com.alibaba.nacos.client.naming          : new ips(3) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8973#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8973,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#8972#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8972,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
-2023-01-03 20:27:49.059  INFO 8136 --- [main] com.alibaba.nacos.client.naming          : current ips:(3) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#8972#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8972,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#8973#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8973,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
-2023-01-03 20:27:49.062  INFO 8136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2023-01-03 20:27:49.103  INFO 8136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2023-01-03 20:27:49.165  INFO 8136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2023-01-03 20:27:49.214  INFO 8136 --- [main] m.s.service.impl.SendLogServiceImplTest  : Started SendLogServiceImplTest in 13.044 seconds (JVM running for 14.393)
-2023-01-03 20:27:49.252  INFO 8136 --- [main] mao.sms_server.factory.ServerRegister    : 生成当前服务实例id:2fd5d801-09ee-4f60-a977-edec811180be
-2023-01-03 20:27:49.343 DEBUG 8136 --- [main] mao.tools_redis_cache.utils.RedisUtils   : sms:List_ConfigEntity:listForConnect:-1 获取分布式锁后，缓存未命中，查询数据库
-2023-01-03 20:27:50.089  INFO 8136 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-01-03 20:27:50.111 DEBUG 8136 --- [main] m.s.mapper.ConfigMapper.selectList       : ==>  Preparing: SELECT id,access_key_id,other,level,is_delete,update_user,channel_type,remark,update_time,is_active,platform,is_enable,access_key_secret,create_time,domain,name,create_user FROM config WHERE (channel_type = ? AND is_active = ? AND is_enable = ?) ORDER BY level ASC 
-2023-01-03 20:27:50.536 DEBUG 8136 --- [main] m.s.mapper.ConfigMapper.selectList       : ==> Parameters: 1(Integer), 1(Integer), 1(Integer)
-2023-01-03 20:27:50.585 DEBUG 8136 --- [main] m.s.mapper.ConfigMapper.selectList       : <==      Total: 0
-2023-01-03 20:27:50.627  INFO 8136 --- [main] mao.sms_server.factory.SmsConnectLoader  : 查询到可用通道：[]
-2023-01-03 20:27:50.628  INFO 8136 --- [main] mao.sms_server.factory.SmsConnectLoader  : 将初始化的通道加载到集合中：[]
-2023-01-03 20:27:50.642  INFO 8136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] sms-server.yml+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
-2023-01-03 20:27:50.645  INFO 8136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=sms-server.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-03 20:27:50.646  INFO 8136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] sms-server+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
-2023-01-03 20:27:50.646  INFO 8136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=sms-server, group=DEFAULT_GROUP, cnt=1
-2023-01-03 20:27:50.655  INFO 8136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] sms-server-dev.yml+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
-2023-01-03 20:27:50.655  INFO 8136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=sms-server-dev.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-03 20:27:50.665  INFO 8136 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [subscribe] common.yml+DEFAULT_GROUP+2051a6a2-ba78-4dac-85a2-f991dd5162f2
-2023-01-03 20:27:50.666  INFO 8136 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-2051a6a2-ba78-4dac-85a2-f991dd5162f2] [add-listener] ok, tenant=2051a6a2-ba78-4dac-85a2-f991dd5162f2, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
-2023-01-03 20:27:50.993 DEBUG 8136 --- [main] m.s.mapper.SendLogMapper.selectList      : ==>  Preparing: SELECT id,template,config_name,request,signature,is_delete,mobile,update_user,remark,update_time,error,create_time,response,config_id,use_time,create_user,config_platform,api_log_id,status FROM send_log 
-2023-01-03 20:27:50.994 DEBUG 8136 --- [main] m.s.mapper.SendLogMapper.selectList      : ==> Parameters: 
-2023-01-03 20:27:51.009 DEBUG 8136 --- [main] m.s.mapper.SendLogMapper.selectList      : <==      Total: 0
-2023-01-03 20:27:51.036  WARN 8136 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2023-01-03 20:27:51.035  WARN 8136 --- [Thread-14] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2023-01-03 20:27:51.036  WARN 8136 --- [Thread-14] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2023-01-03 20:27:51.036  WARN 8136 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2023-01-03 20:27:51.038  INFO 8136 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2023-01-03 20:27:51.040  INFO 8136 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2023-01-03 20:27:51.055  INFO 8136 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-01-03 20:27:51.074  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
-2023-01-03 20:27:51.075  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
-2023-01-03 20:27:51.075  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
-2023-01-03 20:27:54.107  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
-2023-01-03 20:27:57.125  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
-2023-01-03 20:27:57.125  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
-2023-01-03 20:27:57.125  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
-2023-01-03 20:27:57.126  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
-2023-01-03 20:27:57.126  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
-2023-01-03 20:27:57.126  WARN 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
-2023-01-03 20:27:57.126  WARN 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
-2023-01-03 20:27:57.126  INFO 8136 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
-2023-01-03 20:27:57.126  INFO 8136 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
-2023-01-03 20:27:57.126  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
-2023-01-03 20:27:57.160  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-01-03 20:27:57.170  INFO 8136 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-08 20:15:19.766  INFO 28952 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2023-02-08 20:15:20.313  INFO 28952 --- [main] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-02-08 20:15:20.323  INFO 28952 --- [main] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@sms-server@@DEFAULT -> [{"instanceId":"192.168.3.143#8772#DEFAULT#DEFAULT_GROUP@@sms-server","ip":"192.168.3.143","port":8772,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@sms-server","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2023-02-08 20:15:20.325  INFO 28952 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-02-08 20:15:20.360  INFO 28952 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-02-08 20:15:20.411  INFO 28952 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-02-08 20:15:20.563  INFO 28952 --- [main] m.s.s.i.ConfigTemplateServiceImplTest    : Started ConfigTemplateServiceImplTest in 13.476 seconds (JVM running for 14.817)
+2023-02-08 20:15:20.597  INFO 28952 --- [main] mao.sms_server.factory.ServerRegister    : 生成当前服务实例id:5120dce9-0f64-490b-969c-bbb992ee8ffc
+2023-02-08 20:15:20.632 DEBUG 28952 --- [main] mao.tools_redis_cache.utils.RedisUtils   : sms:List_ConfigEntity:listForConnect:-1 获取分布式锁后，缓存未命中，查询数据库
+2023-02-08 20:15:21.332  INFO 28952 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-02-08 20:15:21.348 DEBUG 28952 --- [main] m.s.mapper.ConfigMapper.selectList       : ==>  Preparing: SELECT id,access_key_id,other,level,is_delete,update_user,channel_type,remark,update_time,is_active,platform,is_enable,access_key_secret,create_time,domain,name,create_user FROM config WHERE (channel_type = ? AND is_active = ? AND is_enable = ?) ORDER BY level ASC 
+2023-02-08 20:15:21.643 DEBUG 28952 --- [main] m.s.mapper.ConfigMapper.selectList       : ==> Parameters: 1(Integer), 1(Integer), 1(Integer)
+2023-02-08 20:15:21.677 DEBUG 28952 --- [main] m.s.mapper.ConfigMapper.selectList       : <==      Total: 0
+2023-02-08 20:15:21.698  INFO 28952 --- [main] mao.sms_server.factory.SmsConnectLoader  : 查询到可用通道：[]
+2023-02-08 20:15:21.698  INFO 28952 --- [main] mao.sms_server.factory.SmsConnectLoader  : 将初始化的通道加载到集合中：[]
+2023-02-08 20:15:21.706  INFO 28952 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] sms-server.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:15:21.708  INFO 28952 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=sms-server.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:15:21.708  INFO 28952 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] sms-server+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:15:21.708  INFO 28952 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=sms-server, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:15:21.710  INFO 28952 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] sms-server-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:15:21.710  INFO 28952 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=sms-server-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:15:21.711  INFO 28952 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:15:21.711  INFO 28952 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:15:21.897 DEBUG 28952 --- [main] m.s.m.ConfigTemplateMapper.selectList    : ==>  Preparing: SELECT id,create_time,config_id,is_delete,update_user,remark,update_time,create_user,config_template_code,template_id FROM config_template 
+2023-02-08 20:15:21.898 DEBUG 28952 --- [main] m.s.m.ConfigTemplateMapper.selectList    : ==> Parameters: 
+2023-02-08 20:15:21.900 DEBUG 28952 --- [main] m.s.m.ConfigTemplateMapper.selectList    : <==      Total: 0
+2023-02-08 20:15:21.912  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.BlackListServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:21.913  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.BlackListServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:21.913  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.BlackListServiceImplTest]: BlackListServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:21.915  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.BlackListServiceImplTest
+2023-02-08 20:15:21.918  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:21.918  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@331da721, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@335cbcbd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@64c79b69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a94c8e3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@54ee423f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@281a54b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a457aa1, org.springframework.test.context.event.EventPublishingTestExecutionListener@763a72da, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@50e32998, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5fc76532, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2e268c19, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@baf87a5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@42c9c0a1]
+2023-02-08 20:15:21.929 DEBUG 28952 --- [main] m.s.mapper.BlackListMapper.selectList    : ==>  Preparing: SELECT id,create_time,is_delete,update_user,remark,update_time,create_user,type,content FROM black_list 
+2023-02-08 20:15:21.929 DEBUG 28952 --- [main] m.s.mapper.BlackListMapper.selectList    : ==> Parameters: 
+2023-02-08 20:15:21.932 DEBUG 28952 --- [main] m.s.mapper.BlackListMapper.selectList    : <==      Total: 0
+2023-02-08 20:15:21.936  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.ConfigSignatureServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:21.938  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.ConfigSignatureServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:21.938  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.ConfigSignatureServiceImplTest]: ConfigSignatureServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:21.939  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.ConfigSignatureServiceImplTest
+2023-02-08 20:15:21.941  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:21.942  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7f588bc6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3da8a302, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@21b75073, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@318ca53a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@ab11e76, org.springframework.test.context.transaction.TransactionalTestExecutionListener@72f91c91, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@69d6fe75, org.springframework.test.context.event.EventPublishingTestExecutionListener@3d273300, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3fe7c87c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5c04685, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5bbb351e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f80b25a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5e2525fe]
+2023-02-08 20:15:21.952 DEBUG 28952 --- [main] m.s.m.ConfigSignatureMapper.selectList   : ==>  Preparing: SELECT id,create_time,config_id,is_delete,signature_id,update_user,remark,update_time,create_user,config_signature_code FROM config_signature 
+2023-02-08 20:15:21.953 DEBUG 28952 --- [main] m.s.m.ConfigSignatureMapper.selectList   : ==> Parameters: 
+2023-02-08 20:15:21.954 DEBUG 28952 --- [main] m.s.m.ConfigSignatureMapper.selectList   : <==      Total: 0
+2023-02-08 20:15:21.959  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.TemplateServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:21.960  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.TemplateServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:21.960  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.TemplateServiceImplTest]: TemplateServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:21.961  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.TemplateServiceImplTest
+2023-02-08 20:15:21.963  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:21.964  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@18f1260, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7672dd7a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1aee0f49, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7a80ebcd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@365eaef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@631c6ef4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@9e2b199, org.springframework.test.context.event.EventPublishingTestExecutionListener@7441edeb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@58df431e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5834fd3f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4446e1d9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3f13720f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1df60140]
+2023-02-08 20:15:22.000 DEBUG 28952 --- [main] mao.tools_redis_cache.utils.RedisUtils   : sms:TemplateEntity:getByCode:DXMB_000000001 获取分布式锁后，缓存未命中，查询数据库
+2023-02-08 20:15:22.005 DEBUG 28952 --- [main] m.s.mapper.TemplateMapper.selectOne      : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,type,content FROM template WHERE (code = ?) 
+2023-02-08 20:15:22.007 DEBUG 28952 --- [main] m.s.mapper.TemplateMapper.selectOne      : ==> Parameters: DXMB_000000001(String)
+2023-02-08 20:15:22.011 DEBUG 28952 --- [main] m.s.mapper.TemplateMapper.selectOne      : <==      Total: 1
+2023-02-08 20:15:22.033 DEBUG 28952 --- [main] mao.tools_redis_cache.utils.RedisUtils   : sms:String:getConfigCodeByCode2:3_12_code 获取分布式锁后，缓存未命中，查询数据库
+2023-02-08 20:15:22.036 DEBUG 28952 --- [main] m.s.mapper.TemplateMapper.selectOne      : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,type,content FROM template WHERE (code = ?) 
+2023-02-08 20:15:22.036 DEBUG 28952 --- [main] m.s.mapper.TemplateMapper.selectOne      : ==> Parameters: 3(String)
+2023-02-08 20:15:22.037 DEBUG 28952 --- [main] m.s.mapper.TemplateMapper.selectOne      : <==      Total: 0
+2023-02-08 20:15:22.045  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.SignatureServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:22.046  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.SignatureServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:22.046  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.SignatureServiceImplTest]: SignatureServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:22.048  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.SignatureServiceImplTest
+2023-02-08 20:15:22.050  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:22.050  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1f4d9c7f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6dcb4f30, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@77f66138, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7271320c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@12ce659, org.springframework.test.context.transaction.TransactionalTestExecutionListener@36299b83, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7212d3df, org.springframework.test.context.event.EventPublishingTestExecutionListener@9886ec3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6ff05f85, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@15ff247b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@71979130, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b2317b7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@56c26b21]
+2023-02-08 20:15:22.063 DEBUG 28952 --- [main] mao.tools_redis_cache.utils.RedisUtils   : sms:SignatureEntity:getByCode:1234 获取分布式锁后，缓存未命中，查询数据库
+2023-02-08 20:15:22.066 DEBUG 28952 --- [main] m.s.mapper.SignatureMapper.selectOne     : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE (code = ?) 
+2023-02-08 20:15:22.067 DEBUG 28952 --- [main] m.s.mapper.SignatureMapper.selectOne     : ==> Parameters: 1234(String)
+2023-02-08 20:15:22.069 DEBUG 28952 --- [main] m.s.mapper.SignatureMapper.selectOne     : <==      Total: 0
+2023-02-08 20:15:22.080 DEBUG 28952 --- [main] mao.tools_redis_cache.utils.RedisUtils   : sms:String:getConfigCodeByCode:23_1_code 获取分布式锁后，缓存未命中，查询数据库
+2023-02-08 20:15:22.083 DEBUG 28952 --- [main] m.s.mapper.SignatureMapper.selectOne     : ==>  Preparing: SELECT id,code,create_time,is_delete,name,update_user,remark,update_time,create_user,content FROM signature WHERE (code = ?) 
+2023-02-08 20:15:22.083 DEBUG 28952 --- [main] m.s.mapper.SignatureMapper.selectOne     : ==> Parameters: 23(String)
+2023-02-08 20:15:22.084 DEBUG 28952 --- [main] m.s.mapper.SignatureMapper.selectOne     : <==      Total: 0
+2023-02-08 20:15:22.090  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.SmsServerApplicationTests], using SpringBootContextLoader
+2023-02-08 20:15:22.092  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.SmsServerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:22.092  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.SmsServerApplicationTests]: SmsServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:22.095  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.SmsServerApplicationTests
+2023-02-08 20:15:22.097  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:22.098  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2e1b1d22, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@653c0c9c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5276330a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@221961f2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@541d8a9e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51c0346d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@32cda33c, org.springframework.test.context.event.EventPublishingTestExecutionListener@5bb24266, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@63437af4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@33f059ad, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6c7bc8ac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@25131637, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5d7f4cbb]
+2023-02-08 20:15:22.107  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.ConfigServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:22.108  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.ConfigServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:22.108  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.ConfigServiceImplTest]: ConfigServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:22.110  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.ConfigServiceImplTest
+2023-02-08 20:15:22.112  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:22.112  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5e7fc012, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@63e0c744, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@445d4517, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3284f91f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@125bc00d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@77e4ffe5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@59bf79f3, org.springframework.test.context.event.EventPublishingTestExecutionListener@4c663fda, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@f1d5f3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@50ba19df, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@726882da, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f0deba2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1ddf9fd]
+2023-02-08 20:15:22.123 DEBUG 28952 --- [main] m.s.service.impl.ConfigServiceImpl       : 集合为空
+2023-02-08 20:15:22.138  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.SendLogServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:22.139  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.SendLogServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:22.139  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.SendLogServiceImplTest]: SendLogServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:22.141  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.SendLogServiceImplTest
+2023-02-08 20:15:22.143  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:22.143  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2802caa2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6b9f5dcf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ab7e997, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2552cb80, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b3b5252, org.springframework.test.context.transaction.TransactionalTestExecutionListener@adb15df, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6f45be42, org.springframework.test.context.event.EventPublishingTestExecutionListener@5c7876e1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1d9016fe, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f378d7e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@dc28d74, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@12922d53, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@f28ee19]
+2023-02-08 20:15:22.152 DEBUG 28952 --- [main] m.s.mapper.SendLogMapper.selectList      : ==>  Preparing: SELECT id,template,config_name,request,signature,is_delete,mobile,update_user,remark,update_time,error,create_time,response,config_id,use_time,create_user,config_platform,api_log_id,status FROM send_log 
+2023-02-08 20:15:22.153 DEBUG 28952 --- [main] m.s.mapper.SendLogMapper.selectList      : ==> Parameters: 
+2023-02-08 20:15:22.156 DEBUG 28952 --- [main] m.s.mapper.SendLogMapper.selectList      : <==      Total: 0
+2023-02-08 20:15:22.166  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.ManualProcessServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:22.167  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.ManualProcessServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:22.167  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.ManualProcessServiceImplTest]: ManualProcessServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:22.169  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.ManualProcessServiceImplTest
+2023-02-08 20:15:22.171  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:22.171  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@664c0466, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2edc6690, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6ceeb592, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@332fc35c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@35c69e6b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@78e386a5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6138ee0e, org.springframework.test.context.event.EventPublishingTestExecutionListener@2c40e456, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2df40273, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@49467fc6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6f28a07e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@44e19b99, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@498bfeec]
+2023-02-08 20:15:22.180 DEBUG 28952 --- [main] m.s.m.ManualProcessMapper.selectList     : ==>  Preparing: SELECT id,template,request,signature,is_delete,mobile,update_user,remark,update_time,create_time,config_ids,create_user,status FROM manual_process 
+2023-02-08 20:15:22.180 DEBUG 28952 --- [main] m.s.m.ManualProcessMapper.selectList     : ==> Parameters: 
+2023-02-08 20:15:22.182 DEBUG 28952 --- [main] m.s.m.ManualProcessMapper.selectList     : <==      Total: 0
+2023-02-08 20:15:22.186  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [mao.sms_server.service.impl.ReceiveLogServiceImplTest], using SpringBootContextLoader
+2023-02-08 20:15:22.188  INFO 28952 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [mao.sms_server.service.impl.ReceiveLogServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-08 20:15:22.188  INFO 28952 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mao.sms_server.service.impl.ReceiveLogServiceImplTest]: ReceiveLogServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-08 20:15:22.190  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mao.sms_server.SmsServerApplication for test class mao.sms_server.service.impl.ReceiveLogServiceImplTest
+2023-02-08 20:15:22.192  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:22.192  INFO 28952 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@51bd10f0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@47d7e8b5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3ce71bbb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@661d49d1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5f1eff72, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27f43664, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@234adbe2, org.springframework.test.context.event.EventPublishingTestExecutionListener@2f154d9b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7d8c264, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@19993ed, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7479cdf7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@71852f76, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@308f18c0]
+2023-02-08 20:15:22.202 DEBUG 28952 --- [main] m.s.mapper.ReceiveLogMapper.selectList   : ==>  Preparing: SELECT id,template,request,business,signature,is_delete,mobile,update_user,remark,update_time,platform_id,error,create_time,use_time,config_ids,create_user,platform_name,api_log_id,status FROM receive_log 
+2023-02-08 20:15:22.204 DEBUG 28952 --- [main] m.s.mapper.ReceiveLogMapper.selectList   : ==> Parameters: 
+2023-02-08 20:15:22.207 DEBUG 28952 --- [main] m.s.mapper.ReceiveLogMapper.selectList   : <==      Total: 0
+2023-02-08 20:15:22.229  INFO 28952 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-08 20:15:22.229  INFO 28952 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@60fc4450, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e674698, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@270a3cef, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6d224921, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6f7e5e11, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7bb996e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@da2303c, org.springframework.test.context.event.EventPublishingTestExecutionListener@72b60be8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6f254d79, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@589cc8eb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44233014, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6888a33, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4303511e]
+2023-02-08 20:15:22.692  WARN 28952 --- [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-08 20:15:22.692  WARN 28952 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-08 20:15:22.693  WARN 28952 --- [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-08 20:15:22.693  WARN 28952 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-08 20:15:22.698  INFO 28952 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-08 20:15:22.700  INFO 28952 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2023-02-08 20:15:22.711  INFO 28952 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-08 20:15:22.727  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-08 20:15:22.728  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-08 20:15:22.728  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-08 20:15:25.741  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-08 20:15:28.773  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-08 20:15:28.773  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-08 20:15:28.774  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-08 20:15:28.774  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-08 20:15:28.774  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-08 20:15:28.775  WARN 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-08 20:15:28.775  WARN 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-08 20:15:28.775  INFO 28952 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-08 20:15:28.775  INFO 28952 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-08 20:15:28.775  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2023-02-08 20:15:28.807  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-08 20:15:28.817  INFO 28952 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
