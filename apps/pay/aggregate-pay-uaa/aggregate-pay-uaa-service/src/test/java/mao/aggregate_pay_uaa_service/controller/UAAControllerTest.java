@@ -59,10 +59,54 @@ class UAAControllerTest
     }
 
     /**
+     * Method under test: {@link UAAController#checkToken(String)}
+     */
+    @Test
+    void testCheckToken2() throws Exception
+    {
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.post("/oauth/check_token")
+                .param("value", "foo");
+        ResultActions actualPerformResult = MockMvcBuilders.standaloneSetup(this.uAAController)
+                .build()
+                .perform(requestBuilder);
+        actualPerformResult.andExpect(MockMvcResultMatchers.status().is(400));
+    }
+
+    /**
+     * Method under test: {@link UAAController#createClientDetails(java.util.Map)}
+     */
+    @Test
+    void testCreateClientDetails2() throws Exception
+    {
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.post("/oauth/createClientDetails");
+        ResultActions actualPerformResult = MockMvcBuilders.standaloneSetup(this.uAAController)
+                .build()
+                .perform(requestBuilder);
+        actualPerformResult.andExpect(MockMvcResultMatchers.status().is(400));
+    }
+
+    /**
      * Method under test: {@link UAAController#getClientDetailsByClientId(String)}
      */
     @Test
     void testGetClientDetailsByClientId() throws Exception
+    {
+        when(this.oauthClientDetailsService.getClientDetailsByClientId((String) any())).thenReturn(new HashMap<>());
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/oauth/getClientDetailsByClientId")
+                .param("appId", "foo");
+        MockMvcBuilders.standaloneSetup(this.uAAController)
+                .build()
+                .perform(requestBuilder)
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().contentType("application/json"))
+                .andExpect(MockMvcResultMatchers.content().string("{}"));
+    }
+
+    /**
+     * Method under test: {@link UAAController#getClientDetailsByClientId(String)}
+     */
+    @Test
+    void testGetClientDetailsByClientId2() throws Exception
     {
         when(this.oauthClientDetailsService.getClientDetailsByClientId((String) any())).thenReturn(new HashMap<>());
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/oauth/getClientDetailsByClientId")
