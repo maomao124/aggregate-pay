@@ -1,0 +1,75 @@
+2023-02-08 20:10:30.875  WARN 18328 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[aggregate-pay-sms] & group[DEFAULT_GROUP]
+2023-02-08 20:10:30.885  INFO 18328 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-sms-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-sms.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-aggregate-pay-sms,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-redis.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-common.yml,DEFAULT_GROUP'}]
+2023-02-08 20:10:30.927  WARN 18328 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/mao/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/mao/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-08 20:10:30.933  INFO 18328 --- [main] m.a.AggregatePaySmsApplicationTests      : The following profiles are active: dev
+2023-02-08 20:10:32.002  INFO 18328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-02-08 20:10:32.006  INFO 18328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-08 20:10:32.034  INFO 18328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2023-02-08 20:10:32.101  WARN 18328 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2023-02-08 20:10:32.272  INFO 18328 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=220c1a06-40f5-307d-8233-a2d472a601b0
+2023-02-08 20:10:32.903  INFO 18328 --- [main] mao.sms_sdk.config.SmsConfig             : 初始化 SmsConfig ，短信发送接口名为SmsSendService
+2023-02-08 20:10:33.947  INFO 18328 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-08 20:10:33.947  INFO 18328 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2023-02-08 20:10:33.948  INFO 18328 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2023-02-08 20:10:34.235  INFO 18328 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2023-02-08 20:10:34.566  WARN 18328 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-08 20:10:34.566  INFO 18328 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-08 20:10:34.574  WARN 18328 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2023-02-08 20:10:34.575  INFO 18328 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2023-02-08 20:10:34.906  INFO 18328 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-08 20:10:35.194  INFO 18328 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-08 20:10:35.309  INFO 18328 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-02-08 20:10:35.333  INFO 18328 --- [main] m.t.config.SwaggerAutoConfiguration      : 初始化swagger接口文档
+2023-02-08 20:10:35.334  INFO 18328 --- [main] m.t.config.SwaggerAutoConfiguration      : 
+title：在线文档
+group：
+description：在线文档
+version：1.0
+contact：Contact{name='', url='', email=''}
+basePackage：
+basePath：[]
+excludePath：[]
+docket：{aggregate_pay=DocketInfo{title='验证码服务', group='', description='在线文档', version='1.0', contact=Contact{name='', url='', email=''}, basePackage='mao.aggregate_pay_sms', basePath=[], excludePath=[]}}
+
+2023-02-08 20:10:36.176  INFO 18328 --- [main] com.alibaba.nacos.client.naming          : new ips(2) service: DEFAULT_GROUP@@aggregate-pay-sms@@DEFAULT -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-02-08 20:10:36.187  INFO 18328 --- [main] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@aggregate-pay-sms@@DEFAULT -> [{"instanceId":"192.168.3.143#35478#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":35478,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000},{"instanceId":"192.168.3.143#45739#DEFAULT#DEFAULT_GROUP@@aggregate-pay-sms","ip":"192.168.3.143","port":45739,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":false,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@aggregate-pay-sms","metadata":{"preserved.register.source":"SPRING_CLOUD","management.endpoints.web.base-path":"/actuator","management.context-path":"/actuator"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2023-02-08 20:10:36.189  INFO 18328 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-02-08 20:10:36.223  INFO 18328 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-02-08 20:10:36.271  INFO 18328 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-02-08 20:10:36.424  INFO 18328 --- [main] m.a.AggregatePaySmsApplicationTests      : Started AggregatePaySmsApplicationTests in 7.131 seconds (JVM running for 8.153)
+2023-02-08 20:10:36.469  INFO 18328 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-sms.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:10:36.471  INFO 18328 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-sms.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:10:36.471  INFO 18328 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-sms+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:10:36.472  INFO 18328 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-sms, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:10:36.473  INFO 18328 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] aggregate-pay-sms-dev.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:10:36.473  INFO 18328 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=aggregate-pay-sms-dev.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:10:36.474  INFO 18328 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [subscribe] common.yml+DEFAULT_GROUP+51637975-182d-43e2-ab58-d012723411d5
+2023-02-08 20:10:36.475  INFO 18328 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-127.0.0.1_8848-51637975-182d-43e2-ab58-d012723411d5] [add-listener] ok, tenant=51637975-182d-43e2-ab58-d012723411d5, dataId=common.yml, group=DEFAULT_GROUP, cnt=1
+2023-02-08 20:10:36.690  WARN 18328 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2023-02-08 20:10:36.690  WARN 18328 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2023-02-08 20:10:36.690  WARN 18328 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2023-02-08 20:10:36.691  WARN 18328 --- [Thread-2] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2023-02-08 20:10:36.693  INFO 18328 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2023-02-08 20:10:36.698  INFO 18328 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-08 20:10:36.701  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2023-02-08 20:10:36.701  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2023-02-08 20:10:36.702  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2023-02-08 20:10:37.203  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2023-02-08 20:10:40.236  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2023-02-08 20:10:40.236  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2023-02-08 20:10:43.268  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2023-02-08 20:10:43.268  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2023-02-08 20:10:43.268  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2023-02-08 20:10:43.268  WARN 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-02-08 20:10:43.269  WARN 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2023-02-08 20:10:43.269  INFO 18328 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2023-02-08 20:10:43.269  INFO 18328 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2023-02-08 20:10:43.269  INFO 18328 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop

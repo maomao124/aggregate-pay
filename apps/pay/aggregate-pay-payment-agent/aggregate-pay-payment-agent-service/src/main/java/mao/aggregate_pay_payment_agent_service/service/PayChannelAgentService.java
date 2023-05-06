@@ -56,5 +56,5 @@ public interface PayChannelAgentService
      * @param outTradeNo    平台订单号
      * @return {@link PaymentResponseDTO}<{@link String}>
      */
-    public PaymentResponseDTO<String> queryPayOrderByWeChat(WXConfigParam wxConfigParam, String outTradeNo);
+    PaymentResponseDTO<String> queryPayOrderByWeChat(WXConfigParam wxConfigParam, String outTradeNo);
 }

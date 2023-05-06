@@ -1,0 +1,8 @@
+server:
+  port: 9997
+
+spring:
+  boot:
+    admin:
+      monitor:
+        default-timeout: 30000

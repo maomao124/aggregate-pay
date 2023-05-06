@@ -1,0 +1,6 @@
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-uaa\aggregate-pay-uaa-api\src\main\java\mao\aggregate_pay_uaa_api\dto\MerchantLoginDTO.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-uaa\aggregate-pay-uaa-api\src\main\java\mao\aggregate_pay_uaa_api\fallback\UAAFeignClientFallbackFactory.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-uaa\aggregate-pay-uaa-api\src\main\java\mao\aggregate_pay_uaa_api\fallback\UAAFeignClientV2FallbackFactory.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-uaa\aggregate-pay-uaa-api\src\main\java\mao\aggregate_pay_uaa_api\config\UAAFeignConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-uaa\aggregate-pay-uaa-api\src\main\java\mao\aggregate_pay_uaa_api\feign\UAAFeignClientV2.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-uaa\aggregate-pay-uaa-api\src\main\java\mao\aggregate_pay_uaa_api\feign\UAAFeignClient.java

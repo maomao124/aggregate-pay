@@ -1,1 +1,10 @@
-H:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\AggregatePayGatewayApplication.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\config\ResourceServerConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\config\ClientDefaultAccessTokenConverter.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\utils\HttpUtil.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\config\JWTConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\config\RestAccessDeniedHandler.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\AggregatePayGatewayApplication.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\config\RestOAuth2AuthExceptionEntryPoint.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\config\FilterConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\config\SecurityConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-gateway\src\main\java\mao\aggregate_pay_gateway\filter\AuthFilter.java

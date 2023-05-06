@@ -1,0 +1,12 @@
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\producer\PayProducer.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\config\WXSDKConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\service\impl\PayChannelAgentServiceImpl.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\producer\impl\RocketMQPayProducer.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\constants\RocketMQConstants.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\controller\PayChannelAgentController.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\constants\AliCodeConstants.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\config\ExceptionConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\service\PayChannelAgentService.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\config\WebConfig.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\consumer\PayConsumer.java
+D:\程序\大四寒假\aggregate-pay\apps\pay\aggregate-pay-payment-agent\aggregate-pay-payment-agent-service\src\main\java\mao\aggregate_pay_payment_agent_service\AggregatePayPaymentAgentServiceApplication.java

@@ -37,6 +37,7 @@
         <module name="aggregate-pay-gateway" />
         <module name="sms-server" />
         <module name="tools-validator" />
+        <module name="admin-server" />
         <module name="tools-jwt" />
         <module name="aggregate-pay-uaa-api" />
         <module name="tools-log" />
@@ -50,6 +51,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="admin-server" options="-parameters" />
       <module name="aggregate-pay-common" options="-parameters" />
       <module name="aggregate-pay-entity" options="-parameters" />
       <module name="aggregate-pay-gateway" options="-parameters" />

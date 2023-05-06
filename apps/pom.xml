@@ -21,6 +21,7 @@
         <module>gateway</module>
         <module>sms</module>
         <module>pay</module>
+        <module>admin</module>
     </modules>
 
     <dependencyManagement>
