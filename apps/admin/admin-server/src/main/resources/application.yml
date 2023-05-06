@@ -5,4 +5,4 @@ spring:
   boot:
     admin:
       monitor:
-        default-timeout: 30000
+        default-timeout: 10000

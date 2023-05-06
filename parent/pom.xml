@@ -73,7 +73,7 @@
         <spring.cloud.version>Hoxton.SR10</spring.cloud.version>
         <spring-cloud-alibaba-dependencies.version>2.2.6.RELEASE</spring-cloud-alibaba-dependencies.version>
         <spring.version>5.2.2.RELEASE</spring.version>
-        <spring-boot-admin.version>2.2.0</spring-boot-admin.version>
+        <spring-boot-admin.version>2.3.0</spring-boot-admin.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <mybatis.version>3.5.9</mybatis.version>
         <mybatis.typehandlers.version>1.0.2</mybatis.typehandlers.version>
