@@ -59,6 +59,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter
                 || requestURL.contains("/doc.html")
                 || requestURL.contains("/merchants/register")
                 || requestURL.contains("/sms")
+                || requestURL.contains("/actuator")
                 || requestURL.contains("/my/tenants-merchants"))
         {
 

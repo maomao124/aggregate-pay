@@ -135,6 +135,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                         "/druid",
                         "/druid/**",
                         "/doc.html",
+                        "/actuator/**",
                         "/doc.html/**")
                 .permitAll()
                 .anyRequest().authenticated()
