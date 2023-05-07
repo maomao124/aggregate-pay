@@ -35,12 +35,6 @@ server:
     context‐path: /merchant
   use‐forward‐headers: true
 
-#服务监控与管理配置，运维相关
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh,health,info,env
 
 
 feign:
@@ -78,9 +72,9 @@ feign:
 
 #七牛云配置
 qn:
-  url: "xxxxxx"
-  accessKey: "xxxxxx"
-  secretKey: "xxxxxx"
+  url: "http://rob9upl1l.hn-bkt.clouddn.com/"
+  accessKey: "iCXS8pn-PiJ77RYpkFd9UH5alX9b_0oiBTrBmfJb"
+  secretKey: "w65H_JovJdjWpTQwYcFw63OCIVIS_o6R9BItKNDi"
   bucket: "mao123456"
 
 

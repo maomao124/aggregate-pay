@@ -21,6 +21,10 @@ zuul:
       path: /pay/**
       serviceId: aggregate-pay-transaction-service
       stripPrefix: false
+  ignored-patterns:
+    - /merchant/actuator/**
+    - /uaa/actuator/**
+    - /transaction/actuator/**
 
 feign:
   hystrix:

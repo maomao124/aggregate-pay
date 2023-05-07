@@ -40,10 +40,3 @@ server:
   servlet:
     context‐path: /user
   use‐forward‐headers: true
-
-#服务监控与管理配置，运维相关
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh,health,info,env
