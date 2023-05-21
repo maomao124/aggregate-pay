@@ -15,6 +15,10 @@
 
     </properties>
 
+    <modules>
+        <module>admin-server</module>
+    </modules>
+
     <dependencies>
 
     </dependencies>
